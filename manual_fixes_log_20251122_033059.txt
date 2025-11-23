@@ -1,0 +1,3 @@
+Registro 1 de 23 - autores_citados:
+  DE: ['ANDRADE, De', 'DRUMMUND, Carlos', 'MENDES, Murilo', 'CAPOGROSSI, Giuseppe', 'ARISTÓTELES']
+  PARA: ['ANDRADE, Carlos Drummond de', 'MENDES, Murilo', 'CAPOGROSSI, Giuseppe', 'ARISTÓTELES']

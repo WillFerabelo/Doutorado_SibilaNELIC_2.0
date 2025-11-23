@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Define o caminho absoluto do projeto
+PROJETO_DIR="/Users/williamfernandes/Documents/Doutorado/Doutorado_SibilaNELIC_2.0"
+URL="http://localhost:8501"
+
+# Navega para o diretório do projeto
+cd "$PROJETO_DIR"
+
+# Verifica se a porta 8501 já está em uso
+if lsof -Pi :8501 -sTCP:LISTEN -t >/dev/null 2>&1 ; then
+    # Sistema já está rodando, apenas abre o navegador
+    open "$URL"
+
+    # Mostra notificação
+    osascript -e 'display notification "O sistema já está em execução. Abrindo navegador..." with title "Sistema NELIC"'
+else
+    # Mostra notificação de início
+    osascript -e 'display notification "Iniciando servidor..." with title "Sistema NELIC"'
+
+    # Inicia o Streamlit em background
+    nohup python3 -m streamlit run sibila_code_21.py --server.port=8501 > /dev/null 2>&1 &
+
+    # Aguarda o servidor iniciar
+    echo "Aguardando servidor iniciar..."
+    sleep 3
+
+    # Tenta até 10 vezes (10 segundos) para verificar se o servidor iniciou
+    for i in {1..10}; do
+        if lsof -Pi :8501 -sTCP:LISTEN -t >/dev/null 2>&1 ; then
+            # Servidor iniciou, abre o navegador
+            open "$URL"
+            osascript -e 'display notification "Sistema iniciado com sucesso!" with title "Sistema NELIC"'
+            exit 0
+        fi
+        sleep 1
+    done
+
+    # Se chegou aqui, houve erro
+    osascript -e 'display alert "Sistema NELIC" message "Erro ao iniciar o servidor. Verifique se o Python está instalado." as critical'
+fi

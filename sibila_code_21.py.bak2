@@ -1,0 +1,2414 @@
+import streamlit as st
+import pandas as pd
+import json
+import os
+from datetime import datetime
+import plotly.express as px
+from io import BytesIO
+from fpdf import FPDF
+from typing import Dict, List, Any, Optional, Tuple, Callable
+import hashlib
+
+# ==========================================
+# 1. CONFIGURAÇÃO E ESTILO
+# ==========================================
+
+st.set_page_config(
+    page_title="SISTEMA NELIC - SIBILA",
+    page_icon="📚",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+# Vocabulário Controlado e Metodologia (agora em um módulo de dados)
+# (Dados movidos para dentro da classe DataModule para encapsulamento)
+# Tipos textuais que NÃO exigem resumo analítico
+TIPOS_SEM_RESUMO = {"POEMA", "POEMA(S)", "FICÇÃO", "CAPA", "IMAGEM", "HQ/CHARGE", "HQ", "CHARGE", "ARTES PLÁSTICAS"}
+
+# Caminhos de arquivos
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILE_PATH = os.path.join(BASE_DIR, 'catalogo_sibila.json')
+DIARIO_PATH = os.path.join(BASE_DIR, 'diario_sibila.json')
+BACKUP_DIR = os.path.join(BASE_DIR, 'backups')
+LOGO_PATH = os.path.join(BASE_DIR, 'NELIC.png')  # Arquivo de Logo
+
+# Estilos CSS
+CSS_STYLES = """
+<style>
+.main { 
+    background: radial-gradient(circle at top left, #f5f7fb 0%, #f1f3f5 40%, #eceff1 100%);
+    padding-top: 1rem;
+}
+.block-container {
+    padding-top: 2.2rem;
+    max-width: 1300px;
+}
+.stDeployButton {display: none !important;}
+#MainMenu {visibility: hidden !important;}
+footer {visibility: hidden !important;}
+.viewerBadge_container__1QSob {display: none !important;}
+.styles_viewerBadge__1yB5_ {display: none !important;}
+h1 {
+    color: #1f2933;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    border-bottom: 3px solid #2f5f98;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2rem !important;
+    letter-spacing: 1px;
+}
+h2, h3, h4 { 
+    color: #243b53;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    letter-spacing: 0.06em;
+}
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+    border-right: 1px solid #d8e2ec;
+    box-shadow: 2px 0 16px rgba(15, 23, 42, 0.06);
+}
+section[data-testid="stSidebar"] > div {
+    padding-top: 1.5rem;
+}
+.stButton > button, .stDownloadButton > button {
+    border-radius: 999px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    transition: all 0.25s ease;
+    border: 1px solid #2f5f98;
+    background-color: #2f5f98;
+    color: white;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+}
+.stButton > button:hover, .stDownloadButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+    background-color: #23466f;
+    border-color: #23466f;
+}
+.stTextArea textarea {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+.stTextInput input {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.nelic-card {
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
+    margin-bottom: 0.8rem;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 8 20px rgba(15, 23, 42, 0.04);
+}
+.nelic-card-header {
+    font-weight: 700;
+    color: #1f2933;
+    margin-bottom: 0.35rem;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.nelic-card-subtitle {
+    color: #62748a;
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+}
+.nelic-tag {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    border-radius: 999px;
+    background-color: #e3edff;
+    color: #243b53;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.nelic-tag-muted {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+.nelic-muted {
+    color: #6b7b93;
+    font-size: 0.8rem;
+}
+div[data-testid="stMetricValue"] {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2933;
+}
+div[data-testid="stMetricLabel"] {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7b93;
+}
+div[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8 18px rgba(15, 23, 42, 0.06);
+    background-color: white;
+}
+button[data-baseweb="tab"] {
+    font-size: 0.78rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.info-box {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2f5f98;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+.warning-box {
+    background-color: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+.success-box {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+</style>
+"""
+
+st.markdown(CSS_STYLES, unsafe_allow_html=True)
+
+# ==========================================
+# 2. CLASSES E MÓDULOS
+# ==========================================
+
+class DataModule:
+    """Encapsula dados estáticos e funções de normalização."""
+    LISTA_PALAVRAS_CHAVE = sorted(list(set([x.title() for x in [
+        "Absurdo", "Adolescência", "África", "Agricultura", "Alegoria", "Alemanha", "Alimentação", "Amazônia",
+        "Ambivalência", "América", "América Latina", "Amor", "Análise Do Discurso", "Anarquismo", "Antiguidade",
+        "Antologia", "Antropologia", "Argentina", "Arqueologia", "Arquitetura", "Arte",
+        "Arte Gráfica", "Artes Plásticas", "Artesanato", "Astrologia", "Áustria", "Autonomia", "Autoria",
+        "Autoritarismo", "Barroco", "Best Seller", "Bíblia", "Biblioteca", "Biografia", "Biologia", "Bossa Nova",
+        "Brasil", "Bruxaria", "Burguesia", "Câmbio", "Cânone Literário", "Capitalismo", "Caricatura", "Carnaval",
+        "Cartas", "Casamento", "Catolicismo", "Censura", "Chanchada", "Chile", "China", "Cidade", "Ciência",
+        "Cinema", "Cinema Novo", "Classe", "Classe Média", "Colonialismo", "Comédia", "Cômico", "Competência",
+        "Comportamento", "Compromisso", "Comunicação", "Comunismo", "Colonização", "Concretismo", "Concurso",
+        "Consumo", "Contemporâneo", "Conto", "Contra Cultura", "Crenças Populares", "Criação", "Crise",
+        "Crítica", "Crônica", "Cuba", "Cultura", "Cultura Alternativa", "Cultura Popular", "Dadaísmo", "Dança",
+        "Década De 20", "Década De 30", "Década De 40", "Década De 50", "Década De 60", "Década De 70",
+        "Década De 80", "Década De 90", "Democracia", "Demografia", "Descolonização", "Desconhecimento",
+        "Desconstrução", "Design", "Despotismo", "Dialética", "Direito", "Direitos Autorais", "Discos",
+        "Discriminação", "Discurso", "Ditadura", "Documentário", "Drama", "Dramaturgia", "Drogas", "Ecletismo",
+        "Ecologia", "Economia", "Editor", "Educação", "Efeméride", "Elite", "Enciclopedismo", "Energia",
+        "Engajamento Político", "Ensaio", "Ensino", "Entretenimento", "Epistemologia", "Erotismo",
+        "Escola De Frankfurt", "Escravidão", "Escritor", "Escritura", "Escultura", "Exoterismo", "Espaço",
+        "Espanha", "Esporte", "Estado", "Estado Novo", "Estados Unidos", "Estética", "Estrutura",
+        "Estruturalismo", "Ética", "Etnografia", "Etno-história", "Etnologia", "Europa", "Eventos",
+        "Existencialismo", "Experimentalismo", "Expressionismo", "Fantástico", "Fascismo", "Feminismo",
+        "Fenomenologia", "Ficção", "Ficção Científica", "Filologia", "Filosofia", "Física", "Folclore",
+        "Folhetim", "Formalismo", "Fotografia", "França", "Funcionalismo", "Futebol", "Futurismo", "Genealogia",
+        "Gênero", "Geografia", "Geração De 45", "Geração Marginal", "Globalização", "Golpe Militar", "Grafite",
+        "Gramática", "Guerra", "Guerra Fria", "Hermenêutica", "Herói", "Heterogeneidade", "Hispano-América",
+        "História", "História Do Brasil", "História Em Quadrinhos", "Historiografia", "Homossexualidade",
+        "Humanismo", "Humor", "Idade Média", "Idealização", "Identidade", "Ideograma", "Ideologia", "Idioma",
+        "Igreja", "Iluminismo", "Imagem", "Imaginação", "Imigração", "Imperialismo", "Imprensa",
+        "Imprensa Alternativa", "Impressionismo", "Inconfidência Mineira", "Inconsciente", "Independência",
+        "Índia", "Indianismo", "Índio", "Indústria Cultural", "Industrialização", "Infância", "Informática",
+        "Informes", "Inglaterra", "Instituições", "Intelectual", "Interdisciplinar", "Intelectualidade",
+        "Invenção", "Ironia", "Itália", "Japão", "Jazz", "Jornalismo", "Judaísmo", "Justiça", "Kitsch", "Leitor",
+        "Liberalismo", "Liberdade", "Língua", "Língua Inglesa", "Língua Portuguesa", "Linguagem", "Linguística",
+        "Lírico", "Lirismo", "Literatura", "Literatura Comparada", "Literatura De Cordel",
+        "Literatura Infanto-juvenil", "Literatura Policial", "Livro Didático", "Livros", "Lógica", "Loucura",
+        "Luta De Classes", "Magia", "Mais-valia", "Manifesto", "Marginalidade", "Marxismo", "Matemática",
+        "Mato Grosso", "Medicina", "Memória", "Mercado", "Mercado Editorial", "Mercado Fonográfico",
+        "Metafísica", "Metáfora", "Metalinguagem", "Metodologia De Pesquisa", "Métrica", "México", "Mídia",
+        "Mimesis", "Minas Gerais", "Minoria Sociais", "Misticismo", "Mito", "Mitologia", "Moda", "Modernidade",
+        "Modernismo", "Monarquia", "Monopólio", "Moral", "Morte", "Movimento", "Movimento Ideológico", "MPB",
+        "Mulher", "Museu", "Música", "Música Erudita", "Música Popular", "Nação", "Nacionalismo", "Narrador",
+        "Narrativa", "Naturalismo", "Natureza", "Nazismo", "Negros", "Neoconcretismo", "Neurologia", "Nordeste",
+        "Nova República", "Novela", "Obra", "Obra De Arte", "Ocidente", "Oligarquia", "Ontologia", "Ópera",
+        "Oralidade", "Oriente", "Origem", "Originalidade", "Paraná", "Parnasianismo", "Paródia",
+        "Partido Comunista", "Pastiche", "Patrimônio Cultural", "Pedagogia", "Periferia", "Periodismo",
+        "Peronismo", "Personagem", "Pintura", "Plágio", "Pluralismo", "Poder", "Poema Épico", "Poema Processo",
+        "Poema Visual", "Poesia Marginal", "Poesia", "Poética", "Polêmica", "Polícia", "Polifonia", "Política",
+        "Polônia", "Pop Art", "Populismo", "Pornografia", "Portugal", "Pós-estruturalismo", "Positivismo",
+        "Pós-modernidade", "Pós Modernismo", "Pré História", "Prêmio", "Premio Nobel", "Privatizações",
+        "Proletariado", "Prostituição", "Proto-sátira", "Psicanálise", "Psicologia", "Psicoterapia",
+        "Psiquiatria", "Publicidade", "Química", "Racismo", "Rádio", "Razão", "Reação", "Ready-made", "Realismo",
+        "Realismo Fantástico", "Realismo Mágico", "Rebeldia", "Reforma Agrária", "Regime Político",
+        "Regionalismo", "Relações Internacionais", "Relações Raciais", "Relações Sociais", "Relato", "Religião",
+        "Renascimento", "Reportagem", "Representação", "Repressão", "República", "República Velha", "Retórica",
+        "Revolução", "Revolução De 1930", "Revolução Francesa", "Revolução Industrial", "Rio De Janeiro",
+        "Rio Grande Do Sul", "Rito", "Rock And Roll", "Romance", "Romantismo", "Ruptura", "Rússia", "Samba",
+        "São Paulo", "Sátira", "Saúde", "SBPC", "Século XIX", "Século XVI", "Século XVII", "Século XVIII",
+        "Século XX", "Século XXI", "Semana De Arte Moderna", "Semântica", "Semiologia", "Semiótica", "Servilismo",
+        "Sexualidade", "Silêncio", "Simbolismo", "Simbologia", "Sindicalismo", "Sínteses", "Socialismo",
+        "Sociedade", "Sociedade Industrial", "Sociologia", "Solidão", "Stalinismo", "Subdesenvolvimento",
+        "Sujeito", "Surrealismo", "Tatuagem", "Teatro", "Técnica", "Tecnocracia", "Tecnologia", "Telespectador",
+        "Televisão", "Tempo", "Teologia", "Teoria", "Teoria Da Linguagem", "Teoria Literária", "Teoria Social",
+        "Terrorismo", "Texto", "Tortura", "Trabalho", "Tradição", "Tradução", "Tragédia", "Traição",
+        "Transgressão", "Tropicalismo", "Umbanda", "Underground", "Unidade", "Universalidade", "Universidade",
+        "Urbanismo", "URSS", "Uruguai", "Utopia", "Vanguarda", "Verdade", "Vestibular", "Viagem", "Violência"
+    ]]))
+
+    LISTA_ICONOGRAFIA = [
+        "Cartografia", "Fac-símile", "Foto", "Fotograma", "Gráfico/Tabela",
+        "HQ/Charge", "Ilustração", "Publicidade", "Reprodução"
+    ]
+
+    GÊNEROS_TEXTUAIS = {
+        "APRESENTAÇÃO": ["Sem especificação", "Literatura"],
+        "ARTES PLÁSTICAS": ["Sem especificação"],
+        "CAPA": ["Sem especificação"],
+        "CARTAS DO LEITOR": ["Sem especificação"],
+        "CHARGE": ["Sem especificação"],
+        "CORRESPONDÊNCIA(S)": ["Sem especificação"],
+        "DEBATE": ["Sem especificação"],
+        "DEPOIMENTO": ["Sem especificação", "Literatura"],
+        "EDITORIAL": ["Sem especificação", "Literatura"],
+        "ENSAIO": [
+            "Sem especificação", "Antropologia", "Arquitetura", "Bibliologia", "Ciência",
+            "Comunicação", "Cultura", "Economia", "Educação", "Esporte", "Filosofia",
+            "Fotográfico", "História", "Linguística", "Literatura", "Política",
+            "Psicanálise", "Psicologia", "Sociologia", "Teologia"
+        ],
+        "ENTREVISTA": ["Sem especificação", "Literatura"],
+        "FICÇÃO": ["Sem especificação"],
+        "HQ": ["Sem especificação"],
+        "HQ/CHARGE": ["Sem especificação"],
+        "INFORME": ["Sem especificação", "Literatura"],
+        "POEMA(S)": ["Sem especificação"],
+        "REPORTAGEM": ["Sem especificação", "Literatura"],
+        "RESENHA": [
+            "Sem especificação", "Antropologia", "Arquitetura", "Bibliologia", "Ciência",
+            "Comunicação", "Cultura", "Economia", "Educação", "Filosofia", "História",
+            "Linguística", "Literatura", "Política", "Psicanálise", "Psicologia", "Sociologia"
+        ],
+        "VARIEDADES": ["Sem especificação"]
+    }
+
+    @staticmethod
+    def normalizar_texto(val: str | list) -> str | list:
+        """Normaliza texto genérico (palavras-chave etc.) para Title Case."""
+        if isinstance(val, list):
+            return [i.strip().title() for i in val if str(i).strip()]
+        if isinstance(val, str):
+            return val.strip().title()
+        return val
+
+    @staticmethod
+    def format_nome_abnt(nome: str | None) -> str:
+        """
+        Normaliza nomes pessoais segundo ABNT.
+        Ex.: 'Bonvicino, Régis' -> 'BONVICINO, Régis'
+        """
+        if nome is None:
+            return ""
+        if not isinstance(nome, str):
+            nome = str(nome)
+        s = " ".join(nome.strip().split())
+        if not s:
+            return ""
+        if "," in s:
+            ult, resto = s.split(",", 1)
+            return f"{ult.strip().upper()}, {resto.strip()}" if resto.strip() else ult.strip().upper()
+        partes = s.split()
+        if len(partes) >= 2:
+            sobrenome = partes[-1].upper()
+            prenomes = " ".join(partes[:-1])
+            return f"{sobrenome}, {prenomes}"
+        return s.upper()
+
+    @staticmethod
+    def parse_multiline(texto: str | None) -> list[str]:
+        if texto is None:
+            return []
+        if not isinstance(texto, str):
+            texto = str(texto)
+        linhas = texto.replace(',', '\n').split('\n')
+        return [l.strip() for l in linhas if l.strip()]
+
+    @staticmethod
+    def normalizar_lista_autores(texto: str | list) -> list[str]:
+        nomes = DataModule.parse_multiline(texto)
+        return [DataModule.format_nome_abnt(n) for n in nomes]
+
+    @staticmethod
+    def get_normalized_series(df: pd.DataFrame, col: str) -> pd.Series:
+        """
+        Explode coluna, remove vazios. Para campos de autor, aplica formatação ABNT
+        sem rebaixar para Title Case (preserva SOBRENOME em CAIXA ALTA).
+        """
+        if col not in df.columns:
+            return pd.Series(dtype='object')
+        s = (
+            df.explode(col)[col]
+            .dropna()
+            .astype(str)
+            .str.strip()
+            .replace('', pd.NA)
+            .dropna()
+        )
+        if col in {'autores_colaboradores', 'autores_citados', 'tradutores', 'nome_pessoal_como_assunto'}:
+            s = s.apply(DataModule.format_nome_abnt)
+        return s
+
+class PersistenceModule:
+    """Encapsula funções de carregamento e salvamento de dados."""
+    @staticmethod
+    @st.cache_data(ttl=60)
+    def load_data():
+        if not os.path.exists(FILE_PATH):
+            return []
+        try:
+            with open(FILE_PATH, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            st.error(f"Erro ao carregar dados: {str(e)}")
+            return []
+
+    @staticmethod
+    def save_data(data):
+        try:
+            if os.path.exists(FILE_PATH):
+                if not os.path.exists(BACKUP_DIR):
+                    os.makedirs(BACKUP_DIR)
+                bkp = f"backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+                with open(FILE_PATH, 'r', encoding='utf-8') as f:
+                    with open(os.path.join(BACKUP_DIR, bkp), 'w', encoding='utf-8') as b:
+                        json.dump(json.load(f), b, ensure_ascii=False, indent=2)
+            with open(FILE_PATH, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            PersistenceModule.load_data.clear()
+            return True
+        except Exception as e:
+            st.error(f"Erro ao salvar dados: {str(e)}")
+            return False
+
+    @staticmethod
+    def load_diario():
+        if not os.path.exists(DIARIO_PATH):
+            return []
+        try:
+            with open(DIARIO_PATH, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            st.error(f"Erro ao carregar diário: {str(e)}")
+            return []
+
+    @staticmethod
+    def save_diario(entries):
+        try:
+            with open(DIARIO_PATH, 'w', encoding='utf-8') as f:
+                json.dump(entries, f, ensure_ascii=False, indent=2)
+            return True
+        except Exception as e:
+            st.error(f"Erro ao salvar diário: {str(e)}")
+            return False
+
+class PDFModule:
+    """Encapsula funções de geração de PDF."""
+    @staticmethod
+    def to_latin1(texto):
+        if texto is None:
+            return ""
+        if not isinstance(texto, str):
+            texto = str(texto)
+        texto = (
+            texto
+            .replace('\u2013', '-')
+            .replace('\u2014', '-')
+            .replace('\u2015', '-')
+            .replace('\u2022', '*')
+        )
+        return texto.encode('latin-1', 'replace').decode('latin-1')
+
+    @staticmethod
+    def add_nelic_logo_to_pdf(pdf):
+        if os.path.exists(LOGO_PATH):
+            try:
+                pdf.image(LOGO_PATH, x=10, y=10, w=20, h=0)
+            except Exception:
+                pass
+
+    @staticmethod
+    def gerar_pdf_analitico(df, total, crit):
+        """Relatório analítico genérico (lista de registros) com % na base."""
+        try:
+            pdf = FPDF()
+            pdf.add_page()
+            PDFModule.add_nelic_logo_to_pdf(pdf)
+            pdf.set_font("Arial", 'B', 16)
+            pdf.set_xy(35, 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("RELATÓRIO ANALÍTICO - PROJETO SIBILA"), ln=True, align='C')
+            pdf.set_font("Arial", '', 10)
+            pdf.set_x(35)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
+            pdf.ln(5)
+            pdf.set_fill_color(240, 240, 240)
+            pdf.rect(10, 45, 190, 25, 'F')
+            pdf.set_y(48)
+            pdf.set_x(15)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Critério: {crit}"), ln=True)
+            pdf.set_x(15)
+            pdf.set_font("Arial", '', 11)
+            qtd = len(df)
+            pct = (qtd / total * 100) if total > 0 else 0
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Registros encontrados: {qtd} de {total} (total da base)"), ln=True)
+            pdf.set_x(15)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Percentual da base total: {pct:.2f}%"), ln=True)
+            pdf.ln(15)
+            for _, r in df.iterrows():
+                if pdf.get_y() > 250:
+                    pdf.add_page()
+                try:
+                    tit = PDFModule.to_latin1(r.get('titulo_artigo', ''))
+                    tip = PDFModule.to_latin1(r.get('vocabulario_controlado', ''))
+                    rev = PDFModule.to_latin1(r.get('n', ''))
+                    pags = PDFModule.to_latin1(r.get('paginas', ''))
+                    pdf.set_font("Arial", 'B', 11)
+                    pdf.multi_cell(0, 6, f"[{tip}] REVISTA {rev} | pp. {pags}")
+                    if tit:
+                        pdf.set_font("Arial", '', 10)
+                        pdf.multi_cell(0, 5, tit)
+                    aut = r.get('autores_colaboradores', [])
+                    if aut:
+                        if isinstance(aut, list):
+                            s_aut = ', '.join([DataModule.format_nome_abnt(a) for a in aut if a])
+                        else:
+                            s_aut = DataModule.format_nome_abnt(aut)
+                        s_aut = PDFModule.to_latin1(s_aut)
+                        pdf.set_font("Arial", 'I', 10)
+                        pdf.multi_cell(0, 6, f"Autores: {s_aut}")
+                    nota_ed = r.get('nota_edicao', '')
+                    if nota_ed:
+                        ne = PDFModule.to_latin1(nota_ed)
+                        pdf.set_font("Arial", 'I', 9)
+                        pdf.multi_cell(0, 5, f"Nota de edição: {ne}")
+                    icons = r.get('iconografias', [])
+                    if isinstance(icons, list) and icons:
+                        icon_txt = []
+                        for ic in icons:
+                            t = ic.get('tipo', '')
+                            d = ic.get('descricao', '')
+                            if t or d:
+                                icon_txt.append(f"{t}: {d}")
+                        if icon_txt:
+                            s_icon = PDFModule.to_latin1(" | ".join(icon_txt))
+                            pdf.set_font("Arial", 'I', 9)
+                            pdf.set_text_color(100, 100, 100)
+                            pdf.multi_cell(0, 5, f"[Iconografia]: {s_icon}")
+                            pdf.set_text_color(0, 0, 0)
+                    res = r.get('resumo', '')
+                    if res:
+                        resumo_txt = PDFModule.to_latin1(res)
+                        if len(resumo_txt) > 800:
+                            resumo_txt = resumo_txt[:800] + "..."
+                        pdf.set_font("Arial", '', 10)
+                        pdf.multi_cell(0, 5, resumo_txt)
+                    pdf.ln(5)
+                    pdf.line(10, pdf.get_y(), 200, pdf.get_y())
+                    pdf.ln(5)
+                except Exception:
+                    continue
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+        except Exception as e:
+            st.error(f"Erro ao gerar PDF: {str(e)}")
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_font("Arial", '', 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("Erro ao gerar relatório"), ln=True)
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+
+    @staticmethod
+    def gerar_pdf_busca_analitica(df_reg, total_base, crit, df_citados=None, df_colab=None):
+        """
+        Relatório da aba EXPLORAR DADOS, incluindo:
+        - Critérios de busca
+        - Nº de registros e % na base
+        - Resumo de 'Autores citados' e 'Autores colaboradores' (tabelas da seleção)
+        - Lista de registros
+        """
+        try:
+            pdf = FPDF()
+            pdf.add_page()
+            PDFModule.add_nelic_logo_to_pdf(pdf)
+            pdf.set_font("Arial", 'B', 16)
+            pdf.set_xy(35, 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("RELATÓRIO DE BUSCA - PROJETO SIBILA"), ln=True, align='C')
+            pdf.set_font("Arial", '', 10)
+            pdf.set_x(35)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
+            pdf.ln(5)
+            pdf.set_fill_color(240, 240, 240)
+            pdf.rect(10, 45, 190, 30, 'F')
+            pdf.set_y(48)
+            pdf.set_x(15)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Critério(s): {crit}"), ln=True)
+            qtd = len(df_reg)
+            pct = (qtd / total_base * 100) if total_base > 0 else 0
+            pdf.set_x(15)
+            pdf.set_font("Arial", '', 11)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Registros encontrados: {qtd} de {total_base} (total da base)"), ln=True)
+            pdf.set_x(15)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Percentual da base total: {pct:.2f}%"), ln=True)
+            pdf.ln(10)
+            if df_citados is not None and not df_citados.empty:
+                pdf.set_font("Arial", 'B', 11)
+                pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores citados na seleção (Top 10)"))
+                pdf.set_font("Arial", '', 10)
+                for _, row in df_citados.head(10).iterrows():
+                    if pdf.get_y() > 260:
+                        pdf.add_page()
+                        pdf.set_font("Arial", 'B', 11)
+                        pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores citados na seleção (cont.)"))
+                        pdf.set_font("Arial", '', 10)
+                    linha = f"- {row['Termo']}: {row['Qtd']} ocorrência(s) ({row['%']})"
+                    pdf.multi_cell(0, 5, PDFModule.to_latin1(linha))
+                pdf.ln(6)
+            if df_colab is not None and not df_colab.empty:
+                pdf.set_font("Arial", 'B', 11)
+                pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores colaboradores na seleção (Top 10)"))
+                pdf.set_font("Arial", '', 10)
+                for _, row in df_colab.head(10).iterrows():
+                    if pdf.get_y() > 260:
+                        pdf.add_page()
+                        pdf.set_font("Arial", 'B', 11)
+                        pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores colaboradores na seleção (cont.)"))
+                        pdf.set_font("Arial", '', 10)
+                    linha = f"- {row['Termo']}: {row['Qtd']} ocorrência(s) ({row['%']})"
+                    pdf.multi_cell(0, 5, PDFModule.to_latin1(linha))
+                pdf.ln(8)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.multi_cell(0, 6, PDFModule.to_latin1("Registros da seleção"))
+            pdf.ln(3)
+            for _, r in df_reg.iterrows():
+                if pdf.get_y() > 250:
+                    pdf.add_page()
+                try:
+                    tit = PDFModule.to_latin1(r.get('titulo_artigo', ''))
+                    tip = PDFModule.to_latin1(r.get('vocabulario_controlado', ''))
+                    rev = PDFModule.to_latin1(r.get('n', ''))
+                    pags = PDFModule.to_latin1(r.get('paginas', ''))
+                    pdf.set_font("Arial", 'B', 11)
+                    pdf.multi_cell(0, 6, f"[{tip}] REVISTA {rev} | pp. {pags}")
+                    if tit:
+                        pdf.set_font("Arial", '', 10)
+                        pdf.multi_cell(0, 5, tit)
+                    aut = r.get('autores_colaboradores', [])
+                    if aut:
+                        if isinstance(aut, list):
+                            s_aut = ', '.join([DataModule.format_nome_abnt(a) for a in aut if a])
+                        else:
+                            s_aut = DataModule.format_nome_abnt(aut)
+                        s_aut = PDFModule.to_latin1(s_aut)
+                        pdf.set_font("Arial", 'I', 10)
+                        pdf.multi_cell(0, 6, f"Autores: {s_aut}")
+                    nota_ed = r.get('nota_edicao', '')
+                    if nota_ed:
+                        ne = PDFModule.to_latin1(nota_ed)
+                        pdf.set_font("Arial", 'I', 9)
+                        pdf.multi_cell(0, 5, f"Nota de edição: {ne}")
+                    res = r.get('resumo', '')
+                    if res:
+                        resumo_txt = PDFModule.to_latin1(res)
+                        if len(resumo_txt) > 800:
+                            resumo_txt = resumo_txt[:800] + "..."
+                        pdf.set_font("Arial", '', 10)
+                        pdf.multi_cell(0, 5, resumo_txt)
+                    pdf.ln(5)
+                    pdf.line(10, pdf.get_y(), 200, pdf.get_y())
+                    pdf.ln(5)
+                except Exception:
+                    continue
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+        except Exception as e:
+            st.error(f"Erro ao gerar PDF da busca: {str(e)}")
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_font("Arial", '', 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("Erro ao gerar relatório de busca"), ln=True)
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+
+    @staticmethod
+    def gerar_pdf_ficha(registro):
+        try:
+            pdf = FPDF()
+            pdf.add_page()
+            PDFModule.add_nelic_logo_to_pdf(pdf)
+            pdf.set_font("Arial", 'B', 14)
+            pdf.set_xy(35, 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("FICHA NELIC – PROJETO SIBILA"), ln=True, align='C')
+            pdf.set_font("Arial", '', 9)
+            pdf.set_x(35)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
+            pdf.ln(4)
+            pdf.set_y(30)
+            def safe(text):
+                return PDFModule.to_latin1(text)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, safe("1. IDENTIFICAÇÃO"), ln=True)
+            pdf.set_font("Arial", '', 10)
+            pdf.multi_cell(0, 5, safe(f"Nº revista: {registro.get('n','')}"))
+            pdf.multi_cell(0, 5, safe(f"Registro: {registro.get('registro','')}"))
+            pdf.multi_cell(0, 5, safe(f"Páginas: {registro.get('paginas','')}"))
+            pdf.multi_cell(0, 5, safe(f"Tipo textual: {registro.get('vocabulario_controlado','')}"))
+            pdf.multi_cell(
+                0, 5,
+                safe(f"Idiomas: {registro.get('idioma_01','')} / {registro.get('idioma_02','')}")
+            )
+            pdf.ln(3)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, safe("2. RESPONSABILIDADE AUTORAL"), ln=True)
+            pdf.set_font("Arial", '', 10)
+            colab = registro.get('autores_colaboradores', [])
+            trad = registro.get('tradutores', [])
+            nome_ass = registro.get('nome_pessoal_como_assunto', [])
+            if colab:
+                lst = colab if isinstance(colab, list) else [colab]
+                s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
+                pdf.multi_cell(0, 5, safe(f"Colaboradores: {s}"))
+            if trad:
+                lst = trad if isinstance(trad, list) else [trad]
+                s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
+                pdf.multi_cell(0, 5, safe(f"Tradutores: {s}"))
+            if nome_ass:
+                lst = nome_ass if isinstance(nome_ass, list) else [nome_ass]
+                s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
+                pdf.multi_cell(0, 5, safe(f"Nome pessoal como assunto: {s}"))
+            pdf.ln(3)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, safe("3. CONTEÚDO"), ln=True)
+            pdf.set_font("Arial", '', 10)
+            pdf.multi_cell(0, 5, safe(f"Título: {registro.get('titulo_artigo','')}"))
+            sub = registro.get('subtitulo_artigo', '')
+            if sub:
+                pdf.multi_cell(0, 5, safe(f"Subtítulo: {sub}"))
+            nota_ed = registro.get('nota_edicao', '')
+            if nota_ed:
+                pdf.multi_cell(0, 5, safe(f"Nota de edição: {nota_ed}"))
+            res = registro.get('resumo', '')
+            if res:
+                pdf.ln(1)
+                pdf.set_font("Arial", 'I', 10)
+                pdf.multi_cell(0, 4, safe(res))
+            pdf.ln(3)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, safe("4. ASSUNTOS"), ln=True)
+            pdf.set_font("Arial", '', 10)
+            kw = registro.get('palavras_chave', [])
+            aut_cit = registro.get('autores_citados', [])
+            if kw:
+                s = ", ".join(kw) if isinstance(kw, list) else kw
+                pdf.multi_cell(0, 5, safe(f"Palavras-chave: {s}"))
+            if aut_cit:
+                lst = aut_cit if isinstance(aut_cit, list) else [aut_cit]
+                s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
+                pdf.multi_cell(0, 5, safe(f"Autores citados: {s}"))
+            pdf.ln(3)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, safe("5. ICONOGRAFIA"), ln=True)
+            pdf.set_font("Arial", '', 10)
+            icons = registro.get('iconografias', [])
+            if icons:
+                for ic in icons:
+                    linha = f"- {ic.get('tipo','')}: {ic.get('descricao','')}"
+                    pdf.multi_cell(0, 5, safe(linha))
+            else:
+                pdf.multi_cell(0, 5, safe("Sem iconografia registrada."))
+            pdf.ln(3)
+            pdf.set_font("Arial", 'B', 11)
+            pdf.cell(0, 6, safe("6. NOTAS DE PESQUISA"), ln=True)
+            pdf.set_font("Arial", '', 10)
+            notas = registro.get('notas_pesquisa', [])
+            if notas:
+                for n in sorted(notas, key=lambda x: x.get('data', ''), reverse=True):
+                    data_str = n.get('data', '')[:10]
+                    t = n.get('titulo', '')
+                    txt = n.get('texto', '')
+                    tags = n.get('tags', [])
+                    pdf.set_font("Arial", 'B', 9)
+                    pdf.multi_cell(0, 4, safe(f"[{data_str}] {t}"))
+                    if tags:
+                        pdf.set_font("Arial", 'I', 8)
+                        pdf.multi_cell(0, 4, safe("Tags: " + ", ".join(tags)))
+                    pdf.set_font("Arial", '', 9)
+                    pdf.multi_cell(0, 4, safe(txt))
+                    pdf.ln(1)
+            else:
+                pdf.multi_cell(0, 5, safe("Sem notas vinculadas a este registro até o momento."))
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+        except Exception as e:
+            st.error(f"Erro ao gerar ficha em PDF: {str(e)}")
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_font("Arial", '', 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("Erro ao gerar ficha"), ln=True)
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+
+    @staticmethod
+    def gerar_pdf_tabela_estatistica(df_stats, titulo):
+        """
+        Gera PDF apenas com tabela de estatísticas (campo, num. absoluto, percentual),
+        seguindo o modelo dos relatórios de gêneros e palavras-chave do sistema original.
+        """
+        try:
+            pdf = FPDF()
+            pdf.add_page()
+            PDFModule.add_nelic_logo_to_pdf(pdf)
+            pdf.set_font("Arial", 'B', 16)
+            pdf.set_xy(35, 12)
+            pdf.cell(0, 10, PDFModule.to_latin1(f"ESTATÍSTICAS - {titulo.upper()}"), ln=True, align='C')
+            pdf.set_font("Arial", '', 10)
+            pdf.set_x(35)
+            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
+            pdf.ln(10)
+            cols = list(df_stats.columns)
+            n_cols = len(cols)
+            available_width = 190
+            col_width = available_width / n_cols if n_cols > 0 else available_width
+            pdf.set_font("Arial", 'B', 10)
+            for col in cols:
+                pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C')
+            pdf.ln()
+            pdf.set_font("Arial", '', 9)
+            for _, row in df_stats.iterrows():
+                if pdf.get_y() > 265:
+                    pdf.add_page()
+                    pdf.ln(10)
+                    pdf.set_font("Arial", 'B', 10)
+                    for col in cols:
+                        pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C')
+                    pdf.ln()
+                    pdf.set_font("Arial", '', 9)
+                for col in cols:
+                    txt = PDFModule.to_latin1(str(row[col]))
+                    pdf.cell(col_width, 6, txt, border=1)
+                pdf.ln()
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+        except Exception as e:
+            st.error(f"Erro ao gerar PDF de estatísticas: {str(e)}")
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_font("Arial", '', 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("Erro ao gerar relatório de estatísticas"), ln=True)
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+
+class UtilsModule:
+    """Encapsula funções utilitárias."""
+    @staticmethod
+    def sanitizar_dataframe(df):
+        colunas_lista = [
+            'iconografias',
+            'autores_colaboradores',
+            'tradutores',
+            'autores_citados',
+            'palavras_chave',
+            'nome_pessoal_como_assunto',
+            'notas_pesquisa'
+        ]
+        if df.empty:
+            return df
+        for col in colunas_lista:
+            if col in df.columns:
+                df[col] = df[col].apply(lambda x: x if isinstance(x, list) else [])
+        return df
+
+    @staticmethod
+    def calculate_stats_with_percentage(series):
+        if series.empty:
+            return pd.DataFrame(columns=['Termo', 'Qtd', '%'])
+        counts = series.value_counts().reset_index()
+        counts.columns = ['Termo', 'Qtd']
+        total = counts['Qtd'].sum()
+        counts['%'] = (counts['Qtd'] / total * 100).map('{:.2f}%'.format)
+        return counts
+
+    @staticmethod
+    def get_registro_by_id(dados, reg_id):
+        for r in dados:
+            if r.get('_id') == reg_id:
+                return r
+        return None
+
+    @staticmethod
+    def is_bilingue(registro):
+        """
+        Identifica publicação bilíngue procurando 'bilíngue/bilingue'
+        tanto em nota de edição quanto no resumo (colchetes, aspas etc.).
+        """
+        nota = str(registro.get('nota_edicao', '') or '')
+        resu = str(registro.get('resumo', '') or '')
+        texto = (nota + " " + resu).lower()
+        return ('bilíngue' in texto) or ('bilingue' in texto)
+
+    @staticmethod
+    def format_list_field(reg, field):
+        raw = reg.get(field)
+        itens = []
+        if isinstance(raw, list):
+            for v in raw:
+                if v is None:
+                    continue
+                if isinstance(v, float) and pd.isna(v):
+                    continue
+                s = str(v).strip()
+                if s:
+                    itens.append(s)
+        elif isinstance(raw, str):
+            s = raw.strip()
+            if s:
+                itens.append(s)
+        elif raw is not None and not (isinstance(raw, float) and pd.isna(raw)):
+            s = str(raw).strip()
+            if s:
+                itens.append(s)
+        if field in {'autores_colaboradores', 'autores_citados', 'tradutores', 'nome_pessoal_como_assunto'}:
+            itens = [DataModule.format_nome_abnt(i) for i in itens]
+        return ', '.join(itens) if itens else '—'
+
+    @staticmethod
+    def construir_tipo_textual(tipo_principal: str, subtipo: str | None) -> str:
+        """Monta o rótulo completo, ignorando o placeholder 'Sem especificação'."""
+        if subtipo and subtipo.strip() and subtipo != "Sem especificação":
+            return f"{tipo_principal} - {subtipo.strip()}"
+        return tipo_principal
+
+    @staticmethod
+    def parse_tipo_textual(valor: str) -> tuple[str, str | None]:
+        """Separa o rótulo salvo em principal e subtipo para preencher o formulário."""
+        if not valor:
+            return "", None
+        if " - " in valor:
+            partes = valor.split(" - ", 1)
+            return partes[0].strip(), partes[1].strip()
+        return valor.strip(), "Sem especificação"
+
+    @staticmethod
+    def converter_excel(df):
+        try:
+            o = BytesIO()
+            with pd.ExcelWriter(o, engine='xlsxwriter') as w:
+                df_export = df.copy()
+                for col in df_export.columns:
+                    df_export[col] = df_export[col].apply(
+                        lambda x: json.dumps(x, ensure_ascii=False) if isinstance(x, (list, dict)) else x
+                    )
+                df_export.to_excel(w, index=False, sheet_name='Dados')
+            return o.getvalue()
+        except Exception as e:
+            st.error(f"Erro ao gerar Excel: {str(e)}")
+            o = BytesIO()
+            pd.DataFrame({'Erro': ['Erro ao gerar planilha']}).to_excel(o, index=False)
+            return o.getvalue()
+
+# ==========================================
+# 3. COMPONENTES REUTILIZÁVEIS
+# ==========================================
+
+class CatalogacaoForm:
+    def __init__(self, dados, df):
+        self.dados = dados
+        self.df = df
+
+    def render(self, rec=None, mode="NOVO REGISTRO"):
+        # Inicializa session_state
+        if 'loaded_json' not in st.session_state:
+            st.session_state.loaded_json = None
+        if 'clear_json_input' not in st.session_state:
+            st.session_state.clear_json_input = False
+
+        # Carregamento Rápido via JSON
+        with st.expander("📥 CARREGAMENTO RÁPIDO (COPIAR & COLAR JSON)", expanded=False):
+            c_txt, c_btn = st.columns([4, 1])
+            with c_txt:
+                json_value = "" if st.session_state.clear_json_input else None
+                j_txt = st.text_area("Cole o JSON:", height=100, key="json_input", value=json_value if json_value is not None else "")
+            with c_btn:
+                st.write(""); st.write("")
+                b_load = st.button("PROCESSAR")
+
+        if st.session_state.clear_json_input:
+            st.session_state.clear_json_input = False
+
+        # Lógica de Carregamento JSON
+        if b_load and j_txt:
+            try:
+                l = json.loads(j_txt)
+                rec = l[0] if isinstance(l, list) else l
+                st.session_state.loaded_json = rec
+                st.success("✅ JSON carregado!")
+            except Exception as e:
+                st.error(f"❌ Erro ao processar JSON: {str(e)}")
+                st.session_state.loaded_json = None
+
+        if st.session_state.loaded_json is not None:
+            rec = st.session_state.loaded_json
+            st.info("📋 Dados carregados.")
+            if st.button("🗑️ Limpar dados"):
+                st.session_state.loaded_json = None
+                st.session_state.clear_json_input = True
+                st.rerun()
+
+        # Lógica de Editar Existente (chamada externamente)
+        # --- SELEÇÃO DE TIPO TEXTUAL (FORA DO FORMULÁRIO) ---
+        st.markdown("---")
+        st.markdown("#### TIPO TEXTUAL (Vocabulário Controlado)")
+        tipo_atual = (rec or {}).get('vocabulario_controlado', '')
+        tipo_principal_atual, subtipo_atual = UtilsModule.parse_tipo_textual(tipo_atual) if tipo_atual else (None, None)
+        col_tipo1, col_tipo2 = st.columns(2)
+        with col_tipo1:
+            tipos_principais = sorted(DataModule.GÊNEROS_TEXTUAIS.keys())
+            idx_tipo = tipos_principais.index(tipo_principal_atual) if tipo_principal_atual in tipos_principais else 0
+            tipo_principal_selecionado = st.selectbox(
+                "TIPO PRINCIPAL*",
+                tipos_principais,
+                index=idx_tipo,
+                key="sel_tipo_principal",
+                help="Selecione o tipo textual principal."
+            )
+        with col_tipo2:
+            subtipos_disponiveis = DataModule.GÊNEROS_TEXTUAIS.get(tipo_principal_selecionado, ["Sem especificação"])
+            idx_subtipo = subtipos_disponiveis.index(subtipo_atual) if subtipo_atual in subtipos_disponiveis else 0
+            subtipo_selecionado = st.selectbox(
+                "SUBTIPO (Campo disciplinar)",
+                subtipos_disponiveis,
+                index=idx_subtipo,
+                key="sel_subtipo",
+                help="Especifique o campo disciplinar."
+            )
+
+        tipo_textual_final = UtilsModule.construir_tipo_textual(tipo_principal_selecionado, subtipo_selecionado)
+        st.info(f"Será registrado como: **{tipo_textual_final}**")
+
+        # -----------------------------------------------------
+        st.markdown("---")
+        # --- INÍCIO DO FORMULÁRIO ---
+        with st.form("f1"):
+            c_form1, c_form2, c_form3, c_form4 = st.columns(4)
+            n_rev = c_form1.text_input("Nº REVISTA*", value=(rec or {}).get('n', ''), key="input_n_rev")
+            reg_txt = c_form2.text_input("REGISTRO*", value=(rec or {}).get('registro', ''), key="input_registro")
+            pag = c_form3.text_input("PÁGINAS", value=(rec or {}).get('paginas', ''), key="input_paginas")
+            # Verificação de Duplicidade
+            if n_rev and reg_txt:
+                duplicado = False
+                for r in self.dados:
+                    if mode == "EDITAR EXISTENTE" and (rec or {}).get('_id') == r.get('_id'): continue
+                    if str(r.get('n')) == str(n_rev) and str(r.get('registro')) == str(reg_txt):
+                        duplicado = True
+                        break
+                if duplicado:
+                    st.warning(f"⚠️ ATENÇÃO: Já existe o registro '{reg_txt}' na Revista {n_rev}!", icon="🚨")
+            ordem = c_form4.number_input("ORDEM", value=int((rec or {}).get('ordem_exibicao', 0)), key="input_ordem")
+
+            c5, c6, c7 = st.columns(3)
+            langs = ["POR", "ING", "ESP", "FRA", "ITA", "ALE", "RUS", "CAT", "GRE", "JAP"]
+            i1 = c5.selectbox("IDIOMA 1", langs, index=langs.index((rec or {}).get('idioma_01', 'POR')) if (rec or {}).get('idioma_01') in langs else 0, key="input_i1")
+            i2 = c6.selectbox("IDIOMA 2", [""] + langs, index=(langs.index((rec or {}).get('idioma_02')) + 1) if (rec or {}).get('idioma_02') in langs else 0, key="input_i2")
+            st.markdown("---")
+
+            regra_help = "Se sem título: insira o primeiro verso entre aspas..."
+            tit = st.text_input("TÍTULO*", value=(rec or {}).get('titulo_artigo', ''), help=regra_help, key="input_titulo")
+            sub = st.text_input("SUBTÍTULO", value=(rec or {}).get('subtitulo_artigo', ''), key="input_sub")
+            nota_ed = st.text_input("NOTA DE EDIÇÃO", value=(rec or {}).get('nota_edicao', ''), key="input_nota")
+            def lt(x): return "\n".join(x) if isinstance(x, list) else str(x)
+
+            st.markdown("---")
+            st.markdown("#### RESPONSABILIDADE AUTORAL")
+            c8, c9 = st.columns(2)
+            aut = c8.text_area("COLABORADORES", value=lt((rec or {}).get('autores_colaboradores', [])), key="input_autores")
+            trad = c9.text_area("TRADUTORES", value=lt((rec or {}).get('tradutores', [])), key="input_tradutores")
+
+            st.markdown("---")
+            st.markdown("#### ASSUNTOS")
+            c10, c11 = st.columns(2)
+            cit = c10.text_area("AUTORES CITADOS", value=lt((rec or {}).get('autores_citados', [])), key="input_citados")
+            kw = c11.text_area("PALAVRAS-CHAVE", value=lt((rec or {}).get('palavras_chave', [])), key="input_kw")
+            nome_pessoal = st.text_area("NOME PESSOAL COMO ASSUNTO", value=lt((rec or {}).get('nome_pessoal_como_assunto', [])), key="input_pessoal")
+
+            st.markdown("---")
+            st.markdown("#### RESUMO ANALÍTICO")
+            tipo_base = tipo_principal_selecionado.upper().replace(" ", "")
+            requer_resumo = tipo_base not in TIPOS_SEM_RESUMO
+            label_resumo = "RESUMO" + (" (OBRIGATÓRIO)" if requer_resumo else " (OPCIONAL)")
+            resumo = st.text_area(label_resumo, value=(rec or {}).get('resumo', ''), height=200, key="input_resumo")
+
+            st.markdown("---")
+            st.subheader("ICONOGRAFIA")
+            icon_data = (rec or {}).get('iconografias', [])
+            df_icon = pd.DataFrame(icon_data)
+            if df_icon.empty: df_icon = pd.DataFrame(columns=["tipo", "descricao"])
+            elif "tipo" not in df_icon.columns: df_icon["tipo"] = ""
+            elif "descricao" not in df_icon.columns: df_icon["descricao"] = ""
+            edited_icon = st.data_editor(
+                df_icon,
+                column_config={
+                    "tipo": st.column_config.SelectboxColumn("Tipo", options=DataModule.LISTA_ICONOGRAFIA, required=True, width="medium"),
+                    "descricao": st.column_config.TextColumn("Descrição", required=True, width="large")
+                },
+                num_rows="dynamic",
+                use_container_width=True,
+                key="editor_icon_unique"
+            )
+            st.markdown("---")
+            # BOTÃO SALVAR (DENTRO DO FORM)
+            submit_btn = st.form_submit_button("💾 SALVAR", type="primary")
+
+        # LÓGICA DE SALVAMENTO (FORA DO FORM, MAS GATILHADA PELO BOTÃO)
+        if submit_btn:
+            if not n_rev or not reg_txt:
+                st.error("❌ Campos obrigatórios: Nº REVISTA e REGISTRO!")
+                st.stop()
+            if requer_resumo and not resumo.strip():
+                st.error(f"❌ O tipo textual '{tipo_textual_final}' exige RESUMO ANALÍTICO!")
+                st.stop()
+            icon_list = edited_icon.to_dict('records')
+            icon_list = [i for i in icon_list if i.get("tipo") or i.get("descricao")]
+
+            new = {
+                "n": n_rev,
+                "registro": reg_txt,
+                "ordem_exibicao": ordem,
+                "idioma_01": i1,
+                "idioma_02": i2 if i2 else "",
+                "vocabulario_controlado": tipo_textual_final,
+                "titulo_artigo": tit,
+                "subtitulo_artigo": sub,
+                "paginas": pag,
+                "resumo": resumo,
+                "nota_edicao": nota_ed,
+                "autores_colaboradores": DataModule.normalizar_lista_autores(aut),
+                "tradutores": DataModule.normalizar_lista_autores(trad),
+                "autores_citados": DataModule.normalizar_lista_autores(cit),
+                "palavras_chave": DataModule.normalizar_texto(kw.replace(',', '\n').split('\n')),
+                "nome_pessoal_como_assunto": DataModule.normalizar_lista_autores(nome_pessoal),
+                "iconografias": icon_list,
+                "_timestamp": datetime.now().isoformat()
+            }
+            if 'notas_pesquisa' in (rec or {}):
+                new['notas_pesquisa'] = (rec or {}).get('notas_pesquisa', [])
+            if mode == "EDITAR EXISTENTE" and '_id' in (rec or {}):
+                new['_id'] = (rec or {})['_id']
+                for i, d in enumerate(self.dados):
+                    if d.get('_id') == (rec or {})['_id']:
+                        self.dados[i] = new
+                        break
+            else:
+                new['_id'] = str(int(datetime.now().timestamp() * 1000))
+                new.setdefault('notas_pesquisa', [])
+                self.dados.append(new)
+
+            if PersistenceModule.save_data(self.dados):
+                st.success("✅ Registro salvo com sucesso!")
+                st.balloons()
+                st.session_state.loaded_json = None
+
+
+class FichasNotasView:
+    def __init__(self, df, dados):
+        self.df = df
+        self.dados = dados
+
+    def render(self):
+        st.title("📇 FICHAS & NOTAS NELIC")
+        if self.df.empty:
+            st.warning("Base de dados vazia. Cadastre registros na aba CATALOGAÇÃO.")
+            return
+
+        st.markdown("### 🔍 Navegação por Revista")
+        revistas_disponiveis = sorted(self.df['n'].astype(str).unique())
+        revista_selecionada = st.selectbox(
+            "Selecione a revista:",
+            ["Todas as revistas"] + revistas_disponiveis,
+            help="Filtre os registros por número da revista para facilitar a navegação"
+        )
+
+        if revista_selecionada == "Todas as revistas":
+            df_filtrado = self.df
+        else:
+            df_filtrado = self.df[self.df['n'].astype(str) == revista_selecionada]
+
+        st.markdown("---")
+        opcoes = [
+            f"{r.get('n','?')} | Reg: {r.get('registro','?')} | {r.get('titulo_artigo','[sem título]')}"
+            for _, r in df_filtrado.iterrows()
+        ]
+        if not opcoes:
+            st.warning(f"⚠️ Nenhum registro encontrado para a revista {revista_selecionada}")
+            return
+
+        escolha = st.selectbox("Selecione o registro específico:", opcoes)
+        idx = opcoes.index(escolha)
+        reg_sel = df_filtrado.iloc[idx].to_dict()
+        reg_id = reg_sel.get('_id')
+
+        c_esq, c_dir = st.columns([2, 1])
+        with c_esq:
+            st.markdown(
+                f"""
+                <div class="nelic-card">
+                    <div class="nelic-card-header">FICHA NELIC – REGISTRO {reg_sel.get('registro','')}</div>
+                    <div class="nelic-card-subtitle">
+                        Revista {reg_sel.get('n','?')} · Tipo {reg_sel.get('vocabulario_controlado','')} · pp. {reg_sel.get('paginas','')}
+                    </div>
+                    <div>
+                        <strong>Título:</strong> {reg_sel.get('titulo_artigo','[sem título]')}<br>
+                        <strong>Subtítulo:</strong> {reg_sel.get('subtitulo_artigo','')}
+                    </div>
+                    <div style="margin-top:0.4rem;">
+                        <span class="nelic-tag">Idioma 1: {reg_sel.get('idioma_01','')}</span>
+                        <span class="nelic-tag nelic-tag-muted">Idioma 2: {reg_sel.get('idioma_02','')}</span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
+            st.markdown("#### Conteúdo e Assuntos")
+            with st.expander("📌 Conteúdo", expanded=True):
+                st.markdown(f"**Nota de edição:** {reg_sel.get('nota_edicao','—')}")
+                st.markdown("**Resumo:**")
+                st.write(reg_sel.get('resumo', '—'))
+
+            with st.expander("🎯 Assuntos e Autores", expanded=False):
+                st.markdown(f"**Palavras-chave:** {UtilsModule.format_list_field(reg_sel, 'palavras_chave')}")
+                st.markdown(f"**Autores citados:** {UtilsModule.format_list_field(reg_sel, 'autores_citados')}")
+                st.markdown(f"**Nomes pessoais como assunto:** {UtilsModule.format_list_field(reg_sel, 'nome_pessoal_como_assunto')}")
+
+            with st.expander("🖼️ Iconografia", expanded=False):
+                icons = reg_sel.get('iconografias', [])
+                if icons:
+                    for ic in icons:
+                        st.markdown(f"- **{ic.get('tipo','')}** · {ic.get('descricao','')}")
+                else:
+                    st.markdown("Nenhuma iconografia registrada.")
+
+        with c_dir:
+            st.markdown("#### Exportar Ficha")
+            pdf_ficha = PDFModule.gerar_pdf_ficha(reg_sel)
+            st.download_button(
+                "📄 BAIXAR FICHA EM PDF",
+                pdf_ficha,
+                f"ficha_sibila_{reg_sel.get('registro','')}.pdf",
+                "application/pdf",
+                use_container_width=True
+            )
+
+            st.markdown("---")
+            st.markdown("#### Notas de Pesquisa")
+            # Carregamos o diário aqui para garantir atualização
+            diario = PersistenceModule.load_diario()
+            notas = reg_sel.get('notas_pesquisa', []) or []
+            with st.form("form_nota_registro"):
+                titulo_nota = st.text_input("Título da nota")
+                texto_nota = st.text_area("Texto da nota", height=120)
+                tags_nota = st.text_input("Tags (separadas por vírgula)")
+                if st.form_submit_button("➕ Adicionar nota a este registro"):
+                    if texto_nota.strip():
+                        nova_nota = {
+                            "id": str(int(datetime.now().timestamp() * 1000)),
+                            "data": datetime.now().isoformat(),
+                            "titulo": titulo_nota.strip() or "[sem título]",
+                            "texto": texto_nota.strip(),
+                            "tags": [t.strip() for t in tags_nota.split(',') if t.strip()],
+                            "registro_id": reg_id
+                        }
+                        # Precisamos buscar o registro na lista original 'dados' para salvar
+                        reg_real = UtilsModule.get_registro_by_id(self.dados, reg_id)
+                        if reg_real is not None:
+                            reg_real.setdefault('notas_pesquisa', [])
+                            reg_real['notas_pesquisa'].append(nova_nota)
+                            if PersistenceModule.save_data(self.dados):
+                                st.success("Nota adicionada ao registro.")
+                                st.rerun() # Recarrega para mostrar a nota nova
+                        else:
+                            st.error("Erro ao vincular nota.")
+                    else:
+                        st.warning("O texto da nota não pode estar vazio.")
+
+            if notas:
+                st.markdown("##### Notas já cadastradas")
+                for n in sorted(notas, key=lambda x: x.get('data', ''), reverse=True):
+                    dt = n.get('data', '')[:16].replace("T", " ")
+                    st.markdown(
+                        f"""
+                        <div class="nelic-card">
+                            <div class="nelic-card-header">{n.get('titulo','[sem título]')}</div>
+                            <div class="nelic-card-subtitle">Data: {dt}</div>
+                            <div class="nelic-muted">{n.get('texto','')}</div>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )
+                    tags = n.get('tags', [])
+                    if tags:
+                        st.markdown(" ".join([f"<span class='nelic-tag nelic-tag-muted'>{t}</span>" for t in tags]), unsafe_allow_html=True)
+            else:
+                st.info("Nenhuma nota vinculada.")
+
+# ==========================================
+# 4. FUNÇÕES DE RELATÓRIOS
+# ==========================================
+
+def relatorio_mapa_colaboracao(df):
+    st.markdown("#### Mapa de colaboração por número da revista")
+    def unique_colab_por_revista(df_local):
+        def uniq(lst):
+            if not isinstance(lst, list):
+                return set()
+            return set([str(x).strip() for x in lst if str(x).strip()])
+        rows = []
+        for rev, sub in df_local.groupby('n'):
+            s = set()
+            for line in sub['autores_colaboradores']:
+                s |= uniq(line if isinstance(line, list) else [line])
+            rows.append({"Revista": str(rev), "Colaboradores distintos": len(s)})
+        return pd.DataFrame(rows)
+
+    df_rel = unique_colab_por_revista(df)
+    st.dataframe(df_rel, use_container_width=True)
+    fig = px.bar(df_rel, x="Revista", y="Colaboradores distintos", text="Colaboradores distintos")
+    fig.update_layout(height=380, title="Colaboradores distintos por número da revista")
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("##### Exportar")
+    col1, col2, col3 = st.columns(3)
+    excel_rel = UtilsModule.converter_excel(df_rel)
+    col1.download_button(
+        "📊 EXCEL",
+        excel_rel,
+        f"rel_mapa_colaboracao_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        use_container_width=True
+    )
+    csv_rel = df_rel.to_csv(index=False, encoding='utf-8-sig')
+    col2.download_button(
+        "📋 CSV",
+        csv_rel,
+        f"rel_mapa_colaboracao_{datetime.now().strftime('%Y%m%d')}.csv",
+        "text/csv",
+        use_container_width=True
+    )
+    pdf_rel = PDFModule.gerar_pdf_analitico(df, len(df), "Mapa de colaboração por revista")
+    col3.download_button(
+        "📄 PDF (lista completa)",
+        pdf_rel,
+        f"rel_mapa_colaboracao_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
+        use_container_width=True
+    )
+
+def relatorio_bilinguismo(df):
+    st.markdown("#### Índice de publicações bilíngues por número da revista")
+    df_local = df.copy()
+    df_local['bilingue'] = df_local.apply(UtilsModule.is_bilingue, axis=1)
+    resumo = (
+        df_local.groupby('n')['bilingue']
+        .agg(total='count', bil='sum')
+        .reset_index()
+    )
+    resumo['% bilíngue'] = resumo.apply(
+        lambda r: (r['bil'] / r['total'] * 100) if r['total'] > 0 else 0, axis=1
+    )
+    resumo['n'] = resumo['n'].astype(str)
+    st.dataframe(resumo, use_container_width=True)
+    fig = px.bar(
+        resumo,
+        x='n',
+        y='% bilíngue',
+        text=resumo['% bilíngue'].map(lambda x: f"{x:.1f}%")
+    )
+    fig.update_layout(
+        height=380,
+        title="% de registros bilíngues (nota ou resumo) por revista",
+        xaxis_title="Revista",
+        yaxis_title="% bilíngue"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("##### Exportar")
+    col1, col2 = st.columns(2)
+    excel_rel = UtilsModule.converter_excel(resumo)
+    col1.download_button(
+        "📊 EXCEL",
+        excel_rel,
+        f"rel_bilinguismo_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        use_container_width=True
+    )
+    csv_rel = resumo.to_csv(index=False, encoding='utf-8-sig')
+    col2.download_button(
+        "📋 CSV",
+        csv_rel,
+        f"rel_bilinguismo_{datetime.now().strftime('%Y%m%d')}.csv",
+        "text/csv",
+        use_container_width=True
+    )
+
+def relatorio_iconografia(df):
+    st.markdown("#### Iconografia por número da revista")
+    df_local = df.copy()
+    df_local['tem_iconografia'] = df_local['iconografias'].apply(
+        lambda x: isinstance(x, list) and len(x) > 0
+    )
+    resumo = (
+        df_local.groupby('n')['tem_iconografia']
+        .agg(total='count', com_icon='sum')
+        .reset_index()
+    )
+    resumo['% com iconografia'] = resumo.apply(
+        lambda r: (r['com_icon'] / r['total'] * 100) if r['total'] > 0 else 0, axis=1
+    )
+    resumo['n'] = resumo['n'].astype(str)
+    st.dataframe(resumo, use_container_width=True)
+    fig = px.bar(
+        resumo,
+        x='n',
+        y='% com iconografia',
+        text=resumo['% com iconografia'].map(lambda x: f"{x:.1f}%")
+    )
+    fig.update_layout(
+        height=380,
+        title="% de registros com iconografia por revista",
+        xaxis_title="Revista",
+        yaxis_title="% registros com iconografia"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+    st.markdown("##### Exportar")
+    col1, col2 = st.columns(2)
+    excel_rel = UtilsModule.converter_excel(resumo)
+    col1.download_button(
+        "📊 EXCEL",
+        excel_rel,
+        f"rel_iconografia_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        use_container_width=True
+    )
+    csv_rel = resumo.to_csv(index=False, encoding='utf-8-sig')
+    col2.download_button(
+        "📋 CSV",
+        csv_rel,
+        f"rel_iconografia_{datetime.now().strftime('%Y%m%d')}.csv",
+        "text/csv",
+        use_container_width=True
+    )
+
+def relatorio_autores_assunto_colab(df):
+    st.markdown("#### Autores como assunto vs colaboradores")
+    s_colab = DataModule.get_normalized_series(df, 'autores_colaboradores')
+    s_ass = DataModule.get_normalized_series(df, 'nome_pessoal_como_assunto')
+    df_colab = UtilsModule.calculate_stats_with_percentage(s_colab)
+    df_ass = UtilsModule.calculate_stats_with_percentage(s_ass)
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("**Colaboradores (top 20)**")
+        st.dataframe(df_colab.head(20), use_container_width=True)
+    with c2:
+        st.markdown("**Nomes pessoais como assunto (top 20)**")
+        st.dataframe(df_ass.head(20), use_container_width=True)
+    intersect = set(df_colab['Termo']).intersection(set(df_ass['Termo']))
+    st.markdown("---")
+    st.markdown("##### Interseções (quem é autor e tema)")
+    if intersect:
+        st.write(", ".join(sorted(intersect)))
+    else:
+        st.write("Nenhum nome aparece simultaneamente como colaborador e como assunto na amostra.")
+
+def relatorio_generos_textuais(df):
+    st.markdown("#### Análise por gêneros textuais (tipos)")
+    df_local = df.copy()
+    df_local['tipo_base'] = df_local['vocabulario_controlado'].astype(str).apply(
+        lambda x: x.split(' - ')[0]
+    )
+    counts = df_local['tipo_base'].value_counts().reset_index()
+    counts.columns = ['Gênero textual', 'Num. Absoluto']
+    total = counts['Num. Absoluto'].sum()
+    counts['Percentual'] = (counts['Num. Absoluto'] / total * 100).map(lambda x: f"{x:.2f}%")
+    st.dataframe(counts, use_container_width=True)
+    st.markdown("##### Exportar")
+    col1, col2, col3 = st.columns(3)
+    excel_rel = UtilsModule.converter_excel(counts)
+    col1.download_button(
+        "📊 EXCEL",
+        excel_rel,
+        f"rel_generos_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        use_container_width=True
+    )
+    csv_rel = counts.to_csv(index=False, encoding='utf-8-sig')
+    col2.download_button(
+        "📋 CSV",
+        csv_rel,
+        f"rel_generos_{datetime.now().strftime('%Y%m%d')}.csv",
+        "text/csv",
+        use_container_width=True
+    )
+    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(counts, "Gêneros textuais")
+    col3.download_button(
+        "📄 PDF",
+        pdf_rel,
+        f"rel_generos_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
+        use_container_width=True
+    )
+
+def relatorio_manifesto(df):
+    st.markdown("#### Textos relacionados a 'Manifesto' (tipo textual, palavra-chave ou título)")
+    df_local = df.copy()
+    def verificar_manifesto(registro):
+        locais = []
+        tipo = str(registro.get('vocabulario_controlado', '')).lower()
+        if 'manifesto' in tipo:
+            locais.append('Tipo textual')
+        kw = registro.get('palavras_chave', [])
+        if isinstance(kw, list):
+            for palavra in kw:
+                if palavra and 'manifesto' in str(palavra).lower():
+                    locais.append('Palavra-chave')
+                    break
+        titulo = str(registro.get('titulo_artigo', '')).lower()
+        if 'manifesto' in titulo:
+            locais.append('Título')
+        resumo = str(registro.get('resumo', '')).lower()
+        if 'manifesto' in resumo:
+            locais.append('Resumo')
+        return locais
+
+    df_local['locais_manifesto'] = df_local.apply(verificar_manifesto, axis=1)
+    df_man = df_local[df_local['locais_manifesto'].apply(lambda x: len(x) > 0)].copy()
+    st.write(f"Registros encontrados: {len(df_man)} de {len(df)} (total da base)")
+    if not df_man.empty:
+        df_man['onde_encontrado'] = df_man['locais_manifesto'].apply(lambda x: ', '.join(x))
+        st.dataframe(
+            df_man[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'onde_encontrado']],
+            column_config={
+                'n': 'Revista',
+                'registro': 'Registro',
+                'vocabulario_controlado': 'Tipo',
+                'titulo_artigo': 'Título',
+                'onde_encontrado': 'Encontrado em'
+            },
+            use_container_width=True
+        )
+        st.markdown("##### Exportar")
+        col1, col2, col3 = st.columns(3)
+        df_export = df_man[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'palavras_chave', 'onde_encontrado']].copy()
+        excel_rel = UtilsModule.converter_excel(df_export)
+        col1.download_button(
+            "📊 EXCEL",
+            excel_rel,
+            f"rel_manifesto_{datetime.now().strftime('%Y%m%d')}.xlsx",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            use_container_width=True
+        )
+        csv_rel = df_export.to_csv(index=False, encoding='utf-8-sig')
+        col2.download_button(
+            "📋 CSV",
+            csv_rel,
+            f"rel_manifesto_{datetime.now().strftime('%Y%m%d')}.csv",
+            "text/csv",
+            use_container_width=True
+        )
+        pdf_rel = PDFModule.gerar_pdf_analitico(df_man, len(df), "Manifesto ou manifesto")
+        col3.download_button(
+            "📄 PDF",
+            pdf_rel,
+            f"rel_manifesto_{datetime.now().strftime('%Y%m%d')}.pdf",
+            "application/pdf",
+            use_container_width=True
+        )
+    else:
+        st.info("Nenhum registro relacionado a 'Manifesto' foi encontrado na base.")
+
+def relatorio_palavras_chave(df):
+    st.markdown("#### Estatísticas de palavras-chave (vocabulário controlado)")
+    s = DataModule.get_normalized_series(df, 'palavras_chave')
+    counts = UtilsModule.calculate_stats_with_percentage(s)
+    df_stats = counts.rename(
+        columns={'Termo': 'Palavra-chave', 'Qtd': 'Num. Absoluto', '%': 'Percentual'}
+    )
+    st.dataframe(df_stats, use_container_width=True)
+    st.markdown("##### Exportar")
+    col1, col2, col3 = st.columns(3)
+    excel_rel = UtilsModule.converter_excel(df_stats)
+    col1.download_button(
+        "📊 EXCEL",
+        excel_rel,
+        f"rel_palavras_chave_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        use_container_width=True
+    )
+    csv_rel = df_stats.to_csv(index=False, encoding='utf-8-sig')
+    col2.download_button(
+        "📋 CSV",
+        csv_rel,
+        f"rel_palavras_chave_{datetime.now().strftime('%Y%m%d')}.csv",
+        "text/csv",
+        use_container_width=True
+    )
+    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(df_stats, "Palavras-chave")
+    col3.download_button(
+        "📄 PDF",
+        pdf_rel,
+        f"rel_palavras_chave_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
+        use_container_width=True
+    )
+
+# ==========================================
+# 5. MAIN APP LOGIC
+# ==========================================
+
+def main():
+    if os.path.exists(LOGO_PATH):
+        st.sidebar.image(LOGO_PATH, use_container_width=True, output_format='PNG')
+    st.sidebar.markdown("### SISTEMA NELIC")
+    st.sidebar.markdown("**PROJETO SIBILA**")
+    st.sidebar.markdown("---")
+    menu = st.sidebar.radio(
+        "NAVEGAÇÃO",
+        [
+            "CATALOGAÇÃO",
+            "FICHAS & NOTAS",
+            "EXPLORAR DADOS",
+            "RELATÓRIOS",
+            "ANÁLISE COMPARATIVA",
+            "QUALIDADE DOS DADOS",
+            "DIÁRIO DE PESQUISA",
+            "METODOLOGIA",
+            "MAIS DADOS",
+            "EXPORTAR"
+        ],
+        label_visibility="collapsed"
+    )
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("🟢 **Sistema Ativo**")
+
+    dados = PersistenceModule.load_data()
+    df = pd.DataFrame(dados)
+    df = UtilsModule.sanitizar_dataframe(df)
+
+    # --- CATALOGAÇÃO ---
+    if menu == "CATALOGAÇÃO":
+        st.title("EDITOR DE REGISTROS")
+        form = CatalogacaoForm(dados, df)
+
+        # Seleção de Modo
+        c1, c2 = st.columns([1, 2])
+        with c1:
+            mode = st.radio("Modo:", ["NOVO REGISTRO", "EDITAR EXISTENTE"], key="mode_radio")
+
+        rec = {}
+        # Lógica de Editar Existente
+        if mode == "EDITAR EXISTENTE" and not df.empty:
+            with c2:
+                op = [f"{r.get('n','?')} | Reg: {r.get('registro','?')} | {r.get('titulo_artigo','[sem título]')}" for _, r in df.iterrows()]
+                sel = st.selectbox("Buscar registro:", op, key="search_existing")
+                if sel:
+                    rec = df.iloc[op.index(sel)].to_dict()
+                    st.session_state.loaded_json = None
+
+        form.render(rec=rec, mode=mode)
+
+    # --- FICHAS & NOTAS ---
+    elif menu == "FICHAS & NOTAS":
+        view = FichasNotasView(df, dados)
+        view.render()
+
+    # --- EXPLORAR DADOS ---
+    elif menu == "EXPLORAR DADOS":
+        st.title("🔎 EXPLORAR DADOS")
+        if not df.empty:
+            c1, c2, c3, c4 = st.columns(4)
+            termo = c1.text_input("Busca Livre (Título/Resumo):")
+            revs = sorted(df['n'].astype(str).unique())
+            f_rev = c2.multiselect("Revista", revs)
+            tipos_raw = df['vocabulario_controlado'].astype(str).unique()
+            tipos_clean = sorted(list(set([t.split(' - ')[0] for t in tipos_raw])))
+            f_tipo = c3.multiselect("Tipo Textual", tipos_clean)
+            f_kw = c4.multiselect("Palavras-Chave", DataModule.LISTA_PALAVRAS_CHAVE)
+
+            res = df.copy()
+            criterios = []
+            if f_rev:
+                res = res[res['n'].astype(str).isin(f_rev)]
+                criterios.append(f"Revistas: {', '.join(f_rev)}")
+            if f_tipo:
+                res = res[res['vocabulario_controlado'].apply(lambda x: str(x).split(' - ')[0] in f_tipo)]
+                criterios.append(f"Tipos: {', '.join(f_tipo)}")
+            if f_kw:
+                res = res[
+                    res['palavras_chave'].apply(
+                        lambda x: any(
+                            k.lower() in [i.lower() for i in (x if isinstance(x, list) else [])]
+                            for k in f_kw
+                        )
+                    )
+                ]
+                criterios.append(f"Palavras-chave: {', '.join(f_kw)}")
+            if termo:
+                res = res[
+                    res.astype(str).apply(lambda x: x.str.contains(termo, case=False)).any(axis=1)
+                ]
+                criterios.append(f"Termo livre: '{termo}'")
+
+            str_criterios = " | ".join(criterios) if criterios else "Toda a base de dados"
+            total_base = len(df)
+            qtd_res = len(res)
+            pct_res = (qtd_res / total_base * 100) if total_base > 0 else 0
+
+            st.markdown(f"**Registros encontrados:** {qtd_res} de {total_base} (total da base)")
+            st.markdown(f"**Percentual da base total:** {pct_res:.2f}%")
+
+            st.dataframe(
+                res,
+                column_config={"n": "Rev", "titulo_artigo": "Título", "autores_colaboradores": "Autores"},
+                use_container_width=True,
+                height=320
+            )
+
+            df_citados = None
+            df_colab = None
+            if not res.empty:
+                st.markdown("---")
+                st.subheader("📊 ANÁLISE COM BASE NA SELEÇÃO DOS DADOS")
+                s_citados = DataModule.get_normalized_series(res, 'autores_citados')
+                c_stat1, c_stat2 = st.columns(2)
+                with c_stat1:
+                    if not s_citados.empty:
+                        df_citados = UtilsModule.calculate_stats_with_percentage(s_citados)
+                        st.markdown("📌 **AUTORES MAIS CITADOS**")
+                        st.dataframe(df_citados.head(10), use_container_width=True)
+                    else:
+                        st.info("Nenhum autor citado nestes registros.")
+
+                with c_stat2:
+                    s_colab = DataModule.get_normalized_series(res, 'autores_colaboradores')
+                    if not s_colab.empty:
+                        df_colab = UtilsModule.calculate_stats_with_percentage(s_colab)
+                        st.markdown("✍️ **AUTORES COLABORADORES**")
+                        st.dataframe(df_colab.head(10), use_container_width=True)
+                    else:
+                        st.info("Nenhum colaborador listado nestes registros.")
+
+            st.markdown("---")
+            st.markdown("### 📥 EXPORTAR RESULTADOS DA BUSCA")
+            btn1, btn2 = st.columns(2)
+            excel_busca = UtilsModule.converter_excel(res)
+            pdf_busca = PDFModule.gerar_pdf_busca_analitica(res, len(df), str_criterios, df_citados, df_colab)
+            btn1.download_button(
+                "📊 BAIXAR EXCEL DA BUSCA",
+                excel_busca,
+                f"busca_sibila_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                use_container_width=True
+            )
+            btn2.download_button(
+                "📄 BAIXAR PDF DA BUSCA",
+                pdf_busca,
+                f"relatorio_sibila_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+                "application/pdf",
+                use_container_width=True
+            )
+        else:
+            st.warning("⚠️ Base de dados vazia. Cadastre registros na aba CATALOGAÇÃO.")
+
+    # --- RELATÓRIOS ---
+    elif menu == "RELATÓRIOS":
+        st.title("📑 RELATÓRIOS NELIC")
+        if df.empty:
+            st.warning("Base vazia.")
+        else:
+            tipo_rel = st.selectbox(
+                "Selecione o relatório:",
+                [
+                    "Mapa de colaboração por revista",
+                    "Índice de publicações bilíngues",
+                    "Iconografia por revista",
+                    "Autores como assunto vs colaboradores",
+                    "Análise por gêneros textuais",
+                    "Manifesto ou manifesto",
+                    "Palavras-chave"
+                ]
+            )
+            if tipo_rel == "Mapa de colaboração por revista":
+                relatorio_mapa_colaboracao(df)
+            elif tipo_rel == "Índice de publicações bilíngues":
+                relatorio_bilinguismo(df)
+            elif tipo_rel == "Iconografia por revista":
+                relatorio_iconografia(df)
+            elif tipo_rel == "Autores como assunto vs colaboradores":
+                relatorio_autores_assunto_colab(df)
+            elif tipo_rel == "Análise por gêneros textuais":
+                relatorio_generos_textuais(df)
+            elif tipo_rel == "Manifesto ou manifesto":
+                relatorio_manifesto(df)
+            elif tipo_rel == "Palavras-chave":
+                relatorio_palavras_chave(df)
+
+    # --- ANÁLISE COMPARATIVA ---
+    elif menu == "ANÁLISE COMPARATIVA":
+        st.title("📊 ANÁLISE COMPARATIVA")
+        if df.empty:
+            st.warning("Base vazia.")
+        else:
+            st.markdown("Compare dois conjuntos de registros a partir de filtros NELIC.")
+
+            def aplicar_filtros(df_base, prefix):
+                c1, c2, c3, c4 = st.columns(4)
+                termo = c1.text_input(f"{prefix} · termo livre (título/resumo)", key=f"termo_{prefix}")
+                revs_local = sorted(df_base['n'].astype(str).unique())
+                f_rev = c2.multiselect(f"{prefix} · revistas", revs_local, key=f"rev_{prefix}")
+                tipos_raw_local = df_base['vocabulario_controlado'].astype(str).unique()
+                tipos_clean_local = sorted(list(set([t.split(' - ')[0] for t in tipos_raw_local])))
+                f_tipo = c3.multiselect(f"{prefix} · tipos textuais", tipos_clean_local, key=f"tipo_{prefix}")
+                f_bil = c4.selectbox(
+                    f"{prefix} · bilíngue",
+                    ["Todos", "Apenas bilíngues", "Apenas não bilíngues"],
+                    key=f"bil_{prefix}"
+                )
+                res_local = df_base.copy()
+                if f_rev:
+                    res_local = res_local[res_local['n'].astype(str).isin(f_rev)]
+                if f_tipo:
+                    res_local = res_local[
+                        res_local['vocabulario_controlado'].apply(lambda x: str(x).split(' - ')[0] in f_tipo)
+                    ]
+                res_local = res_local.copy()
+                res_local['__bil'] = res_local.apply(UtilsModule.is_bilingue, axis=1)
+                if f_bil == "Apenas bilíngues":
+                    res_local = res_local[res_local['__bil']]
+                elif f_bil == "Apenas não bilíngues":
+                    res_local = res_local[~res_local['__bil']]
+                if termo:
+                    res_local = res_local[
+                        res_local.astype(str).apply(lambda x: x.str.contains(termo, case=False)).any(axis=1)
+                    ]
+                return res_local.drop(columns=['__bil'], errors='ignore')
+
+            st.markdown("#### Conjunto A")
+            df_A = aplicar_filtros(df, "A")
+            st.markdown(f"Conjunto A: {len(df_A)} registros.")
+
+            st.markdown("#### Conjunto B")
+            df_B = aplicar_filtros(df, "B")
+            st.markdown(f"Conjunto B: {len(df_B)} registros.")
+
+            if not df_A.empty or not df_B.empty:
+                st.markdown("---")
+                st.subheader("🔬 Métricas comparadas")
+                def metricas(df_sub):
+                    s_colab = DataModule.get_normalized_series(df_sub, 'autores_colaboradores')
+                    s_cit = DataModule.get_normalized_series(df_sub, 'autores_citados')
+                    ic = df_sub['iconografias'].apply(
+                        lambda x: isinstance(x, list) and len(x) > 0
+                    ).sum()
+                    df_tmp = df_sub.copy()
+                    df_tmp['__bil'] = df_tmp.apply(UtilsModule.is_bilingue, axis=1)
+                    bil = df_tmp['__bil'].sum()
+                    total = len(df_tmp)
+                    return {
+                        "registros": total,
+                        "colab_distintos": s_colab.nunique(),
+                        "cit_distintos": s_cit.nunique(),
+                        "pct_iconografia": (ic / total * 100) if total > 0 else 0,
+                        "pct_bilingue": (bil / total * 100) if total > 0 else 0
+                    }
+
+                mA = metricas(df_A) if not df_A.empty else None
+                mB = metricas(df_B) if not df_B.empty else None
+                cA, cB = st.columns(2)
+                with cA:
+                    st.markdown("##### Conjunto A")
+                    if mA:
+                        st.metric("Registros", mA["registros"])
+                        st.metric("Colaboradores distintos", mA["colab_distintos"])
+                        st.metric("Autores citados distintos", mA["cit_distintos"])
+                        st.metric("% com iconografia", f"{mA['pct_iconografia']:.1f}%")
+                        st.metric("% bilíngue", f"{mA['pct_bilingue']:.1f}%")
+                    else:
+                        st.info("Sem registros no conjunto A.")
+
+                with cB:
+                    st.markdown("##### Conjunto B")
+                    if mB:
+                        st.metric("Registros", mB["registros"])
+                        st.metric("Colaboradores distintos", mB["colab_distintos"])
+                        st.metric("Autores citados distintos", mB["cit_distintos"])
+                        st.metric("% com iconografia", f"{mB['pct_iconografia']:.1f}%")
+                        st.metric("% bilíngue", f"{mB['pct_bilingue']:.1f}%")
+                    else:
+                        st.info("Sem registros no conjunto B.")
+
+    # --- QUALIDADE DOS DADOS ---
+    elif menu == "QUALIDADE DOS DADOS":
+        st.title("🧪 QUALIDADE DOS DADOS")
+        if df.empty:
+            st.warning("Base vazia.")
+        else:
+            st.markdown(
+                "Monitoramento de consistência e lacunas conforme as exigências metodológicas do NELIC."
+            )
+            df_local = df.copy()
+            sem_pag = df_local[
+                df_local['paginas'].isna() |
+                (df_local['paginas'].astype(str).str.strip() == '')
+            ]
+            sem_tit = df_local[
+                df_local['titulo_artigo'].isna() |
+                (df_local['titulo_artigo'].astype(str).str.strip() == '')
+            ]
+            df_local['tipo_base'] = df_local['vocabulario_controlado'].astype(str).apply(
+                lambda x: x.split(' - ')[0]
+            )
+            precisa_resumo = ~df_local['tipo_base'].isin(TIPOS_SEM_RESUMO)
+            sem_resumo = df_local[
+                precisa_resumo &
+                (
+                    df_local['resumo'].isna() |
+                    (df_local['resumo'].astype(str).str.strip() == '')
+                )
+            ]
+            t1, t2, t3, t4 = st.tabs(
+                ["Sem páginas", "Sem título", "Sem resumo (quando exigido)", "Duplicidade de registro"]
+            )
+            with t1:
+                st.markdown("#### Registros sem informação de páginas")
+                st.write(f"Total: {len(sem_pag)}")
+                st.dataframe(sem_pag[['n', 'registro', 'titulo_artigo', 'paginas']], use_container_width=True)
+            with t2:
+                st.markdown("#### Registros sem título")
+                st.write(f"Total: {len(sem_tit)}")
+                st.dataframe(sem_tit[['n', 'registro', 'paginas']], use_container_width=True)
+            with t3:
+                st.markdown("#### Registros sem resumo em tipos que demandam resumo analítico")
+                st.write(f"Total: {len(sem_resumo)}")
+                st.dataframe(
+                    sem_resumo[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo']],
+                    use_container_width=True
+                )
+            with t4:
+                st.markdown("#### Duplicidade potencial de campo REGISTRO")
+                df_local['chave_unica'] = df_local['n'].astype(str) + '_' + df_local['registro'].astype(str)
+                duplicatas = df_local[df_local.duplicated(subset=['chave_unica'], keep=False)]
+                if not duplicatas.empty:
+                    st.write(f"Total: {len(duplicatas)} registros com potencial duplicidade")
+                    for chave in duplicatas['chave_unica'].unique():
+                        grupo = duplicatas[duplicatas['chave_unica'] == chave]
+                        st.markdown(f"**🔴 Duplicata encontrada: Revista {grupo.iloc[0]['n']} - Registro {grupo.iloc[0]['registro']}**")
+                        st.dataframe(
+                            grupo[['n', 'registro', 'titulo_artigo', 'paginas', '_id']],
+                            use_container_width=True
+                        )
+                        st.markdown("---")
+                else:
+                    st.success("✅ Nenhuma duplicidade detectada! Todos os registros possuem combinações únicas de Revista + Registro.")
+                df_local = df_local.drop(columns=['chave_unica'])
+
+    # --- DIÁRIO DE PESQUISA ---
+    elif menu == "DIÁRIO DE PESQUISA":
+        st.title("📝 DIÁRIO DE PESQUISA – PROJETO SIBILA")
+        diario = PersistenceModule.load_diario()
+        with st.expander("➕ Registrar nova entrada no diário", expanded=True):
+            with st.form("form_diario_geral"):
+                titulo = st.text_input("Título da entrada")
+                texto = st.text_area("Texto da entrada", height=160)
+                tags = st.text_input("Tags (separadas por vírgula)")
+                reg_ops = []
+                reg_ids = []
+                for r in dados:
+                    label = f"{r.get('n','?')} | Reg: {r.get('registro','?')} | {r.get('titulo_artigo','[sem título]')}"
+                    reg_ops.append(label)
+                    reg_ids.append(r.get('_id'))
+                registros_sel = st.multiselect(
+                    "Vincular a registros específicos (opcional)", reg_ops
+                )
+                if st.form_submit_button("💾 Salvar entrada no diário"):
+                    if texto.strip():
+                        vinc_ids = [
+                            reg_ids[reg_ops.index(lbl)] for lbl in registros_sel
+                        ]
+                        entrada = {
+                            "id": str(int(datetime.now().timestamp() * 1000)),
+                            "data": datetime.now().isoformat(),
+                            "titulo": titulo.strip() or "[sem título]",
+                            "texto": texto.strip(),
+                            "tags": [t.strip() for t in tags.split(',') if t.strip()],
+                            "registros_relacionados": vinc_ids
+                        }
+                        diario.append(entrada)
+                        if PersistenceModule.save_diario(diario):
+                            st.success("Entrada adicionada ao diário.")
+                    else:
+                        st.warning("O texto da entrada não pode estar vazio.")
+
+        st.markdown("---")
+        st.subheader("Entradas registradas")
+        if not diario:
+            st.info("Nenhuma entrada registrada ainda.")
+        else:
+            tags_existentes = sorted(
+                list(
+                    set(
+                        t
+                        for d in diario
+                        for t in d.get('tags', [])
+                    )
+                )
+            )
+            c1, c2 = st.columns([1, 2])
+            with c1:
+                tag_filtro = st.multiselect("Filtrar por tags", tags_existentes)
+            with c2:
+                ordem = st.selectbox("Ordenar por", ["Mais recentes primeiro", "Mais antigas primeiro"])
+
+            entradas = diario.copy()
+            entradas = sorted(
+                entradas,
+                key=lambda x: x.get('data', ''),
+                reverse=(ordem == "Mais recentes primeiro")
+            )
+            if tag_filtro:
+                entradas = [
+                    e for e in entradas
+                    if any(t in e.get('tags', []) for t in tag_filtro)
+                ]
+
+            for e in entradas:
+                dt = e.get('data', '')[:16].replace("T", " ")
+                st.markdown(
+                    f"""
+                    <div class="nelic-card">
+                        <div class="nelic-card-header">{e.get('titulo','[sem título]')}</div>
+                        <div class="nelic-card-subtitle">Data: {dt}</div>
+                        <div class="nelic-muted">{e.get('texto','')}</div>
+                        <div style="margin-top:0.4rem;">
+                    """,
+                    unsafe_allow_html=True
+                )
+                if e.get('tags'):
+                    st.markdown(
+                        " ".join(
+                            [f"<span class='nelic-tag nelic-tag-muted'>{t}</span>" for t in e['tags']]
+                        ),
+                        unsafe_allow_html=True
+                    )
+                if e.get('registros_relacionados'):
+                    st.markdown("<br><span class='nelic-muted'>Registros vinculados:</span>", unsafe_allow_html=True)
+                    labels = []
+                    for reg_id in e.get('registros_relacionados', []):
+                        r = UtilsModule.get_registro_by_id(dados, reg_id)
+                        if r:
+                            labels.append(
+                                f"{r.get('n','?')} | Reg: {r.get('registro','?')} | {r.get('titulo_artigo','[sem título]')}"
+                            )
+                    if labels:
+                        st.markdown(
+                            "<br>".join(labels),
+                            unsafe_allow_html=True
+                        )
+                st.markdown("</div>", unsafe_allow_html=True)
+
+    # --- METODOLOGIA ---
+    elif menu == "METODOLOGIA":
+        st.title("📚 METODOLOGIA NELIC - SISTEMA COMPLETO")
+        st.markdown("""
+        <div class="success-box">
+        <h3>🎯 VISÃO GERAL DO SISTEMA</h3>
+        <p>O <strong>Sistema NELIC - SIBILA</strong> é uma ferramenta de catalogação bibliográfica especializada,
+        desenvolvida para documentação sistemática da revista <em>Sibila</em> (2001-2007). Este sistema implementa
+        rigorosa metodologia de catalogação de periódicos literários, permitindo análises críticas profundas
+        sobre a produção poética e ensaística contemporânea brasileira.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        tab1, tab2, tab3, tab4, tab5 = st.tabs([
+            "📝 Catalogação",
+            "🔍 Busca e Exploração",
+            "📊 Análises e Relatórios",
+            "🎓 Metodologia Detalhada",
+            "💡 Dicas de Uso"
+        ])
+        with tab1:
+            st.markdown("## 📝 GUIA DE CATALOGAÇÃO")
+            st.markdown("""
+            ### Como funciona o Editor de Registros
+            O editor permite criar novos registros ou editar registros existentes. Cada registro representa
+            um texto publicado na revista Sibila e deve conter informações bibliográficas completas.
+            """)
+            st.markdown("### 📋 Campos do Formulário de Catalogação")
+            st.markdown("""
+            <div class="info-box">
+            <h4>1. IDENTIFICAÇÃO BÁSICA (Campos obrigatórios marcados com *)</h4>
+            - **Nº REVISTA***: Número da edição da revista (1 a 13)
+            - **REGISTRO***: Código único de identificação (formato sugerido: R001, R002, etc.)
+            - **PÁGINAS**: Intervalo de páginas (ex: 45-48)
+            - **ORDEM**: Número de ordem de exibição no sistema
+            - **IDIOMAS**: Idioma primário e secundário (se bilíngue)
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown("""
+            <div class="info-box">
+            <h4>2. TIPO TEXTUAL (Sistema Hierárquico)</h4>
+            O sistema utiliza classificação em **dois níveis**:
+            **TIPOS PRINCIPAIS:**
+            - POEMA(S) - não exige resumo
+            - ENSAIO - exige resumo analítico
+            - RESENHA - exige resumo analítico
+            - ENTREVISTA - exige resumo analítico
+            - FICÇÃO - não exige resumo
+            - EDITORIAL
+            - APRESENTAÇÃO
+            - REPORTAGEM
+            - CARTAS DO LEITOR
+            - E outros...
+            **SUBTIPOS (Campo disciplinar):**
+            Alguns tipos principais permitem especificação disciplinar:
+            - ENSAIO - Literatura, Filosofia, História, Linguística, etc.
+            - RESENHA - Literatura, Antropologia, Sociologia, etc.
+            - ENTREVISTA - Literatura
+            - INFORME - Literatura
+            **Exemplo:** ENSAIO - Filosofia
+            **⚠️ ATENÇÃO:** O sistema valida automaticamente se o tipo textual exige resumo analítico!
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown("""
+            <div class="info-box">
+            <h4>3. TÍTULOS E NOTAS</h4>
+            **TÍTULO***:
+            - Se o texto possui título: transcreva fielmente
+            - Se poema sem título: insira primeiro verso entre aspas e reticências
+              - Exemplo: 'não penses enquanto passa (…)'
+            - Se prosa sem título: reproduza as 4-5 primeiras palavras
+            **SUBTÍTULO**: Caso exista
+            **NOTA DE EDIÇÃO**: Informações editoriais importantes
+            - [publicação bilíngue]
+            - [tradução do inglês]
+            - [texto republicado de...]
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown("""
+            <div class="info-box">
+            <h4>4. RESPONSABILIDADE AUTORAL</h4>
+            **FORMATO ABNT (automático):** O sistema converte automaticamente para:
+            - SOBRENOME, Prenomes
+            **Exemplos:**
+            - Digite: Régis Bonvicino → Sistema salva: BONVICINO, Régis
+            - Digite: Claudio Daniel → Sistema salva: DANIEL, Claudio
+            **COLABORADORES**: Autores do texto (um por linha)
+            **TRADUTORES**: Se aplicável (um por linha)
+            💡 **Dica**: Digite um nome por linha ou separe por vírgulas
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown("""
+            <div class="info-box">
+            <h4>5. ASSUNTOS E INDEXAÇÃO</h4>
+            **AUTORES CITADOS**: Autores mencionados no texto (um por linha)
+            - Use para mapear referências bibliográficas
+            - Importante para análise de redes intelectuais
+            **PALAVRAS-CHAVE**: Use APENAS termos do Vocabulário Controlado
+            - Lista pré-estabelecida de 400+ termos
+            - Garante consistência nas buscas
+            - Exemplos: Poesia, Modernismo, Vanguarda, Literatura Brasileira
+            **NOME PESSOAL COMO ASSUNTO**: Pessoas que são tema principal
+            - Use para biografias, homenagens, estudos críticos
+            - Exemplo: texto sobre Drummond → ANDRADE, Carlos Drummond de
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown("""
+            <div class="warning-box">
+            <h4>6. RESUMO ANALÍTICO ⚠️</h4>
+            **OBRIGATÓRIO para:**
+            - ENSAIO
+            - RESENHA
+            - ENTREVISTA
+            - REPORTAGEM
+            - EDITORIAL (com conteúdo analítico)
+            - APRESENTAÇÃO
+            - DEBATE
+            **NÃO EXIGIDO para:**
+            - POEMA(S)
+            - FICÇÃO
+            - CAPA
+            - IMAGENS
+            - HQ/CHARGE
+            **Como escrever:** Síntese crítica do conteúdo (150-300 palavras)
+            - Tema central
+            - Argumentos principais
+            - Conclusões ou posições defendidas
+            O sistema valida automaticamente e impede salvar se resumo estiver ausente quando obrigatório!
+            </div>
+            """, unsafe_allow_html=True)
+            st.markdown("""
+            <div class="info-box">
+            <h4>7. ICONOGRAFIA</h4>
+            Documentação sistemática de elementos visuais:
+            **TIPOS:**
+            - Foto
+            - Ilustração
+            - Reprodução (de obra de arte)
+            - Fac-símile
+            - Cartografia
+            - Gráfico/Tabela
+            - HQ/Charge
+            - Fotograma
+            - Publicidade
+            **DESCRIÇÃO**: Título da obra, créditos, data
+            - Exemplo tipo: Foto
+            - Exemplo descrição: "Retrato de João Cabral de Melo Neto. Foto: Arquivo Nacional, 1960"
+            </div>
+            """, unsafe_allow_html=True)
+
+    # --- MAIS DADOS ---
+    elif menu == "MAIS DADOS":
+        st.title("📊 MAIS DADOS - ANÁLISE COMPLETA")
+        if not df.empty:
+            c1, c2, c3, c4 = st.columns(4)
+            c1.metric("REGISTROS", len(df))
+            c2.metric("COLABORADORES", DataModule.get_normalized_series(df, 'autores_colaboradores').nunique())
+            c3.metric("AUTORES CITADOS", DataModule.get_normalized_series(df, 'autores_citados').nunique())
+            if 'iconografias' in df.columns:
+                n_icon = df['iconografias'].apply(
+                    lambda x: 1 if isinstance(x, list) and len(x) > 0 else 0
+                ).sum()
+                p_icon = (n_icon / len(df)) * 100
+                c4.metric("ÍNDICE ICONOGRAFIA", f"{p_icon:.1f}%", help=f"{n_icon} registros contêm iconografia")
+            else:
+                c4.metric("ÍNDICE ICONOGRAFIA", "0%")
+
+            st.markdown("---")
+            st.subheader("📥 EXPORTAR BASE COMPLETA")
+            col_exp1, col_exp2, col_exp3 = st.columns(3)
+            excel_completo = UtilsModule.converter_excel(df)
+            pdf_completo = PDFModule.gerar_pdf_analitico(df, len(df), "Base de dados completa")
+            json_completo = json.dumps(dados, ensure_ascii=False, indent=2)
+            col_exp1.download_button(
+                "📊 EXCEL COMPLETO",
+                excel_completo,
+                f"sibila_completo_{datetime.now().strftime('%Y%m%d')}.xlsx",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                use_container_width=True
+            )
+            col_exp2.download_button(
+                "📄 PDF COMPLETO",
+                pdf_completo,
+                f"sibila_completo_{datetime.now().strftime('%Y%m%d')}.pdf",
+                "application/pdf",
+                use_container_width=True
+            )
+            col_exp3.download_button(
+                "💾 JSON COMPLETO",
+                json_completo,
+                f"sibila_completo_{datetime.now().strftime('%Y%m%d')}.json",
+                "application/json",
+                use_container_width=True
+            )
+
+            st.markdown("---")
+            g1, g2 = st.columns(2)
+            with g1:
+                s = df['vocabulario_controlado'].apply(
+                    lambda x: str(x).split(' - ')[0] if isinstance(x, str) else x
+                )
+                v = s.value_counts().head(10).reset_index()
+                v.columns = ['Tipo', 'Qtd']
+                fig = px.bar(v, x='Tipo', y='Qtd', text='Qtd')
+                fig.update_layout(title="DISTRIBUIÇÃO POR TIPO TEXTUAL", height=380)
+                st.plotly_chart(fig, use_container_width=True)
+            with g2:
+                r = df['n'].value_counts().reset_index()
+                r.columns = ['Revista', 'Qtd']
+                fig2 = px.bar(
+                    r.sort_values('Revista'),
+                    x='Revista',
+                    y='Qtd',
+                    text='Qtd'
+                )
+                fig2.update_layout(title="REGISTROS POR REVISTA", height=380)
+                st.plotly_chart(fig2, use_container_width=True)
+
+            st.markdown("---")
+            t1, t2, t3, t4 = st.tabs(
+                ["PALAVRAS-CHAVE", "AUTORES CITADOS", "COLABORADORES", "TRADUTORES"]
+            )
+            def show_stats_with_export(col, label, tab_key):
+                s = DataModule.get_normalized_series(df, col)
+                if s.empty:
+                    st.info(f"Sem dados de {label.lower()}.")
+                    return
+                counts = UtilsModule.calculate_stats_with_percentage(s)
+                df_export = counts.rename(
+                    columns={'Termo': 'Campo', 'Qtd': 'Num. Absoluto', '%': 'Percentual'}
+                )
+                st.markdown(f"### 📥 Exportar dados de {label}")
+                exp_col1, exp_col2, exp_col3 = st.columns(3)
+                excel_cat = UtilsModule.converter_excel(df_export)
+                exp_col1.download_button(
+                    f"📊 EXCEL - {label.upper()}",
+                    excel_cat,
+                    f"sibila_{tab_key}_{datetime.now().strftime('%Y%m%d')}.xlsx",
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    use_container_width=True,
+                    key=f"btn_excel_{tab_key}"
+                )
+                pdf_cat = PDFModule.gerar_pdf_tabela_estatistica(df_export, label)
+                exp_col2.download_button(
+                    f"📄 PDF - {label.upper()}",
+                    pdf_cat,
+                    f"sibila_{tab_key}_{datetime.now().strftime('%Y%m%d')}.pdf",
+                    "application/pdf",
+                    use_container_width=True,
+                    key=f"btn_pdf_{tab_key}"
+                )
+                csv_data = df_export.to_csv(index=False, encoding='utf-8-sig')
+                exp_col3.download_button(
+                    f"📋 CSV - {label.upper()}",
+                    csv_data,
+                    f"sibila_{tab_key}_{datetime.now().strftime('%Y%m%d')}.csv",
+                    "text/csv",
+                    use_container_width=True,
+                    key=f"btn_csv_{tab_key}"
+                )
+                st.markdown("---")
+                st.markdown(f"**⬆️ {label.upper()} MAIS FREQUENTES (Top 30)**")
+                st.dataframe(counts.head(30), use_container_width=True)
+                with st.expander(f"Mostrar tabela completa de {label} ({len(counts)} termos)"):
+                    st.dataframe(counts, use_container_width=True)
+
+            with t1:
+                show_stats_with_export('palavras_chave', 'Palavra-chave', 'palavras_chave')
+            with t2:
+                show_stats_with_export('autores_citados', 'Autor Citado', 'autores_citados')
+            with t3:
+                show_stats_with_export('autores_colaboradores', 'Colaborador', 'colaboradores')
+            with t4:
+                show_stats_with_export('tradutores', 'Tradutor', 'tradutores')
+        else:
+            st.warning("⚠️ Base de dados vazia. Cadastre registros na aba CATALOGAÇÃO.")
+
+    # --- EXPORTAR ---
+    elif menu == "EXPORTAR":
+        st.title("💾 GERENCIAMENTO DE DADOS")
+        st.markdown("### 📤 IMPORTAÇÃO")
+        c1, c2 = st.columns(2)
+        with c1:
+            u = st.file_uploader("Importar JSON (catálogo)", type=['json'])
+            if u:
+                try:
+                    n = json.load(u)
+                    if isinstance(n, list):
+                        dados.extend(n)
+                        un = {v.get('_id', str(i)): v for i, v in enumerate(dados)}.values()
+                        if PersistenceModule.save_data(list(un)):
+                            st.success("✅ Dados importados com sucesso!")
+                            st.balloons()
+                except Exception as e:
+                    st.error(f"❌ Erro ao importar: {str(e)}")
+        with c2:
+            u2 = st.file_uploader("Importar JSON (diário de pesquisa)", type=['json'])
+            if u2:
+                try:
+                    d = json.load(u2)
+                    if isinstance(d, list):
+                        if PersistenceModule.save_diario(d):
+                            st.success("✅ Diário importado com sucesso!")
+                            st.balloons()
+                except Exception as e:
+                    st.error(f"❌ Erro ao importar diário: {str(e)}")
+
+        st.markdown("---")
+        st.markdown("### 📥 EXPORTAÇÃO")
+        if not df.empty:
+            exp_row1_col1, exp_row1_col2, exp_row1_col3 = st.columns(3)
+            js = json.dumps(dados, ensure_ascii=False, indent=2)
+            exp_row1_col1.download_button(
+                "📥 BAIXAR JSON (CATÁLOGO)",
+                js,
+                f"backup_sibila_{datetime.now().strftime('%Y%m%d')}.json",
+                "application/json",
+                use_container_width=True
+            )
+            excel_data = UtilsModule.converter_excel(df)
+            exp_row1_col2.download_button(
+                "📊 BAIXAR EXCEL (CATÁLOGO)",
+                excel_data,
+                f"backup_sibila_{datetime.now().strftime('%Y%m%d')}.xlsx",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                use_container_width=True
+            )
+            csv_data = df.astype(str).to_csv(index=False, encoding='utf-8-sig')
+            exp_row1_col3.download_button(
+                "📄 BAIXAR CSV (CATÁLOGO)",
+                csv_data,
+                f"backup_sibila_{datetime.now().strftime('%Y%m%d')}.csv",
+                "text/csv",
+                use_container_width=True
+            )
+        else:
+            st.info("Nenhum dado para exportar (catálogo).")
+
+        st.markdown("#### Diário de pesquisa")
+        diario = PersistenceModule.load_diario()
+        if diario:
+            js_d = json.dumps(diario, ensure_ascii=False, indent=2)
+            st.download_button(
+                "📥 BAIXAR JSON (DIÁRIO)",
+                js_d,
+                f"diario_sibila_{datetime.now().strftime('%Y%m%d')}.json",
+                "application/json",
+                use_container_width=True
+            )
+        else:
+            st.info("Nenhuma entrada no diário para exportar.")
+
+        st.markdown("---")
+        st.markdown("### 📊 ESTATÍSTICAS DO SISTEMA")
+        stat_col1, stat_col2 = st.columns(2)
+        if os.path.exists(BACKUP_DIR):
+            backups = sorted(os.listdir(BACKUP_DIR), reverse=True)
+            stat_col1.metric("Backups disponíveis", len(backups))
+        else:
+            backups = []
+            stat_col1.metric("Backups disponíveis", 0)
+        stat_col2.metric("Total de Registros", len(df))
+        diario = PersistenceModule.load_diario()
+        st.markdown(f"**Entradas no diário de pesquisa:** {len(diario)}")
+        if backups:
+            st.markdown("#### 📦 Backups salvos (últimos 5)")
+            backups_recentes = backups[:5]
+            for bkp in backups_recentes:
+                bkp_path = os.path.join(BACKUP_DIR, bkp)
+                try:
+                    with open(bkp_path, 'r', encoding='utf-8') as f:
+                        conteudo = f.read()
+                    st.download_button(
+                        f"📥 Baixar {bkp}",
+                        conteudo,
+                        file_name=bkp,
+                        mime="application/json",
+                        use_container_width=True,
+                        key=f"btn_bkp_{bkp}"
+                    )
+                except Exception as e:
+                    st.warning(f"Não foi possível carregar o backup {bkp}: {e}")
+            if len(backups) > 5:
+                st.info(f"ℹ️ Existem mais {len(backups) - 5} backup(s) antigo(s) não exibido(s).")
+
+if __name__ == "__main__":
+    main()

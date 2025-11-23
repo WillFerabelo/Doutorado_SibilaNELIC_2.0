@@ -1,0 +1,19 @@
+
+Primeiro:
+
+cd /Users/williamfernandes/Downloads/Doutorado_Sibila
+
+Executar o programa:
+
+python3.11 -m streamlit run app_sibila.py
+
+Rodar direto
+
+streamlit run /Users/williamfernandes/Downloads/Doutorado_Sibila/app_sibila.py
+
+
+---
+
+Para o Claude code:
+Acesso:
+ http://localhost:8501
