@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 import os
+import time
 from datetime import datetime
 import plotly.express as px
 from io import BytesIO
@@ -398,7 +399,7 @@ class DataModule:
             .replace('', pd.NA)
             .dropna()
         )
-        if col in {'autores_colaboradores', 'autores_citados', 'tradutores', 'nome_pessoal_como_assunto'}:
+        if col in {'autores_colaboradores', 'autores_citados', 'tradutores', 'entidade_coletiva', 'nome_pessoal_como_assunto'}:
             s = s.apply(DataModule.format_nome_abnt)
         return s
 
@@ -552,8 +553,7 @@ class PDFModule:
                     res = r.get('resumo', '')
                     if res:
                         resumo_txt = PDFModule.to_latin1(res)
-                        if len(resumo_txt) > 800:
-                            resumo_txt = resumo_txt[:800] + "..."
+                        # REMOVIDA LIMITAÇÃO: imprime resumo completo sem corte
                         pdf.set_font("Arial", '', 10)
                         pdf.multi_cell(0, 5, resumo_txt)
                     pdf.ln(5)
@@ -663,8 +663,7 @@ class PDFModule:
                     res = r.get('resumo', '')
                     if res:
                         resumo_txt = PDFModule.to_latin1(res)
-                        if len(resumo_txt) > 800:
-                            resumo_txt = resumo_txt[:800] + "..."
+                        # REMOVIDA LIMITAÇÃO: imprime resumo completo sem corte
                         pdf.set_font("Arial", '', 10)
                         pdf.multi_cell(0, 5, resumo_txt)
                     pdf.ln(5)
@@ -713,12 +712,17 @@ class PDFModule:
             pdf.cell(0, 6, safe("2. RESPONSABILIDADE AUTORAL"), ln=True)
             pdf.set_font("Arial", '', 10)
             colab = registro.get('autores_colaboradores', [])
+            entidade = registro.get('entidade_coletiva', [])
             trad = registro.get('tradutores', [])
             nome_ass = registro.get('nome_pessoal_como_assunto', [])
             if colab:
                 lst = colab if isinstance(colab, list) else [colab]
                 s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
                 pdf.multi_cell(0, 5, safe(f"Colaboradores: {s}"))
+            if entidade:
+                lst = entidade if isinstance(entidade, list) else [entidade]
+                s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
+                pdf.multi_cell(0, 5, safe(f"Entidade Coletiva: {s}"))
             if trad:
                 lst = trad if isinstance(trad, list) else [trad]
                 s = ", ".join(DataModule.format_nome_abnt(x) for x in lst)
@@ -973,6 +977,8 @@ class CatalogacaoForm:
             st.session_state.loaded_json = None
         if 'clear_json_input' not in st.session_state:
             st.session_state.clear_json_input = False
+        if 'form_clear_counter' not in st.session_state:
+            st.session_state.form_clear_counter = 0
 
         # Carregamento Rápido via JSON/Excel - APENAS em NOVO REGISTRO
         if mode == "NOVO REGISTRO":
@@ -1026,9 +1032,11 @@ class CatalogacaoForm:
                     st.session_state.loaded_json = None
                     st.session_state.selected_record = None
                     st.session_state.clear_json_input = True
-                    # Limpar todos os campos do formulário
+                    # Incrementar contador para forçar recriação do formulário
+                    st.session_state.form_clear_counter += 1
+                    # Limpar todos os campos do formulário E campos de busca
                     for key in list(st.session_state.keys()):
-                        if key.startswith('form_'):
+                        if key.startswith('form_') or key.startswith('busca_') or key.startswith('confirm_delete_'):
                             del st.session_state[key]
                     st.rerun()
         elif rec and mode == "EDITAR EXISTENTE":
@@ -1040,9 +1048,11 @@ class CatalogacaoForm:
                 if st.button("🧹 Limpar formulário", use_container_width=True):
                     st.session_state.selected_record = None
                     st.session_state.loaded_json = None
-                    # Limpar todos os campos do formulário
+                    # Incrementar contador para forçar recriação do formulário
+                    st.session_state.form_clear_counter += 1
+                    # Limpar todos os campos do formulário e campos de busca
                     for key in list(st.session_state.keys()):
-                        if key.startswith('form_'):
+                        if key.startswith('form_') or key.startswith('busca_'):
                             del st.session_state[key]
                     st.rerun()
 
@@ -1057,22 +1067,31 @@ class CatalogacaoForm:
         col_tipo1, col_tipo2 = st.columns(2)
         with col_tipo1:
             tipos_principais = sorted(DataModule.GÊNEROS_TEXTUAIS.keys())
-            idx_tipo = tipos_principais.index(tipo_principal_atual) if tipo_principal_atual in tipos_principais else 0
+
+            # Encontrar o índice correto
+            idx_tipo = 0  # default
+            if tipo_principal_atual and tipo_principal_atual in tipos_principais:
+                idx_tipo = tipos_principais.index(tipo_principal_atual)
+
+            # Gerar key único baseado no valor atual para forçar atualização do selectbox
+            key_tipo = f"sel_tipo_principal_{tipo_atual}_{rec.get('_id', 'novo') if rec else 'novo'}"
             tipo_principal_selecionado = st.selectbox(
                 "TIPO PRINCIPAL*",
                 tipos_principais,
                 index=idx_tipo,
-                key=f"sel_tipo_principal_{rec.get('_id', 'novo') if rec else 'novo'}",
+                key=key_tipo,
                 help="Selecione o tipo textual principal."
             )
         with col_tipo2:
             subtipos_disponiveis = DataModule.GÊNEROS_TEXTUAIS.get(tipo_principal_selecionado, ["Sem especificação"])
             idx_subtipo = subtipos_disponiveis.index(subtipo_atual) if subtipo_atual in subtipos_disponiveis else 0
+            # Gerar key único baseado no valor atual para forçar atualização
+            key_subtipo = f"sel_subtipo_{tipo_atual}_{rec.get('_id', 'novo') if rec else 'novo'}"
             subtipo_selecionado = st.selectbox(
                 "SUBTIPO (Campo disciplinar)",
                 subtipos_disponiveis,
                 index=idx_subtipo,
-                key=f"sel_subtipo_{rec.get('_id', 'novo') if rec else 'novo'}",
+                key=key_subtipo,
                 help="Especifique o campo disciplinar."
             )
 
@@ -1084,6 +1103,7 @@ class CatalogacaoForm:
         # --- INÍCIO DO FORMULÁRIO ---
         # Inicializar campos no session_state com dados do registro
         if rec:
+            # Se houver dados, preencher o formulário
             def lt(x): return "\n".join(x) if isinstance(x, list) else str(x)
             st.session_state.form_n_rev = str(rec.get('n', ''))
             st.session_state.form_registro = str(rec.get('registro', ''))
@@ -1095,15 +1115,35 @@ class CatalogacaoForm:
             st.session_state.form_sub = rec.get('subtitulo_artigo', '')
             st.session_state.form_nota = rec.get('nota_edicao', '')
             st.session_state.form_autores = lt(rec.get('autores_colaboradores', []))
+            st.session_state.form_entidade = lt(rec.get('entidade_coletiva', []))
             st.session_state.form_tradutores = lt(rec.get('tradutores', []))
             st.session_state.form_citados = lt(rec.get('autores_citados', []))
             st.session_state.form_kw = lt(rec.get('palavras_chave', []))
             st.session_state.form_pessoal = lt(rec.get('nome_pessoal_como_assunto', []))
             st.session_state.form_resumo = rec.get('resumo', '')
+        else:
+            # Se NÃO houver dados (formulário vazio), FORÇAR campos vazios
+            # IMPORTANTE: Isso SOBRESCREVE qualquer valor existente para garantir limpeza
+            st.session_state.form_n_rev = ''
+            st.session_state.form_registro = ''
+            st.session_state.form_paginas = ''
+            st.session_state.form_ordem = 0
+            st.session_state.form_i1 = 'POR'
+            st.session_state.form_i2 = ''
+            st.session_state.form_titulo = ''
+            st.session_state.form_sub = ''
+            st.session_state.form_nota = ''
+            st.session_state.form_autores = ''
+            st.session_state.form_entidade = ''
+            st.session_state.form_tradutores = ''
+            st.session_state.form_citados = ''
+            st.session_state.form_kw = ''
+            st.session_state.form_pessoal = ''
+            st.session_state.form_resumo = ''
 
-        # Usar chave dinâmica para forçar recriação do formulário quando registro mudar
+        # Usar chave dinâmica para forçar recriação do formulário quando registro mudar OU quando limpar
         rec_id = rec.get('_id', 'novo') if rec else 'novo'
-        form_key = f"form_{rec_id}"
+        form_key = f"form_{rec_id}_v{st.session_state.form_clear_counter}"
         with st.form(form_key):
             c_form1, c_form2, c_form3, c_form4 = st.columns(4)
             n_rev = c_form1.text_input("Nº REVISTA*", key="form_n_rev")
@@ -1135,9 +1175,10 @@ class CatalogacaoForm:
 
             st.markdown("---")
             st.markdown("#### RESPONSABILIDADE AUTORAL")
-            c8, c9 = st.columns(2)
+            c8, c9, c10 = st.columns(3)
             aut = c8.text_area("COLABORADORES", key="form_autores")
-            trad = c9.text_area("TRADUTORES", key="form_tradutores")
+            entidade = c9.text_area("ENTIDADE COLETIVA", key="form_entidade", help="Responsabilidade institucional quando não há autor individual")
+            trad = c10.text_area("TRADUTORES", key="form_tradutores")
 
             st.markdown("---")
             st.markdown("#### ASSUNTOS")
@@ -1198,6 +1239,7 @@ class CatalogacaoForm:
                 "resumo": resumo,
                 "nota_edicao": nota_ed,
                 "autores_colaboradores": DataModule.normalizar_lista_autores(aut),
+                "entidade_coletiva": DataModule.normalizar_lista_autores(entidade),
                 "tradutores": DataModule.normalizar_lista_autores(trad),
                 "autores_citados": DataModule.normalizar_lista_autores(cit),
                 "palavras_chave": DataModule.normalizar_texto(kw.replace(',', '\n').split('\n')),
@@ -1205,23 +1247,77 @@ class CatalogacaoForm:
                 "iconografias": icon_list,
                 "_timestamp": datetime.now().isoformat()
             }
+            # Preservar notas de pesquisa do registro original, se existir
             if 'notas_pesquisa' in (rec or {}):
                 new['notas_pesquisa'] = (rec or {}).get('notas_pesquisa', [])
-            if mode == "EDITAR EXISTENTE" and '_id' in (rec or {}):
-                new['_id'] = (rec or {})['_id']
-                for i, d in enumerate(self.dados):
-                    if d.get('_id') == (rec or {})['_id']:
-                        self.dados[i] = new
-                        break
+
+            # LÓGICA APRIMORADA: Buscar registro existente por Revista + Registro
+            # Isso evita duplicatas mesmo quando não há _id no rec
+            registro_existente = None
+            indice_existente = None
+
+            for i, d in enumerate(self.dados):
+                if str(d.get('n')) == str(n_rev) and str(d.get('registro')) == str(reg_txt):
+                    # Encontrou registro com mesma Revista + Registro
+                    registro_existente = d
+                    indice_existente = i
+                    break
+
+            if mode == "EDITAR EXISTENTE":
+                # Modo EDITAR: Verificar se há registro para substituir
+                if registro_existente:
+                    # Substituir o registro existente, preservando o _id original
+                    new['_id'] = registro_existente.get('_id', str(int(datetime.now().timestamp() * 1000)))
+                    # Preservar notas de pesquisa do registro original
+                    if 'notas_pesquisa' in registro_existente:
+                        new['notas_pesquisa'] = registro_existente.get('notas_pesquisa', [])
+                    self.dados[indice_existente] = new
+                    st.info(f"ℹ️ Registro existente (ID: {new['_id']}) foi ATUALIZADO.")
+                elif '_id' in (rec or {}):
+                    # Tem _id mas não encontrou por revista+registro (usuário pode ter mudado esses campos)
+                    # Buscar pelo _id original
+                    new['_id'] = (rec or {})['_id']
+                    for i, d in enumerate(self.dados):
+                        if d.get('_id') == new['_id']:
+                            self.dados[i] = new
+                            st.info(f"ℹ️ Registro (ID: {new['_id']}) foi ATUALIZADO.")
+                            break
+                else:
+                    # Está em modo EDITAR mas não encontrou registro existente - criar novo
+                    new['_id'] = str(int(datetime.now().timestamp() * 1000))
+                    new.setdefault('notas_pesquisa', [])
+                    self.dados.append(new)
+                    st.warning("⚠️ Não foi encontrado registro existente para editar. Criado NOVO registro.")
             else:
-                new['_id'] = str(int(datetime.now().timestamp() * 1000))
-                new.setdefault('notas_pesquisa', [])
-                self.dados.append(new)
+                # Modo NOVO REGISTRO
+                if registro_existente:
+                    # ATENÇÃO: Já existe um registro com essa Revista + Registro!
+                    st.error(f"❌ ERRO: Já existe um registro com Revista {n_rev} e Registro {reg_txt} (ID: {registro_existente.get('_id')})")
+                    st.error("💡 Use o modo 'EDITAR EXISTENTE' para modificar este registro ou altere os campos Revista/Registro.")
+                    st.stop()
+                else:
+                    # Criar novo registro normalmente
+                    new['_id'] = str(int(datetime.now().timestamp() * 1000))
+                    new.setdefault('notas_pesquisa', [])
+                    self.dados.append(new)
 
             if PersistenceModule.save_data(self.dados):
                 st.success("✅ Registro salvo com sucesso!")
                 st.balloons()
+
+                # Limpar automaticamente o formulário após salvar
                 st.session_state.loaded_json = None
+                st.session_state.selected_record = None
+                # Incrementar contador para forçar recriação do formulário
+                st.session_state.form_clear_counter += 1
+
+                # Limpar todos os campos do formulário
+                for key in list(st.session_state.keys()):
+                    if key.startswith('form_') or key.startswith('busca_') or key.startswith('confirm_delete_'):
+                        del st.session_state[key]
+
+                # Recarregar a página para mostrar formulário limpo
+                st.rerun()
 
 
 class FichasNotasView:
@@ -1678,14 +1774,62 @@ def relatorio_palavras_chave(df):
 # ==========================================
 
 def main():
+    # Logo e cabeçalho
     if os.path.exists(LOGO_PATH):
         st.sidebar.image(LOGO_PATH, width='stretch', output_format='PNG')
     st.sidebar.markdown("### SISTEMA NELIC")
     st.sidebar.markdown("**PROJETO SIBILA**")
     st.sidebar.markdown("---")
-    menu = st.sidebar.radio(
-        "NAVEGAÇÃO",
-        [
+
+    # ==================================================
+    # SISTEMA DE AUTENTICAÇÃO
+    # ==================================================
+
+    # Campo de senha na sidebar
+    senha_digitada = st.sidebar.text_input(
+        "🔐 Área Restrita (Catalogadores)",
+        type="password",
+        placeholder="Digite a senha...",
+        help="Digite a senha para acessar funções de catalogação e exportação"
+    )
+
+    # Verificar autenticação
+    usuario_autenticado = False
+    senha_correta = None
+
+    # Tenta pegar a senha dos secrets (Streamlit Cloud)
+    try:
+        if "SENHA_ADMIN" in st.secrets:
+            senha_correta = st.secrets["SENHA_ADMIN"]
+    except:
+        pass
+
+    # Se não encontrou nos secrets, usa senha padrão local
+    if senha_correta is None:
+        senha_correta = "nelic2025"  # Senha padrão para uso local
+
+    # Verifica se a senha está correta
+    if senha_digitada == senha_correta:
+        usuario_autenticado = True
+        st.sidebar.success("✅ Modo Editor: ATIVADO")
+
+        # Detecta se está rodando no Streamlit Cloud
+        is_cloud = os.environ.get('STREAMLIT_SHARING_MODE') or os.environ.get('STREAMLIT_SERVER_HEADLESS')
+
+        if is_cloud:
+            st.sidebar.warning("⚠️ **Atenção**: Dados inseridos online não são salvos permanentemente. Para catalogação segura, use o sistema local no seu computador.")
+    elif senha_digitada:
+        st.sidebar.error("❌ Senha incorreta")
+
+    st.sidebar.markdown("---")
+
+    # ==================================================
+    # MENU ADAPTATIVO (baseado na autenticação)
+    # ==================================================
+
+    # Menu completo para usuários autenticados
+    if usuario_autenticado:
+        opcoes_menu = [
             "NELIC",
             "CATALOGAÇÃO",
             "FICHAS & NOTAS",
@@ -1697,11 +1841,34 @@ def main():
             "METODOLOGIA",
             "MAIS DADOS",
             "EXPORTAR"
-        ],
+        ]
+    else:
+        # Menu público (apenas visualização)
+        opcoes_menu = [
+            "NELIC",
+            "FICHAS & NOTAS",
+            "EXPLORAR DADOS",
+            "RELATÓRIOS",
+            "ANÁLISE COMPARATIVA",
+            "QUALIDADE DOS DADOS",
+            "METODOLOGIA",
+            "MAIS DADOS"
+        ]
+
+    menu = st.sidebar.radio(
+        "NAVEGAÇÃO",
+        opcoes_menu,
         label_visibility="collapsed"
     )
+
     st.sidebar.markdown("---")
-    st.sidebar.markdown("🟢 **Sistema Ativo**")
+
+    # Status do sistema
+    if usuario_autenticado:
+        st.sidebar.markdown("🔓 **Modo Catalogador**")
+    else:
+        st.sidebar.markdown("👁️ **Modo Visitante**")
+        st.sidebar.info("💡 Digite a senha acima para catalogar")
 
     dados = PersistenceModule.load_data()
     df = pd.DataFrame(dados)
@@ -1974,23 +2141,72 @@ def main():
         st.title("EDITOR DE REGISTROS")
         form = CatalogacaoForm(dados, df)
 
-        # Seleção de Modo
-        mode = st.radio("Modo:", ["NOVO REGISTRO", "EDITAR EXISTENTE"], key="mode_radio", horizontal=True)
+        # Seleção de Modo com Botão de Limpeza
+        col_mode1, col_mode2, col_mode3 = st.columns([2, 3, 5])
+        with col_mode1:
+            st.markdown("**Modo:**")
+        with col_mode2:
+            mode = st.radio("Selecione:", ["NOVO REGISTRO", "EDITAR EXISTENTE"], key="mode_radio", horizontal=True, label_visibility="collapsed")
+        with col_mode3:
+            # Botão LIMPAR TUDO - só aparece e funciona em NOVO REGISTRO
+            if 'mode_radio' in st.session_state and st.session_state.mode_radio == "NOVO REGISTRO":
+                if st.button("🗑️ LIMPAR TUDO", help="Limpa todos os campos do formulário"):
+                    # Limpar TUDO no session_state relacionado ao formulário
+                    st.session_state.selected_record = None
+                    st.session_state.loaded_json = None
+                    st.session_state.clear_json_input = True
+
+                    # Incrementar contador para forçar recriação do formulário
+                    if 'form_clear_counter' not in st.session_state:
+                        st.session_state.form_clear_counter = 0
+                    st.session_state.form_clear_counter += 1
+
+                    # Limpar TODOS os campos do formulário e busca
+                    keys_to_delete = [key for key in st.session_state.keys()
+                                      if key.startswith('form_') or key.startswith('busca_') or
+                                      key.startswith('confirm_delete_') or key.startswith('sel_tipo_') or
+                                      key.startswith('sel_subtipo_')]
+                    for key in keys_to_delete:
+                        del st.session_state[key]
+
+                    st.success("✅ Formulário limpo!")
+                    time.sleep(0.3)
+                    st.rerun()
 
         # Inicializar session_state para registro selecionado
         if 'selected_record' not in st.session_state:
             st.session_state.selected_record = None
 
-        # Limpar registro selecionado ao mudar de modo
+        # Limpar registro selecionado e formulário ao mudar de modo
         if 'previous_mode' not in st.session_state:
             st.session_state.previous_mode = mode
         if st.session_state.previous_mode != mode:
             st.session_state.selected_record = None
+            st.session_state.loaded_json = None
             st.session_state.previous_mode = mode
+            # Incrementar contador para forçar recriação do formulário
+            if 'form_clear_counter' not in st.session_state:
+                st.session_state.form_clear_counter = 0
+            st.session_state.form_clear_counter += 1
+            # Limpar TODOS os campos do formulário ao mudar de modo
+            for key in list(st.session_state.keys()):
+                if key.startswith('form_') or key.startswith('busca_') or key.startswith('confirm_delete_'):
+                    del st.session_state[key]
+            # IMPORTANTE: Recarregar a página para aplicar a limpeza
+            st.rerun()
 
         rec = {}
+
+        # No modo NOVO REGISTRO, garantir que rec seja vazio se não houver registro carregado
+        if mode == "NOVO REGISTRO":
+            # Se selected_record for None, garantir que rec seja vazio
+            if st.session_state.selected_record is None:
+                rec = {}
+            else:
+                rec = st.session_state.selected_record
+
         # Lógica de Editar Existente
-        if mode == "EDITAR EXISTENTE" and dados:
+        elif mode == "EDITAR EXISTENTE" and dados:
             st.markdown("---")
             st.markdown("### 🔍 BUSCAR REGISTRO PARA EDITAR")
 
@@ -2340,13 +2556,41 @@ def main():
                 duplicatas = df_local[df_local.duplicated(subset=['chave_unica'], keep=False)]
                 if not duplicatas.empty:
                     st.write(f"Total: {len(duplicatas)} registros com potencial duplicidade")
+
+                    if usuario_autenticado:
+                        st.warning("⚠️ Use os botões 🗑️ para excluir registros duplicados. Esta ação é IRREVERSÍVEL!")
+                    else:
+                        st.info("ℹ️ Para excluir registros duplicados, faça login com a senha de editor.")
+
                     for chave in duplicatas['chave_unica'].unique():
                         grupo = duplicatas[duplicatas['chave_unica'] == chave]
                         st.markdown(f"**🔴 Duplicata encontrada: Revista {grupo.iloc[0]['n']} - Registro {grupo.iloc[0]['registro']}**")
-                        st.dataframe(
-                            grupo[['n', 'registro', 'titulo_artigo', 'paginas', '_id']],
-                            width='stretch'
-                        )
+
+                        # Mostrar cada registro duplicado com botão de exclusão
+                        for idx, row in grupo.iterrows():
+                            if usuario_autenticado:
+                                col1, col2 = st.columns([5, 1])
+                                with col1:
+                                    st.write(f"**ID:** {row['_id']} | **Título:** {row['titulo_artigo']} | **Páginas:** {row['paginas']}")
+                                with col2:
+                                    if st.button(f"🗑️ Excluir", key=f"delete_{row['_id']}"):
+                                        # Confirmar exclusão
+                                        if f"confirm_delete_{row['_id']}" not in st.session_state:
+                                            st.session_state[f"confirm_delete_{row['_id']}"] = True
+                                            st.warning(f"⚠️ Clique novamente para CONFIRMAR a exclusão do registro ID: {row['_id']}")
+                                            st.rerun()
+                                        else:
+                                            # Excluir o registro
+                                            dados_novos = [d for d in dados if d.get('_id') != row['_id']]
+                                            if PersistenceModule.save_data(dados_novos):
+                                                st.success(f"✅ Registro ID {row['_id']} excluído com sucesso!")
+                                                del st.session_state[f"confirm_delete_{row['_id']}"]
+                                                st.rerun()
+                                            else:
+                                                st.error("❌ Erro ao salvar os dados após exclusão.")
+                            else:
+                                # Visitantes veem apenas as informações, sem botão de exclusão
+                                st.write(f"**ID:** {row['_id']} | **Título:** {row['titulo_artigo']} | **Páginas:** {row['paginas']}")
                         st.markdown("---")
                 else:
                     st.success("✅ Nenhuma duplicidade detectada! Todos os registros possuem combinações únicas de Revista + Registro.")

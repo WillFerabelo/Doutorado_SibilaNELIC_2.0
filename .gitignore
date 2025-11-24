@@ -1,3 +1,6 @@
+# Streamlit secrets (NUNCA enviar para GitHub!)
+.streamlit/secrets.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
