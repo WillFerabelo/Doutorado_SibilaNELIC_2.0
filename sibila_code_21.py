@@ -563,7 +563,7 @@ class PDFModule:
     def add_nelic_logo_to_pdf(pdf):
         if os.path.exists(LOGO_PATH):
             try:
-                pdf.image(LOGO_PATH, x=10, y=10, w=20, h=0)
+                pdf.image(LOGO_PATH, x=175, y=10, w=25, h=0)
             except Exception:
                 pass
 
@@ -575,12 +575,13 @@ class PDFModule:
             pdf.add_page()
             PDFModule.add_nelic_logo_to_pdf(pdf)
             pdf.set_font("Arial", 'B', 16)
-            pdf.set_xy(35, 12)
+            pdf.set_xy(0, 15)
             pdf.cell(0, 10, PDFModule.to_latin1("RELATÓRIO ANALÍTICO - PROJETO SIBILA"), ln=True, align='C')
             pdf.set_font("Arial", '', 10)
             pdf.set_x(35)
             pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
             pdf.ln(5)
+            pdf.set_y(40)
             pdf.set_fill_color(240, 240, 240)
             pdf.rect(10, 45, 190, 25, 'F')
             pdf.set_y(48)
@@ -773,13 +774,13 @@ class PDFModule:
             pdf.add_page()
             PDFModule.add_nelic_logo_to_pdf(pdf)
             pdf.set_font("Arial", 'B', 14)
-            pdf.set_xy(35, 12)
+            pdf.set_xy(0, 15)
             pdf.cell(0, 10, PDFModule.to_latin1("FICHA NELIC – PROJETO SIBILA"), ln=True, align='C')
             pdf.set_font("Arial", '', 9)
             pdf.set_x(35)
             pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
             pdf.ln(4)
-            pdf.set_y(30)
+            pdf.set_y(40)
             def safe(text):
                 return PDFModule.to_latin1(text)
             pdf.set_font("Arial", 'B', 11)
@@ -831,7 +832,7 @@ class PDFModule:
             res = registro.get('resumo', '')
             if res:
                 pdf.ln(1)
-                pdf.set_font("Arial", 'I', 10)
+                pdf.set_font("Arial", '', 10)
                 pdf.multi_cell(0, 4, safe(res))
             pdf.ln(3)
             pdf.set_font("Arial", 'B', 11)
@@ -1087,6 +1088,7 @@ class CatalogacaoForm:
                     if b_load and j_txt:
                         try:
                             l = json.loads(j_txt)
+                            st.session_state.force_form_update = True
                             loaded_rec = l[0] if isinstance(l, list) else l
                             st.session_state.loaded_json = loaded_rec
                             st.success("✅ JSON carregado!")

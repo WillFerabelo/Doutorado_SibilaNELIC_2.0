@@ -3,3 +3,5 @@ Streamlit.io: SENHA_ADMIN = "@nelic2025@": @nelic2025@
 Senha do catalogador: @nelic2025
 
 Command + Shift + .
+
+https://doutoradosibilanelic.streamlit.app/
