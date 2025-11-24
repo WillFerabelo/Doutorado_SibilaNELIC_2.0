@@ -92,8 +92,26 @@ Cada texto enviado é uma unidade estanque e independente.
 **idioma_02** (Opcional):
 - Preencher APENAS quando:
   - Houver tradução acompanhando o texto original NA MESMA PÁGINA
-  - Publicação bilíngue (original + tradução lado a lado)
-- Se preenchido, adicionar ao resumo: `[Publicação bilíngue.]`
+  - Publicação bilíngue (original + tradução)
+- Se preenchido, adicionar ao resumo: "[Publicação bilíngue.]"
+
+REGRAS PARA IDIOMA_02 E PUBLICAÇÃO BILÍNGUE:
+
+1. Se vocabulario_controlado ∈ { "FICÇÃO", "POEMA", "POEMA(S)", "CAPA", "HQ", "HQ/CHARGE" }:
+   - resumo = ""
+   - palavras_chave = []
+   - autores_citados = []
+   - Se idioma_02 ≠ "":
+       → nota_edicao deve conter "[Publicação bilíngue.]"
+
+2. Caso contrário (demais tipos textuais):
+   - Se idioma_02 = "":
+       → resumo não precisa mencionar bilinguismo
+   - Se idioma_02 ≠ "":
+       → resumo deve ser preenchido normalmente
+       → resumo deve terminar com "[Publicação bilíngue.]"
+
+3. Se disser: "Incluir em resumo": inclua no resumo
 
 ---
 

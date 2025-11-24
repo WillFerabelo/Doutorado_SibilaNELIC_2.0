@@ -105,9 +105,9 @@
     "idioma_02": "POR",
     "vocabulario_controlado": "POEMA(S)",
     "titulo_artigo": "De parsing",
-    "subtitulo_artigo": "",
+    "subtitulo_artigo": "Poema de Charles Bernstein (EUA); tradução de Regis Bonvicino",
     "paginas": "p.10-13",
-    "resumo": "[Publicação bilíngue]",
+    "resumo": "",
     "nota_edicao": "",
     "autores_colaboradores": [
       "BERNSTEIN, Charles"
@@ -120,9 +120,9 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T00:08:52.487629",
-    "notas_pesquisa": [],
-    "_id": "1763953327417"
+    "_timestamp": "2025-11-24T00:02:07.417660",
+    "_id": "1763953327417",
+    "notas_pesquisa": []
   },
   {
     "n": "0",
@@ -132,9 +132,9 @@
     "idioma_02": "ING",
     "vocabulario_controlado": "POEMA(S)",
     "titulo_artigo": "Poema (de caprichos e relaxos)",
-    "subtitulo_artigo": "",
+    "subtitulo_artigo": "Poema de Paulo Leminski; tradução de Charles Bernstein e Regis Bonvicino",
     "paginas": "p.14-15",
-    "resumo": "[Publicação bilíngue]",
+    "resumo": "",
     "nota_edicao": "",
     "autores_colaboradores": [
       "LEMINSKI, Paulo"
@@ -150,61 +150,6 @@
     "iconografias": [],
     "_timestamp": "2025-11-24T00:03:10.339793",
     "_id": "1763953390339",
-    "notas_pesquisa": []
-  },
-  {
-    "n": "0",
-    "registro": "5 de 25",
-    "ordem_exibicao": 6,
-    "idioma_01": "ING",
-    "idioma_02": "POR",
-    "vocabulario_controlado": "POEMA(S)",
-    "titulo_artigo": "Estar for Hélio Oiticica",
-    "subtitulo_artigo": "",
-    "paginas": "p.16-17",
-    "resumo": "",
-    "nota_edicao": "[Publicação bilíngue.]",
-    "autores_colaboradores": [
-      "COLE, Norma"
-    ],
-    "entidade_coletiva": [],
-    "tradutores": [
-      "TEIXEIRA, Virna G."
-    ],
-    "autores_citados": [],
-    "palavras_chave": [],
-    "nome_pessoal_como_assunto": [],
-    "iconografias": [],
-    "_timestamp": "2025-11-24T00:26:31.529581",
-    "_id": "1763954791529",
-    "notas_pesquisa": []
-  },
-  {
-    "n": "0",
-    "registro": "6 de 25",
-    "ordem_exibicao": 7,
-    "idioma_01": "FRA",
-    "idioma_02": "POR",
-    "vocabulario_controlado": "POEMA(S)",
-    "titulo_artigo": "Poemas",
-    "subtitulo_artigo": "",
-    "paginas": "p.18-21",
-    "resumo": "Textos de \"Poèmes\". As versões em inglês são de Samuel Beckett, as traduções em português são de Júlio Castañon Guimarães. [Publicação bilíngue.]",
-    "nota_edicao": "",
-    "autores_colaboradores": [
-      "BECKETT, Samuel"
-    ],
-    "entidade_coletiva": [],
-    "tradutores": [
-      "BECKETT, Samuel",
-      "GUIMARÃES, Júlio Castañon"
-    ],
-    "autores_citados": [],
-    "palavras_chave": [],
-    "nome_pessoal_como_assunto": [],
-    "iconografias": [],
-    "_timestamp": "2025-11-24T00:39:21.442787",
-    "_id": "1763955561442",
     "notas_pesquisa": []
   }
 ]
