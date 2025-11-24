@@ -37,27 +37,9 @@ LOGO_PATH = os.path.join(BASE_DIR, 'NELIC.png')  # Arquivo de Logo
 # Estilos CSS
 CSS_STYLES = """
 <style>
-/* 1. Força o fundo da aplicação inteira para branco */
-.stApp {
-    background-color: #ffffff !important;
-}
-
 .main { 
-    background: #ffffff !important;
+    background: radial-gradient(circle at top left, #f5f7fb 0%, #f1f3f5 40%, #eceff1 100%);
     padding-top: 1rem;
-}
-
-/* 2. Força TODAS as letras a ficarem escuras para não sumirem */
-h1, h2, h3, h4, h5, h6, p, div, span, label, li, .stMarkdown {
-    color: #1f2933 !important;
-}
-
-/* 3. Mantém o estilo específico dos seus títulos (reforço) */
-h1 {
-    color: #1f2933 !important; /* Cinza escuro */
-}
-h2, h3, h4 { 
-    color: #243b53 !important; /* Azul escuro do NELIC */
 }
 .block-container {
     padding-top: 2.2rem;
