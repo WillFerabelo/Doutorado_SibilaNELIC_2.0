@@ -1961,19 +1961,19 @@ def main():
     usuario_autenticado = False
     senha_correta = None
 
-    # Tenta pegar a senha dos secrets (Streamlit Cloud)
+    # Tenta pegar a senha dos secrets
     try:
         if "SENHA_ADMIN" in st.secrets:
             senha_correta = st.secrets["SENHA_ADMIN"]
     except:
         pass
 
-    # Se não encontrou nos secrets, usa senha padrão local
+    # Se não encontrou nos secrets, exibe aviso
     if senha_correta is None:
-        senha_correta = "nelic2025"  # Senha padrão para uso local
-
+        if senha_digitada:
+            st.sidebar.error("⚠️ Configure SENHA_ADMIN em .streamlit/secrets.toml")
     # Verifica se a senha está correta
-    if senha_digitada == senha_correta:
+    elif senha_digitada == senha_correta:
         usuario_autenticado = True
         st.sidebar.success("✅ Modo Editor: ATIVADO")
 
