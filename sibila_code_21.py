@@ -1939,7 +1939,7 @@ def main():
     # ===== LOGO NELIC =====
     with st.sidebar:
         try:
-            st.image("/Users/williamfernandes/Documents/Doutorado/Doutorado_SibilaNELIC_2.0/Nelic-imagem.png", use_container_width=True)
+            st.image("Nelic-imagem.png", use_container_width=True)
         except:
             st.error("Imagem não encontrada no caminho especificado.")
             st.markdown("## NELIC")  # Fallback
