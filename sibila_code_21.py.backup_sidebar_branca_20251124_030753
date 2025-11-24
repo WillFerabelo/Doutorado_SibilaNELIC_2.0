@@ -67,17 +67,22 @@ h2, h3, h4 {
     margin-top: 1.5rem;
     letter-spacing: 0.06em;
 }
-/* ===== SIDEBAR - FUNDO BRANCO LIMPO ===== */
+/* ===== SIDEBAR - IDENTIDADE VISUAL IMERSIVA ===== */
 [data-testid="stSidebar"] {
-    background-color: #ffffff !important;
-    border-right: 1px solid #e0e0e0;
+    background-color: #366092 !important;
+    border-right: none;
 }
 
 [data-testid="stSidebar"] > div {
     padding-top: 1.5rem;
 }
 
-/* Texto da sidebar em azul escuro */
+/* Botão X de fechar sidebar (mobile) */
+[data-testid="stSidebar"] button {
+    color: white !important;
+}
+
+/* Texto da sidebar em branco */
 [data-testid="stSidebar"] h1,
 [data-testid="stSidebar"] h2,
 [data-testid="stSidebar"] h3,
@@ -87,38 +92,25 @@ h2, h3, h4 {
 [data-testid="stSidebar"] p,
 [data-testid="stSidebar"] label,
 [data-testid="stSidebar"] .stMarkdown {
-    color: #366092 !important;
+    color: white !important;
 }
 
-/* LOGO: Sem inversão para fundo branco */
+/* LOGO: Inversão de cores para destacar em fundo azul */
 [data-testid="stSidebar"] img {
-    filter: none;
-    opacity: 1;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
 }
 
-/* Input de senha - estilo para fundo branco */
+/* Input de senha - estilo adaptado para fundo azul */
 [data-testid="stSidebar"] input {
-    background-color: #f8f9fa !important;
-    color: #366092 !important;
-    border: 1px solid #d0d7de !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 [data-testid="stSidebar"] input::placeholder {
-    color: #8a9ab0 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
 }
-
-/* Alinhamento do tooltip (?) ao lado do label */
-[data-testid="stSidebar"] label {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
-}
-
-[data-testid="stSidebar"] .stTooltipIcon {
-    margin-left: 0 !important;
-    vertical-align: middle !important;
-}
-
 .stButton > button, .stDownloadButton > button {
     border-radius: 999px;
     font-weight: 600;
@@ -1895,26 +1887,24 @@ def relatorio_palavras_chave(df):
 # ==========================================
 
 def main():
-    # ===== LOGO NELIC =====
-    with st.sidebar:
-        try:
-            st.image("/Users/williamfernandes/Documents/Doutorado/Doutorado_SibilaNELIC_2.0/Nelic-imagem.png", use_container_width=True)
-        except:
-            st.error("Imagem não encontrada no caminho especificado.")
-            st.markdown("## NELIC")  # Fallback
-        st.write("")  # Espaçamento
+    # Logo e cabeçalho
+    if os.path.exists(LOGO_PATH):
+        st.sidebar.image(LOGO_PATH, width='stretch', output_format='PNG')
+    st.sidebar.markdown("### SISTEMA NELIC")
+    st.sidebar.markdown("**PROJETO SIBILA**")
+    st.sidebar.markdown("---")
 
     # ==================================================
     # SISTEMA DE AUTENTICAÇÃO
     # ==================================================
 
     # Campo de senha na sidebar
-    with st.sidebar:
-        senha_digitada = st.text_input(
-            "🔐 Área Restrita (Catalogadores)",
-            type="password",
-            placeholder="Digite a senha..."
-        )
+    senha_digitada = st.sidebar.text_input(
+        "🔐 Área Restrita (Catalogadores)",
+        type="password",
+        placeholder="Digite a senha...",
+        help="Digite a senha para acessar funções de catalogação e exportação"
+    )
 
     # Verificar autenticação
     usuario_autenticado = False
@@ -2001,36 +1991,38 @@ def main():
             "database"
         ]
 
-    # ===== MENU DE NAVEGAÇÃO LIMPO =====
+    # ===== MENU - IDENTIDADE VISUAL IMERSIVA =====
     with st.sidebar:
         menu = option_menu(
-            menu_title=None,  # Remove o título "NAVEGAÇÃO"
+            menu_title="NAVEGAÇÃO",
             options=opcoes_menu,
             icons=icones_menu,
+            menu_icon="house",
             default_index=0,
             orientation="vertical",
             styles={
                 "container": {
                     "padding": "0!important",
-                    "background-color": "#ffffff"  # Fundo Branco
+                    "background-color": "transparent"
                 },
                 "icon": {
-                    "color": "#366092",  # Ícones Azul
+                    "color": "white",
                     "font-size": "14px"
                 },
                 "nav-link": {
-                    "color": "#366092",  # Texto Azul
-                    "font-size": "15px",
+                    "color": "white",
+                    "font-size": "14px",
                     "text-align": "left",
-                    "margin": "0px",
+                    "margin": "5px",
                     "padding": "10px 12px",
                     "border-radius": "6px",
-                    "font-weight": "bold",  # Negrito
-                    "--hover-color": "#f0f2f6"
+                    "background-color": "transparent",
+                    "--hover-color": "#4b7bc2"
                 },
                 "nav-link-selected": {
-                    "background-color": "#366092",  # Fundo Azul quando selecionado
-                    "color": "white"  # Texto Branco quando selecionado
+                    "background-color": "white",
+                    "color": "#366092",
+                    "font-weight": "bold"
                 }
             }
         )

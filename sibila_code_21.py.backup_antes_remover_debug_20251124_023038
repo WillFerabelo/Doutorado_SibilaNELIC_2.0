@@ -9,7 +9,6 @@ from io import BytesIO
 from fpdf import FPDF
 from typing import Dict, List, Any, Optional, Tuple, Callable
 import hashlib
-from streamlit_option_menu import option_menu
 
 # ==========================================
 # 1. CONFIGURAÇÃO E ESTILO
@@ -67,58 +66,14 @@ h2, h3, h4 {
     margin-top: 1.5rem;
     letter-spacing: 0.06em;
 }
-/* ===== SIDEBAR - FUNDO BRANCO LIMPO ===== */
-[data-testid="stSidebar"] {
-    background-color: #ffffff !important;
-    border-right: 1px solid #e0e0e0;
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+    border-right: 1px solid #d8e2ec;
+    box-shadow: 2px 0 16px rgba(15, 23, 42, 0.06);
 }
-
-[data-testid="stSidebar"] > div {
+section[data-testid="stSidebar"] > div {
     padding-top: 1.5rem;
 }
-
-/* Texto da sidebar em azul escuro */
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3,
-[data-testid="stSidebar"] h4,
-[data-testid="stSidebar"] h5,
-[data-testid="stSidebar"] h6,
-[data-testid="stSidebar"] p,
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] .stMarkdown {
-    color: #366092 !important;
-}
-
-/* LOGO: Sem inversão para fundo branco */
-[data-testid="stSidebar"] img {
-    filter: none;
-    opacity: 1;
-}
-
-/* Input de senha - estilo para fundo branco */
-[data-testid="stSidebar"] input {
-    background-color: #f8f9fa !important;
-    color: #366092 !important;
-    border: 1px solid #d0d7de !important;
-}
-
-[data-testid="stSidebar"] input::placeholder {
-    color: #8a9ab0 !important;
-}
-
-/* Alinhamento do tooltip (?) ao lado do label */
-[data-testid="stSidebar"] label {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
-}
-
-[data-testid="stSidebar"] .stTooltipIcon {
-    margin-left: 0 !important;
-    vertical-align: middle !important;
-}
-
 .stButton > button, .stDownloadButton > button {
     border-radius: 999px;
     font-weight: 600;
@@ -1483,14 +1438,11 @@ class FichasNotasView:
                 <div class="nelic-card">
                     <div class="nelic-card-header">FICHA NELIC – REGISTRO {reg_sel.get('registro','')}</div>
                     <div class="nelic-card-subtitle">
-                        n. {reg_sel.get('n','?')} · Tipo {reg_sel.get('vocabulario_controlado','')} · pp. {reg_sel.get('paginas','')}
+                        Revista {reg_sel.get('n','?')} · Tipo {reg_sel.get('vocabulario_controlado','')} · pp. {reg_sel.get('paginas','')}
                     </div>
                     <div>
                         <strong>Título:</strong> {reg_sel.get('titulo_artigo','[sem título]')}<br>
-                        <strong>Subtítulo:</strong> {reg_sel.get('subtitulo_artigo','')}<br>
-                        <strong>Autores:</strong> {UtilsModule.format_list_field(reg_sel, 'autores_colaboradores')}<br>
-                        <strong>Tradutores:</strong> {UtilsModule.format_list_field(reg_sel, 'tradutores')}<br>
-                        <strong>Entidade Coletiva:</strong> {UtilsModule.format_list_field(reg_sel, 'entidade_coletiva')}
+                        <strong>Subtítulo:</strong> {reg_sel.get('subtitulo_artigo','')}
                     </div>
                     <div style="margin-top:0.4rem;">
                         <span class="nelic-tag">Idioma 1: {reg_sel.get('idioma_01','')}</span>
@@ -1507,7 +1459,7 @@ class FichasNotasView:
                 st.markdown("**Resumo:**")
                 st.write(reg_sel.get('resumo', '—'))
 
-            with st.expander("🎯 Assuntos e autores citados", expanded=False):
+            with st.expander("🎯 Assuntos e Autores", expanded=False):
                 st.markdown(f"**Palavras-chave:** {UtilsModule.format_list_field(reg_sel, 'palavras_chave')}")
                 st.markdown(f"**Autores citados:** {UtilsModule.format_list_field(reg_sel, 'autores_citados')}")
                 st.markdown(f"**Nomes pessoais como assunto:** {UtilsModule.format_list_field(reg_sel, 'nome_pessoal_como_assunto')}")
@@ -1599,12 +1551,12 @@ def relatorio_mapa_colaboracao(df):
             s = set()
             for line in sub['autores_colaboradores']:
                 s |= uniq(line if isinstance(line, list) else [line])
-            rows.append({"n.": str(rev), "Colaboradores distintos": len(s)})
+            rows.append({"Revista": str(rev), "Colaboradores distintos": len(s)})
         return pd.DataFrame(rows)
 
     df_rel = unique_colab_por_revista(df)
     st.dataframe(df_rel, width='stretch')
-    fig = px.bar(df_rel, x="n.", y="Colaboradores distintos", text="Colaboradores distintos")
+    fig = px.bar(df_rel, x="Revista", y="Colaboradores distintos", text="Colaboradores distintos")
     fig.update_layout(height=380, title="Colaboradores distintos por número da revista")
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
@@ -1657,7 +1609,7 @@ def relatorio_bilinguismo(df):
     fig.update_layout(
         height=380,
         title="% de registros bilíngues (nota ou resumo) por revista",
-        xaxis_title="n.",
+        xaxis_title="Revista",
         yaxis_title="% bilíngue"
     )
     st.plotly_chart(fig, width='stretch')
@@ -1705,7 +1657,7 @@ def relatorio_iconografia(df):
     fig.update_layout(
         height=380,
         title="% de registros com iconografia por revista",
-        xaxis_title="n.",
+        xaxis_title="Revista",
         yaxis_title="% registros com iconografia"
     )
     st.plotly_chart(fig, width='stretch')
@@ -1895,26 +1847,24 @@ def relatorio_palavras_chave(df):
 # ==========================================
 
 def main():
-    # ===== LOGO NELIC =====
-    with st.sidebar:
-        try:
-            st.image("/Users/williamfernandes/Documents/Doutorado/Doutorado_SibilaNELIC_2.0/Nelic-imagem.png", use_container_width=True)
-        except:
-            st.error("Imagem não encontrada no caminho especificado.")
-            st.markdown("## NELIC")  # Fallback
-        st.write("")  # Espaçamento
+    # Logo e cabeçalho
+    if os.path.exists(LOGO_PATH):
+        st.sidebar.image(LOGO_PATH, width='stretch', output_format='PNG')
+    st.sidebar.markdown("### SISTEMA NELIC")
+    st.sidebar.markdown("**PROJETO SIBILA**")
+    st.sidebar.markdown("---")
 
     # ==================================================
     # SISTEMA DE AUTENTICAÇÃO
     # ==================================================
 
     # Campo de senha na sidebar
-    with st.sidebar:
-        senha_digitada = st.text_input(
-            "🔐 Área Restrita (Catalogadores)",
-            type="password",
-            placeholder="Digite a senha..."
-        )
+    senha_digitada = st.sidebar.text_input(
+        "🔐 Área Restrita (Catalogadores)",
+        type="password",
+        placeholder="Digite a senha...",
+        help="Digite a senha para acessar funções de catalogação e exportação"
+    )
 
     # Verificar autenticação
     usuario_autenticado = False
@@ -1965,19 +1915,6 @@ def main():
             "MAIS DADOS",
             "EXPORTAR"
         ]
-        icones_menu = [
-            "house-fill",
-            "pencil-square",
-            "file-text",
-            "search",
-            "graph-up",
-            "diagram-3",
-            "shield-check",
-            "journal-text",
-            "book",
-            "database",
-            "download"
-        ]
     else:
         # Menu público (apenas visualização)
         opcoes_menu = [
@@ -1990,50 +1927,12 @@ def main():
             "METODOLOGIA",
             "MAIS DADOS"
         ]
-        icones_menu = [
-            "house-fill",
-            "file-text",
-            "search",
-            "graph-up",
-            "diagram-3",
-            "shield-check",
-            "book",
-            "database"
-        ]
 
-    # ===== MENU DE NAVEGAÇÃO LIMPO =====
-    with st.sidebar:
-        menu = option_menu(
-            menu_title=None,  # Remove o título "NAVEGAÇÃO"
-            options=opcoes_menu,
-            icons=icones_menu,
-            default_index=0,
-            orientation="vertical",
-            styles={
-                "container": {
-                    "padding": "0!important",
-                    "background-color": "#ffffff"  # Fundo Branco
-                },
-                "icon": {
-                    "color": "#366092",  # Ícones Azul
-                    "font-size": "14px"
-                },
-                "nav-link": {
-                    "color": "#366092",  # Texto Azul
-                    "font-size": "15px",
-                    "text-align": "left",
-                    "margin": "0px",
-                    "padding": "10px 12px",
-                    "border-radius": "6px",
-                    "font-weight": "bold",  # Negrito
-                    "--hover-color": "#f0f2f6"
-                },
-                "nav-link-selected": {
-                    "background-color": "#366092",  # Fundo Azul quando selecionado
-                    "color": "white"  # Texto Branco quando selecionado
-                }
-            }
-        )
+    menu = st.sidebar.radio(
+        "NAVEGAÇÃO",
+        opcoes_menu,
+        label_visibility="collapsed"
+    )
 
     st.sidebar.markdown("---")
 
@@ -2047,6 +1946,20 @@ def main():
     dados = PersistenceModule.load_data()
     df = pd.DataFrame(dados)
     df = UtilsModule.sanitizar_dataframe(df)
+
+    # DEBUG TEMPORÁRIO - Remover depois de resolver
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### 🔧 DEBUG")
+    st.sidebar.write(f"📊 Registros carregados: **{len(dados)}**")
+    st.sidebar.write(f"📐 DataFrame shape: **{df.shape}**")
+    if not df.empty and 'vocabulario_controlado' in df.columns:
+        vocab_values = df['vocabulario_controlado'].unique()
+        st.sidebar.write(f"📝 Tipos únicos: **{len(vocab_values)}**")
+        st.sidebar.write(f"🔤 Primeiros 5:")
+        for v in list(vocab_values)[:5]:
+            st.sidebar.write(f"- `{v}`")
+    else:
+        st.sidebar.error("❌ DataFrame vazio ou coluna ausente")
 
     # --- NELIC ---
     if menu == "NELIC":
@@ -2458,6 +2371,20 @@ def main():
     elif menu == "EXPLORAR DADOS":
         st.title("🔎 EXPLORAR DADOS")
         if not df.empty:
+            # Debug: Informações sobre os dados carregados
+            with st.expander("🔧 Debug - Informações do Dataset", expanded=False):
+                st.write(f"**Total de registros:** {len(df)}")
+                st.write(f"**Colunas disponíveis:** {', '.join(df.columns.tolist())}")
+
+                if 'vocabulario_controlado' in df.columns:
+                    vocab_values = df['vocabulario_controlado'].dropna().unique()
+                    st.write(f"**Valores únicos em 'vocabulario_controlado':** {len(vocab_values)}")
+                    st.write("**Primeiros 10 valores:**")
+                    for val in list(vocab_values)[:10]:
+                        st.write(f"- `{val}`")
+                else:
+                    st.error("⚠️ Coluna 'vocabulario_controlado' não encontrada!")
+
             # Linha de filtros com botão de reset
             st.markdown("### 🔍 FILTROS DE BUSCA")
 
@@ -2631,74 +2558,19 @@ def main():
                         st.session_state.colunas_visiveis = colunas_recomendadas
                         st.rerun()
 
-            # Preparar DataFrame para exibição
-            res_prepared = res.copy()
-
-            # Remover coluna _timestamp se existir
-            if '_timestamp' in res_prepared.columns:
-                res_prepared = res_prepared.drop(columns=['_timestamp'])
-
-            # Formatar iconografias para mostrar dados reais
-            if 'iconografias' in res_prepared.columns:
-                def formatar_iconografias(icon_list):
-                    if not icon_list or not isinstance(icon_list, list):
-                        return ""
-                    itens = []
-                    for icon in icon_list:
-                        if isinstance(icon, dict):
-                            tipo = icon.get('tipo', '')
-                            desc = icon.get('descricao', '')
-                            if tipo:
-                                itens.append(f"{tipo}: {desc}" if desc else tipo)
-                    return " | ".join(itens) if itens else ""
-
-                res_prepared['iconografias'] = res_prepared['iconografias'].apply(formatar_iconografias)
-
-            # Reordenar colunas: mover entidade_coletiva perto de autores
-            # e nota_edicao para o final
-            colunas_ordenadas = []
-            for col in res_prepared.columns:
-                if col not in ['entidade_coletiva', 'nota_edicao']:
-                    colunas_ordenadas.append(col)
-                    # Inserir entidade_coletiva após tradutores
-                    if col == 'tradutores' and 'entidade_coletiva' in res_prepared.columns:
-                        colunas_ordenadas.append('entidade_coletiva')
-
-            # Adicionar nota_edicao no final
-            if 'nota_edicao' in res_prepared.columns:
-                colunas_ordenadas.append('nota_edicao')
-
-            res_prepared = res_prepared[colunas_ordenadas]
-
-            # Atualizar colunas visíveis se necessário
-            if st.session_state.colunas_visiveis:
-                colunas_disponiveis = [col for col in st.session_state.colunas_visiveis if col in res_prepared.columns]
-                res_display = res_prepared[colunas_disponiveis]
-            else:
-                res_display = res_prepared
+            # Exibir apenas colunas selecionadas
+            res_display = res[st.session_state.colunas_visiveis] if st.session_state.colunas_visiveis else res
 
             st.dataframe(
                 res_display,
                 column_config={
-                    "n": "n.",
+                    "n": "Rev",
                     "registro": "Registro",
                     "titulo_artigo": "Título",
-                    "subtitulo_artigo": "Subtítulo",
                     "autores_colaboradores": "Autores",
-                    "entidade_coletiva": "Entidade Coletiva",
-                    "tradutores": "Tradutores",
-                    "autores_citados": "Autores Citados",
                     "vocabulario_controlado": "Tipo Textual",
                     "palavras_chave": "Palavras-Chave",
-                    "nome_pessoal_como_assunto": "Nome Pessoal Como Assunto",
-                    "paginas": "Páginas",
-                    "resumo": "Resumo",
-                    "iconografias": "Iconografias",
-                    "nota_edicao": "Nota da Edição",
-                    "notas_pesquisa": "Notas de Pesquisa",
-                    "idioma_01": "Idioma 01",
-                    "idioma_02": "Idioma 02",
-                    "ordem_exibicao": "Ordem de Exibição"
+                    "paginas": "Páginas"
                 },
                 use_container_width=True,
                 height=400

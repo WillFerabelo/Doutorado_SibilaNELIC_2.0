@@ -102,7 +102,7 @@ REGRAS PARA IDIOMA_02 E PUBLICAÇÃO BILÍNGUE:
    - palavras_chave = []
    - autores_citados = []
    - Se idioma_02 ≠ "":
-       → nota_edicao deve conter "[Publicação bilíngue.]"
+       → resumo deve conter "[Publicação bilíngue.]"
 
 2. Caso contrário (demais tipos textuais):
    - Se idioma_02 = "":

@@ -9,7 +9,6 @@ from io import BytesIO
 from fpdf import FPDF
 from typing import Dict, List, Any, Optional, Tuple, Callable
 import hashlib
-from streamlit_option_menu import option_menu
 
 # ==========================================
 # 1. CONFIGURAÇÃO E ESTILO
@@ -67,58 +66,14 @@ h2, h3, h4 {
     margin-top: 1.5rem;
     letter-spacing: 0.06em;
 }
-/* ===== SIDEBAR - FUNDO BRANCO LIMPO ===== */
-[data-testid="stSidebar"] {
-    background-color: #ffffff !important;
-    border-right: 1px solid #e0e0e0;
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+    border-right: 1px solid #d8e2ec;
+    box-shadow: 2px 0 16px rgba(15, 23, 42, 0.06);
 }
-
-[data-testid="stSidebar"] > div {
+section[data-testid="stSidebar"] > div {
     padding-top: 1.5rem;
 }
-
-/* Texto da sidebar em azul escuro */
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3,
-[data-testid="stSidebar"] h4,
-[data-testid="stSidebar"] h5,
-[data-testid="stSidebar"] h6,
-[data-testid="stSidebar"] p,
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] .stMarkdown {
-    color: #366092 !important;
-}
-
-/* LOGO: Sem inversão para fundo branco */
-[data-testid="stSidebar"] img {
-    filter: none;
-    opacity: 1;
-}
-
-/* Input de senha - estilo para fundo branco */
-[data-testid="stSidebar"] input {
-    background-color: #f8f9fa !important;
-    color: #366092 !important;
-    border: 1px solid #d0d7de !important;
-}
-
-[data-testid="stSidebar"] input::placeholder {
-    color: #8a9ab0 !important;
-}
-
-/* Alinhamento do tooltip (?) ao lado do label */
-[data-testid="stSidebar"] label {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
-}
-
-[data-testid="stSidebar"] .stTooltipIcon {
-    margin-left: 0 !important;
-    vertical-align: middle !important;
-}
-
 .stButton > button, .stDownloadButton > button {
     border-radius: 999px;
     font-weight: 600;
@@ -1895,26 +1850,24 @@ def relatorio_palavras_chave(df):
 # ==========================================
 
 def main():
-    # ===== LOGO NELIC =====
-    with st.sidebar:
-        try:
-            st.image("/Users/williamfernandes/Documents/Doutorado/Doutorado_SibilaNELIC_2.0/Nelic-imagem.png", use_container_width=True)
-        except:
-            st.error("Imagem não encontrada no caminho especificado.")
-            st.markdown("## NELIC")  # Fallback
-        st.write("")  # Espaçamento
+    # Logo e cabeçalho
+    if os.path.exists(LOGO_PATH):
+        st.sidebar.image(LOGO_PATH, width='stretch', output_format='PNG')
+    st.sidebar.markdown("### SISTEMA NELIC")
+    st.sidebar.markdown("**PROJETO SIBILA**")
+    st.sidebar.markdown("---")
 
     # ==================================================
     # SISTEMA DE AUTENTICAÇÃO
     # ==================================================
 
     # Campo de senha na sidebar
-    with st.sidebar:
-        senha_digitada = st.text_input(
-            "🔐 Área Restrita (Catalogadores)",
-            type="password",
-            placeholder="Digite a senha..."
-        )
+    senha_digitada = st.sidebar.text_input(
+        "🔐 Área Restrita (Catalogadores)",
+        type="password",
+        placeholder="Digite a senha...",
+        help="Digite a senha para acessar funções de catalogação e exportação"
+    )
 
     # Verificar autenticação
     usuario_autenticado = False
@@ -1965,19 +1918,6 @@ def main():
             "MAIS DADOS",
             "EXPORTAR"
         ]
-        icones_menu = [
-            "house-fill",
-            "pencil-square",
-            "file-text",
-            "search",
-            "graph-up",
-            "diagram-3",
-            "shield-check",
-            "journal-text",
-            "book",
-            "database",
-            "download"
-        ]
     else:
         # Menu público (apenas visualização)
         opcoes_menu = [
@@ -1990,50 +1930,12 @@ def main():
             "METODOLOGIA",
             "MAIS DADOS"
         ]
-        icones_menu = [
-            "house-fill",
-            "file-text",
-            "search",
-            "graph-up",
-            "diagram-3",
-            "shield-check",
-            "book",
-            "database"
-        ]
 
-    # ===== MENU DE NAVEGAÇÃO LIMPO =====
-    with st.sidebar:
-        menu = option_menu(
-            menu_title=None,  # Remove o título "NAVEGAÇÃO"
-            options=opcoes_menu,
-            icons=icones_menu,
-            default_index=0,
-            orientation="vertical",
-            styles={
-                "container": {
-                    "padding": "0!important",
-                    "background-color": "#ffffff"  # Fundo Branco
-                },
-                "icon": {
-                    "color": "#366092",  # Ícones Azul
-                    "font-size": "14px"
-                },
-                "nav-link": {
-                    "color": "#366092",  # Texto Azul
-                    "font-size": "15px",
-                    "text-align": "left",
-                    "margin": "0px",
-                    "padding": "10px 12px",
-                    "border-radius": "6px",
-                    "font-weight": "bold",  # Negrito
-                    "--hover-color": "#f0f2f6"
-                },
-                "nav-link-selected": {
-                    "background-color": "#366092",  # Fundo Azul quando selecionado
-                    "color": "white"  # Texto Branco quando selecionado
-                }
-            }
-        )
+    menu = st.sidebar.radio(
+        "NAVEGAÇÃO",
+        opcoes_menu,
+        label_visibility="collapsed"
+    )
 
     st.sidebar.markdown("---")
 

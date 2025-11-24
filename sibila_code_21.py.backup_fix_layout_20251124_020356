@@ -9,7 +9,6 @@ from io import BytesIO
 from fpdf import FPDF
 from typing import Dict, List, Any, Optional, Tuple, Callable
 import hashlib
-from streamlit_option_menu import option_menu
 
 # ==========================================
 # 1. CONFIGURAÇÃO E ESTILO
@@ -67,58 +66,14 @@ h2, h3, h4 {
     margin-top: 1.5rem;
     letter-spacing: 0.06em;
 }
-/* ===== SIDEBAR - FUNDO BRANCO LIMPO ===== */
-[data-testid="stSidebar"] {
-    background-color: #ffffff !important;
-    border-right: 1px solid #e0e0e0;
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+    border-right: 1px solid #d8e2ec;
+    box-shadow: 2px 0 16px rgba(15, 23, 42, 0.06);
 }
-
-[data-testid="stSidebar"] > div {
+section[data-testid="stSidebar"] > div {
     padding-top: 1.5rem;
 }
-
-/* Texto da sidebar em azul escuro */
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3,
-[data-testid="stSidebar"] h4,
-[data-testid="stSidebar"] h5,
-[data-testid="stSidebar"] h6,
-[data-testid="stSidebar"] p,
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] .stMarkdown {
-    color: #366092 !important;
-}
-
-/* LOGO: Sem inversão para fundo branco */
-[data-testid="stSidebar"] img {
-    filter: none;
-    opacity: 1;
-}
-
-/* Input de senha - estilo para fundo branco */
-[data-testid="stSidebar"] input {
-    background-color: #f8f9fa !important;
-    color: #366092 !important;
-    border: 1px solid #d0d7de !important;
-}
-
-[data-testid="stSidebar"] input::placeholder {
-    color: #8a9ab0 !important;
-}
-
-/* Alinhamento do tooltip (?) ao lado do label */
-[data-testid="stSidebar"] label {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.25rem !important;
-}
-
-[data-testid="stSidebar"] .stTooltipIcon {
-    margin-left: 0 !important;
-    vertical-align: middle !important;
-}
-
 .stButton > button, .stDownloadButton > button {
     border-radius: 999px;
     font-weight: 600;
@@ -350,7 +305,7 @@ class DataModule:
         "HQ/Charge", "Ilustração", "Publicidade", "Reprodução"
     ]
 
-    TIPOS_TEXTUAIS = {
+    GÊNEROS_TEXTUAIS = {
         "APRESENTAÇÃO": ["Sem especificação", "Literatura"],
         "ARTES PLÁSTICAS": ["Sem especificação"],
         "CAPA": ["Sem especificação"],
@@ -1113,7 +1068,7 @@ class CatalogacaoForm:
 
         col_tipo1, col_tipo2 = st.columns(2)
         with col_tipo1:
-            tipos_principais = sorted(DataModule.TIPOS_TEXTUAIS.keys())
+            tipos_principais = sorted(DataModule.GÊNEROS_TEXTUAIS.keys())
 
             # Encontrar o índice correto
             idx_tipo = 0  # default
@@ -1130,7 +1085,7 @@ class CatalogacaoForm:
                 help="Selecione o tipo textual principal."
             )
         with col_tipo2:
-            subtipos_disponiveis = DataModule.TIPOS_TEXTUAIS.get(tipo_principal_selecionado, ["Sem especificação"])
+            subtipos_disponiveis = DataModule.GÊNEROS_TEXTUAIS.get(tipo_principal_selecionado, ["Sem especificação"])
             idx_subtipo = subtipos_disponiveis.index(subtipo_atual) if subtipo_atual in subtipos_disponiveis else 0
             # Gerar key único baseado no valor atual para forçar atualização
             key_subtipo = f"sel_subtipo_{tipo_atual}_{rec.get('_id', 'novo') if rec else 'novo'}"
@@ -1483,14 +1438,11 @@ class FichasNotasView:
                 <div class="nelic-card">
                     <div class="nelic-card-header">FICHA NELIC – REGISTRO {reg_sel.get('registro','')}</div>
                     <div class="nelic-card-subtitle">
-                        n. {reg_sel.get('n','?')} · Tipo {reg_sel.get('vocabulario_controlado','')} · pp. {reg_sel.get('paginas','')}
+                        Revista {reg_sel.get('n','?')} · Tipo {reg_sel.get('vocabulario_controlado','')} · pp. {reg_sel.get('paginas','')}
                     </div>
                     <div>
                         <strong>Título:</strong> {reg_sel.get('titulo_artigo','[sem título]')}<br>
-                        <strong>Subtítulo:</strong> {reg_sel.get('subtitulo_artigo','')}<br>
-                        <strong>Autores:</strong> {UtilsModule.format_list_field(reg_sel, 'autores_colaboradores')}<br>
-                        <strong>Tradutores:</strong> {UtilsModule.format_list_field(reg_sel, 'tradutores')}<br>
-                        <strong>Entidade Coletiva:</strong> {UtilsModule.format_list_field(reg_sel, 'entidade_coletiva')}
+                        <strong>Subtítulo:</strong> {reg_sel.get('subtitulo_artigo','')}
                     </div>
                     <div style="margin-top:0.4rem;">
                         <span class="nelic-tag">Idioma 1: {reg_sel.get('idioma_01','')}</span>
@@ -1507,7 +1459,7 @@ class FichasNotasView:
                 st.markdown("**Resumo:**")
                 st.write(reg_sel.get('resumo', '—'))
 
-            with st.expander("🎯 Assuntos e autores citados", expanded=False):
+            with st.expander("🎯 Assuntos e Autores", expanded=False):
                 st.markdown(f"**Palavras-chave:** {UtilsModule.format_list_field(reg_sel, 'palavras_chave')}")
                 st.markdown(f"**Autores citados:** {UtilsModule.format_list_field(reg_sel, 'autores_citados')}")
                 st.markdown(f"**Nomes pessoais como assunto:** {UtilsModule.format_list_field(reg_sel, 'nome_pessoal_como_assunto')}")
@@ -1599,12 +1551,12 @@ def relatorio_mapa_colaboracao(df):
             s = set()
             for line in sub['autores_colaboradores']:
                 s |= uniq(line if isinstance(line, list) else [line])
-            rows.append({"n.": str(rev), "Colaboradores distintos": len(s)})
+            rows.append({"Revista": str(rev), "Colaboradores distintos": len(s)})
         return pd.DataFrame(rows)
 
     df_rel = unique_colab_por_revista(df)
     st.dataframe(df_rel, width='stretch')
-    fig = px.bar(df_rel, x="n.", y="Colaboradores distintos", text="Colaboradores distintos")
+    fig = px.bar(df_rel, x="Revista", y="Colaboradores distintos", text="Colaboradores distintos")
     fig.update_layout(height=380, title="Colaboradores distintos por número da revista")
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
@@ -1657,7 +1609,7 @@ def relatorio_bilinguismo(df):
     fig.update_layout(
         height=380,
         title="% de registros bilíngues (nota ou resumo) por revista",
-        xaxis_title="n.",
+        xaxis_title="Revista",
         yaxis_title="% bilíngue"
     )
     st.plotly_chart(fig, width='stretch')
@@ -1705,7 +1657,7 @@ def relatorio_iconografia(df):
     fig.update_layout(
         height=380,
         title="% de registros com iconografia por revista",
-        xaxis_title="n.",
+        xaxis_title="Revista",
         yaxis_title="% registros com iconografia"
     )
     st.plotly_chart(fig, width='stretch')
@@ -1749,7 +1701,7 @@ def relatorio_autores_assunto_colab(df):
     else:
         st.write("Nenhum nome aparece simultaneamente como colaborador e como assunto na amostra.")
 
-def relatorio_tipos_textuais(df):
+def relatorio_generos_textuais(df):
     st.markdown("#### Análise por tipos textuais")
     df_local = df.copy()
     df_local['tipo_base'] = df_local['vocabulario_controlado'].astype(str).apply(
@@ -1766,7 +1718,7 @@ def relatorio_tipos_textuais(df):
     col1.download_button(
         "📊 EXCEL",
         excel_rel,
-        f"rel_tipos_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        f"rel_generos_{datetime.now().strftime('%Y%m%d')}.xlsx",
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
@@ -1774,7 +1726,7 @@ def relatorio_tipos_textuais(df):
     col2.download_button(
         "📋 CSV",
         csv_rel,
-        f"rel_tipos_{datetime.now().strftime('%Y%m%d')}.csv",
+        f"rel_generos_{datetime.now().strftime('%Y%m%d')}.csv",
         "text/csv",
         width='stretch'
     )
@@ -1782,7 +1734,7 @@ def relatorio_tipos_textuais(df):
     col3.download_button(
         "📄 PDF",
         pdf_rel,
-        f"rel_tipos_{datetime.now().strftime('%Y%m%d')}.pdf",
+        f"rel_generos_{datetime.now().strftime('%Y%m%d')}.pdf",
         "application/pdf",
         width='stretch'
     )
@@ -1895,26 +1847,24 @@ def relatorio_palavras_chave(df):
 # ==========================================
 
 def main():
-    # ===== LOGO NELIC =====
-    with st.sidebar:
-        try:
-            st.image("/Users/williamfernandes/Documents/Doutorado/Doutorado_SibilaNELIC_2.0/Nelic-imagem.png", use_container_width=True)
-        except:
-            st.error("Imagem não encontrada no caminho especificado.")
-            st.markdown("## NELIC")  # Fallback
-        st.write("")  # Espaçamento
+    # Logo e cabeçalho
+    if os.path.exists(LOGO_PATH):
+        st.sidebar.image(LOGO_PATH, width='stretch', output_format='PNG')
+    st.sidebar.markdown("### SISTEMA NELIC")
+    st.sidebar.markdown("**PROJETO SIBILA**")
+    st.sidebar.markdown("---")
 
     # ==================================================
     # SISTEMA DE AUTENTICAÇÃO
     # ==================================================
 
     # Campo de senha na sidebar
-    with st.sidebar:
-        senha_digitada = st.text_input(
-            "🔐 Área Restrita (Catalogadores)",
-            type="password",
-            placeholder="Digite a senha..."
-        )
+    senha_digitada = st.sidebar.text_input(
+        "🔐 Área Restrita (Catalogadores)",
+        type="password",
+        placeholder="Digite a senha...",
+        help="Digite a senha para acessar funções de catalogação e exportação"
+    )
 
     # Verificar autenticação
     usuario_autenticado = False
@@ -1965,19 +1915,6 @@ def main():
             "MAIS DADOS",
             "EXPORTAR"
         ]
-        icones_menu = [
-            "house-fill",
-            "pencil-square",
-            "file-text",
-            "search",
-            "graph-up",
-            "diagram-3",
-            "shield-check",
-            "journal-text",
-            "book",
-            "database",
-            "download"
-        ]
     else:
         # Menu público (apenas visualização)
         opcoes_menu = [
@@ -1990,50 +1927,12 @@ def main():
             "METODOLOGIA",
             "MAIS DADOS"
         ]
-        icones_menu = [
-            "house-fill",
-            "file-text",
-            "search",
-            "graph-up",
-            "diagram-3",
-            "shield-check",
-            "book",
-            "database"
-        ]
 
-    # ===== MENU DE NAVEGAÇÃO LIMPO =====
-    with st.sidebar:
-        menu = option_menu(
-            menu_title=None,  # Remove o título "NAVEGAÇÃO"
-            options=opcoes_menu,
-            icons=icones_menu,
-            default_index=0,
-            orientation="vertical",
-            styles={
-                "container": {
-                    "padding": "0!important",
-                    "background-color": "#ffffff"  # Fundo Branco
-                },
-                "icon": {
-                    "color": "#366092",  # Ícones Azul
-                    "font-size": "14px"
-                },
-                "nav-link": {
-                    "color": "#366092",  # Texto Azul
-                    "font-size": "15px",
-                    "text-align": "left",
-                    "margin": "0px",
-                    "padding": "10px 12px",
-                    "border-radius": "6px",
-                    "font-weight": "bold",  # Negrito
-                    "--hover-color": "#f0f2f6"
-                },
-                "nav-link-selected": {
-                    "background-color": "#366092",  # Fundo Azul quando selecionado
-                    "color": "white"  # Texto Branco quando selecionado
-                }
-            }
-        )
+    menu = st.sidebar.radio(
+        "NAVEGAÇÃO",
+        opcoes_menu,
+        label_visibility="collapsed"
+    )
 
     st.sidebar.markdown("---")
 
@@ -2047,6 +1946,20 @@ def main():
     dados = PersistenceModule.load_data()
     df = pd.DataFrame(dados)
     df = UtilsModule.sanitizar_dataframe(df)
+
+    # DEBUG TEMPORÁRIO - Remover depois de resolver
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("### 🔧 DEBUG")
+    st.sidebar.write(f"📊 Registros carregados: **{len(dados)}**")
+    st.sidebar.write(f"📐 DataFrame shape: **{df.shape}**")
+    if not df.empty and 'vocabulario_controlado' in df.columns:
+        vocab_values = df['vocabulario_controlado'].unique()
+        st.sidebar.write(f"📝 Tipos únicos: **{len(vocab_values)}**")
+        st.sidebar.write(f"🔤 Primeiros 5:")
+        for v in list(vocab_values)[:5]:
+            st.sidebar.write(f"- `{v}`")
+    else:
+        st.sidebar.error("❌ DataFrame vazio ou coluna ausente")
 
     # --- NELIC ---
     if menu == "NELIC":
@@ -2458,101 +2371,67 @@ def main():
     elif menu == "EXPLORAR DADOS":
         st.title("🔎 EXPLORAR DADOS")
         if not df.empty:
+            # Debug: Informações sobre os dados carregados
+            with st.expander("🔧 Debug - Informações do Dataset", expanded=False):
+                st.write(f"**Total de registros:** {len(df)}")
+                st.write(f"**Colunas disponíveis:** {', '.join(df.columns.tolist())}")
+
+                if 'vocabulario_controlado' in df.columns:
+                    vocab_values = df['vocabulario_controlado'].dropna().unique()
+                    st.write(f"**Valores únicos em 'vocabulario_controlado':** {len(vocab_values)}")
+                    st.write("**Primeiros 10 valores:**")
+                    for val in list(vocab_values)[:10]:
+                        st.write(f"- `{val}`")
+                else:
+                    st.error("⚠️ Coluna 'vocabulario_controlado' não encontrada!")
+
             # Linha de filtros com botão de reset
             st.markdown("### 🔍 FILTROS DE BUSCA")
 
-            # GERAÇÃO DE TODOS OS TIPOS TEXTUAIS POSSÍVEIS (do TIPOS_TEXTUAIS)
-            # Incluindo TODAS as combinações de tipo + subtipo
-            tipos_completos = []
-            for tipo, subtipos in DataModule.TIPOS_TEXTUAIS.items():
-                for subtipo in subtipos:
-                    if subtipo == "Sem especificação":
-                        # Tipo sem subtipo específico
-                        tipos_completos.append(tipo)
-                    else:
-                        # Tipo com subtipo (formato: "TIPO - Subtipo")
-                        tipos_completos.append(f"{tipo} - {subtipo}")
-            tipos_clean = sorted(list(set(tipos_completos)))
+            # EXTRAÇÃO DE TIPOS TEXTUAIS (fora das colunas para evitar problemas)
+            tipos_set = set()
+            for valor in df['vocabulario_controlado']:
+                if pd.notna(valor) and str(valor).strip() and str(valor) != 'nan':
+                    tipo_principal = str(valor).split(' - ')[0].strip()
+                    if tipo_principal:
+                        tipos_set.add(tipo_principal)
+            tipos_clean = sorted(list(tipos_set))
 
-            # Preparar listas para os filtros
-            revs = sorted(df['n'].astype(str).unique())
+            # Debug de sucesso (fora das colunas)
+            if tipos_clean:
+                st.caption(f"✅ {len(tipos_clean)} tipos disponíveis: {', '.join(tipos_clean)}")
+            else:
+                st.error("❌ Nenhum tipo textual encontrado na base")
 
-            # FILTROS
-            col_filtros1, col_filtros2 = st.columns(2)
+            # FILTROS EM COLUNAS
+            col_filtros1, col_filtros2, col_filtros3, col_filtros4, col_reset = st.columns([3, 3, 3, 3, 2])
 
             with col_filtros1:
-                termo = st.text_input("🔍 Busca Livre (Título/Resumo):", key="explorar_termo")
+                termo = st.text_input("Busca Livre (Título/Resumo):", key="explorar_termo")
 
             with col_filtros2:
-                # Selectbox para revista
-                revista_sel = st.selectbox(
-                    "📖 Revista",
-                    ["Todas"] + revs,
-                    key="explorar_revista_select"
-                )
-                f_rev = [revista_sel] if revista_sel != "Todas" else []
+                revs = sorted(df['n'].astype(str).unique())
+                f_rev = st.multiselect("Revista", revs, key="explorar_revista")
 
-            # Filtro de Tipo Textual - TODOS os tipos e subtipos!
-            with st.expander("📝 Tipo Textual (clique para expandir e selecionar)", expanded=False):
-                st.caption(f"💡 {len(tipos_clean)} tipos textuais disponíveis (incluindo todos os subtipos)")
-
-                # Campo de busca para filtrar tipos
-                busca_tipo = st.text_input(
-                    "🔍 Filtrar tipos:",
-                    key="busca_tipo_textual",
-                    placeholder="Digite para filtrar a lista..."
+            with col_filtros3:
+                f_tipo = st.multiselect(
+                    "Tipo Textual",
+                    tipos_clean,
+                    key="explorar_tipo"
                 )
 
-                # Filtrar tipos conforme a busca
-                if busca_tipo:
-                    tipos_exibir = [t for t in tipos_clean
-                                   if busca_tipo.lower() in t.lower()]
-                    st.caption(f"✅ {len(tipos_exibir)} tipos encontrados")
-                else:
-                    tipos_exibir = tipos_clean
+            with col_filtros4:
+                f_kw = st.multiselect("Palavras-Chave", DataModule.LISTA_PALAVRAS_CHAVE, key="explorar_kw")
 
-                # Mostrar TODOS os tipos (filtrados ou não)
-                f_tipo = []
-                cols_tipo = st.columns(3)
-                for idx, tipo in enumerate(tipos_exibir):
-                    with cols_tipo[idx % 3]:
-                        if st.checkbox(tipo, key=f"tipo_check_{tipo}"):
-                            f_tipo.append(tipo)
-
-            # Filtro de Palavras-chave - TODAS AS 461!
-            with st.expander("🏷️ Palavras-Chave (clique para expandir e selecionar)", expanded=False):
-                st.caption(f"💡 {len(DataModule.LISTA_PALAVRAS_CHAVE)} palavras-chave disponíveis")
-
-                # Campo de busca para filtrar palavras
-                busca_palavra = st.text_input(
-                    "🔍 Filtrar palavras:",
-                    key="busca_palavra_chave",
-                    placeholder="Digite para filtrar a lista..."
-                )
-
-                # Filtrar palavras conforme a busca
-                if busca_palavra:
-                    palavras_exibir = [p for p in DataModule.LISTA_PALAVRAS_CHAVE
-                                      if busca_palavra.lower() in p.lower()]
-                    st.caption(f"✅ {len(palavras_exibir)} palavras encontradas")
-                else:
-                    palavras_exibir = DataModule.LISTA_PALAVRAS_CHAVE
-
-                # Mostrar TODAS as palavras (filtradas ou não)
-                f_kw = []
-                cols_kw = st.columns(4)
-                for idx, palavra in enumerate(palavras_exibir):
-                    with cols_kw[idx % 4]:
-                        if st.checkbox(palavra, key=f"kw_check_{palavra}"):
-                            f_kw.append(palavra)
-
-            # Botão de reset
-            if st.button("🔄 Limpar Todos os Filtros", help="Desmarca todos os filtros e recarrega"):
-                # Limpar TODOS os checkboxes e filtros
-                for key in list(st.session_state.keys()):
-                    if key.startswith('tipo_check_') or key.startswith('kw_check_') or key.startswith('explorar_'):
-                        del st.session_state[key]
-                st.rerun()
+            with col_reset:
+                st.write("")  # Espaçamento
+                st.write("")  # Espaçamento
+                if st.button("🔄 Limpar Filtros", use_container_width=True, help="Remove todos os filtros aplicados"):
+                    # Limpar todos os filtros
+                    for key in ['explorar_termo', 'explorar_revista', 'explorar_tipo', 'explorar_kw']:
+                        if key in st.session_state:
+                            del st.session_state[key]
+                    st.rerun()
 
             # Aplicar filtros
             res = df.copy()
@@ -2563,13 +2442,12 @@ def main():
                 criterios.append(f"Revistas: {', '.join(f_rev)}")
 
             if f_tipo:
-                # Filtro que compara o valor COMPLETO (tipo + subtipo) do vocabulario_controlado
+                # CORREÇÃO: Filtro mais robusto que lida com valores nulos e vazios
                 def filtro_tipo(valor):
                     if pd.isna(valor) or not valor:
                         return False
-                    valor_completo = str(valor).strip()
-                    # Verificar se o valor completo está nos tipos selecionados
-                    return valor_completo in f_tipo
+                    tipo_principal = str(valor).split(' - ')[0].strip()
+                    return tipo_principal in f_tipo
 
                 res = res[res['vocabulario_controlado'].apply(filtro_tipo)]
                 criterios.append(f"Tipos: {', '.join(f_tipo)}")
@@ -2631,74 +2509,19 @@ def main():
                         st.session_state.colunas_visiveis = colunas_recomendadas
                         st.rerun()
 
-            # Preparar DataFrame para exibição
-            res_prepared = res.copy()
-
-            # Remover coluna _timestamp se existir
-            if '_timestamp' in res_prepared.columns:
-                res_prepared = res_prepared.drop(columns=['_timestamp'])
-
-            # Formatar iconografias para mostrar dados reais
-            if 'iconografias' in res_prepared.columns:
-                def formatar_iconografias(icon_list):
-                    if not icon_list or not isinstance(icon_list, list):
-                        return ""
-                    itens = []
-                    for icon in icon_list:
-                        if isinstance(icon, dict):
-                            tipo = icon.get('tipo', '')
-                            desc = icon.get('descricao', '')
-                            if tipo:
-                                itens.append(f"{tipo}: {desc}" if desc else tipo)
-                    return " | ".join(itens) if itens else ""
-
-                res_prepared['iconografias'] = res_prepared['iconografias'].apply(formatar_iconografias)
-
-            # Reordenar colunas: mover entidade_coletiva perto de autores
-            # e nota_edicao para o final
-            colunas_ordenadas = []
-            for col in res_prepared.columns:
-                if col not in ['entidade_coletiva', 'nota_edicao']:
-                    colunas_ordenadas.append(col)
-                    # Inserir entidade_coletiva após tradutores
-                    if col == 'tradutores' and 'entidade_coletiva' in res_prepared.columns:
-                        colunas_ordenadas.append('entidade_coletiva')
-
-            # Adicionar nota_edicao no final
-            if 'nota_edicao' in res_prepared.columns:
-                colunas_ordenadas.append('nota_edicao')
-
-            res_prepared = res_prepared[colunas_ordenadas]
-
-            # Atualizar colunas visíveis se necessário
-            if st.session_state.colunas_visiveis:
-                colunas_disponiveis = [col for col in st.session_state.colunas_visiveis if col in res_prepared.columns]
-                res_display = res_prepared[colunas_disponiveis]
-            else:
-                res_display = res_prepared
+            # Exibir apenas colunas selecionadas
+            res_display = res[st.session_state.colunas_visiveis] if st.session_state.colunas_visiveis else res
 
             st.dataframe(
                 res_display,
                 column_config={
-                    "n": "n.",
+                    "n": "Rev",
                     "registro": "Registro",
                     "titulo_artigo": "Título",
-                    "subtitulo_artigo": "Subtítulo",
                     "autores_colaboradores": "Autores",
-                    "entidade_coletiva": "Entidade Coletiva",
-                    "tradutores": "Tradutores",
-                    "autores_citados": "Autores Citados",
                     "vocabulario_controlado": "Tipo Textual",
                     "palavras_chave": "Palavras-Chave",
-                    "nome_pessoal_como_assunto": "Nome Pessoal Como Assunto",
-                    "paginas": "Páginas",
-                    "resumo": "Resumo",
-                    "iconografias": "Iconografias",
-                    "nota_edicao": "Nota da Edição",
-                    "notas_pesquisa": "Notas de Pesquisa",
-                    "idioma_01": "Idioma 01",
-                    "idioma_02": "Idioma 02",
-                    "ordem_exibicao": "Ordem de Exibição"
+                    "paginas": "Páginas"
                 },
                 use_container_width=True,
                 height=400
@@ -2791,7 +2614,7 @@ def main():
             elif tipo_rel == "Autores como assunto vs colaboradores":
                 relatorio_autores_assunto_colab(df)
             elif tipo_rel == "Análise por tipos textuais":
-                relatorio_tipos_textuais(df)
+                relatorio_generos_textuais(df)
             elif tipo_rel == "Manifesto ou manifesto":
                 relatorio_manifesto(df)
             elif tipo_rel == "Palavras-chave":
