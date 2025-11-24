@@ -37,8 +37,13 @@ LOGO_PATH = os.path.join(BASE_DIR, 'NELIC.png')  # Arquivo de Logo
 # Estilos CSS
 CSS_STYLES = """
 <style>
+/* Força o fundo da aplicação inteira para branco (resolve o mobile) */
+.stApp {
+    background-color: #ffffff !important;
+}
+
 .main { 
-    background: radial-gradient(circle at top left, #f5f7fb 0%, #f1f3f5 40%, #eceff1 100%);
+    background: #ffffff !important;
     padding-top: 1rem;
 }
 .block-container {
