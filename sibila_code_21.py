@@ -9,6 +9,7 @@ from io import BytesIO
 from fpdf import FPDF
 from typing import Dict, List, Any, Optional, Tuple, Callable
 import hashlib
+import uuid
 from streamlit_option_menu import option_menu
 
 # ==========================================
@@ -1228,6 +1229,16 @@ class CatalogacaoForm:
                 st.session_state.form_ordem = int(rec.get('ordem_exibicao', 0))
                 st.session_state.form_i1 = rec.get('idioma_01', 'POR')
                 st.session_state.form_i2 = rec.get('idioma_02', '')
+
+                # Carregar Iconografias para lista dinâmica
+                icon_data = rec.get('iconografias', [])
+                rows = []
+                for item in icon_data:
+                    row_id = str(uuid.uuid4())
+                    rows.append(row_id)
+                    st.session_state[f"icon_tipo_{row_id}"] = item.get('tipo', DataModule.LISTA_ICONOGRAFIA[0])
+                    st.session_state[f"icon_desc_{row_id}"] = item.get('descricao', '')
+                st.session_state.iconografias_rows = rows
                 st.session_state.form_titulo = rec.get('titulo_artigo', '')
                 st.session_state.form_sub = rec.get('subtitulo_artigo', '')
                 st.session_state.form_nota = rec.get('nota_edicao', '')
@@ -1259,8 +1270,11 @@ class CatalogacaoForm:
 
         # Usar chave dinâmica para forçar recriação do formulário quando registro mudar OU quando limpar
         rec_id = rec.get('_id', 'novo') if rec else 'novo'
-        form_key = f"form_{rec_id}_v{st.session_state.form_clear_counter}"
-        with st.form(form_key):
+        # form_key = f"form_{rec_id}_v{st.session_state.form_clear_counter}"
+        
+        # REMOVIDO st.form PARA PERMITIR BOTÕES DINÂMICOS
+        # with st.form(form_key):
+        if True: # Manter indentação visual ou remover indentação abaixo (vou remover indentação)
             c_form1, c_form2, c_form3, c_form4 = st.columns(4)
             n_rev = c_form1.text_input("Nº REVISTA*", key="form_n_rev")
             reg_txt = c_form2.text_input("REGISTRO*", key="form_registro")
@@ -1275,7 +1289,7 @@ class CatalogacaoForm:
                         break
                 if duplicado:
                     st.warning(f"⚠️ ATENÇÃO: Já existe o registro '{reg_txt}' na Revista {n_rev}!", icon="🚨")
-            ordem = c_form4.number_input("ORDEM", key="form_ordem")
+            ordem = c_form4.number_input("ORDEM", key="form_ordem", min_value=0, step=1, format="%d")
 
             c5, c6, c7 = st.columns(3)
             langs = ["POR", "ING", "ESP", "FRA", "ITA", "ALE", "RUS", "CAT", "GRE", "JAP"]
@@ -1313,66 +1327,62 @@ class CatalogacaoForm:
             st.markdown("---")
             st.markdown("#### ICONOGRAFIA")
 
-            # Obter iconografias existentes do registro
-            icon_data = (rec or {}).get('iconografias', [])
+            # --- ICONOGRAFIA (REFATORADO) ---
+            if 'iconografias_rows' not in st.session_state:
+                st.session_state.iconografias_rows = []
 
-            # Controle de quantidade (number_input funciona dentro de forms!)
-            num_icons_inicial = len(icon_data) if icon_data else 0
-            num_icons = st.number_input(
-                "Quantidade de iconografias",
-                min_value=0,
-                max_value=20,
-                value=num_icons_inicial,
-                step=1,
-                key=f"num_icons_{rec_id}_{st.session_state.form_clear_counter}",
-                help="Ajuste a quantidade de iconografias que deseja cadastrar"
-            )
+            # Botão de Adicionar
+            col_add_icon, _ = st.columns([3, 4])
+            if col_add_icon.button("➕ ADICIONAR ICONOGRAFIA"):
+                new_row_id = str(uuid.uuid4())
+                st.session_state.iconografias_rows.append(new_row_id)
+                # Valores padrão
+                st.session_state[f"icon_tipo_{new_row_id}"] = DataModule.LISTA_ICONOGRAFIA[0]
+                st.session_state[f"icon_desc_{new_row_id}"] = ""
+                st.rerun()
 
-            # Renderizar campos para cada iconografia
-            iconografias_list = []
-            for idx in range(int(num_icons)):
+            # Renderizar linhas
+            rows_to_remove = []
+            for idx, row_id in enumerate(st.session_state.iconografias_rows):
                 st.markdown(f"**Iconografia {idx+1}**")
-                col_tipo, col_desc = st.columns([2, 5])
-
-                # Obter valores existentes ou usar defaults
-                tipo_existente = icon_data[idx].get('tipo', DataModule.LISTA_ICONOGRAFIA[0]) if idx < len(icon_data) else DataModule.LISTA_ICONOGRAFIA[0]
-                desc_existente = icon_data[idx].get('descricao', '') if idx < len(icon_data) else ''
-
-                with col_tipo:
-                    tipo_idx = 0
-                    if tipo_existente in DataModule.LISTA_ICONOGRAFIA:
-                        tipo_idx = DataModule.LISTA_ICONOGRAFIA.index(tipo_existente)
-
-                    tipo = st.selectbox(
-                        f"Tipo",
+                c_tipo, c_desc, c_del = st.columns([2, 5, 0.5])
+                
+                with c_tipo:
+                    st.selectbox(
+                        "Tipo",
                         DataModule.LISTA_ICONOGRAFIA,
-                        index=tipo_idx,
-                        key=f"icon_tipo_{idx}_{rec_id}_{st.session_state.form_clear_counter}",
+                        key=f"icon_tipo_{row_id}",
                         label_visibility="collapsed"
                     )
-
-                with col_desc:
-                    descricao = st.text_input(
-                        f"Descrição",
-                        value=desc_existente,
-                        key=f"icon_desc_{idx}_{rec_id}_{st.session_state.form_clear_counter}",
-                        placeholder="Digite a descrição da iconografia...",
+                with c_desc:
+                    st.text_input(
+                        "Descrição",
+                        key=f"icon_desc_{row_id}",
+                        placeholder="Descrição da iconografia...",
                         label_visibility="collapsed"
                     )
+                with c_del:
+                    if st.button("🗑️", key=f"del_icon_{row_id}", help="Remover iconografia"):
+                        rows_to_remove.append(row_id)
 
-                # Adicionar à lista se tiver descrição
-                if tipo and descricao and descricao.strip():
-                    iconografias_list.append({"tipo": tipo, "descricao": descricao.strip()})
+            # Processar remoções
+            if rows_to_remove:
+                for rid in rows_to_remove:
+                    if rid in st.session_state.iconografias_rows:
+                        st.session_state.iconografias_rows.remove(rid)
+                    # Limpar chaves do session_state
+                    if f"icon_tipo_{rid}" in st.session_state: del st.session_state[f"icon_tipo_{rid}"]
+                    if f"icon_desc_{rid}" in st.session_state: del st.session_state[f"icon_desc_{rid}"]
+                st.rerun()
 
             # Informação visual
-            if num_icons == 0:
-                st.info("ℹ️ Nenhuma iconografia. Aumente o número acima para adicionar.")
-            else:
+            if not st.session_state.iconografias_rows:
+                st.info("ℹ️ Nenhuma iconografia cadastrada.")
                 st.caption(f"💡 Dica: Aumente o número acima para adicionar mais iconografias, diminua para remover.")
 
             st.markdown("---")
-            # BOTÃO SALVAR (DENTRO DO FORM)
-            submit_btn = st.form_submit_button("💾 SALVAR", type="primary")
+            # BOTÃO SALVAR (AGORA FORA DO FORM)
+            submit_btn = st.button("💾 SALVAR", type="primary")
 
         # LÓGICA DE SALVAMENTO (FORA DO FORM, MAS GATILHADA PELO BOTÃO)
         if submit_btn:
@@ -1383,8 +1393,14 @@ class CatalogacaoForm:
                 st.error(f"❌ O tipo textual '{tipo_textual_final}' exige RESUMO ANALÍTICO!")
                 st.stop()
 
-            # Usar a lista de iconografias já filtrada que foi construída no formulário
-            icon_list = iconografias_list
+            # Construir lista de iconografias a partir do session_state
+            icon_list = []
+            if 'iconografias_rows' in st.session_state:
+                for row_id in st.session_state.iconografias_rows:
+                    t = st.session_state.get(f"icon_tipo_{row_id}")
+                    d = st.session_state.get(f"icon_desc_{row_id}", "").strip()
+                    if t and d:
+                        icon_list.append({"tipo": t, "descricao": d})
 
             new = {
                 "n": n_rev,
@@ -2386,6 +2402,10 @@ def main():
                                       key.startswith('sel_subtipo_') or key.startswith('icon_')]
                     for key in keys_to_delete:
                         del st.session_state[key]
+                    
+                    # Limpar lista de linhas de iconografia
+                    if 'iconografias_rows' in st.session_state:
+                        st.session_state.iconografias_rows = []
 
                     st.success("✅ Formulário limpo!")
                     time.sleep(0.3)

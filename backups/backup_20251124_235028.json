@@ -235,7 +235,7 @@
   {
     "n": "0",
     "registro": "8 de 25",
-    "ordem_exibicao": 9.0,
+    "ordem_exibicao": 9,
     "idioma_01": "ESP",
     "idioma_02": "",
     "vocabulario_controlado": "ENSAIO - Literatura",
@@ -267,7 +267,7 @@
   {
     "n": "0",
     "registro": "9 de 25",
-    "ordem_exibicao": 10.0,
+    "ordem_exibicao": 10,
     "idioma_01": "POR",
     "idioma_02": "ESP",
     "vocabulario_controlado": "POEMA(S)",
@@ -303,7 +303,7 @@
   {
     "n": "0",
     "registro": "10 de 25",
-    "ordem_exibicao": 11.0,
+    "ordem_exibicao": 11,
     "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "ENSAIO - Linguística",
@@ -373,7 +373,7 @@
   {
     "n": "0",
     "registro": "11 de 25",
-    "ordem_exibicao": 12.0,
+    "ordem_exibicao": 12,
     "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "POEMA(S)",
@@ -398,7 +398,7 @@
   {
     "n": "0",
     "registro": "12 de 25",
-    "ordem_exibicao": 13.0,
+    "ordem_exibicao": 13,
     "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "POEMA(S)",
@@ -423,7 +423,7 @@
   {
     "n": "0",
     "registro": "13 de 25",
-    "ordem_exibicao": 14.0,
+    "ordem_exibicao": 14,
     "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "POEMA(S)",
@@ -444,5 +444,397 @@
     "_timestamp": "2025-11-24T21:34:32.466955",
     "notas_pesquisa": [],
     "_id": "1764030785364"
+  },
+  {
+    "n": "0",
+    "registro": "14 de 25",
+    "ordem_exibicao": 15,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "48-49",
+    "resumo": "Publicação de dois poemas de Aníbal Cristobo, \"NENHUMA VIAGEM\" e \"FILHA DO CAPINZAL (WESTERN VERSION)\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CRISTOBO, Aníbal"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:01:24.594562",
+    "_id": "1764032484594",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "15 de 25",
+    "ordem_exibicao": 16,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Canções do muro",
+    "subtitulo_artigo": "",
+    "paginas": "p.50-53",
+    "resumo": "Canções do muro",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "COSTA, Horácio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:17:43.295081",
+    "_id": "1764033463295",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "16 de 25",
+    "ordem_exibicao": 17,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.54-55",
+    "resumo": "Alguma palavra; Quando.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DICK, André Henrique"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:23:46.562523",
+    "_id": "1764033826562",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "17 de 25",
+    "ordem_exibicao": 18,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poema",
+    "subtitulo_artigo": "",
+    "paginas": "p.56-57",
+    "resumo": "\"são canais de sombra as...\"",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LIMA, Carlos Augusto"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:27:08.173668",
+    "_id": "1764034028173",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "18 de 25",
+    "ordem_exibicao": 19,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "3 poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.58-60",
+    "resumo": "\"Uma presença deserto...\"; \"José Claúdio pintando mangas\"; \"Kafka lido por Charlie\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "AMÂNCIO, Moacir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:28:20.498416",
+    "_id": "1764034100498",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "19 de 25",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "O lobo sutil",
+    "subtitulo_artigo": "",
+    "paginas": "p.61",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BUENO, Wilson"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:32:16.562377",
+    "_id": "1764034336562",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "20 de 25",
+    "ordem_exibicao": 21,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "O que se esconde atrás do espelho",
+    "subtitulo_artigo": "",
+    "paginas": "p.62-72",
+    "resumo": "Resenha do livro \"Corola\" [Ateliê Editorial], de Claudia Roquette-Pinto. O texto analisa a poética da autora, destacando o uso de recursos formais variados, a discussão entre tradição e inovação, e a presença de uma sensualidade marcada pela estranheza e pela dúvida ontológica. Discute-se a relação entre a palavra poética e a representação do mundo, apontando para uma metafísica que funde razão e sensibilidade. (ROQUETTE-PINTO, Claudia. \"Corola\", Ateliê Editorial).",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SALVINO, Romulo Valle"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ROQUETTE-PINTO, Claudia",
+      "BLAKE, William",
+      "BANDEIRA, Manuel",
+      "NOVALIS",
+      "WORDSWORTH, William",
+      "MAGRITTE, René",
+      "ANDRADE, Carlos Drummond de",
+      "GOMES, Aíla de Oliveira",
+      "BONVICINO, Régis",
+      "CÍCERO",
+      "AGOSTINHO, SANTO"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Estética",
+      "Metalinguagem",
+      "Representação"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ROQUETTE-PINTO, Claudia"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-24T22:34:24.979742",
+    "_id": "1764034464979",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "21 de 25",
+    "ordem_exibicao": 22,
+    "idioma_01": "ING",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Donkey",
+    "subtitulo_artigo": "",
+    "paginas": "p.73",
+    "resumo": "Reprodução de desenho de Claude Royet-Journoud intitulado \"Donkey\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROYET-JOURNOUD, Claude"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Donkey\", (desenho), por Claude Royet-Journoud, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-24T22:55:51.177416",
+    "_id": "1764035751177",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "22 de 25",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "ENSAIO | Artes Plásticas",
+    "titulo_artigo": "Empenho e outros sentidos",
+    "subtitulo_artigo": "",
+    "paginas": "p.74-82",
+    "resumo": "Ensaio crítico sobre a instalação de Eduardo Frota no espaço Torreão. O autor discute os conceitos de limite, empenho e a relação da obra com o espaço arquitetônico, analisando a tensão entre o objeto escultórico e o trânsito do espectador pelas escadas do edifício.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LIMA, Manoel Ricardo de"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "FROTA, Eduardo"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Escultura",
+      "Instalação",
+      "Crítica",
+      "Espaço"
+    ],
+    "nome_pessoal_como_assunto": [
+      "FROTA, Eduardo"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "Vista de instalação de Eduardo Frota no Torreão, (foto), s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Vista de instalação de Eduardo Frota no Torreão, (foto), s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Vista de instalação de Eduardo Frota no Torreão, (foto), s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Detalhe de instalação de Eduardo Frota no Torreão, (foto), s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Vista de instalação de Eduardo Frota no Torreão, (foto), s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Vista de instalação de Eduardo Frota no Torreão, (foto), s/crédito, s/d"
+      }
+    ]
+  },
+  {
+    "n": "0",
+    "registro": "23 de 25",
+    "ordem_exibicao": 24.0,
+    "idioma_01": "ING",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Along Pico looking north",
+    "subtitulo_artigo": "",
+    "paginas": "p.83-87",
+    "resumo": "Série fotográfica de Robert Flick documentando a Pico Boulevard, desde a Baía de Santa Monica até o centro de Los Angeles.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FLICK, Robert"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Fotografia",
+      "Estados Unidos",
+      "Cidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Along Pico looking north\" (sequência fotográfica colorida), por Robert Flick, s/d [p.84]"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Along Pico looking north\" (sequência fotográfica colorida), por Robert Flick, s/d [p.85]"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Along Pico looking north\" (sequência fotográfica colorida), por Robert Flick, s/d [p.86]"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Along Pico looking north\" (sequência fotográfica colorida), por Robert Flick, s/d [p.87]"
+      }
+    ],
+    "_timestamp": "2025-11-24T23:24:11.005893",
+    "_id": "1764037451005",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "0",
+    "registro": "24 de 25",
+    "ordem_exibicao": 25.0,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Quarta capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.88",
+    "resumo": "Lista de autores citados na quarta capa: Murilo Mendes, Ricardo Assis, Michael Palmer, Charles Bernstein, Paulo Leminski, Norma Cole, Virna G. Teixeira, Samuel Becket, Túlio Castañon Guimarães, Manuel Ulancia, Reynaldo Jiménez, José Kozer, Josely Viana Baptista, Aníbal Cristobo, Eduardo Espina, Cecilia Vicuña, Horácio Costa, Guilherme Mansur, Vitor Sosa, Vitor Toledo, Régis Bonvicino, Yao Jingming, Graça Capinha, Sandra Guerreiro, André Dick, Carlos Augusto Lima, Moacir Amâncio, Wilson Bueno, Romulo Valle Salvino, Claude Royet-Journoud, Manoel Ricardo de Lima, Robert Flick.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Quarta capa com lista de colaboradores sobreposta a colagem de fotografias urbanas, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-24T23:32:05.147988",
+    "_id": "1764037925147",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "0 de 35",
+    "ordem_exibicao": 1.0,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Pathfinder on the Beach\", (colorido), por Susan Rankaitis, 2000"
+      }
+    ],
+    "_timestamp": "2025-11-24T23:45:51.164791",
+    "_id": "1764038751164",
+    "notas_pesquisa": []
   }
 ]
