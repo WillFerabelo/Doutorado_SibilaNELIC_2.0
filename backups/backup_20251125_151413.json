@@ -1,7 +1,7 @@
 [
   {
     "n": "0",
-    "registro": "0 de 25",
+    "registro": "0 de 24",
     "ordem_exibicao": 1,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -12,6 +12,7 @@
     "resumo": "",
     "nota_edicao": "",
     "autores_colaboradores": [],
+    "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [],
     "palavras_chave": [],
@@ -22,13 +23,13 @@
         "descricao": "\"Along Pico Looking North\", (fotografia colorida), FLICK, Robert, s/d"
       }
     ],
-    "_timestamp": "2025-11-23T21:31:41.379084",
-    "_id": "1763944301379",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:08:08.662735",
+    "notas_pesquisa": [],
+    "_id": "1763944301379"
   },
   {
     "n": "0",
-    "registro": "1 de 25",
+    "registro": "1 de 24",
     "ordem_exibicao": 2,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -57,19 +58,14 @@
       "Identidade"
     ],
     "nome_pessoal_como_assunto": [],
-    "iconografias": [
-      {
-        "tipo": "Ilustração",
-        "descricao": ""
-      }
-    ],
-    "_timestamp": "2025-11-23T21:49:23.579317",
-    "_id": "1763945363579",
-    "notas_pesquisa": []
+    "iconografias": [],
+    "_timestamp": "2025-11-25T15:09:18.209933",
+    "notas_pesquisa": [],
+    "_id": "1763945363579"
   },
   {
     "n": "0",
-    "registro": "2 de 25",
+    "registro": "2 de 24",
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -93,13 +89,13 @@
         "descricao": "s/título, s/crédito, s/d, p. 8"
       }
     ],
-    "_timestamp": "2025-11-23T23:46:13.340844",
-    "_id": "1763952373340",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:08:28.001393",
+    "notas_pesquisa": [],
+    "_id": "1763952373340"
   },
   {
     "n": "0",
-    "registro": "3 de 25",
+    "registro": "3 de 24",
     "ordem_exibicao": 4,
     "idioma_01": "ING",
     "idioma_02": "POR",
@@ -120,13 +116,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T00:08:52.487629",
+    "_timestamp": "2025-11-25T15:09:33.746330",
     "notas_pesquisa": [],
     "_id": "1763953327417"
   },
   {
     "n": "0",
-    "registro": "4 de 25",
+    "registro": "4 de 24",
     "ordem_exibicao": 5,
     "idioma_01": "POR",
     "idioma_02": "ING",
@@ -148,13 +144,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T00:03:10.339793",
-    "_id": "1763953390339",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:10:03.326000",
+    "notas_pesquisa": [],
+    "_id": "1763953390339"
   },
   {
     "n": "0",
-    "registro": "5 de 25",
+    "registro": "5 de 24",
     "ordem_exibicao": 6,
     "idioma_01": "ING",
     "idioma_02": "POR",
@@ -175,13 +171,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T00:26:31.529581",
-    "_id": "1763954791529",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:10:17.626299",
+    "notas_pesquisa": [],
+    "_id": "1763954791529"
   },
   {
     "n": "0",
-    "registro": "6 de 25",
+    "registro": "6 de 24",
     "ordem_exibicao": 7,
     "idioma_01": "FRA",
     "idioma_02": "POR",
@@ -203,13 +199,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T00:39:21.442787",
-    "_id": "1763955561442",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:10:32.381352",
+    "notas_pesquisa": [],
+    "_id": "1763955561442"
   },
   {
     "n": "0",
-    "registro": "7 de 25",
+    "registro": "7 de 24",
     "ordem_exibicao": 8,
     "idioma_01": "ESP",
     "idioma_02": "",
@@ -228,13 +224,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T00:45:03.587989",
-    "_id": "1763955903588",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:10:46.094334",
+    "notas_pesquisa": [],
+    "_id": "1763955903588"
   },
   {
     "n": "0",
-    "registro": "8 de 25",
+    "registro": "8 de 24",
     "ordem_exibicao": 9,
     "idioma_01": "ESP",
     "idioma_02": "",
@@ -260,13 +256,13 @@
     ],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T01:37:13.266552",
+    "_timestamp": "2025-11-25T15:11:58.518922",
     "notas_pesquisa": [],
     "_id": "1763956852904"
   },
   {
     "n": "0",
-    "registro": "9 de 25",
+    "registro": "9 de 24",
     "ordem_exibicao": 10,
     "idioma_01": "POR",
     "idioma_02": "ESP",
@@ -296,13 +292,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T20:36:44.165725",
-    "_id": "1764027404165",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:12:15.584349",
+    "notas_pesquisa": [],
+    "_id": "1764027404165"
   },
   {
     "n": "0",
-    "registro": "10 de 25",
+    "registro": "10 de 24",
     "ordem_exibicao": 11,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -355,8 +351,7 @@
     ],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T21:14:02.054640",
-    "_id": "1764029642054",
+    "_timestamp": "2025-11-25T15:12:29.725200",
     "notas_pesquisa": [
       {
         "id": "1764029702460",
@@ -368,11 +363,12 @@
         ],
         "registro_id": "1764029642054"
       }
-    ]
+    ],
+    "_id": "1764029642054"
   },
   {
     "n": "0",
-    "registro": "11 de 25",
+    "registro": "11 de 24",
     "ordem_exibicao": 12,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -391,13 +387,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T21:24:31.657964",
-    "_id": "1764030271657",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:12:50.644207",
+    "notas_pesquisa": [],
+    "_id": "1764030271657"
   },
   {
     "n": "0",
-    "registro": "12 de 25",
+    "registro": "12 de 24",
     "ordem_exibicao": 13,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -416,13 +412,13 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T21:27:46.053306",
-    "_id": "1764030466053",
-    "notas_pesquisa": []
+    "_timestamp": "2025-11-25T15:13:25.097336",
+    "notas_pesquisa": [],
+    "_id": "1764030466053"
   },
   {
     "n": "0",
-    "registro": "13 de 25",
+    "registro": "13 de 24",
     "ordem_exibicao": 14,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -441,7 +437,7 @@
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-24T21:34:32.466955",
+    "_timestamp": "2025-11-25T15:13:56.238563",
     "notas_pesquisa": [],
     "_id": "1764030785364"
   },
@@ -835,6 +831,38 @@
     ],
     "_timestamp": "2025-11-24T23:45:51.164791",
     "_id": "1764038751164",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "1 de 35",
+    "ordem_exibicao": 2.0,
+    "idioma_01": "ING",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Pathfinder on the Beach",
+    "subtitulo_artigo": "",
+    "paginas": "p.4-5",
+    "resumo": "Reprodução por fotografia de obra de Susan Rankaitis intituladas \"Pathfinder on the Beach\", originalmente na capa e contracapa, mas também na quarta capa.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "RANKAITIS, Susan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Fotografia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Pathfinder on the Beach\", (preto e branco), por Susan Rankaitis, 2000"
+      }
+    ],
+    "_timestamp": "2025-11-24T23:50:28.072157",
+    "_id": "1764039028072",
     "notas_pesquisa": []
   }
 ]
