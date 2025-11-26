@@ -3353,7 +3353,7 @@
     "titulo_artigo": "Entrevista de Torquato Neto no jornal Opinião",
     "subtitulo_artigo": "",
     "paginas": "p.179-185",
-    "resumo": "A entrevista concedida por Torquato Neto ao jornal Opinião, e republicada pela revista Sibila, constitui um documento analítico sobre a gênese e os desdobramentos estéticos da Tropicália, situando o movimento como uma resposta à estagnação cultural imposta pelo nacionalismo da \"esquerda festiva\" e pelo purismo da MPB em meados da década de 1960. Torquato define a Tropicália não como um programa codificado, mas como um \"exercício de liberdade\" que visava assimilar a informação internacional (representada pelos Beatles e pela Jovem Guarda de Roberto Carlos) a partir de uma base inevitavelmente nacional, rompendo com a dicotomia entre música engajada e cultura de massa. O texto evidencia a interdisciplinaridade do movimento, articulando a produção musical com o Cinema Novo, o Teatro Oficina e a Poesia Concreta, ao mesmo tempo em que estabelece críticas contundentes a contemporâneos como Geraldo Vandré, classificado como reacionário na forma artística, e à apropriação conservadora da obra de Chico Buarque. Por fim, o autor decreta a autoliquidação do grupo tropicalista como coletivo organizado, afirmando a permanência do conceito de \"tropicália\" como um processo contínuo de contradições brasileiras, enquanto sinaliza seu retorno à atividade cinematográfica.",
+    "resumo": "A entrevista concedida por Torquato Neto ao jornal Opinião, e republicada pela revista Sibila, constitui um documento analítico sobre a gênese e os desdobramentos estéticos da Tropicália, situando o movimento como uma resposta à estagnação cultural imposta pelo nacionalismo da \"esquerda festiva\" e pelo purismo da MPB em meados da década de 1960. Torquato define a Tropicália não como um programa codificado, mas como um \"exercício de liberdade\" que visava assimilar a informação internacional (representada pelos Beatles e pela Jovem Guarda de Roberto Carlos) a partir de uma base inevitavelmente nacional, rompendo com a dicotomia entre música engajada e cultura de massa. O texto evidencia a interdisciplinaridade do movimento, articulando a produção musical com o Cinema Novo, o Teatro Oficina e a Poesia Concreta, ao mesmo tempo em que estabelece críticas contundentes a contemporâneos como Geraldo Vandré — classificado como reacionário na forma artística — e à apropriação conservadora da obra de Chico Buarque. Por fim, o autor decreta a autoliquidação do grupo tropicalista como coletivo organizado, afirmando a permanência do conceito de \"tropicália\" como um processo contínuo de contradições brasileiras, enquanto sinaliza seu retorno à atividade cinematográfica.",
     "nota_edicao": "",
     "autores_colaboradores": [
       "NETO, Torquato"
@@ -3389,50 +3389,8 @@
       "NETO, Torquato"
     ],
     "iconografias": [],
-    "_timestamp": "2025-11-26T17:17:50.737193",
-    "notas_pesquisa": [],
-    "_id": "1764188226856"
-  },
-  {
-    "n": "2",
-    "registro": "40 de 40",
-    "ordem_exibicao": 41,
-    "idioma_01": "POR",
-    "idioma_02": "",
-    "vocabulario_controlado": "VARIEDADES",
-    "titulo_artigo": "Poesia na Ateliê Editorial",
-    "subtitulo_artigo": "",
-    "paginas": "p.186-189",
-    "resumo": "Páginas publicitárias da Ateliê Editorial divulgando publicações de poesia, incluindo as revistas Sibila nº 0 e Sibila nº 1, e os seguintes livros: \"A Um\" de Robert Creeley & Régis Bonvicino; \"Corola\" de Cláudia Roquette-Pinto (Prêmio Jabuti 2002); \"Viva Vaia\" de Augusto de Campos; \"A Máquina do Mundo Repensada\" de Haroldo de Campos; \"Louco no Oco sem Beiras\" de Frederico Barbosa; \"Orlando Furioso\" de Ludovico Ariosto; \"Quadragésimo\" de Horácio Costa; \"Vermelho\" de Aguinaldo Gonçalves; \"Antologia Poética\" de Jorge Wanderley; \"Um Canto\" de Cacá Moreira de Souza (Prêmio Fernando Pini de Excelência Gráfica 1997); \"Primeiras Palavras\" de Douglas Messerli; \"O Um\" de Bruno Verner; \"Encontros Necessários\" de Marcello Rollemberg; \"Together\" de Regis Bonvicino et all.",
-    "nota_edicao": "",
-    "autores_colaboradores": [],
-    "entidade_coletiva": [
-      "EDITORIAL, Ateliê"
-    ],
-    "tradutores": [],
-    "autores_citados": [],
-    "palavras_chave": [],
-    "nome_pessoal_como_assunto": [],
-    "iconografias": [
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.186: Capas de Sibila nº 0 e Sibila nº 1"
-      },
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.187: Capas de \"A Um\" (Robert Creeley & Régis Bonvicino) e \"Corola\" (Cláudia Roquette-Pinto)"
-      },
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.188: Capas de \"Viva Vaia\" (Augusto de Campos), \"A Máquina do Mundo Repensada\" (Haroldo de Campos), \"Louco no Oco sem Beiras\" (Frederico Barbosa) e \"Orlando Furioso\" (Ludovico Ariosto)"
-      },
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.189: Capas de \"Quadragésimo\" (Horácio Costa), \"Vermelho\" (Aguinaldo Gonçalves), \"Antologia Poética\" (Jorge Wanderley), \"Um Canto\" (Cacá Moreira de Souza), \"Primeiras Palavras\" (Douglas Messerli), \"O Um\" (Bruno Verner), \"Encontros Necessários\" (Marcello Rollemberg) e \"Together\" (Regis Bonvicino et alii)"
-      }
-    ],
-    "_timestamp": "2025-11-26T17:19:19.165304",
-    "_id": "1764188359165",
+    "_timestamp": "2025-11-26T17:17:06.856810",
+    "_id": "1764188226856",
     "notas_pesquisa": []
   }
 ]

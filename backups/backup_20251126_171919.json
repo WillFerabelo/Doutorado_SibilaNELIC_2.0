@@ -3392,47 +3392,5 @@
     "_timestamp": "2025-11-26T17:17:50.737193",
     "notas_pesquisa": [],
     "_id": "1764188226856"
-  },
-  {
-    "n": "2",
-    "registro": "40 de 40",
-    "ordem_exibicao": 41,
-    "idioma_01": "POR",
-    "idioma_02": "",
-    "vocabulario_controlado": "VARIEDADES",
-    "titulo_artigo": "Poesia na Ateliê Editorial",
-    "subtitulo_artigo": "",
-    "paginas": "p.186-189",
-    "resumo": "Páginas publicitárias da Ateliê Editorial divulgando publicações de poesia, incluindo as revistas Sibila nº 0 e Sibila nº 1, e os seguintes livros: \"A Um\" de Robert Creeley & Régis Bonvicino; \"Corola\" de Cláudia Roquette-Pinto (Prêmio Jabuti 2002); \"Viva Vaia\" de Augusto de Campos; \"A Máquina do Mundo Repensada\" de Haroldo de Campos; \"Louco no Oco sem Beiras\" de Frederico Barbosa; \"Orlando Furioso\" de Ludovico Ariosto; \"Quadragésimo\" de Horácio Costa; \"Vermelho\" de Aguinaldo Gonçalves; \"Antologia Poética\" de Jorge Wanderley; \"Um Canto\" de Cacá Moreira de Souza (Prêmio Fernando Pini de Excelência Gráfica 1997); \"Primeiras Palavras\" de Douglas Messerli; \"O Um\" de Bruno Verner; \"Encontros Necessários\" de Marcello Rollemberg; \"Together\" de Regis Bonvicino et all.",
-    "nota_edicao": "",
-    "autores_colaboradores": [],
-    "entidade_coletiva": [
-      "EDITORIAL, Ateliê"
-    ],
-    "tradutores": [],
-    "autores_citados": [],
-    "palavras_chave": [],
-    "nome_pessoal_como_assunto": [],
-    "iconografias": [
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.186: Capas de Sibila nº 0 e Sibila nº 1"
-      },
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.187: Capas de \"A Um\" (Robert Creeley & Régis Bonvicino) e \"Corola\" (Cláudia Roquette-Pinto)"
-      },
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.188: Capas de \"Viva Vaia\" (Augusto de Campos), \"A Máquina do Mundo Repensada\" (Haroldo de Campos), \"Louco no Oco sem Beiras\" (Frederico Barbosa) e \"Orlando Furioso\" (Ludovico Ariosto)"
-      },
-      {
-        "tipo": "Publicidade",
-        "descricao": "p.189: Capas de \"Quadragésimo\" (Horácio Costa), \"Vermelho\" (Aguinaldo Gonçalves), \"Antologia Poética\" (Jorge Wanderley), \"Um Canto\" (Cacá Moreira de Souza), \"Primeiras Palavras\" (Douglas Messerli), \"O Um\" (Bruno Verner), \"Encontros Necessários\" (Marcello Rollemberg) e \"Together\" (Regis Bonvicino et alii)"
-      }
-    ],
-    "_timestamp": "2025-11-26T17:19:19.165304",
-    "_id": "1764188359165",
-    "notas_pesquisa": []
   }
 ]
