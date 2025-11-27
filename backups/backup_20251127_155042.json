@@ -3353,7 +3353,7 @@
     "titulo_artigo": "Entrevista de Torquato Neto no jornal Opinião",
     "subtitulo_artigo": "",
     "paginas": "p.179-185",
-    "resumo": "A entrevista concedida por Torquato Neto ao jornal Opinião, e republicada pela revista Sibila, constitui um documento analítico sobre a gênese e os desdobramentos estéticos da Tropicália, situando o movimento como uma resposta à estagnação cultural imposta pelo nacionalismo da \"esquerda festiva\" e pelo purismo da MPB em meados da década de 1960. Torquato define a Tropicália não como um programa codificado, mas como um \"exercício de liberdade\" que visava assimilar a informação internacional (representada pelos Beatles e pela Jovem Guarda de Roberto Carlos) a partir de uma base inevitavelmente nacional, rompendo com a dicotomia entre música engajada e cultura de massa. O texto evidencia a interdisciplinaridade do movimento, articulando a produção musical com o Cinema Novo, o Teatro Oficina e a Poesia Concreta, ao mesmo tempo em que estabelece críticas contundentes a contemporâneos como Geraldo Vandré — classificado como reacionário na forma artística — e à apropriação conservadora da obra de Chico Buarque. Por fim, o autor decreta a autoliquidação do grupo tropicalista como coletivo organizado, afirmando a permanência do conceito de \"tropicália\" como um processo contínuo de contradições brasileiras, enquanto sinaliza seu retorno à atividade cinematográfica.",
+    "resumo": "A entrevista concedida por Torquato Neto ao jornal Opinião, e republicada pela revista Sibila, constitui um documento analítico sobre a gênese e os desdobramentos estéticos da Tropicália, situando o movimento como uma resposta à estagnação cultural imposta pelo nacionalismo da \"esquerda festiva\" e pelo purismo da MPB em meados da década de 1960. Torquato define a Tropicália não como um programa codificado, mas como um \"exercício de liberdade\" que visava assimilar a informação internacional (representada pelos Beatles e pela Jovem Guarda de Roberto Carlos) a partir de uma base inevitavelmente nacional, rompendo com a dicotomia entre música engajada e cultura de massa. O texto evidencia a interdisciplinaridade do movimento, articulando a produção musical com o Cinema Novo, o Teatro Oficina e a Poesia Concreta, ao mesmo tempo em que estabelece críticas contundentes a contemporâneos como Geraldo Vandré, classificado como reacionário na forma artística, e à apropriação conservadora da obra de Chico Buarque. Por fim, o autor decreta a autoliquidação do grupo tropicalista como coletivo organizado, afirmando a permanência do conceito de \"tropicália\" como um processo contínuo de contradições brasileiras, enquanto sinaliza seu retorno à atividade cinematográfica.",
     "nota_edicao": "",
     "autores_colaboradores": [
       "NETO, Torquato"
@@ -3389,8 +3389,2201 @@
       "NETO, Torquato"
     ],
     "iconografias": [],
-    "_timestamp": "2025-11-26T17:17:06.856810",
-    "_id": "1764188226856",
+    "_timestamp": "2025-11-26T17:17:50.737193",
+    "notas_pesquisa": [],
+    "_id": "1764188226856"
+  },
+  {
+    "n": "2",
+    "registro": "40 de 40",
+    "ordem_exibicao": 41,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "VARIEDADES",
+    "titulo_artigo": "Poesia na Ateliê Editorial",
+    "subtitulo_artigo": "",
+    "paginas": "p.186-189",
+    "resumo": "Páginas publicitárias da Ateliê Editorial divulgando publicações de poesia, incluindo as revistas Sibila nº 0 e Sibila nº 1, e os seguintes livros: \"A Um\" de Robert Creeley & Régis Bonvicino; \"Corola\" de Cláudia Roquette-Pinto (Prêmio Jabuti 2002); \"Viva Vaia\" de Augusto de Campos; \"A Máquina do Mundo Repensada\" de Haroldo de Campos; \"Louco no Oco sem Beiras\" de Frederico Barbosa; \"Orlando Furioso\" de Ludovico Ariosto; \"Quadragésimo\" de Horácio Costa; \"Vermelho\" de Aguinaldo Gonçalves; \"Antologia Poética\" de Jorge Wanderley; \"Um Canto\" de Cacá Moreira de Souza (Prêmio Fernando Pini de Excelência Gráfica 1997); \"Primeiras Palavras\" de Douglas Messerli; \"O Um\" de Bruno Verner; \"Encontros Necessários\" de Marcello Rollemberg; \"Together\" de Regis Bonvicino et all.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "EDITORIAL, Ateliê"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "p.186: Capas de Sibila nº 0 e Sibila nº 1"
+      },
+      {
+        "tipo": "Publicidade",
+        "descricao": "p.187: Capas de \"A Um\" (Robert Creeley & Régis Bonvicino) e \"Corola\" (Cláudia Roquette-Pinto)"
+      },
+      {
+        "tipo": "Publicidade",
+        "descricao": "p.188: Capas de \"Viva Vaia\" (Augusto de Campos), \"A Máquina do Mundo Repensada\" (Haroldo de Campos), \"Louco no Oco sem Beiras\" (Frederico Barbosa) e \"Orlando Furioso\" (Ludovico Ariosto)"
+      },
+      {
+        "tipo": "Publicidade",
+        "descricao": "p.189: Capas de \"Quadragésimo\" (Horácio Costa), \"Vermelho\" (Aguinaldo Gonçalves), \"Antologia Poética\" (Jorge Wanderley), \"Um Canto\" (Cacá Moreira de Souza), \"Primeiras Palavras\" (Douglas Messerli), \"O Um\" (Bruno Verner), \"Encontros Necessários\" (Marcello Rollemberg) e \"Together\" (Regis Bonvicino et alii)"
+      }
+    ],
+    "_timestamp": "2025-11-26T17:19:19.165304",
+    "_id": "1764188359165",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "0 de 54",
+    "ordem_exibicao": 1,
+    "idioma_01": "Português",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "1",
+    "resumo": "Capa da revista Sibila, ano 2, n. 3 (2002), que combina a reprodução da obra \"Helena Inventa Angela Maria\" (1975), de Hélio Oiticica, com enunciados editoriais que anunciam o lançamento do \"im(pós)sibilismo\", destacam um texto inédito e depoimento de João Cabral de Melo Neto e a apresentação, pela primeira vez no Brasil, do poeta mexicano José Juan Tablada, além de slogans como \"Inovação é a marca da reconsideração\" e \"Não há bombas limpas\", configurando um paratexto visual e verbal que antecipa o viés experimental e crítico do número. [Capa com reprodução de \"Helena Inventa Angela Maria\", Hélio Oiticica, 1975.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Helena Inventa Angela Maria\", (obra de Hélio Oiticica), 1975"
+      }
+    ],
+    "_timestamp": "2025-11-27T12:17:37.612564",
+    "_id": "1764256657612",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "1 de 54",
+    "ordem_exibicao": 2,
+    "idioma_01": "Português",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "2",
+    "resumo": "Página interna da revista Sibila n. 3 que apresenta uma bricolagem com a fotografia em preto e branco de Círio Martins, identificada como obra sem título (ver página 160 da mesma revista), com formato 18 x 24 cm, com arte gráfica de Sibila. [Essa imagem aparece em seguida à de Hélio Oiticica na versão em PDF que Sibila disponibiliza em seu site: https://is.gd/Kgl2ZE]. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Fotografia",
+        "descricao": "Obra sem título, Círio Martins, fotografia em preto e branco, 18 x 24 cm"
+      }
+    ],
+    "_timestamp": "2025-11-27T12:45:07.924268",
+    "notas_pesquisa": [],
+    "_id": "1764257429808"
+  },
+  {
+    "n": "3",
+    "registro": "2 de 54",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Contracapa",
+    "subtitulo_artigo": "",
+    "paginas": "p.3",
+    "resumo": "Contracapa da revista Sibila n. 3 que retoma a mesma imagem de \"Helena Inventa Angela Maria\" (1975), de Hélio Oiticica, utilizada na capa, com arte gráfica de Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Fração de \"Helena Inventa Angela Maria\", Hélio Oiticica, 1975, imagem reaplicada na contracapa"
+      }
+    ],
+    "_timestamp": "2025-11-27T12:38:48.000106",
+    "notas_pesquisa": [],
+    "_id": "1764257904347"
+  },
+  {
+    "n": "3",
+    "registro": "3 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ZÉ, Tom",
+      "CÁMARA, Mario",
+      "BOSI, Viviana",
+      "ROSA, Mario Alex",
+      "CARVALHO, Ricardo Schmitt",
+      "MACCHI, Fabiana",
+      "BESSA, A.S.",
+      "TOSCANO, Rodrigo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "SALVINO, Rômulo Valle",
+      "WEINBERGER, Eliot",
+      "VETERANYI, Aglaja",
+      "STOCK, Robert",
+      "MARTINS, Luciana",
+      "FAUSTINO, Mário",
+      "VILLAÇA, Alcides Celso de Oliveira",
+      "NETO, Torquato",
+      "MEIRELES, Cecília"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476880",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "4 de 54",
+    "ordem_exibicao": 5,
+    "idioma_01": "POR",
+    "idioma_02": "ING",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "Im(pós)sibilismo",
+    "subtitulo_artigo": "",
+    "paginas": "p.9",
+    "resumo": "Declaração programática multilíngue que anuncia o lançamento do conceito de \"im(pós)sibilismo\". O texto apresenta variações da frase de lançamento em português, espanhol, tcheco, francês e inglês, configurando-se como um manifesto estético da publicação. Incluímos como \"Editorial\" uma vez que a revista apresenta o texto no lugar em que, diante dos outros números, publica o expediente. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Manifesto"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica com um S ocupando a folha inteira\", preto e branco, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T12:55:20.322256",
+    "_id": "1764258920322",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "5 de 54",
+    "ordem_exibicao": 6,
+    "idioma_01": "POR",
+    "idioma_02": "ING",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Desmanifesto",
+    "subtitulo_artigo": "Singing under test",
+    "paginas": "p.10-12",
+    "resumo": "Desmanifesto: Singing under test. [Manifesto de Sibila]. [Publicação bilíngue.]",
+    "nota_edicao": "Apresenta também o título em inglês: Unmanifesto: Singing under test",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles",
+      "BONVICINO, Régis",
+      "CISNEROS, Odile"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:58:56.429073",
+    "_id": "1764259136429",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "6 de 54",
+    "ordem_exibicao": 7,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Inovação é a marca da reconsideração",
+    "subtitulo_artigo": "",
+    "paginas": "p.13-20",
+    "resumo": "Entrevista em que Charles Bernstein, membro do conselho editorial da Sibila e fundador do movimento L=a=n=g=u=a=g=e, debate com Régis Bonvicino e Odile Cisneros a natureza da inovação na poesia contemporânea. O argumento central refuta a inovação como simples valor de mercado ou progressismo linear, definindo-a como uma necessidade histórica de resposta às crises sociais e à repetição-compulsão cultural. O texto articula comparações entre a poesia norte-americana (objetivistas, beats, language poets) e a poesia concreta brasileira, analisando as posições críticas de Augusto de Campos sobre John Cage e o modernismo. Bernstein defende uma \"poética da perplexidade\" e a invenção constante como forma de lidar com o contemporâneo, rejeitando a dicotomia entre sucesso e fracasso.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles",
+      "BONVICINO, Régis",
+      "CISNEROS, Odile"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ANDREWS, Bruce",
+      "DYLAN, Bob",
+      "SPICER, Jack",
+      "STEIN, Gertrude",
+      "WILLIAMS, William Carlos",
+      "ZUKOFSKY, Louis",
+      "REZNIKOFF, Charles",
+      "NIEDECKER, Lorine",
+      "ROTHENBERG, Jerome",
+      "ANTIN, David",
+      "WEINER, Hannah",
+      "GUEST, Barbara",
+      "ASHBERY, John",
+      "O'HARA, Frank",
+      "OLSON, Charles",
+      "CREELEY, Robert",
+      "ELIOT, T.S.",
+      "GINSBERG, Allen",
+      "MCCAFFERY, Steve",
+      "HEJINIAN, Lyn",
+      "SCALAPINO, Leslie",
+      "DUPLESSIS, Rachel",
+      "PIOMBINO, Nick",
+      "HOWE, Susan",
+      "WAH, Fred",
+      "PERELMAN, Bob",
+      "LAZER, Hank",
+      "STEWART, Susan",
+      "FRASER, Kathleen",
+      "THOMAS, Lorenzo",
+      "WALLACE, Mark",
+      "MARKS, Steven",
+      "SPAHR, Juliana",
+      "GOLDSMITH, Kenny",
+      "LIN, Tan",
+      "DORIS, Stacy",
+      "MULLEN, Harreyette",
+      "BOK, Christian",
+      "WERSHLER-HENRY, Darren",
+      "MAC CORMACK, Karen",
+      "DAVIES, Kevin",
+      "CAMPOS, Augusto de",
+      "CAGE, John",
+      "POUND, Ezra",
+      "CUMMINGS, e.e.",
+      "STEVENS, Wallace",
+      "CRANE, Hart",
+      "OPPEN, George",
+      "MAC LOW, Jackson",
+      "CAMPOS, Haroldo de",
+      "RIMBAUD, Arthur"
+    ],
+    "palavras_chave": [
+      "Invenção",
+      "Poesia",
+      "Vanguarda",
+      "Crítica",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "Foto de Charles Bernstein (p&b), s/d, p.13"
+      }
+    ],
+    "_timestamp": "2025-11-27T13:06:53.889597",
+    "_id": "1764259613889",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "7 de 54",
+    "ordem_exibicao": 8,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "São Francisco, o rio e o outro",
+    "subtitulo_artigo": "",
+    "paginas": "p.21-22",
+    "resumo": "Ensaio em que Maria Elisa Costa percorre a geografia física e afetiva do Rio São Francisco, estabelecendo uma homologia entre o curso fluvial e a identidade nacional brasileira. A autora contrapõe a memória de um passado orgânico e abundante à intervenção tecnocrática da modernidade , simbolizada pelas barragens hidrelétricas que, embora gerem progresso técnico, resultam na morte simbólica da paisagem natural e na exclusão social das populações ribeirinhas. O texto conclui com a imagem do rio como uma \"fera ferida\" que resiste até a exaustão, sustentando a tese de que o destino do São Francisco espelha a própria condição do Brasil.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "COSTA, Maria Elisa"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Brasil",
+      "Geografia",
+      "Memória",
+      "Modernidade",
+      "Natureza"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:10:53.079281",
+    "_id": "1764259853079",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "8 de 54",
+    "ordem_exibicao": 9,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois desenhos",
+    "subtitulo_artigo": "",
+    "paginas": "p.23-25",
+    "resumo": "[Poema visual escrito à mão com várias palavras grafadas na folha, como \"o tempo\" e \"o pensamento\".]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GRISPUM, Ester"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:12:07.433765",
+    "_id": "1764259927433",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "9 de 54",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Letra para um rap",
+    "subtitulo_artigo": "",
+    "paginas": "p.26",
+    "resumo": "\"Letra para um rap\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LOPEZ, Telê Ancona"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:13:00.201433",
+    "_id": "1764259980201",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "10 de 54",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Soneto 507 remanifesto",
+    "subtitulo_artigo": "",
+    "paginas": "p.27",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MATTOSO, Glauco"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "HOMERO"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:14:25.703912",
+    "_id": "1764260065703",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "11 de 54",
+    "ordem_exibicao": 12,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Nuevas inscripciones",
+    "subtitulo_artigo": "",
+    "paginas": "p.28-31",
+    "resumo": "Nuevas inscripciones / Pedras pensadas. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "NAVAS, Adolfo Montejo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ALCIDES, Sérgio"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:15:45.394323",
+    "_id": "1764260145394",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "12 de 54",
+    "ordem_exibicao": 13,
+    "idioma_01": "ING",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Letter to a vagrant",
+    "subtitulo_artigo": "",
+    "paginas": "p.32-35",
+    "resumo": "Letter to a vagrant / Carta a um vadio. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PALMER, Michael"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:16:57.022834",
+    "_id": "1764260217022",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "13 de 54",
+    "ordem_exibicao": 14,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Issey Miyake",
+    "subtitulo_artigo": "",
+    "paginas": "p.36-37",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FERRAZ, Eucanaã"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:19:04.637211",
+    "_id": "1764260344637",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "14 de 54",
+    "ordem_exibicao": 15,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Três poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.38-40",
+    "resumo": "Três poemas: \"Tratado de amarelinha\"; \"Maneiras de olhar\"; \"Ainda barrocos\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FERRAZ, Paulo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:20:04.902959",
+    "_id": "1764260404902",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "15 de 54",
+    "ordem_exibicao": 16,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Amianto",
+    "subtitulo_artigo": "",
+    "paginas": "p.41",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LIMA, Manoel Ricardo de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:21:08.525840",
+    "_id": "1764260468525",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "16 de 54",
+    "ordem_exibicao": 17,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.42",
+    "resumo": "Dois poemas: \"Entre\"; \"Quarteirão\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MARIANI, Matias"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:22:04.269886",
+    "_id": "1764260524269",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "17 de 54",
+    "ordem_exibicao": 18,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.43-44",
+    "resumo": "Dois poemas: \"No vale\"; \"Província\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CAMPOS, Angela de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:23:29.946005",
+    "_id": "1764260609946",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "18 de 54",
+    "ordem_exibicao": 19,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Fragmentos",
+    "subtitulo_artigo": "",
+    "paginas": "p.45-46",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MING, Yao Jing"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:24:34.663015",
+    "_id": "1764260674663",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "19 de 54",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.47-49",
+    "resumo": "Dois poemas: \"Da palindromia vocabular\"; \"Da artropodia vocabular\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DOLHNIKOFF, Luis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:25:35.488308",
+    "_id": "1764260735488",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "20 de 54",
+    "ordem_exibicao": 21,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Agricultor Raduan",
+    "subtitulo_artigo": "",
+    "paginas": "p.50",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "AMÂNCIO, Moacir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:27:07.328773",
+    "_id": "1764260827328",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "21 de 54",
+    "ordem_exibicao": 22,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "A nuvem",
+    "subtitulo_artigo": "",
+    "paginas": "p.51-52",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:27:47.420375",
+    "_id": "1764260867420",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "22 de 54",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "VARIEDADES",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "53",
+    "resumo": "Trata-se de uma imagem do céu, em preto e branco, com nuvens, após o poema \"A nuvem\", de Régis Bonvicino.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Imagem de nuvem (p&b), s/d (após o poema de Bonvicino: \"A nuvem\")"
+      }
+    ],
+    "_timestamp": "2025-11-27T13:31:13.719439",
+    "_id": "1764261073719",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "23 de 54",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Tablada",
+    "subtitulo_artigo": "um vanguardista mexicano",
+    "paginas": "p.54-57",
+    "resumo": "Ensaio biográfico e crítico sobre José Juan Tablada, situando-o como figura central na transição do modernismo hispano-americano para as vanguardas literárias do século XX. O texto examina a influência do contexto político mexicano, incluindo a relação do autor com o regime de Porfírio Díaz e seu posterior exílio em Nova York, onde atuou como mediador cultural. A análise destaca a introdução do haicai na língua espanhola e as experimentações com poesia visual e ideográfica como marcas da constante inovação na obra de Tablada, fundamentada em diálogos com a arte japonesa e a vanguarda internacional.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CISNEROS, Odile"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "TABLADA, José Juan",
+      "HIROSHIGUÉ",
+      "DE ZAYAS, Marius",
+      "VARESE, Edgar",
+      "HUIDOBRO, Vicente",
+      "MILHAUD, Darius",
+      "COVARRUBIAS, Miguel",
+      "APOLLINAIRE, Guillaume",
+      "PO, LI",
+      "PAZ, Octavio",
+      "PACHECO, José Emilio"
+    ],
+    "palavras_chave": [
+      "Vanguarda",
+      "Modernismo",
+      "México",
+      "Japão",
+      "Poesia",
+      "Biografia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "TABLADA, José Juan"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:34:50.529341",
+    "_id": "1764261290529",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "24 de 54",
+    "ordem_exibicao": 25,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "De un día...",
+    "subtitulo_artigo": "",
+    "paginas": "p.58-65",
+    "resumo": "De un día...: \"La mañana\" (El saúz; Los gansos; El bambú; El caballo del diablo); \"La tarde\" (Las cigarras; Las ranas; Hojas secas); \"El crepúsculo\" (Mariposa nocturna; Los sapos; El murciélago); \"La noche\" (Luciérnagas; El abejorro; El cocuyo). [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "TABLADA, José Juan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile",
+      "REIS, Orfa Carneiro"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:35:54.352514",
+    "_id": "1764261354352",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "25 de 54",
+    "ordem_exibicao": 26,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A poesia francesa de Ungaretti",
+    "subtitulo_artigo": "uma tradução comparada",
+    "paginas": "p.66-67",
+    "resumo": "Ensaio introdutório em que Aurora Fornoni Bernardini examina o bilinguismo na obra de Giuseppe Ungaretti, com foco na coletânea de versos em francês \"Derniers Jours\" (1919). O texto discute a relevância da autotradução na poética ungarettiana e estabelece diálogos com a crítica de Edoardo Sanguineti e as traduções de Haroldo de Campos. A autora contextualiza a seleção de poemas que serão apresentados em tradução comparada, destacando as origens bilíngues ou circunstanciais de peças dedicadas a Guillaume Apollinaire e compostas durante a guerra.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BERNARDINI, Aurora Fornoni"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "UNGARETTI, Giuseppe",
+      "SANGUINETI, Edoardo",
+      "CAMPOS, Haroldo de",
+      "APOLLINAIRE, Guillaume",
+      "SCEAB, Moammed",
+      "REBAY, Luciano",
+      "LAMBERT, G.M."
+    ],
+    "palavras_chave": [
+      "Tradução",
+      "Poesia",
+      "Literatura",
+      "Itália",
+      "França"
+    ],
+    "nome_pessoal_como_assunto": [
+      "UNGARETTI, Giuseppe"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:37:54.470826",
+    "_id": "1764261474470",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "26 de 54",
+    "ordem_exibicao": 27,
+    "idioma_01": "POR",
+    "idioma_02": "FRA",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.68-74",
+    "resumo": "Poemas: \"Pour Guillaume Apollinaire\" / \"For Guillaume Apollinaire\" / \"Para Guillaume Apollinaire\"; \"Nostalgia\" / \"Nostalgie\"; \"Girovago\" / \"Voyage\" / \"Viagem\". [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "UNGARETTI, Giuseppe"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "LAMBERT, G. M.",
+      "BERNARDINI, Aurora Fornoni"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:41:13.515780",
+    "_id": "1764261673515",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "27 de 54",
+    "ordem_exibicao": 28,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Quatro trabalhos",
+    "subtitulo_artigo": "",
+    "paginas": "p.75-78",
+    "resumo": "Série de quatro trabalhos de arte gráfica (colagens) da artista Susan Bee.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BEE, Susan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"s/título\", (colagem com recortes de texto 'Bin Laden hunted in caves' e elementos gráficos), s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"s/título\", (colagem com crianças, figura diabólica e criatura fantástica), s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"s/título\", (colagem surrealista com árvore, cobra e figura feminina nua), s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"s/título\", (colagem com figura feminina nua reclinada e mão segurando revólver), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T13:41:48.847842",
+    "_id": "1764261708847",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "28 de 54",
+    "ordem_exibicao": 29,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Gil Vicente",
+    "subtitulo_artigo": "um espelho levantado à boca de cena",
+    "paginas": "p.79-82",
+    "resumo": "Ensaio que articula a memória pessoal da infância nas Caxinas com a análise crítica da dramaturgia de Gil Vicente. Valter Hugo Mãe estabelece um paralelo entre a dramaticidade da vida piscatória e a universalidade dos tipos vicentinos, argumentando que a obra do dramaturgo possui uma nitidez atemporal capaz de espelhar a condição humana para além do século XVI. O texto defende a atualidade da crítica social de Vicente, cuja \"malícia inteligente\" e suspensão da inocência continuam a expor o caráter moral da sociedade portuguesa contemporânea.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MÃE, Valter Hugo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "VICENTE, Gil"
+    ],
+    "palavras_chave": [
+      "Teatro",
+      "Literatura",
+      "Memória",
+      "Portugal",
+      "Religião"
+    ],
+    "nome_pessoal_como_assunto": [
+      "VICENTE, Gil"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "Fotografia de valter hugo mãe (p&b), s/d, p.80"
+      }
+    ],
+    "_timestamp": "2025-11-27T13:45:40.342634",
+    "_id": "1764261940342",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "29 de 54",
+    "ordem_exibicao": 30,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A sombra de Tânato",
+    "subtitulo_artigo": "trajetos da ficção portuguesa contemporânea",
+    "paginas": "p.83-91",
+    "resumo": "Ensaio que investiga a inscrição da morte (Tânato) e do niilismo na ficção portuguesa contemporânea, estabelecendo um contraponto com a tradição cultural humanista e a metafísica estática predominante até a década de 1980. O texto analisa como o desencanto pós-revolucionário de 1974 propiciou uma apropriação mais radical da negatividade, exemplificada nas obras de Vergílio Ferreira (Para Sempre, Até ao Fim, Na Tua Face), Almeida Faria (Tetralogia Lusitana) e Rui Nunes. A análise destaca a dissolução do sujeito, a incomunicabilidade e a estética do grotesco como formas de responsabilidade cognitiva da literatura diante de uma sociedade normalizada e em crise.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SOUSA, João Paulo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BERNHARD, Thomas",
+      "SOARES, Bernardo",
+      "GUERREIRO, António",
+      "BAUDELAIRE, Charles",
+      "FLAUBERT, Gustave",
+      "GIL, José",
+      "BROCH, Hermann",
+      "JOYCE, James",
+      "FERREIRA, Vergílio",
+      "PICASSO, Pablo",
+      "BACON, Francis",
+      "FARIA, Almeida",
+      "NUNES, Rui",
+      "BLANCHOT, Maurice",
+      "HEIDEGGER, Martin",
+      "HOMERO"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Morte",
+      "Portugal",
+      "Romance",
+      "Filosofia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "FERREIRA, Vergílio",
+      "FARIA, Almeida",
+      "NUNES, Rui"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T13:49:02.452551",
+    "_id": "1764262142452",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "30 de 54",
+    "ordem_exibicao": 31,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Polêmica",
+    "subtitulo_artigo": "",
+    "paginas": "p.92-93",
+    "resumo": "Arte gráfica da revista Sibila servindo como introdução visual à seção \"Polêmica\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Arte Gráfica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de introdução à seção Polêmica\", por Sibila, p.92-93"
+      }
+    ],
+    "_timestamp": "2025-11-27T13:49:33.854642",
+    "_id": "1764262173854",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "31 de 54",
+    "ordem_exibicao": 32,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A “verdadeira” obra de Gertrude Stein",
+    "subtitulo_artigo": "",
+    "paginas": "p.94-100",
+    "resumo": "Ensaio crítico integrante da seção \"Polêmica\", no qual Ulla Dydo discute os desafios e a necessidade de uma edição completa e anotada da obra de Gertrude Stein. A autora compara o estado editorial precário dos textos de Stein com o tratamento rigoroso dispensado a modernistas como Ezra Pound, James Joyce e Emily Dickinson, argumentando que a simplicidade aparente e a falta de revisões de Stein exigem um estudo meticuloso dos manuscritos e cadernos originais. O texto aborda a importância de datar corretamente as obras, corrigir discrepâncias textuais e compreender o processo criativo da autora para além de sua persona pública.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DYDO, Ulla"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BESSA, A. S."
+    ],
+    "autores_citados": [
+      "STEIN, Gertrude",
+      "POUND, Ezra",
+      "JOYCE, James",
+      "ELIOT, T.S.",
+      "DICKINSON, Emily",
+      "GABLER, Hans",
+      "JOHNSON",
+      "FRANKLIN, R. W.",
+      "HOWE, Susan",
+      "MELLOW, James",
+      "TOKLAS, Alice B."
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Editor",
+      "Crítica",
+      "Biografia",
+      "Modernismo"
+    ],
+    "nome_pessoal_como_assunto": [
+      "STEIN, Gertrude"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T14:20:07.712584",
+    "_id": "1764264007712",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "32 de 54",
+    "ordem_exibicao": 33,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Poesia: presente & (possível) futuro",
+    "subtitulo_artigo": "",
+    "paginas": "p.101-111",
+    "resumo": "Ensaio integrante da seção \"Polêmica\", no qual Carlos Ávila analisa o panorama da poesia contemporânea diante das transformações tecnológicas e do legado das vanguardas do século XX. O texto discute a crise de comunicabilidade da poesia moderna, comparando-a à música erudita, e reflete sobre o impacto da informática na criação poética (infopoesia). Apoiando-se em diagnósticos de Paul Valéry e na visão otimista de Murilo Mendes, o autor examina as possibilidades de sobrevivência e reinvenção da poesia no novo milênio, considerando a hibridização de linguagens e a resistência cultural como caminhos para o futuro.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ÁVILA, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ELIOT, T.S.",
+      "PESSOA, Fernando",
+      "PAZ, Octavio",
+      "MELO NETO, João Cabral de",
+      "VALÉRY, Paul",
+      "MALLARMÉ, Stéphane",
+      "MIASKOWSKI",
+      "MENDES, Murilo",
+      "ARAÚJO, Lais Corrêa de"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Vanguarda",
+      "Tecnologia",
+      "Crítica",
+      "Século Xx",
+      "Concretismo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T14:22:24.405918",
+    "_id": "1764264144405",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "33 de 54",
+    "ordem_exibicao": 34,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Destradução",
+    "subtitulo_artigo": "",
+    "paginas": "p.112-113",
+    "resumo": "Arte gráfica da revista Sibila servindo como introdução visual à seção \"Destradução\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Arte Gráfica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Destradução\", (arte gráfica, preto e branco), Sibila, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T14:24:50.267709",
+    "_id": "1764264290267",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "34 de 54",
+    "ordem_exibicao": 35,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "p.114",
+    "resumo": "Nota biográfica situada na seção \"Destradução\", apresentando a poeta e ensaísta sueca Helena Erikson. O texto destaca sua produção literária, origem em Gothenburg e o trabalho de autotradução do poema inédito \"Drottningburen\", encaminhado à revista por Claude Royet-Journoud.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "ERIKSON, Helena",
+      "ROYET-JOURNOUD, Claude"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Tradução",
+      "Suécia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ERIKSON, Helena"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Retrato de Helena Erikson escrevendo ao ar livre\", preto e branco, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T14:25:50.180140",
+    "_id": "1764264350180",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "35 de 54",
+    "ordem_exibicao": 36,
+    "idioma_01": "ING",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Drottningburen",
+    "subtitulo_artigo": "",
+    "paginas": "p.115-120",
+    "resumo": "Drottningburen / Cage of Queens. [Poema original em sueco com autotradução para o inglês. Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ERIKSON, Helena"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ERIKSON, Helena"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T14:47:54.863635",
+    "_id": "1764265674863",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "36 de 54",
+    "ordem_exibicao": 37,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Pares contemporâneos",
+    "subtitulo_artigo": "",
+    "paginas": "p.121-122",
+    "resumo": "Texto de apresentação que inaugura a seção \"Pares contemporâneos\", dedicada a contextualizar o pensamento e a produção artística brasileira. A seção destaca o artista plástico e crítico Carlos Zilio, autor de \"A Querela do Brasil\", e o poeta e tradutor Ruy Proença, apontado pela crítica como voz inovadora da poesia contemporânea. As entrevistas subsequentes foram conduzidas por Régis Bonvicino, Odile Cisneros e Paulo Ferraz.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "ZILIO, Carlos",
+      "PROENÇA, Ruy",
+      "VIAN, Boris",
+      "BASTOS, Jorge Henrique",
+      "BUENO, Alexei",
+      "FERRAZ, Heitor",
+      "AZEVEDO, Carlito",
+      "BONVICINO, Régis",
+      "CISNEROS, Odile",
+      "FERRAZ, Paulo"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Crítica",
+      "Poesia",
+      "Brasil",
+      "Modernismo",
+      "Entrevista"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ZILIO, Carlos",
+      "PROENÇA, Ruy"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica da revista com recorte da obra de Carlos Zilio\", preto e branco, Sibila, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T14:48:31.845227",
+    "_id": "1764265711845",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "37 de 54",
+    "ordem_exibicao": 38,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Vanguarda como transgressão",
+    "subtitulo_artigo": "",
+    "paginas": "p.123-127",
+    "resumo": "Entrevista em que o artista plástico e crítico Carlos Zilio discute a natureza da vanguarda e do modernismo no Brasil e na América Latina. Zilio analisa a relação entre ruptura da representação e estilização figurativa, aponta o caráter conservador das instituições culturais brasileiras em comparação ao contexto de Marcel Duchamp e critica a institucionalização acadêmica do modernismo. O texto destaca a figura de Lucio Costa como elo estrutural entre o período colonial e o moderno, através de uma sintaxe apoiada no cubismo e em Le Corbusier, e reflete sobre a contemporaneidade e o esgotamento do sentido contestatório da vanguarda. [Seção: Pares contemporâneos].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ZILIO, Carlos"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "CÉZANNE, Paul",
+      "VAN GOGH, Vincent",
+      "GAUGUIN, Paul",
+      "SIQUEIROS, David Alfaro",
+      "POLLOCK, Jackson",
+      "SERRA, Richard",
+      "DUCHAMP, Marcel",
+      "COSTA, Lucio",
+      "CORBUSIER, LE",
+      "AMARAL, Tarsila do",
+      "ANDRADE, Mário de",
+      "ANDRADE, Oswald de",
+      "ZILIO, Carlos"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Vanguarda",
+      "Modernismo",
+      "Arquitetura",
+      "Brasil",
+      "América Latina"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T14:58:23.712811",
+    "notas_pesquisa": [],
+    "_id": "1764265916207"
+  },
+  {
+    "n": "3",
+    "registro": "38 de 54",
+    "ordem_exibicao": 39,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Dois trabalhos",
+    "subtitulo_artigo": "",
+    "paginas": "p.128-129",
+    "resumo": "Dois trabalhos de artes plásticas de Carlos Zilio. [Seção: Pares contemporâneos]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ZILIO, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Arte"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"s/título\", (obra abstrata com texturas verticais escuras sobre fundo claro), Carlos Zilio, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"s/título\", (obra abstrata com texturas e varreduras curvilíneas), Carlos Zilio, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T14:59:56.518235",
+    "notas_pesquisa": [],
+    "_id": "1764266022065"
+  },
+  {
+    "n": "3",
+    "registro": "39 de 54",
+    "ordem_exibicao": 40,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "A aposta na geração 90",
+    "subtitulo_artigo": "",
+    "paginas": "p.130-136",
+    "resumo": "Entrevista com o poeta Ruy Proença, na qual discute sua trajetória literária, a concepção da poesia como ferramenta de ressensorialização e resistência ao tempo linear, e sua relação ambivalente com o surrealismo. Proença analisa as transformações na poesia brasileira contemporânea, identificando um divisor de águas entre a estética apurada dos anos 80 e a diversidade \"anárquica\" da geração de 90, marcada pela liberdade em relação ao concretismo e pela experimentação de novos caminhos líricos. [Seção: Pares contemporâneos]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PROENÇA, Ruy"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "PROENÇA, Ruy",
+      "BOTO, Antonio",
+      "RIMBAUD, Arthur",
+      "LISPECTOR, Clarice",
+      "CAMÕES, Luís de",
+      "PESSOA, Fernando",
+      "GULLAR, Ferreira",
+      "CRISTOBO, Anibal",
+      "DRUMMOND, Carlos",
+      "PIVA, Roberto",
+      "LIMA, Jorge de",
+      "MENDES, Murilo",
+      "BANDEIRA, Manuel",
+      "ALVIM, Chico",
+      "CACASO",
+      "HORÁCIO",
+      "PEIXOTO, Alvarenga",
+      "MALLARMÉ, Stéphane",
+      "LORCA, Federico García",
+      "PAIXÃO, Fernando",
+      "MOISÉS, Carlos Felipe",
+      "ASCHER, Nelson"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Surrealismo",
+      "Concretismo",
+      "Tempo",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:00:26.677695",
+    "notas_pesquisa": [],
+    "_id": "1764266047208"
+  },
+  {
+    "n": "3",
+    "registro": "40 de 54",
+    "ordem_exibicao": 41,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Três poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.137-138",
+    "resumo": "Três poemas: \"Tanto peso\"; \"Amor\"; \"Albergue público\". [Seção: Pares contemporâneos]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PROENÇA, Ruy"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:00:41.767450",
+    "notas_pesquisa": [],
+    "_id": "1764266186036"
+  },
+  {
+    "n": "3",
+    "registro": "41 de 54",
+    "ordem_exibicao": 42,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA - Literatura",
+    "titulo_artigo": "Visualidades e sonoridades da poesia contemporânea",
+    "subtitulo_artigo": "Uma conversa de Marjorie Perloff com Kenneth Goldsmith",
+    "paginas": "p.139-158",
+    "resumo": "Entrevista em que Marjorie Perloff e Kenneth Goldsmith discutem as intersecções entre artes visuais, poesia concreta e escrita digital no contexto da vanguarda contemporânea. Goldsmith detalha sua transição da escultura para a \"escrita não criativa\", abordando o uso da internet como meio ideal para a concretização da poesia visual e a aplicação de métodos de apropriação e coleta de linguagem em obras como \"Fidget\", \"Soliloquy\" e \"No. 111\". O diálogo confronta as filosofias de John Cage e Andy Warhol, defendendo uma poética permeável ao cotidiano e à mecanização digital, além de criticar a narrativa convencional em favor de processos conceituais radicais. [Seção: Pares contemporâneos]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PERLOFF, Marjorie",
+      "GOLDSMITH, Kenneth"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "GONÇALVES, Cláudia"
+    ],
+    "autores_citados": [
+      "GOLDSMITH, Kenneth",
+      "PERLOFF, Marjorie",
+      "GREENBERG, Clement",
+      "WARHOL, Andy",
+      "GYSIN, Brion",
+      "BESSA, Sérgio",
+      "CAGE, John",
+      "RETALLACK, Joan",
+      "ACCONCI, Vito",
+      "NAUMAN, Bruce",
+      "WHITMAN, Walt",
+      "STEIN, Gertrude",
+      "GINSBERG, Allen",
+      "ANTIN, David",
+      "JAMES, Henry",
+      "LAWRENCE, D.H.",
+      "PICABIA, Francis",
+      "JONAS, Joan",
+      "PEREC, Georges",
+      "ROUBAUD, Jacques",
+      "WALDROP, Rosmarie",
+      "ROBBE-GRILLET, Alain",
+      "BOK, Christian",
+      "DWORKIN, Craig",
+      "WERSHLER-HENRY, Darren",
+      "O'HARA, Frank",
+      "ASHBERY, John",
+      "ANDREWS, Bruce",
+      "YOUNG, Geoff",
+      "ARISTÓFANES",
+      "PICASSO, Pablo",
+      "DANTE",
+      "GROSZ, George",
+      "LA BARBARA, Joan",
+      "KOSUTH, Joseph",
+      "WEINER, Lawrence",
+      "HOLZER, Jenny"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Artes Plásticas",
+      "Tecnologia",
+      "Vanguarda",
+      "Crítica",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:02:50.849068",
+    "notas_pesquisa": [],
+    "_id": "1764266548412"
+  },
+  {
+    "n": "3",
+    "registro": "42 de 54",
+    "ordem_exibicao": 43,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Dois trabalhos",
+    "subtitulo_artigo": "",
+    "paginas": "p.159-160",
+    "resumo": "Dois trabalhos de artes plásticas (fotografias) de Cídio Martins.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MARTINS, Cídio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\", 18 x 24 cm, Cídio Martins, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\", 18 x 24 cm, Cídio Martins, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T15:06:41.972160",
+    "_id": "1764266801972",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "43 de 54",
+    "ordem_exibicao": 44,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Resenhas e notas",
+    "subtitulo_artigo": "",
+    "paginas": "p.161",
+    "resumo": "Arte gráfica da revista Sibila servindo como abertura à seção \"Resenhas e notas\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Resenhas e notas\", (arte gráfica), Sibila, p.161"
+      }
+    ],
+    "_timestamp": "2025-11-27T15:08:40.849126",
+    "_id": "1764266920849",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "44 de 54",
+    "ordem_exibicao": 45,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Política",
+    "titulo_artigo": "Não há bombas limpas",
+    "subtitulo_artigo": "Uma fala para os estudantes da SUNY-Buffalo",
+    "paginas": "p.162-166",
+    "resumo": "Texto apresentado na seção \"Resenhas e Notas\", escrito a convite de Charles Bernstein para uma leitura na SUNY-Buffalo no primeiro aniversário dos atentados de 11 de setembro. Régis Bonvicino articula uma reflexão política e cultural sobre o evento, criticando a retórica belicista da administração Bush, o esvaziamento das liberdades civis nos EUA e o apoio histórico americano ao Taleban. O autor estabelece paralelos com a ditadura brasileira e a crise social do país, além de discutir o papel da arte em um mundo dominado pelo mercado e pela perda de utopias, concluindo com a defesa da retomada dos valores democráticos e humanistas. [Seção Resenhas e notas].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BERNSTEIN, Charles",
+      "BESSA, A.S.",
+      "DUPAS, Gilberto",
+      "PALMER, Michael",
+      "LAPOUGE, Gilles",
+      "LENNON, John",
+      "BRANDÃO, Junito de Souza",
+      "TZARA, Tristan",
+      "FAUSTINO, Mário"
+    ],
+    "palavras_chave": [
+      "Política",
+      "Arte",
+      "Democracia",
+      "Terrorismo",
+      "Brasil",
+      "Estados Unidos"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:10:45.840661",
+    "_id": "1764267045840",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "45 de 54",
+    "ordem_exibicao": 46,
+    "idioma_01": "ESP",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Carta desde las ruinas",
+    "subtitulo_artigo": "",
+    "paginas": "p.167-170",
+    "resumo": "Ensaio epistolar escrito por Cecilia Vicuña em Nova York logo após os atentados de 11 de setembro. A autora descreve a transformação da cidade, marcada pelos cartazes de desaparecidos e pelo cheiro da destruição, traçando um paralelo com a opressão sofrida pelas mulheres no Afeganistão sob o regime Talibã. Vicuña recorre à sabedoria védica e citações de Huidobro, Dickinson e Gandhi para defender a poesia como uma possibilidade de resistência, visão e construção de paz diante da violência e da tirania. [Seção Resenhas e notas].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "VICUÑA, Cecilia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "HUIDOBRO, Vicente",
+      "DICKINSON, Emily",
+      "GANDHI, Mahatma"
+    ],
+    "palavras_chave": [
+      "Terrorismo",
+      "Poesia",
+      "Estados Unidos",
+      "Mulher",
+      "Política"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:13:01.652441",
+    "_id": "1764267181652",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "46 de 54",
+    "ordem_exibicao": 47,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A nova vanguarda materialista",
+    "subtitulo_artigo": "",
+    "paginas": "p.171-177",
+    "resumo": "Ensaio crítico sobre a obra da teórica Marjorie Perloff, com foco no livro \"Modernismo do Século 21\", no qual se defende a tese de que a poética contemporânea de vanguarda constitui uma retomada do projeto modernista radical, e não sua superação pós-moderna. O texto articula a revisão historiográfica de autores canônicos, resgatando o T.S. Eliot experimental de 1910 em detrimento de sua fase conservadora, e estabelece linhagens diretas com a poesia da linguagem norte-americana. A argumentação sustenta-se na valorização de uma \"poética materialista\" fundamentada em Gertrude Stein, Marcel Duchamp e Velimir Khlébnikov, contrapondo-se ao paradigma do discurso natural para legitimar poetas como Charles Bernstein, Lyn Hejinian e Susan Howe. [Seção Resenhas e Notas].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ALMINO, João"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PERLOFF, Marjorie",
+      "ALLEN, Donald",
+      "OLSON, Charles",
+      "ELIOT, T.S.",
+      "BERNSTEIN, Charles",
+      "HEJINIAN, Lyn",
+      "FLAUBERT, Gustave",
+      "MALLARMÉ, Stéphane",
+      "ASHBERY, John",
+      "RICKS, Christopher",
+      "DAVIDSON, Michael",
+      "STEIN, Gertrude",
+      "DUCHAMP, Marcel",
+      "KHLÉBNIKOV, Velimir",
+      "JAKOBSON, Roman",
+      "GINSBERG, Allen",
+      "DOVE, Rita",
+      "PINSKY, Robert",
+      "KUNITZ, Stanley",
+      "HOWE, Susan",
+      "MCCAFFERY, Steve",
+      "POUND, Ezra"
+    ],
+    "palavras_chave": [
+      "Crítica",
+      "Vanguarda",
+      "Modernismo",
+      "Pós-Modernismo",
+      "Poesia",
+      "Século Xxi"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PERLOFF, Marjorie"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:14:49.779444",
+    "_id": "1764267289779",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "47 de 54",
+    "ordem_exibicao": 48,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Cultura",
+    "titulo_artigo": "Reurge Dracon",
+    "subtitulo_artigo": "",
+    "paginas": "p.178-184",
+    "resumo": "Resenha crítica do álbum \"Eu Não Peço Desculpa\", colaboração entre Caetano Veloso e Jorge Mautner. O autor analisa a obra como um produto \"ideológico-dionisíaco\", destacando o diálogo entre as vozes dos compositores e a arquitetura sonora do disco. O texto percorre as faixas do álbum, examinando a fusão de estilos (rock, samba, maracatu), a estética do kitsch-crítico e a retomada de elementos tropicalistas. A análise ressalta a qualidade interpretativa de Caetano e o papel catalisador de Mautner, abordando temas como a identidade nacional, a ironia política e a transcendência lírica presentes nas composições inéditas e nas regravações. [Seção Resenhas e Notas].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ADRIANO, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "VELOSO, Caetano",
+      "MAUTNER, Jorge",
+      "POUND, Ezra",
+      "PESSOA, Fernando",
+      "CAGE, John",
+      "OLIVEIRA, Dalva de",
+      "SCHEMBERG, Mário",
+      "SEIXAS, Raul",
+      "ROSA, Noel",
+      "VADICO",
+      "GIL, Gilberto",
+      "JACOBINA, Nelson",
+      "NIETZSCHE, Friedrich",
+      "JAGGER, Mick",
+      "AMADO, Sergio",
+      "BABO, Lamartine",
+      "ITARARÉ, Barão de",
+      "ANTONIONI, Michelangelo",
+      "SÁ-CARNEIRO, Mário de",
+      "ANDRADE, Carlos Drummond de",
+      "NETO, Torquato",
+      "BAKHTIN, Mikhail",
+      "BRESSANE, Julio"
+    ],
+    "palavras_chave": [
+      "Música Popular",
+      "Mpb",
+      "Tropicalismo",
+      "Cultura",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [
+      "VELOSO, Caetano",
+      "MAUTNER, Jorge"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:17:03.835290",
+    "_id": "1764267423835",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "48 de 54",
+    "ordem_exibicao": 49,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Cultura",
+    "titulo_artigo": "Tanto tempo",
+    "subtitulo_artigo": "a nova velha bossa nova de Bebel Gilberto",
+    "paginas": "p.185-197",
+    "resumo": "Resenha crítica do álbum \"Tanto Tempo\", de Bebel Gilberto. O autor contextualiza a trajetória da cantora desde suas primeiras participações em discos de Chico Buarque e Caetano Veloso até sua radicação nos Estados Unidos, inserindo-a na linhagem de artistas brasileiros com carreira internacional, como Carmen Miranda e os ícones da Bossa Nova. A análise destaca a dualidade do disco entre a tradição musical brasileira e a inovação eletrônica, elogiando a qualidade interpretativa de Bebel e a produção de Suba, mas apontando fragilidades nas letras autorais e o desafio de reinventar um gênero consagrado como a Bossa Nova. [Seção Resenhas e Notas].",
+    "nota_edicao": "GILBERTO, Bebel. \"Tanto Tempo\", 2000",
+    "autores_colaboradores": [
+      "SANDMANN, Marcelo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "GILBERTO, Bebel",
+      "BUARQUE, Chico",
+      "VELOSO, Caetano",
+      "PEREIRA, Geraldo",
+      "RODRIGUES, Pedro",
+      "CAZUZA",
+      "DÉ",
+      "SALLES, Walter",
+      "THOMAS, Daniela",
+      "MACALÉ, Jards",
+      "SALOMÃO, Waly",
+      "COSTA, Gal",
+      "MIRANDA, Carmen",
+      "JOBIM, Antônio Carlos",
+      "GILBERTO, João",
+      "GILBERTO, Astrud",
+      "MENDES, Sérgio",
+      "ANDRADE, Oswald de",
+      "POWELL, Baden",
+      "MOREIRA, Airto",
+      "PURIM, Flora",
+      "PASCOAL, Hermeto",
+      "GISMONTI, Egberto",
+      "VASCONCELOS, Naná",
+      "ELIAS, Eliane",
+      "PERELMAN, Ivo",
+      "NASCIMENTO, Milton",
+      "LINS, Ivan",
+      "GIL, Gilberto",
+      "BEN, Jorge",
+      "CAYMMI, Dori",
+      "DJAVAN",
+      "JOYCE",
+      "BYRNE, David",
+      "ZÉ, Tom",
+      "SUBA",
+      "FONSECA, Celso",
+      "SUZANO, Marcos",
+      "BROWN, Carlinhos",
+      "DONATO, João",
+      "SILVA, Robertinho",
+      "BOCATO",
+      "TOBIN, Amon",
+      "CALDATO JR., Mário",
+      "MORAIS, Vinícius de",
+      "VALLE, Marcos",
+      "VALLE, Paulo Sérgio",
+      "GARZA, Renato",
+      "MELLO, Chico",
+      "OCOUGNE, Silvia",
+      "JOBIM, Tom",
+      "LYRA, Carlos",
+      "MENESCAL, Roberto",
+      "OTTO"
+    ],
+    "palavras_chave": [
+      "Música Popular",
+      "Mpb",
+      "Bossa Nova",
+      "Cultura",
+      "Estados Unidos",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [
+      "GILBERTO, Bebel"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:20:17.866184",
+    "_id": "1764267617866",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "49 de 54",
+    "ordem_exibicao": 50,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Os dez anos da morte de Néstor Perlongher",
+    "subtitulo_artigo": "",
+    "paginas": "p.198-200",
+    "resumo": "Texto ensaístico e memorialístico, integrante da seção \"Resenhas e Notas\", que marca o décimo aniversário da morte do poeta e antropólogo Néstor Perlongher. Wilson Bueno rememora sua amizade epistolar e telefônica com o autor, definindo a estética perlongheriana como um \"neón-barroso\" radical, avesso à mediocridade literária e permeado por uma erótica da linguagem. O texto analisa a relação ambivalente de Perlongher com o Brasil, seu engajamento com as marginalidades sociais e políticas (dos desaparecidos políticos aos meninos de aluguel) e sua resistência vital diante da doença (AIDS), destacando ainda o papel de tradutores e editores na difusão de sua obra.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BUENO, Wilson"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PERLONGHER, Néstor",
+      "GIRONDO, Oliverio",
+      "BONVICINO, Régis",
+      "BAPTISTA, Josely Vianna",
+      "SCHWARTZ, Jorge",
+      "LEON, Samuel",
+      "LAMBORGHINI, Osvaldo"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Brasil",
+      "Argentina",
+      "Morte",
+      "Barroco",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PERLONGHER, Néstor"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:23:01.715079",
+    "_id": "1764267781715",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "50 de 54",
+    "ordem_exibicao": 51,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Um espaço novo para a poesia brasileira",
+    "subtitulo_artigo": "",
+    "paginas": "p.201-210",
+    "resumo": "Texto editorial e ensaístico de Romulo Valle Salvino, escrito para a revista homônima espanhola, que apresenta o projeto da Sibila brasileira. O autor discute o distanciamento cultural entre Brasil e Espanha, apesar das raízes comuns, e traça um panorama da poesia brasileira contemporânea, analisando o legado do Concretismo, a poesia visual, a relação entre poesia e música popular (MPB) e os desafios da criação poética em suporte impresso na era digital. O texto defende uma postura crítica e de pesquisa estética, avessa a modismos vanguardistas vazios, e reafirma o compromisso da revista com a inovação e o diálogo internacional. [Seção Resenhas e Notas].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SALVINO, Romulo Valle"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "CÉU, Sóror Maria do",
+      "VICENTE, Gil",
+      "ANCHIETA, José de",
+      "GUERRA, Gregório de Matos",
+      "MELO NETO, João Cabral de",
+      "MENDES, Murilo",
+      "AMÂNCIO, Moacir",
+      "LAERTE",
+      "PERLOFF, Marjorie",
+      "BERNSTEIN, Charles",
+      "MESSERLI, Douglas",
+      "ROYET-JOURNOUD, Claude",
+      "MÃE, valter hugo",
+      "CAPINHA, Graça",
+      "DELVILLE, Michel",
+      "CISNEROS, Odile",
+      "CAPOGROSSI, Giuseppe",
+      "VELOSO, Caetano",
+      "BUARQUE, Chico",
+      "SHAKESPEARE, William",
+      "GILGAMESH",
+      "NETO, Torquato",
+      "MILÁN, Eduardo"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Brasil",
+      "Espanha",
+      "Crítica",
+      "Concretismo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Sibila de Delfos\", (recorte da Capela Sistina), Michelangelo, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-27T15:29:00.296920",
+    "_id": "1764268140296",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "51 de 54",
+    "ordem_exibicao": 52,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Recuperações",
+    "subtitulo_artigo": "",
+    "paginas": "p.211-212",
+    "resumo": "Texto de apresentação da seção \"Recuperações\", assinado por Régis Bonvicino. O autor contextualiza a republicação de uma entrevista realizada com João Cabral de Melo Neto em 1982, originalmente veiculada na revista Polímica, destacando o cenário político de censura e o debate estético da época envolvendo o concretismo, o tropicalismo e a poesia marginal. O texto também anuncia a publicação de um ensaio inédito de Cabral sobre gravuras populares do Nordeste, escrito em espanhol para um catálogo de 1963, e uma homenagem fotográfica de Eder Chiodetto.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "MELO NETO, João Cabral de",
+      "ANDRADE, Carlos Drummond de",
+      "BERNARDINI, Aurora Fornoni",
+      "CÉSAR, Ana Cristina",
+      "SECCHIN, Antonio Carlos",
+      "CHIODETTO, Eder"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Política",
+      "Modernismo",
+      "Concretismo",
+      "Tropicalismo",
+      "Nordeste"
+    ],
+    "nome_pessoal_como_assunto": [
+      "MELO NETO, João Cabral de"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de Sibila\", (arte gráfica, preto e branco), Sibila, p.211"
+      }
+    ],
+    "_timestamp": "2025-11-27T15:31:09.532303",
+    "_id": "1764268269532",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "52 de 54",
+    "ordem_exibicao": 53,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "João Cabral de Melo Neto",
+    "subtitulo_artigo": "Flashes de uma visita (1982)",
+    "paginas": "p.213-218",
+    "resumo": "Relato memorialístico e entrevista reconstruída por Régis Bonvicino a partir de um encontro com João Cabral de Melo Neto em 1982. O texto articula a posição crítica de Cabral face à tradição literária brasileira, destacando sua preferência pelo rigor construtivista do Concretismo — com ênfase na coerência de Augusto de Campos e nas intuições de Décio Pignatari — em detrimento do Modernismo de 22, equiparando Mário e Oswald de Andrade sem entusiasmo. A narrativa expõe o método de composição obsessivo do poeta, sua aversão à publicação de inéditos em periódicos e o desconforto com a autotradução, além de registrar opiniões sobre a poesia beat norte-americana e anedotas envolvendo personalidades como Charles Chaplin e Jânio Quadros, concluindo com uma reflexão sobre o pessimismo como necessidade estrutural do Brasil. [Seção Recuperações].",
+    "nota_edicao": "Publicado em Polímica: revista de crítica e criação, nº4, São Paulo, 1982.",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MELO NETO, João Cabral de",
+      "ASCHER, Nelson",
+      "LEITE, Sebastião Uchoa",
+      "ANDRADE, Mário de",
+      "ANDRADE, Oswald de",
+      "ANDRADE, Carlos Drummond de",
+      "CAMPOS, Augusto de",
+      "CAMPOS, Haroldo de",
+      "PIGNATARI, Décio",
+      "BANDEIRA, Manuel",
+      "DIAS, Cícero",
+      "CHAPLIN, Charles",
+      "QUADROS, Jânio",
+      "BRINGHURST, Robert",
+      "KEYS, Kerry",
+      "GINSBERG, Allen",
+      "ELIOT, T.S.",
+      "POUND, Ezra",
+      "WILLIAMS, William Carlos",
+      "CASTRO, Fidel",
+      "GUIA, Ademir da"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Modernismo",
+      "Concretismo",
+      "Literatura",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "Foto de João Cabral de Melo Neto (p&b), s/d, p.214"
+      }
+    ],
+    "_timestamp": "2025-11-27T15:33:10.419695",
+    "_id": "1764268390419",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "53 de 54",
+    "ordem_exibicao": 54,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Los grabados populares del Nordeste del Brasil",
+    "subtitulo_artigo": "",
+    "paginas": "p.219-222",
+    "resumo": "Ensaio sobre a xilogravura popular no Nordeste brasileiro, destacando sua singularidade como arte viva e funcional em contraste com o desaparecimento dessas técnicas na era industrial moderna. João Cabral de Melo Neto argumenta que, diferentemente da gravura erudita focada na expressão individual, a xilogravura nordestina mantém um caráter utilitário ao ilustrar a literatura de cordel, constituindo a forma cultural mais vital da região. O texto menciona o trabalho de preservação de matrizes realizado por Lívio Xavier Júnior no Museu de Arte Popular da Universidade do Ceará e pelo pintor Aloísio Magalhães. [Publicação bilíngue.]. [Seção Recuperações].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MELO NETO, João Cabral de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [
+      "XAVIER JÚNIOR, Lívio",
+      "MAGALHÃES, Aloísio"
+    ],
+    "palavras_chave": [
+      "Cultura Popular",
+      "Artes Plásticas",
+      "Literatura De Cordel",
+      "Nordeste",
+      "Brasil"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T15:35:42.794441",
+    "_id": "1764268542794",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "54 de 54",
+    "ordem_exibicao": 55,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "INFORME",
+    "titulo_artigo": "Poupança Nossa Caixa",
+    "subtitulo_artigo": "A segurança que você quer para sua família",
+    "paginas": "223",
+    "resumo": "Quarta capa da revista Sibila com publicidade da Nossa Caixa",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "CAIXA, Nossa"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Publicidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "Nossa Caixa, quarta capa."
+      }
+    ],
+    "_timestamp": "2025-11-27T15:39:56.508096",
+    "_id": "1764268796508",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "2",
+    "registro": "41 de 40",
+    "ordem_exibicao": 42,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Quarta capa",
+    "subtitulo_artigo": "",
+    "paginas": "192",
+    "resumo": "Quarta capa com publicidade, em vermelho: \"Se você não é cliente da Nossa Caixa, não sabe o que está perdendo.\"",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "CAIXA, Nossa"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Publicidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "Nossa Caixa, colorido (vermelho)."
+      }
+    ],
+    "_timestamp": "2025-11-27T15:49:06.594883",
+    "_id": "1764269346594",
     "notas_pesquisa": []
   }
 ]

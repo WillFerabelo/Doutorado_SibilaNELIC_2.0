@@ -324,9 +324,9 @@ VARIEDADES
 **resumo**:
 - Descrição objetiva do conteúdo do texto
 - Extensão recomendada:
-  - Ensaios longos: 150-250 palavras
-  - Resenhas: 100-150 palavras
-  - Outros textos: 50-100 palavras
+  - Ensaios longos: 150-300 palavras
+  - Resenhas: 100-300 palavras
+  - Outros textos: 50-200 palavras
 - Obras citadas: sempre entre aspas
 - Informações complementares: entre colchetes `[...]`
 - **Estrutura sugerida:**
@@ -380,71 +380,15 @@ VARIEDADES
 **IMPORTANTE:** O sistema normaliza automaticamente para Title Case. Você pode enviar em qualquer formato.
 
 ```
-"Absurdo", "Adolescência", "África", "Agricultura", "Alegoria", "Alemanha", "Alimentação", "Amazônia",
-"Ambivalência", "América", "América Latina", "Amor", "Análise Do Discurso", "Anarquismo", "Antiguidade",
-"Antologia", "Antropologia", "Argentina", "Arqueologia", "Arquitetura", "Arte", "Arte Gráfica",
-"Artes Plásticas", "Artesanato", "Astrologia", "Áustria", "Autonomia", "Autoria", "Autoritarismo",
-"Barroco", "Best Seller", "Bíblia", "Biblioteca", "Biografia", "Biologia", "Bossa Nova", "Brasil",
-"Bruxaria", "Burguesia", "Câmbio", "Cânone Literário", "Capitalismo", "Caricatura", "Carnaval", "Cartas",
-"Casamento", "Catolicismo", "Censura", "Chanchada", "Chile", "China", "Cidade", "Ciência", "Cinema",
-"Cinema Novo", "Classe", "Classe Média", "Colonialismo", "Comédia", "Cômico", "Competência",
-"Comportamento", "Compromisso", "Comunicação", "Comunismo", "Colonização", "Concretismo", "Concurso",
-"Consumo", "Contemporâneo", "Conto", "Contra Cultura", "Crenças Populares", "Criação", "Crise", "Crítica",
-"Crônica", "Cuba", "Cultura", "Cultura Alternativa", "Cultura Popular", "Dadaísmo", "Dança",
-"Década De 20", "Década De 30", "Década De 40", "Década De 50", "Década De 60", "Década De 70",
-"Década De 80", "Década De 90", "Democracia", "Demografia", "Descolonização", "Desconhecimento",
-"Desconstrução", "Design", "Despotismo", "Dialética", "Direito", "Direitos Autorais", "Discos",
-"Discriminação", "Discurso", "Ditadura", "Documentário", "Drama", "Dramaturgia", "Drogas", "Ecletismo",
-"Ecologia", "Economia", "Editor", "Educação", "Efeméride", "Elite", "Enciclopedismo", "Energia",
-"Engajamento Político", "Ensaio", "Ensino", "Entretenimento", "Epistemologia", "Erotismo",
-"Escola De Frankfurt", "Escravidão", "Escritor", "Escritura", "Escultura", "Exoterismo", "Espaço",
-"Espanha", "Esporte", "Estado", "Estado Novo", "Estados Unidos", "Estética", "Estrutura",
-"Estruturalismo", "Ética", "Etnografia", "Etno-história", "Etnologia", "Europa", "Eventos",
-"Existencialismo", "Experimentalismo", "Expressionismo", "Fantástico", "Fascismo", "Feminismo",
-"Fenomenologia", "Ficção", "Ficção Científica", "Filologia", "Filosofia", "Física", "Folclore",
-"Folhetim", "Formalismo", "Fotografia", "França", "Funcionalismo", "Futebol", "Futurismo", "Genealogia",
-"Gênero", "Geografia", "Geração De 45", "Geração Marginal", "Globalização", "Golpe Militar", "Grafite",
-"Gramática", "Guerra", "Guerra Fria", "Hermenêutica", "Herói", "Heterogeneidade", "Hispano-América",
-"História", "História Do Brasil", "História Em Quadrinhos", "Historiografia", "Homossexualidade",
-"Humanismo", "Humor", "Idade Média", "Idealização", "Identidade", "Ideograma", "Ideologia", "Idioma",
-"Igreja", "Iluminismo", "Imagem", "Imaginação", "Imigração", "Imperialismo", "Imprensa",
-"Imprensa Alternativa", "Impressionismo", "Inconfidência Mineira", "Inconsciente", "Independência",
-"Índia", "Indianismo", "Índio", "Indústria Cultural", "Industrialização", "Infância", "Informática",
-"Informes", "Inglaterra", "Instituições", "Intelectual", "Interdisciplinar", "Intelectualidade",
-"Invenção", "Ironia", "Itália", "Japão", "Jazz", "Jornalismo", "Judaísmo", "Justiça", "Kitsch",
-"Leitor", "Liberalismo", "Liberdade", "Língua", "Língua Inglesa", "Língua Portuguesa", "Linguagem",
-"Linguística", "Lírico", "Lirismo", "Literatura", "Literatura Comparada", "Literatura De Cordel",
-"Literatura Infanto-juvenil", "Literatura Policial", "Livro Didático", "Livros", "Lógica", "Loucura",
-"Luta De Classes", "Magia", "Mais-valia", "Manifesto", "Marginalidade", "Marxismo", "Matemática",
-"Mato Grosso", "Medicina", "Memória", "Mercado", "Mercado Editorial", "Mercado Fonográfico", "Metafísica",
+"Absurdo", "Adolescência", "África", "Agricultura", "Alegoria", "Alemanha", "Alimentação", "Amazônia", "Ambivalência", "América", "América Latina", "Amor", "Análise Do Discurso", "Anarquismo", "Antiguidade", "Antologia", "Antropologia", "Argentina", "Arqueologia", "Arquitetura", "Arte", "Arte Gráfica", "Artes Plásticas", "Artesanato", "Astrologia", "Áustria", "Autonomia", "Autoria", "Autoritarismo", "Barroco", "Best Seller", "Bíblia", "Biblioteca", "Biografia", "Biologia", "Bossa Nova", "Brasil", "Bruxaria", "Burguesia", "Câmbio", "Cânone Literário", "Capitalismo", "Caricatura", "Carnaval", "Cartas", "Casamento", "Catolicismo", "Censura", "Chanchada", "Chile", "China", "Cidade", "Ciência", "Cinema", "Cinema Novo", "Classe", "Classe Média", "Colonialismo", "Comédia", "Cômico", "Competência", "Comportamento", "Compromisso", "Comunicação", "Comunismo", "Colonização", "Concretismo", "Concurso",
+"Consumo", "Contemporâneo", "Conto", "Contra Cultura", "Crenças Populares", "Criação", "Crise", "Crítica", "Crônica", "Cuba", "Cultura", "Cultura Alternativa", "Cultura Popular", "Dadaísmo", "Dança", "Década De 20", "Década De 30", "Década De 40", "Década De 50", "Década De 60", "Década De 70", "Década De 80", "Década De 90", "Democracia", "Demografia", "Descolonização", "Desconhecimento", "Desconstrução", "Design", "Despotismo", "Dialética", "Direito", "Direitos Autorais", "Discos", "Discriminação", "Discurso", "Ditadura", "Documentário", "Drama", "Dramaturgia", "Drogas", "Ecletismo", "Ecologia", "Economia", "Editor", "Educação", "Efeméride", "Elite", "Enciclopedismo", "Energia", "Engajamento Político", "Ensaio", "Ensino", "Entretenimento", "Epistemologia", "Erotismo", "Escola De Frankfurt", "Escravidão", "Escritor", "Escritura", "Escultura", "Exoterismo", "Espaço", "Espanha", "Esporte", "Estado", "Estado Novo", "Estados Unidos", "Estética", "Estrutura", "Estruturalismo", "Ética", "Etnografia", "Etno-história", "Etnologia", "Europa", "Eventos", "Existencialismo", "Experimentalismo", "Expressionismo", "Fantástico", "Fascismo", "Feminismo", "Fenomenologia", "Ficção", "Ficção Científica", "Filologia", "Filosofia", "Física", "Folclore", "Folhetim", "Formalismo", "Fotografia", "França", "Funcionalismo", "Futebol", "Futurismo", "Genealogia", "Gênero", "Geografia", "Geração De 45", "Geração Marginal", "Globalização", "Golpe Militar", "Grafite",
+"Gramática", "Guerra", "Guerra Fria", "Hermenêutica", "Herói", "Heterogeneidade", "Hispano-América", "História", "História Do Brasil", "História Em Quadrinhos", "Historiografia", "Homossexualidade", "Humanismo", "Humor", "Idade Média", "Idealização", "Identidade", "Ideograma", "Ideologia", "Idioma", "Igreja", "Iluminismo", "Imagem", "Imaginação", "Imigração", "Imperialismo", "Imprensa", "Imprensa Alternativa", "Impressionismo", "Inconfidência Mineira", "Inconsciente", "Independência", "Índia", "Indianismo", "Índio", "Indústria Cultural", "Industrialização", "Infância", "Informática", "Informes", "Inglaterra", "Instituições", "Intelectual", "Interdisciplinar", "Intelectualidade", "Invenção", "Ironia", "Itália", "Japão", "Jazz", "Jornalismo", "Judaísmo", "Justiça", "Kitsch", "Leitor", "Liberalismo", "Liberdade", "Língua", "Língua Inglesa", "Língua Portuguesa", "Linguagem", "Linguística", "Lírico", "Lirismo", "Literatura", "Literatura Comparada", "Literatura De Cordel", "Literatura Infanto-juvenil", "Literatura Policial", "Livro Didático", "Livros", "Lógica", "Loucura", "Luta De Classes", "Magia", "Mais-valia", "Manifesto", "Marginalidade", "Marxismo", "Matemática", "Mato Grosso", "Medicina", "Memória", "Mercado", "Mercado Editorial", "Mercado Fonográfico", "Metafísica",
 "Metáfora", "Metalinguagem", "Metodologia De Pesquisa", "Métrica", "México", "Mídia", "Mimesis",
 "Minas Gerais", "Minoria Sociais", "Misticismo", "Mito", "Mitologia", "Moda", "Modernidade",
-"Modernismo", "Monarquia", "Monopólio", "Moral", "Morte", "Movimento", "Movimento Ideológico", "MPB",
-"Mulher", "Museu", "Música", "Música Erudita", "Música Popular", "Nação", "Nacionalismo", "Narrador",
-"Narrativa", "Naturalismo", "Natureza", "Nazismo", "Negros", "Neoconcretismo", "Neurologia", "Nordeste",
-"Nova República", "Novela", "Obra", "Obra De Arte", "Ocidente", "Oligarquia", "Ontologia", "Ópera",
-"Oralidade", "Oriente", "Origem", "Originalidade", "Paraná", "Parnasianismo", "Paródia",
-"Partido Comunista", "Pastiche", "Patrimônio Cultural", "Pedagogia", "Periferia", "Periodismo",
-"Peronismo", "Personagem", "Pintura", "Plágio", "Pluralismo", "Poder", "Poema Épico", "Poema Processo",
-"Poema Visual", "Poesia Marginal", "Poesia", "Poética", "Polêmica", "Polícia", "Polifonia", "Política",
-"Polônia", "Pop Art", "Populismo", "Pornografia", "Portugal", "Pós-estruturalismo", "Positivismo",
-"Pós-modernidade", "Pós Modernismo", "Pré História", "Prêmio", "Premio Nobel", "Privatizações",
-"Proletariado", "Prostituição", "Proto-sátira", "Psicanálise", "Psicologia", "Psicoterapia",
-"Psiquiatria", "Publicidade", "Química", "Racismo", "Rádio", "Razão", "Reação", "Ready-made",
-"Realismo", "Realismo Fantástico", "Realismo Mágico", "Rebeldia", "Reforma Agrária", "Regime Político",
-"Regionalismo", "Relações Internacionais", "Relações Raciais", "Relações Sociais", "Relato", "Religião",
-"Renascimento", "Reportagem", "Representação", "Repressão", "República", "República Velha", "Retórica",
-"Revolução", "Revolução De 1930", "Revolução Francesa", "Revolução Industrial", "Rio De Janeiro",
-"Rio Grande Do Sul", "Rito", "Rock And Roll", "Romance", "Romantismo", "Ruptura", "Rússia", "Samba",
-"São Paulo", "Sátira", "Saúde", "SBPC", "Século XIX", "Século XVI", "Século XVII", "Século XVIII",
-"Século XX", "Século XXI", "Semana De Arte Moderna", "Semântica", "Semiologia", "Semiótica", "Servilismo",
-"Sexualidade", "Silêncio", "Simbolismo", "Simbologia", "Sindicalismo", "Sínteses", "Socialismo",
-"Sociedade", "Sociedade Industrial", "Sociologia", "Solidão", "Stalinismo", "Subdesenvolvimento",
-"Sujeito", "Surrealismo", "Tatuagem", "Teatro", "Técnica", "Tecnocracia", "Tecnologia", "Telespectador",
-"Televisão", "Tempo", "Teologia", "Teoria", "Teoria Da Linguagem", "Teoria Literária", "Teoria Social",
+"Modernismo", "Monarquia", "Monopólio", "Moral", "Morte", "Movimento", "Movimento Ideológico", "MPB", "Mulher", "Museu", "Música", "Música Erudita", "Música Popular", "Nação", "Nacionalismo", "Narrador", "Narrativa", "Naturalismo", "Natureza", "Nazismo", "Negros", "Neoconcretismo", "Neurologia", "Nordeste", "Nova República", "Novela", "Obra", "Obra De Arte", "Ocidente", "Oligarquia", "Ontologia", "Ópera", "Oralidade", "Oriente", "Origem", "Originalidade", "Paraná", "Parnasianismo", "Paródia", "Partido Comunista", "Pastiche", "Patrimônio Cultural", "Pedagogia", "Periferia", "Periodismo", "Peronismo", "Personagem", "Pintura", "Plágio", "Pluralismo", "Poder", "Poema Épico", "Poema Processo", "Poema Visual", "Poesia Marginal", "Poesia", "Poética", "Polêmica", "Polícia", "Polifonia", "Política", "Polônia", "Pop Art", "Populismo", "Pornografia", "Portugal", "Pós-estruturalismo", "Positivismo", "Pós-modernidade", "Pós Modernismo", "Pré História", "Prêmio", "Premio Nobel", "Privatizações", "Proletariado", "Prostituição", "Proto-sátira", "Psicanálise", "Psicologia", "Psicoterapia", "Psiquiatria", "Publicidade", "Química", "Racismo", "Rádio", "Razão", "Reação", "Ready-made", "Realismo", "Realismo Fantástico", "Realismo Mágico", "Rebeldia", "Reforma Agrária", "Regime Político",
+"Regionalismo", "Relações Internacionais", "Relações Raciais", "Relações Sociais", "Relato", "Religião", "Renascimento", "Reportagem", "Representação", "Repressão", "República", "República Velha", "Retórica", "Revolução", "Revolução De 1930", "Revolução Francesa", "Revolução Industrial", "Rio De Janeiro", "Rio Grande Do Sul", "Rito", "Rock And Roll", "Romance", "Romantismo", "Ruptura", "Rússia", "Samba", "São Paulo", "Sátira", "Saúde", "SBPC", "Século XIX", "Século XVI", "Século XVII", "Século XVIII", "Século XX", "Século XXI", "Semana De Arte Moderna", "Semântica", "Semiologia", "Semiótica", "Servilismo", "Sexualidade", "Silêncio", "Simbolismo", "Simbologia", "Sindicalismo", "Sínteses", "Socialismo", "Sociedade", "Sociedade Industrial", "Sociologia", "Solidão", "Stalinismo", "Subdesenvolvimento", "Sujeito", "Surrealismo", "Tatuagem", "Teatro", "Técnica", "Tecnocracia", "Tecnologia", "Telespectador", "Televisão", "Tempo", "Teologia", "Teoria", "Teoria Da Linguagem", "Teoria Literária", "Teoria Social",
 "Terrorismo", "Texto", "Tortura", "Trabalho", "Tradição", "Tradução", "Tragédia", "Traição",
-"Transgressão", "Tropicalismo", "Umbanda", "Underground", "Unidade", "Universalidade", "Universidade",
-"Urbanismo", "URSS", "Uruguai", "Utopia", "Vanguarda", "Verdade", "Vestibular", "Viagem", "Violência"
+"Transgressão", "Tropicalismo", "Umbanda", "Underground", "Unidade", "Universalidade", "Universidade", "Urbanismo", "URSS", "Uruguai", "Utopia", "Vanguarda", "Verdade", "Vestibular", "Viagem", "Violência"
 ```
 
 ---
