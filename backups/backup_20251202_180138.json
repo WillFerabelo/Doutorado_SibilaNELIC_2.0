@@ -10826,5 +10826,654 @@
     "_timestamp": "2025-12-02T16:08:12.163411",
     "_id": "1764702492163",
     "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "10 de 26",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Momento crítico (meu meio século)",
+    "subtitulo_artigo": "",
+    "paginas": "p.43-87",
+    "resumo": "Texto híbrido entre narrativa ficcional e ensaio crítico, no qual Alcir Pécora relata a comemoração de seu aniversário de 50 anos em um restaurante árabe, recusando-se a comparecer a um debate sobre o livro \"Literatura Brasileira Hoje\", de Manuel da Costa Pinto (Publifolha). Por meio de diálogos com interlocutores reais transformados em personagens (como Paulo Franchetti, Régis Bonvicino, Eric Sabinson, Luís Dolhnikoff, entre outros), o autor tece uma crítica severa à obra de Costa Pinto. Os convivas apontam problemas teóricos, a falta de critérios rigorosos, o \"folhacentrismo\" (predominância de autores ligados à Folha de S. Paulo), a repetição de clichês sobre o Concretismo e o Modernismo, e omissões de autores como Paulo Leminski e Mário Faustino. O texto discute o cânone, a função da crítica e a distinção entre letra de música e poesia.",
+    "nota_edicao": "Nota do autor no texto: \"Esta é uma obra de ficção. Nenhum dos lugares, pessoas ou objetos variados referidos têm qualquer responsabilidade sobre o que vai inventado aqui\".",
+    "autores_colaboradores": [
+      "PÉCORA, Alcir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PINTO, Manuel da Costa",
+      "OLIVEIRA, Carlos de",
+      "NESTROVSKI, Artur",
+      "ROCHA, João Cézar de Castro",
+      "CANDIDO, Antonio",
+      "FRANCHETTI, Paulo",
+      "SABINSON, Eric",
+      "BONVICINO, Régis",
+      "CAMPOS, Haroldo de",
+      "VELOSO, Caetano",
+      "ANDRADE, Carlos Drummond de",
+      "BAUDELAIRE, Charles",
+      "MALLARMÉ, Stéphane",
+      "CABRAL, João (Melo Neto)",
+      "BARROS, Manoel de",
+      "AZEVEDO, Carlito",
+      "WITTGENSTEIN, Ludwig",
+      "SISCAR, Marcos",
+      "LIMA, Luiz Costa",
+      "LEITE, Sebastião Uchoa",
+      "SALOMÃO, Waly",
+      "GULLAR, Ferreira",
+      "LEMINSKI, Paulo",
+      "ANDRADE, Mário de",
+      "ANDRADE, Oswald de",
+      "CONY, Carlos Heitor",
+      "SCLIAR, Moacyr",
+      "CARVALHO, Bernardo",
+      "AJZENBERG, Bernardo",
+      "BONASSI, Fernando",
+      "RIBEIRO, João Ubaldo",
+      "VERÍSSIMO, Luis Fernando",
+      "HILST, Hilda",
+      "TELLES, Lygia Fagundes",
+      "TREVISAN, Dalton",
+      "FONSECA, Rubem",
+      "SIMÃO, José",
+      "PIGNATARI, Décio",
+      "FAUSTINO, Mário",
+      "DANTAS, Francisco",
+      "BUENO, Wilson",
+      "NASSAR, Raduan",
+      "HATOUM, Milton",
+      "BARBOSA, Frederico",
+      "POUND, Ezra",
+      "CESAR, Ana Cristina",
+      "CHAMIE, Mário",
+      "ALCIDES, Sérgio",
+      "KEHL, Maria Rita",
+      "NETO, Afonso Henriques",
+      "WILLER, Claudio",
+      "PIVA, Roberto",
+      "MARTINS, Floriano",
+      "ASSUMPÇÃO, Ademir",
+      "ÁVILA, Afonso",
+      "HELDER, Herberto",
+      "MATTOSO, Glauco",
+      "PRADO, Adélia",
+      "FILHO, Armando Freitas",
+      "CÍCERO, Antonio",
+      "MOTTA, Waldo",
+      "MORICONI, Ítalo",
+      "ANTUNES, Arnaldo",
+      "TOLENTINO, Bruno",
+      "PESSOA, Fernando"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Poesia",
+      "Jornalismo",
+      "Cânone Literário",
+      "Modernismo"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PINTO, Manuel da Costa"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"s/título\" (apresentação da seção Pares Contemporâneos), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T16:16:45.250226",
+    "_id": "1764703005250",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "11 de 26",
+    "ordem_exibicao": 12,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Roteiro básico para uma vida sem livros",
+    "subtitulo_artigo": "",
+    "paginas": "p.89-93",
+    "resumo": "Texto satírico em que Furio Lonza apresenta uma crítica à lógica comercial do mercado editorial contemporâneo e à descaracterização das livrarias como espaços culturais. Por meio de vinte \"mandamentos\" irônicos, o autor descreve mecanismos de massificação que privilegian o marketing, a rotatividade acelerada de títulos e a exclusão de autores literários em favor de celebridades e best-sellers fabricados. O ensaio argumenta que as grandes livrarias (\"mega stores\") se converteram em centros de entretenimento e gastronomia, marginalizando o livro como produto cultural. A argumentação é complementada por um guia sarcástico de livrarias do Rio de Janeiro e São Paulo, avaliadas exclusivamente por seus serviços de alimentação e venda de eletrônicos, terminando seu texto com uma referência à obra distópica \"Fahrenheit 451\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LONZA, Furio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "TRUFFAUT, François",
+      "BRADBURY, Ray"
+    ],
+    "palavras_chave": [
+      "Mercado Editorial",
+      "Indústria Cultural",
+      "Livros",
+      "Consumo",
+      "Ironia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, arte gráfica de apresentação da seção Resenhas e Notas, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T16:21:27.834764",
+    "_id": "1764703287834",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "12 de 26",
+    "ordem_exibicao": 13,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Os cadáveres da história na poesia de Nestor Perlongher",
+    "subtitulo_artigo": "",
+    "paginas": "p.94-106",
+    "resumo": "Ensaio crítico de Florencia Garramuño, com tradução de Gênese Andrade, sobre a poética de Néstor Perlongher, especificamente nos livros \"Áustria-Hungria\" e \"Alambres\". A autora investiga a colisão entre a opacidade linguística, construída por meio de aliterações, rimas e procedimentos neobarrocos que resistem à referencialidade direta, e a irrupção de \"cápsulas\" históricas ligadas ao nazismo e à ditadura militar. A análise detém-se nos poemas \"La Murga, los Polacos\" e, centralmente, em \"Cadáveres\", demonstrando como este último opera uma desconstrução da função informacional da linguagem para articular o horror do desaparecimento político através de uma enumeração ilógica e excessiva. O texto situa Perlongher na tradição da revista argentina \"Literal\", identificando uma postura estética que recusa tanto o realismo engajado quanto o hermetismo vanguardista puro, formulando uma dialética entre o significante sonoro e a inscrição traumática da experiência social.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GARRAMUÑO, Florencia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ANDRADE, Gênese"
+    ],
+    "autores_citados": [
+      "PERLONGHER, Néstor",
+      "KHLEBNIKOV, Velimir",
+      "KRUCHENYKH, Aleksei",
+      "DELEUZE, Gilles",
+      "GUATTARI, Félix",
+      "DARÍO, Rubén",
+      "GIRONDO, Oliverio",
+      "SCHWARTZ, Jorge",
+      "BONVICINO, Régis",
+      "BAPTISTA, Josely Vianna",
+      "LIBERTELLA, Héctor",
+      "CARRERA, Arturo",
+      "GUSMÁN, Luis",
+      "ZELARRAYÁN, Ricardo",
+      "LAMBORGHINI, Leónidas",
+      "LAMBORGHINI, Osvaldo",
+      "FERRER, Christian",
+      "BAIGORRIA, Osvaldo"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "História",
+      "Linguagem",
+      "Ditadura",
+      "Barroco",
+      "Argentina"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PERLONGHER, Néstor"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T16:25:21.553536",
+    "_id": "1764703521553",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "13 de 26",
+    "ordem_exibicao": 14,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "O sexo das meninas",
+    "subtitulo_artigo": "",
+    "paginas": "p.107-121",
+    "resumo": "Ensaio crítico em que Néstor Perlongher examina a centralidade da sexualidade na poesia de Oliverio Girondo, articulando a sensualidade verbal, a imagética do corpo, a fragmentação do desejo e a libidinização do espaço urbano e social. O texto percorre poemas de várias fases do autor, enfatizando como a escritura intensifica fenômenos como erotização da paisagem, dissolução da identidade, circulação pulsional e desagregação sintático-semântica, culminando na leitura de \"En la Masmédula\" como ápice de uma sexualidade que se transfere para a própria estrutura da linguagem. O ensaio também mobiliza leituras de Aldo Pellegrini, Enrique Molina e ecos de Bataille e Cendrars, avaliando como a obra de Girondo produz um ‘sexualismo’ que atravessa corpo, sociedade e escritura.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PERLONGHER, Néstor"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ANDRADE, Gênese"
+    ],
+    "autores_citados": [
+      "PELLEGRINI, Aldo",
+      "MOLINA, Enrique",
+      "GIRONDO, Oliverio",
+      "SCHWARTZ, Jorge",
+      "PEREYRA, Washington",
+      "FOGWILL, Rodolfo",
+      "CENDRARS, Blaise",
+      "BATAILLE, Georges"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Erotismo",
+      "Sexualidade",
+      "Vanguarda",
+      "Argentina"
+    ],
+    "nome_pessoal_como_assunto": [
+      "GIRONDO, Oliverio"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:05:44.761952",
+    "_id": "1764705944761",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "14 de 26",
+    "ordem_exibicao": 15,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO",
+    "titulo_artigo": "Horizontes abdutivos",
+    "subtitulo_artigo": "Rascunhos notacionais",
+    "paginas": "122-135",
+    "resumo": "Ensaio teórico em que Décio Pignatari articula a semiótica peirceana, a lógica da abdução e a fenomenologia das categorias de Primeiridade, Secundidade e Terceiridade para discutir processos de sentido, mutação cultural e modos de funcionamento do pensamento moderno. O texto examina equívocos históricos ligados à recepção de Peirce, como o uso vulgarizado dos termos pragmatismo, ícone e abdução, e propõe compreender o signo como dinâmica de remetimentos que envolve signos sucessivos e interpretantes sempre provisórios. A argumentação integra referências a Hegel, Darwin, Saussure, Heidegger, Lao-Tsé, Camus, Kierkegaard e tradições literárias e artísticas ocidentais, situando a abdução como momento criativo capaz de iluminar transformações civilizatórias, estéticas e epistemológicas. O ensaio desenvolve ainda uma reflexão crítica sobre os surtos culturais modernos, a formação do indivíduo burguês, as mutações literárias e artísticas desde o Romantismo até o século XX, e a tensão entre criação e burocratização cultural.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PIGNATARI, Décio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PEIRCE, Charles Sanders",
+      "JAMES, William",
+      "HEGEL, Georg Wilhelm Friedrich",
+      "DARWIN, Charles",
+      "SAUSSURE, Ferdinand de",
+      "HEIDEGGER, Martin",
+      "LAO-TSE",
+      "CAMUS, Albert",
+      "LAFAYETTE, Madame de",
+      "STAEL, Madame de",
+      "GOETHE",
+      "BYRON",
+      "PUCHKIN",
+      "HUGO, Victor",
+      "KIERKEGAARD, Søren",
+      "ALIGHIERI, DANTE",
+      "PROUST, Marcel",
+      "JOYCE, James",
+      "STEIN, Gertrude",
+      "WOOLF, Virgínia",
+      "BERGSON, Henri",
+      "EINSTEIN, Albert"
+    ],
+    "palavras_chave": [
+      "Semiótica",
+      "Filosofia",
+      "Comunicação",
+      "Cultura",
+      "Vanguarda",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PEIRCE, Charles Sanders"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:06:48.004344",
+    "_id": "1764706008004",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "15 de 26",
+    "ordem_exibicao": 16,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Os excessos contemporâneos de Augusto de Campos",
+    "subtitulo_artigo": "",
+    "paginas": "136-144",
+    "resumo": "Ensaio de Sérgio Medeiros em que examina a obra de Augusto de Campos, descrevendo como sua poesia e suas traduções constituem um projeto estético centrado na mobilidade intermidial, na reelaboração contínua dos próprios poemas e na incorporação deliberada de materiais kitsch, excessivos e neobarrocos. O texto contesta a imagem de poeta econômico e de produção reduzida, enfatizando que a migração de seus poemas para mídias diversas (livro, CD, performances, internet) integra estruturalmente sua criação. Medeiros analisa peças verbivocovisuais como \"O pulsar\", \"Luxo\", \"pluvial/fluvial\", \"código\" e as reedições de Viva Vaia e Despoesia, discutindo tensões entre forma e fundo, entre verso pós-concreto e visualidade exuberante. O ensaio também confronta o diálogo de Augusto com e. e. cummings e outros autores, avaliando como o neobarroquismo contemporâneo do poeta brasileiro redefine práticas de tradução, recriação e design poético, produzindo uma estética do excesso que desafia tradições concretistas e modernistas.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MEDEIROS, Sérgio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CAMPOS, Augusto de",
+      "FLAUBERT, Gustave",
+      "KAVÁFIS, K. P.",
+      "BORGES, Jorge Luis",
+      "VELOSO, Caetano",
+      "RODRIGUES, Lupicínio",
+      "MAIAKÓVSKI, Vladimir",
+      "KHLIÉBNIKOV, Velimir",
+      "CAGE, John",
+      "CUMMINGS, e. e.",
+      "APOLLINAIRE, Guillaume",
+      "ALIGHIERI, DANTE",
+      "JOYCE, James",
+      "POUND, Ezra",
+      "MALLARMÉ, Stéphane",
+      "BLAKE, William",
+      "DONNE, John",
+      "VALÉRY, Paul",
+      "HOPKINS, Gerard Manley",
+      "RILKE, Rainer Maria",
+      "CARLOS, Erasmo",
+      "CARLOS, Roberto",
+      "PLAZA, Julio"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Tradução",
+      "Vanguarda",
+      "Cultura",
+      "Comunicação"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CAMPOS, Augusto de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:28:59.248723",
+    "_id": "1764707339248",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "16 de 26",
+    "ordem_exibicao": 17,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Rudeza de argumentos em torno da pedra de Drummond",
+    "subtitulo_artigo": "",
+    "paginas": "145-151",
+    "resumo": "O trabalho de Luís Dolhnikoff é dedicado a uma análise estrutural e semântica de \"No meio do caminho\", de Carlos Drummond de Andrade. O autor examina como a repetição dos versos, aliada ao encadeamento frasal e ao efeito de parada sintática, materializa no corpo do poema o próprio impasse que o texto enuncia. Dolhnikoff argumenta que o poema não se organiza por metáforas abertas, mas pela reprodução formal da experiência de bloqueio, o que aproxima sua estrutura daquilo que descreve. A análise compara o procedimento drummondiano a recursos presentes em Verlaine e e. e. cummings, destacando como o ritmo, os cortes e a visualidade também configuram significados. O ensaio discute ainda as tensões entre o passado lírico tradicional e a modernidade formal do poema, relacionando-o à \"Commedia\" de Dante e ao mito de Sísifo, tal como retomado por Camus, para evidenciar o alcance existencial do impasse recriado pelo texto.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DOLHNIKOFF, Luís"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ANDRADE, Carlos Drummond de",
+      "VERLAINE, Paul",
+      "CUMMINGS, e. e.",
+      "ALIGHIERI, DANTE",
+      "CAMUS, Albert"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Modernismo",
+      "Interpretação",
+      "Forma Poética",
+      "Crítica Literária"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ANDRADE, Carlos Drummond de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:39:58.938554",
+    "notas_pesquisa": [],
+    "_id": "1764707399008"
+  },
+  {
+    "n": "7",
+    "registro": "17 de 26",
+    "ordem_exibicao": 18,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A morte de Sophia",
+    "subtitulo_artigo": "",
+    "paginas": "152-154",
+    "resumo": "Ensaio memorial em que Richard Zenith relata sua convivência com Sophia de Mello Breyner Andresen, articulando lembranças pessoais, experiências de tradução e reflexões sobre a dimensão mítica de sua poesia. O autor recorda encontros em Lisboa, o convívio na Graça e o processo de tradução de poemas como \"Escrita II\", \"Ressurgiremos\", \"Arte Poética I\" e \"Arte Poética II\", destacando a relação singular de Sophia com objetos, espaços e luminosidades. A leitura que constrói enfatiza que a poesia da autora nasce menos de livros e arquivos do que de uma atenção radical ao mundo, em que o gesto de escrever se confunde com o de testemunhar e habitar simbolicamente a realidade. O texto descreve também a visão religiosa de Sophia, simultaneamente católica e pagã, estruturada por uma ideia de aliança entre o humano e o sagrado, que se manifesta em imagens como a ânfora de barro, Creta, o mar e a busca de um reino interior. Zenith finaliza refletindo sobre a força espiritual e estética da poeta, cuja presença se perpetua na memória do autor por meio de objetos, gestos e da fé poética que ela encarnava.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ZENITH, Richard"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ANDRESEN, Sophia de Mello Breyner",
+      "CABRAL DE MELO NETO, João",
+      "NEGREIROS, Almada",
+      "VIEIRA DA SILVA, Maria Helena",
+      "XAVIER"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Tradução",
+      "Memória",
+      "Cultura",
+      "Interpretação"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ANDRESEN, Sophia de Mello Breyner"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:31:48.766062",
+    "_id": "1764707508766",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "18 de 26",
+    "ordem_exibicao": 19,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Sibilas",
+    "subtitulo_artigo": "",
+    "paginas": "155",
+    "resumo": "Publicado em \"Coral\" (1950).",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ANDRESEN, Sophia de Mello Breyner"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "ANDRESEN, Sophia de Mello Breyner"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:35:23.552594",
+    "_id": "1764707723552",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "19 de 26",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Else Lasker-Schüler",
+    "subtitulo_artigo": "",
+    "paginas": "157-159",
+    "resumo": "Apresentação de Cláudia Cavalcanti sobre a poeta alemã Else Lasker-Schüler, figura central do expressionismo e marcada por trajetória de vida marginal, criação autobiográfica e experimentação formal. O texto apresenta elementos biográficos fundamentais, incluindo os casamentos com Berthold Lasker e Herwarth Walden, a relação com a revista Der Sturm e a importância de sua poesia para a vanguarda alemã do início do século XX. A autora destaca algumas características estilísticas como palavras inventadas, rimas originais, musicalidade e temas de amor e melancolia, situando Lasker-Schüler entre nomes como Jakob van Hoddis, Georg Heym, Georg Trakl e Gottfried Benn. O texto contextualiza o exílio da poeta na Suíça e depois na Palestina, abordando sua obra múltipla (poesia, prosa, teatro, cartas e ilustrações) e sua contribuição singular ao modernismo germânico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CAVALCANTI, Cláudia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "LASKER, Berthold",
+      "WALDEN, Herwarth",
+      "HODDIS, Jakob van",
+      "HEYM, Georg",
+      "TRAKL, Georg",
+      "BENN, Gottfried"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Biografia",
+      "Expressão Artística",
+      "História",
+      "Poesia",
+      "Autoria"
+    ],
+    "nome_pessoal_como_assunto": [
+      "LASKER-SCHÜLER, Else"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Ilustração introduzindo a seção \"Dois poetas alemães do século XX\", s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T17:39:13.350930",
+    "_id": "1764707953350",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "20 de 26",
+    "ordem_exibicao": 21,
+    "idioma_01": "ALE",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas ",
+    "subtitulo_artigo": "",
+    "paginas": "160-169",
+    "resumo": "Cinco poemas de Else Lasker-Schüler, apresentados em alemão e traduzidos por Cláudia Cavalcanti. \"Vollmond\" (\"Lua cheia\"), \"Und suche Gott\" (\"E busco Deus\"), \"Der letzte Stern\" (\"A última estrela\"), \"Meine Mutter\" (\"Minha mãe\"), \"Ein alter Tibet­teppich\" (\"Um velho tapete tibetano\"). [Publicação bilíngue] ",
+    "nota_edicao": "Else Lasker-Schüler, Ich suche allerlanden eine Stadt, Leipzig, Reclam Verlag, 1988.",
+    "autores_colaboradores": [
+      "CAVALCANTI, Cláudia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CAVALCANTI, Cláudia"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "LASKER-SCHÜLER, Else"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:43:46.853326",
+    "_id": "1764708226853",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "21 de 26",
+    "ordem_exibicao": 22,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Ernst Jandl",
+    "subtitulo_artigo": "",
+    "paginas": "170-171",
+    "resumo": "Texto de Fabiana Macchi apresentando a trajetória de Ernst Jandl, um dos poetas alemães mais populares do pós-guerra. A autora discute o impacto de seus jogos linguísticos, amplamente difundidos em contextos educacionais nos países de língua alemã, e recorda a recepção controversa de seu livro 'Laut und Luise' (1966). O ensaio delineia influências variadas, que vão de Brecht, Benn, Fried e Prévert às correntes expressionistas, passando pela música dodecafônica de Schoenberg e Webern, pela música aleatória de John Cage e pela poesia de Creeley, Auden e Gertrude Stein. Destaca-se também a presença de recursos visuais, o uso da sequência alfabética como processo temporal e a centralidade da sonoridade em sua obra, especialmente nas performances acompanhadas por jazz, nas quais o sentido emerge através da oralização e da construção de massas sonoras.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MACCHI, Fabiana"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BRECHT, Bertolt",
+      "BENN, Gottfried",
+      "FRIED, Erich",
+      "PRÉVERT, Jacques",
+      "TRAKL, Georg",
+      "STRAMM, August",
+      "BECHER, Johannes R.",
+      "SCHOENBERG, Arnold",
+      "WEBERN, Anton",
+      "CAGE, John",
+      "CREELEY, Robert",
+      "AUDEN, W. H.",
+      "STEIN, Gertrude",
+      "PERLOFF, Marjorie"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Expressão Artística",
+      "Tradução",
+      "Performance",
+      "História"
+    ],
+    "nome_pessoal_como_assunto": [
+      "JANDL, Ernst"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:45:06.933904",
+    "_id": "1764708306933",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "22 de 26",
+    "ordem_exibicao": 23,
+    "idioma_01": "ALE",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas ",
+    "subtitulo_artigo": "",
+    "paginas": "172-179",
+    "resumo": "[Publicação bilíngue] Conjunto de três poemas de Ernst Jandl acompanhados de versões em português de Fabiana Macchi: \"Camping\", \"Calypso\", \"1944 1945\"",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "JANDL, Ernst"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MACCHI, Fabiana"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "JANDL, Ernst"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T17:48:40.163745",
+    "_id": "1764708520163",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "23 de 26",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "Conto",
+    "subtitulo_artigo": "",
+    "paginas": "180-184",
+    "resumo": "",
+    "nota_edicao": "O texto, classificado por Hélio Oiticica como 'conto', foi escrito em Brighton no período em que o artista residia na Sussex University. Suas referências remetem ao período vivido por ele na Mangueira entre 1964 e 1968: o Maracanã; a rua Visconde de Niterói; a Cerâmica Brasileira, onde a escola de samba ensaiava; a ponte da Mangueira; a Candelária; a proximidade com a favela do Esqueleto, então em processo de remoção pelo governo Carlos Lacerda; e o bairro de Vila Isabel, incluindo Noel Rosa, a garagem de ônibus no Boulevard 28 de Setembro e a praça Barão de Drumond. Há menção ao bandido Cara de Cavalo, cuja morte inspirou o bólide 'Homenagem a Cara de Cavalo' (1965–66), e ao trabalho 'Barracão', apresentado em textos publicados na Revista de Cultura Vozes em 1970. Nota de Frederico Oliveira Coelho.",
+    "autores_colaboradores": [
+      "OITICICA, Hélio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Ilustração em preto e branco como abertura da seção 'Héliotur'"
+      }
+    ],
+    "_timestamp": "2025-12-02T17:50:53.249164",
+    "_id": "1764708653249",
+    "notas_pesquisa": []
   }
 ]

@@ -1662,6 +1662,7 @@ def relatorio_mapa_colaboracao(df):
         return pd.DataFrame(rows)
 
     df_rel = unique_colab_por_revista(df)
+    df_rel.index = df_rel.index + 1
     st.dataframe(df_rel, width='stretch')
     fig = px.bar(df_rel, x="n.", y="Colaboradores distintos", text="Colaboradores distintos")
     fig.update_layout(height=380, title="Colaboradores distintos por número da revista")
@@ -1706,6 +1707,7 @@ def relatorio_bilinguismo(df):
         lambda r: (r['bil'] / r['total'] * 100) if r['total'] > 0 else 0, axis=1
     )
     resumo['n'] = resumo['n'].astype(str)
+    resumo.index = resumo.index + 1
     st.dataframe(resumo, width='stretch')
     fig = px.bar(
         resumo,
@@ -1754,6 +1756,7 @@ def relatorio_iconografia(df):
         lambda r: (r['com_icon'] / r['total'] * 100) if r['total'] > 0 else 0, axis=1
     )
     resumo['n'] = resumo['n'].astype(str)
+    resumo.index = resumo.index + 1
     st.dataframe(resumo, width='stretch')
     fig = px.bar(
         resumo,
@@ -1793,6 +1796,11 @@ def relatorio_autores_assunto_colab(df):
     s_ass = DataModule.get_normalized_series(df, 'nome_pessoal_como_assunto')
     df_colab = UtilsModule.calculate_stats_with_percentage(s_colab)
     df_ass = UtilsModule.calculate_stats_with_percentage(s_ass)
+    
+    # Ajuste visual do índice para começar em 1
+    df_colab.index = df_colab.index + 1
+    df_ass.index = df_ass.index + 1
+    
     c1, c2 = st.columns(2)
     with c1:
         st.markdown("**Colaboradores (top 20)**")
@@ -1812,12 +1820,13 @@ def relatorio_tipos_textuais(df):
     st.markdown("#### Análise por tipos textuais")
     df_local = df.copy()
     df_local['tipo_base'] = df_local['vocabulario_controlado'].astype(str).apply(
-        lambda x: x.split(' - ')[0]
+        lambda x: 'Manifesto' if 'manifesto' in x.lower() else x.split(' - ')[0]
     )
     counts = df_local['tipo_base'].value_counts().reset_index()
     counts.columns = ['Tipo textual', 'Num. Absoluto']
     total = counts['Num. Absoluto'].sum()
     counts['Percentual'] = (counts['Num. Absoluto'] / total * 100).map(lambda x: f"{x:.2f}%")
+    counts.index = counts.index + 1
     st.dataframe(counts, width='stretch')
     st.markdown("##### Exportar")
     col1, col2, col3 = st.columns(3)
@@ -1873,8 +1882,14 @@ def relatorio_manifesto(df):
     st.write(f"Registros encontrados: {len(df_man)} de {len(df)} (total da base)")
     if not df_man.empty:
         df_man['onde_encontrado'] = df_man['locais_manifesto'].apply(lambda x: ', '.join(x))
+        
+        # Preparar dataframe para exibição com índice começando em 1
+        df_display = df_man[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'onde_encontrado']].copy()
+        df_display.reset_index(drop=True, inplace=True)
+        df_display.index = df_display.index + 1
+        
         st.dataframe(
-            df_man[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'onde_encontrado']],
+            df_display,
             column_config={
                 'n': 'Revista',
                 'registro': 'Registro',
@@ -1903,7 +1918,7 @@ def relatorio_manifesto(df):
             "text/csv",
             width='stretch'
         )
-        pdf_rel = PDFModule.gerar_pdf_analitico(df_man, len(df), "Manifesto ou manifesto")
+        pdf_rel = PDFModule.gerar_pdf_analitico(df_man, len(df), "Manifesto")
         col3.download_button(
             "📄 PDF",
             pdf_rel,
@@ -1914,6 +1929,80 @@ def relatorio_manifesto(df):
     else:
         st.info("Nenhum registro relacionado a 'Manifesto' foi encontrado na base.")
 
+def relatorio_sibila(df):
+    st.markdown("#### Textos relacionados a 'Sibila' (tipo textual, palavra-chave ou título)")
+    df_local = df.copy()
+    def verificar_sibila(registro):
+        locais = []
+        tipo = str(registro.get('vocabulario_controlado', '')).lower()
+        if 'sibil' in tipo:
+            locais.append('Tipo textual')
+        kw = registro.get('palavras_chave', [])
+        if isinstance(kw, list):
+            for palavra in kw:
+                if palavra and 'sibil' in str(palavra).lower():
+                    locais.append('Palavra-chave')
+                    break
+        titulo = str(registro.get('titulo_artigo', '')).lower()
+        if 'sibil' in titulo:
+            locais.append('Título')
+        resumo = str(registro.get('resumo', '')).lower()
+        if 'sibil' in resumo:
+            locais.append('Resumo')
+        return locais
+
+    df_local['locais_sibila'] = df_local.apply(verificar_sibila, axis=1)
+    df_sib = df_local[df_local['locais_sibila'].apply(lambda x: len(x) > 0)].copy()
+    st.write(f"Registros encontrados: {len(df_sib)} de {len(df)} (total da base)")
+    if not df_sib.empty:
+        df_sib['onde_encontrado'] = df_sib['locais_sibila'].apply(lambda x: ', '.join(x))
+        
+        # Preparar dataframe para exibição com índice começando em 1
+        df_display = df_sib[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'onde_encontrado']].copy()
+        df_display.reset_index(drop=True, inplace=True)
+        df_display.index = df_display.index + 1
+        
+        st.dataframe(
+            df_display,
+            column_config={
+                'n': 'Revista',
+                'registro': 'Registro',
+                'vocabulario_controlado': 'Tipo',
+                'titulo_artigo': 'Título',
+                'onde_encontrado': 'Encontrado em'
+            },
+            width='stretch'
+        )
+        st.markdown("##### Exportar")
+        col1, col2, col3 = st.columns(3)
+        df_export = df_sib[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'palavras_chave', 'onde_encontrado']].copy()
+        excel_rel = UtilsModule.converter_excel(df_export)
+        col1.download_button(
+            "📊 EXCEL",
+            excel_rel,
+            f"rel_sibila_{datetime.now().strftime('%Y%m%d')}.xlsx",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            width='stretch'
+        )
+        csv_rel = df_export.to_csv(index=False, encoding='utf-8-sig')
+        col2.download_button(
+            "📋 CSV",
+            csv_rel,
+            f"rel_sibila_{datetime.now().strftime('%Y%m%d')}.csv",
+            "text/csv",
+            width='stretch'
+        )
+        pdf_rel = PDFModule.gerar_pdf_analitico(df_sib, len(df), "Sibila")
+        col3.download_button(
+            "📄 PDF",
+            pdf_rel,
+            f"rel_sibila_{datetime.now().strftime('%Y%m%d')}.pdf",
+            "application/pdf",
+            width='stretch'
+        )
+    else:
+        st.info("Nenhum registro relacionado a 'Sibila' foi encontrado na base.")
+
 def relatorio_palavras_chave(df):
     st.markdown("#### Estatísticas de palavras-chave (vocabulário controlado)")
     s = DataModule.get_normalized_series(df, 'palavras_chave')
@@ -1921,6 +2010,7 @@ def relatorio_palavras_chave(df):
     df_stats = counts.rename(
         columns={'Termo': 'Palavra-chave', 'Qtd': 'Num. Absoluto', '%': 'Percentual'}
     )
+    df_stats.index = df_stats.index + 1
     st.dataframe(df_stats, width='stretch')
     st.markdown("##### Exportar")
     col1, col2, col3 = st.columns(3)
@@ -2740,6 +2830,11 @@ def main():
             else:
                 res_display = res_prepared
 
+            # Ajuste visual do índice para começar em 1
+            res_display = res_display.copy()
+            res_display.reset_index(drop=True, inplace=True)
+            res_display.index = res_display.index + 1
+
             st.dataframe(
                 res_display,
                 column_config={
@@ -2778,6 +2873,7 @@ def main():
                     if not s_citados.empty:
                         df_citados = UtilsModule.calculate_stats_with_percentage(s_citados)
                         st.markdown("📌 **AUTORES MAIS CITADOS**")
+                        df_citados.index = df_citados.index + 1
                         st.dataframe(df_citados.head(10), width='stretch')
                     else:
                         st.info("Nenhum autor citado nestes registros.")
@@ -2787,6 +2883,7 @@ def main():
                     if not s_colab.empty:
                         df_colab = UtilsModule.calculate_stats_with_percentage(s_colab)
                         st.markdown("✍️ **AUTORES COLABORADORES**")
+                        df_colab.index = df_colab.index + 1
                         st.dataframe(df_colab.head(10), width='stretch')
                     else:
                         st.info("Nenhum colaborador listado nestes registros.")
@@ -2841,7 +2938,8 @@ def main():
                     "Iconografia por revista",
                     "Autores como assunto vs colaboradores",
                     "Análise por tipos textuais",
-                    "Manifesto ou manifesto",
+                    "Manifesto",
+                    "Sibila",
                     "Palavras-chave"
                 ]
             )
@@ -2855,8 +2953,10 @@ def main():
                 relatorio_autores_assunto_colab(df)
             elif tipo_rel == "Análise por tipos textuais":
                 relatorio_tipos_textuais(df)
-            elif tipo_rel == "Manifesto ou manifesto":
+            elif tipo_rel == "Manifesto":
                 relatorio_manifesto(df)
+            elif tipo_rel == "Sibila":
+                relatorio_sibila(df)
             elif tipo_rel == "Palavras-chave":
                 relatorio_palavras_chave(df)
 
@@ -2989,16 +3089,25 @@ def main():
             with t1:
                 st.markdown("#### Registros sem informação de páginas")
                 st.write(f"Total: {len(sem_pag)}")
-                st.dataframe(sem_pag[['n', 'registro', 'titulo_artigo', 'paginas']], width='stretch')
+                df_sem_pag = sem_pag[['n', 'registro', 'titulo_artigo', 'paginas']].copy()
+                df_sem_pag.reset_index(drop=True, inplace=True)
+                df_sem_pag.index = df_sem_pag.index + 1
+                st.dataframe(df_sem_pag, width='stretch')
             with t2:
                 st.markdown("#### Registros sem título")
                 st.write(f"Total: {len(sem_tit)}")
-                st.dataframe(sem_tit[['n', 'registro', 'paginas']], width='stretch')
+                df_sem_tit = sem_tit[['n', 'registro', 'paginas']].copy()
+                df_sem_tit.reset_index(drop=True, inplace=True)
+                df_sem_tit.index = df_sem_tit.index + 1
+                st.dataframe(df_sem_tit, width='stretch')
             with t3:
                 st.markdown("#### Registros sem resumo em tipos que demandam resumo analítico")
                 st.write(f"Total: {len(sem_resumo)}")
+                df_sem_resumo = sem_resumo[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo']].copy()
+                df_sem_resumo.reset_index(drop=True, inplace=True)
+                df_sem_resumo.index = df_sem_resumo.index + 1
                 st.dataframe(
-                    sem_resumo[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo']],
+                    df_sem_resumo,
                     width='stretch'
                 )
             with t4:
@@ -3605,7 +3714,7 @@ def main():
             g1, g2 = st.columns(2)
             with g1:
                 s = df['vocabulario_controlado'].apply(
-                    lambda x: str(x).split(' - ')[0] if isinstance(x, str) else x
+                    lambda x: 'Manifesto' if 'manifesto' in str(x).lower() else (str(x).split(' - ')[0] if isinstance(x, str) else x)
                 )
                 v = s.value_counts().head(10).reset_index()
                 v.columns = ['Tipo', 'Qtd']
@@ -3668,6 +3777,7 @@ def main():
                 )
                 st.markdown("---")
                 st.markdown(f"**⬆️ {label.upper()} MAIS FREQUENTES (Top 30)**")
+                counts.index = counts.index + 1
                 st.dataframe(counts.head(30), width='stretch')
                 with st.expander(f"Mostrar tabela completa de {label} ({len(counts)} termos)"):
                     st.dataframe(counts, width='stretch')
