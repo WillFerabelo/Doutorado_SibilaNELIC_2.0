@@ -1647,28 +1647,23 @@ class FichasNotasView:
 # ==========================================
 
 def relatorio_mapa_colaboracao(df):
-    st.markdown("#### Mapa de colaboração por número da revista")
-    def unique_colab_por_revista(df_local):
-        def uniq(lst):
-            if not isinstance(lst, list):
-                return set()
-            return set([str(x).strip() for x in lst if str(x).strip()])
+    st.markdown("#### Volume de itens por revista")
+    def itens_por_revista(df_local):
         rows = []
         for rev, sub in df_local.groupby('n'):
-            s = set()
-            for line in sub['autores_colaboradores']:
-                s |= uniq(line if isinstance(line, list) else [line])
-            rows.append({"n.": str(rev), "Colaboradores distintos": len(s)})
+            rows.append({"n.": str(rev), "Quantidade de itens": len(sub)})
         return pd.DataFrame(rows)
-
-    df_rel = unique_colab_por_revista(df)
+    
+    df_rel = itens_por_revista(df)
     df_rel.index = df_rel.index + 1
     st.dataframe(df_rel, width='stretch')
-    fig = px.bar(df_rel, x="n.", y="Colaboradores distintos", text="Colaboradores distintos")
-    fig.update_layout(height=380, title="Colaboradores distintos por número da revista")
+    fig = px.bar(df_rel, x="n.", y="Quantidade de itens", text="Quantidade de itens")
+    fig.update_layout(height=380, title="Volume de itens por número da revista")
     st.plotly_chart(fig, width='stretch')
+    
     st.markdown("##### Exportar")
     col1, col2, col3 = st.columns(3)
+    
     excel_rel = UtilsModule.converter_excel(df_rel)
     col1.download_button(
         "📊 EXCEL",
@@ -1685,7 +1680,7 @@ def relatorio_mapa_colaboracao(df):
         "text/csv",
         width='stretch'
     )
-    pdf_rel = PDFModule.gerar_pdf_analitico(df, len(df), "Mapa de colaboração por revista")
+    pdf_rel = PDFModule.gerar_pdf_analitico(df, len(df), "Volume de itens por revista")
     col3.download_button(
         "📄 PDF (lista completa)",
         pdf_rel,
@@ -2933,7 +2928,7 @@ def main():
             tipo_rel = st.selectbox(
                 "Selecione o relatório:",
                 [
-                    "Mapa de colaboração por revista",
+                    "Volume de itens por revista",
                     "Índice de publicações bilíngues",
                     "Iconografia por revista",
                     "Autores como assunto vs colaboradores",
@@ -2943,7 +2938,7 @@ def main():
                     "Palavras-chave"
                 ]
             )
-            if tipo_rel == "Mapa de colaboração por revista":
+            if tipo_rel == "Volume de itens por revista":
                 relatorio_mapa_colaboracao(df)
             elif tipo_rel == "Índice de publicações bilíngues":
                 relatorio_bilinguismo(df)
