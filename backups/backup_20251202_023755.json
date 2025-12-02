@@ -7072,5 +7072,3316 @@
     "_timestamp": "2025-11-28T14:41:23.292419",
     "_id": "1764351683292",
     "notas_pesquisa": []
+  },
+  {
+    "n": "4",
+    "registro": "37 de 37",
+    "ordem_exibicao": 38,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "INFORME",
+    "titulo_artigo": "Investimentos Nossa Caixa",
+    "subtitulo_artigo": "",
+    "paginas": "234",
+    "resumo": "Quarta capa colorida da revista Sibila contendo publicidade da Nossa Caixa: Banco Nossa Caixa S.A.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "CAIXA, Nossa"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Publicidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "Nossa Caixa, quarta capa."
+      }
+    ],
+    "_timestamp": "2025-11-28T17:47:05.660362",
+    "notas_pesquisa": [],
+    "_id": "1764362396768"
+  },
+  {
+    "n": "5",
+    "registro": "0 de 39",
+    "ordem_exibicao": 1,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "Informações da capa: \"viena sedutora: ensaio inédito de marjorie perloff, regina silveira/ ana hatherly/ affonso ávila/ mário faustino/ henriqueta lisboa/ arkadii dragomoshchenko: uma voz viva da rússia/ roger laporte/ kafka/ mallarmé & rimbaud.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SILVEIRA, Regina"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"s/título\", (imagem da capa colorida), por Regina Silveira, 2003"
+      }
+    ],
+    "_timestamp": "2025-12-01T23:45:47.094259",
+    "notas_pesquisa": [],
+    "_id": "1764448465117"
+  },
+  {
+    "n": "5",
+    "registro": "1 de 39",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Contracapa",
+    "subtitulo_artigo": "",
+    "paginas": "p.2-3",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SILVEIRA, Regina"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"s/título\", (imagem da capa em preto e branco), por Regina Silveira, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T17:36:44.699541",
+    "_id": "1764448604699",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "2 de 39",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MULLER, Adalberto",
+      "PÉCORA, Alcir",
+      "GULLAR, Ferreira",
+      "GOLA, Hugo",
+      "MALTA, P.",
+      "ROSENFIELD, Kathrin H."
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SANDMANN, Marcelo",
+      "CELAN, Paul",
+      "BONVICINO, Régis",
+      "HARDT, Michael",
+      "NEGRI, Antonio",
+      "BRECHT, Bertolt",
+      "GENET, Jean",
+      "CREELEY, Robert",
+      "MESSERLI, Douglas"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Política",
+      "Democracia",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:38:04.709422",
+    "_id": "1764448684709",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "3 de 39",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "No action to be taken???",
+    "subtitulo_artigo": "",
+    "paginas": "p.9-10",
+    "resumo": "Editorial de apresentação do sexto número da revista Sibila. Destaca o ensaio \"Viena Sedutora\" de Marjorie Perloff (do livro \"Viena Days\") e a discussão sobre cultura erudita e pop. Aborda a tensão entre \"vida e escritura\", citando Roger Laporte, Franz Kafka e Haroldo de Campos. Apresenta a seção \"Pares Contemporâneos\" com entrevistas de Affonso Ávila e Arkadii Dragomoshchenko, contextualizada por texto de Mário Faustino sobre poesia russa. Ressalta a presença da voz feminina com Regina Silveira, Ana Hatherly e Henriqueta Lisboa, e a teoria da tradução de Yao Jingming sobre Li Shangyin. [Assinam \"os editores\": (Editor Régis Bonvicino (São Paulo); Editores associados: Odile Cisneros (Edmonton) e Romulo Valle Salvino (Brasília); Editora assistente: Tatiana Longo dos Santos (São Paulo)].\n",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "PERLOFF, Marjorie",
+      "SILVEIRA, Regina",
+      "HATHERLY, Ana",
+      "MELO NETO, João Cabral de",
+      "LAPORTE, Roger",
+      "KAFKA, Franz",
+      "CAMPOS, Haroldo de",
+      "MALLARMÉ, Stéphane",
+      "ANDRADE, Mário de",
+      "RIMBAUD, Arthur",
+      "ÁVILA, Affonso",
+      "DRAGOMOSHCHENKO, Arkadii",
+      "FAUSTINO, Mário",
+      "JINGMING, Yao",
+      "SHANGYIN, Li",
+      "LISBOA, Henriqueta",
+      "ANDRADE, Carlos Drummond de"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Escritura",
+      "Mulher",
+      "Tradução",
+      "Política"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:41:18.694284",
+    "_id": "1764448878694",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "4 de 39",
+    "ordem_exibicao": 5,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Viena sedutora",
+    "subtitulo_artigo": "ou como Gabrielle Mintz se transformou em Marjorie...",
+    "paginas": "p.11-38",
+    "resumo": "Ensaio de Marjorie Perloff, traduzido por Cláudia Gonçalves, que articula memória autobiográfica e crítica cultural para investigar a Viena modernista idealizada pelas instituições museológicas contemporâneas e a realidade histórica do exílio judaico. A autora parte de sua mudança de nome (de Gabrielle para Marjorie) após a fuga do nazismo para discutir a assimilação cultural nos Estados Unidos e a \"Kulturdrang\" da burguesia judaica vienense. O texto analisa a política de memória e a arquitetura por meio de estudos de caso como o Centro Arnold Schoenberg (no Palais Fanto), a Neue Galerie em Nova Iorque e o Fórum Cultural Austríaco de Raimund Abraham, contrastando a autenticidade histórica com simulações nostálgicas como o Café Sabarsky. Perloff dialoga com obras de Robert Musil, Ingeborg Bachmann e Thomas Bernhard, e utiliza o poema \"A Aventura Irreal de Gertrude e Ludwig\", de Charles Bernstein, para problematizar a identidade híbrida e a impossibilidade de recuperação do passado após a ruptura do Holocausto.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PERLOFF, Marjorie"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "GONÇALVES, Cláudia"
+    ],
+    "autores_citados": [
+      "MUSIL, Robert",
+      "BACHMANN, Ingeborg",
+      "BERNHARD, Thomas",
+      "VON HUMBOLDT, Wilhelm",
+      "VON HUMBOLDT, Alexander",
+      "VON BÜLOW, Gabriele",
+      "GOETHE, Johann Wolfgang von",
+      "SCHOENBERG, Arnold",
+      "MANN, Thomas",
+      "BRECHT, Bertolt",
+      "FEUCHTWANGER, Lion",
+      "ADORNO, Theodor",
+      "LANG, Fritz",
+      "CAGE, John",
+      "STEIN, Leonard",
+      "KLEMPERER, Otto",
+      "STOKOWSKI, Leopold",
+      "HAIDER, Jörg",
+      "GUTENBRUNNER, Kurt",
+      "ISHERWOOD, Christopher",
+      "HOFMANNSTHAL, Hugo",
+      "ADLER, Alfred",
+      "FREUD, Sigmund",
+      "KRAUS, Karl",
+      "TROTSKY, Leon",
+      "SCHNITZLER, Arthur",
+      "BROD, Max",
+      "WERFEL, Franz",
+      "FRIEDELL, Egon",
+      "BEER, Rudolf",
+      "WALZER, Tina",
+      "TEMPL, Stephan",
+      "BOYM, Svetlana",
+      "PROUST, Marcel",
+      "ABRAHAM, Raimund",
+      "JANDL, Ernst",
+      "LOOS, Adolf",
+      "AUDEN, W. H.",
+      "WOUK, Herman",
+      "BERNSTEIN, Charles",
+      "STEIN, Gertrude",
+      "WITTGENSTEIN, Ludwig",
+      "HEWITT, Peter",
+      "ASHBERY, John",
+      "O’HARA, Frank",
+      "PICASSO, Pablo",
+      "APOLLINAIRE, Guillaume",
+      "RIMBAUD, Arthur",
+      "KLIMT, Gustav",
+      "SCHIELE, Egon",
+      "KOKOSCHKA, Oskar",
+      "HOFFMANN, Josef",
+      "WAGNER, Otto",
+      "HAMANN, Brigitte",
+      "LAUDER, Ronald S.",
+      "SABARSKY, Serge",
+      "SWED, Mark",
+      "COTTER, Holland",
+      "FORMAN, Janet",
+      "ALLEN, Donald M."
+    ],
+    "palavras_chave": [
+      "Cultura",
+      "Identidade",
+      "Memória",
+      "Nazismo",
+      "Áustria",
+      "Arquitetura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Palais Fanto, Viena\", (fachada do edifício), s/crédito, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Lili Schüller\", (quadro de Ilse Schüller), s/crédito, 1908"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Grande Escadaria da Neue Galerie\", por David Schlegel, Nova Iorque, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"In the Griensteidl Café [No Café Griensteidl]\", (aquarela), por Reinhold Völkel, 1896"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Café Herrenhof, Herrengasse 10 de março de 1938\", s/crédito, 1938"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Fórum Cultural Austríaco, Rua 52, Nova Iorque\", por C. R. Polidori, 2002"
+      }
+    ],
+    "_timestamp": "2025-11-29T17:48:58.263575",
+    "_id": "1764449338263",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "5 de 39",
+    "ordem_exibicao": 6,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Eclipses",
+    "subtitulo_artigo": "",
+    "paginas": "p.39-42",
+    "resumo": "Série de obras visuais da artista Regina Silveira intitulada \"Eclipses\", composta por fotomontagens que exploram a distorção entre objetos cotidianos e suas sombras projetadas.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SILVEIRA, Regina"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Eclipses\", (série de obras: tomadas elétricas projetando sombra de um emaranhado de fios, como espelho da imagem principal), por Regina Silveira, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Eclipses\", (série de obras: gancho de parede projetando sombra de revólver), por Regina Silveira, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Eclipses\", (série de obras: garfo projetando sombra de uma asa), por Regina Silveira, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Eclipses\", (série de obras: clipe de papel projetando sombra de um clipe de papel), por Regina Silveira, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T17:55:18.648100",
+    "_id": "1764449718648",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "6 de 39",
+    "ordem_exibicao": 7,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "C O I X  L A C R I M A",
+    "subtitulo_artigo": "",
+    "paginas": "p.43",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BAPTISTA, Josely Vianna"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:56:45.627527",
+    "_id": "1764449805627",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "7 de 39",
+    "ordem_exibicao": 8,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Três peças do livro inédito \"Poemas femininos\"",
+    "subtitulo_artigo": "",
+    "paginas": "p.44-46",
+    "resumo": "Poemas intitulados \"A neo-Penélope\", \"As antigas damas japonesas\" e \"Poema sorrindo\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "HATHERLY, Ana"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:59:41.480861",
+    "_id": "1764449981480",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "8 de 39",
+    "ordem_exibicao": 9,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Três poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.47-49",
+    "resumo": "Poemas intitulados \"Mais uma lua\", \"Fotos em Sarajevo\" e \"Quem fala quando acabam as palavras...\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROQUETTE-PINTO, Cláudia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:01:42.837177",
+    "_id": "1764450102837",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "9 de 39",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Impossibilidades",
+    "subtitulo_artigo": "",
+    "paginas": "p.50",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "REBUZZI, Solange"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:02:41.432950",
+    "_id": "1764450161432",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "10 de 39",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Fiat lux",
+    "subtitulo_artigo": "",
+    "paginas": "p.51",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LOPEZ, Telê Ancona"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:03:46.572650",
+    "_id": "1764450226572",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "11 de 39",
+    "ordem_exibicao": 12,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "De luz acesa",
+    "subtitulo_artigo": "",
+    "paginas": "p.52",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "AMÂNCIO, Moacir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:05:15.290574",
+    "_id": "1764450315290",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "12 de 39",
+    "ordem_exibicao": 13,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.53-54",
+    "resumo": "Poemas: \"visagem\", \"a / boca...\" e \"como / um...\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ARRUDA, Gustavo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:09:51.705153",
+    "_id": "1764450591705",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "13 de 39",
+    "ordem_exibicao": 14,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Sibila",
+    "subtitulo_artigo": "",
+    "paginas": "p.55-57",
+    "resumo": "Poema visual e arte gráfica da revista Sibila. A página 55 apresenta uma colagem com a repetição da palavra \"SIBILA\" sobreposta a ícones pop e artísticos. As páginas 56 e 57 trazem uma sequência de painéis escuros com nomes inscritos em branco: \"Ana\", \"José\", \"João\", \"Madalena\", \"Maria\", \"Marta\", \"Pedro\" e \"Tomé\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Sibila\", (colagem com tipografia e rostos de Marilyn Monroe, Mona Lisa e outros), por Sibila, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Ana, José, João, Madalena\", (painéis com caligrafia branca sobre fundo escuro), por Sibila, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Maria, Marta, Pedro, Tomé\", (painéis com caligrafia branca sobre fundo escuro), por Sibila, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T18:11:54.167773",
+    "_id": "1764450714167",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "14 de 39",
+    "ordem_exibicao": 15,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.58-63",
+    "resumo": "Poemas: \"Las tres gracias\" e \"Austrohúngara\". Traduções para o português (\"As três graças\" e \"Austro-húngara\") de Jussara Salazar. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SOSA, Víctor"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "SALAZAR, Jussara"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:14:35.703533",
+    "_id": "1764450875703",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "15 de 39",
+    "ordem_exibicao": 16,
+    "idioma_01": "FRA",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Guitare",
+    "subtitulo_artigo": "",
+    "paginas": "p.64-65",
+    "resumo": "Poema \"Guitare\" com tradução para o português (\"Guitarra\") de Cláudio Nunes de Morais. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LAFORGUE, Jules"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MORAIS, Cláudio Nunes de"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:17:32.917660",
+    "_id": "1764451052917",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "16 de 39",
+    "ordem_exibicao": 17,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Laporte",
+    "subtitulo_artigo": "outra vertente da vanguarda francesa",
+    "paginas": "p.66-72",
+    "resumo": "Análise da trajetória literária de Roger Laporte, situado como inventor de um gênero biográfico singular que inverte a relação vida-escrita: não o relato da existência empírica do autor, mas a \"bio\" da \"grafia\", a vida intrínseca da escritura no instante de sua ocorrência. Discute-se a ruptura com a psicologia individual e a busca pela \"gênese da gênese\", influenciada pela abstração musical e pela interlocução com Maurice Blanchot e Franz Kafka. O texto examina a recepção crítica da obra, notadamente em \"Une Vie\" e \"Moriendo\", contrastando a leitura cética anglo-saxã com a valorização estruturalista francesa (Barthes, Derrida) que identifica na \"antiautobiografia\" laportiana uma voz anônima e um mediador do desejo de escrever. Aborda-se a tensão final entre o imperativo de cessar a escritura (o silêncio de Rimbaud) e a persistência dos cadernos póstumos, concluindo pela irredutibilidade da obra ao silêncio editorial e sua afirmação como uma escrita da escrita que transcende a literatura convencional.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "KRAMER, Micaela"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "LAPORTE, Roger",
+      "GUICHARD, Thierry",
+      "BRETON, André",
+      "MALRAUX, André",
+      "BLANCHOT, Maurice",
+      "CHAR, René",
+      "KAFKA, Franz",
+      "STURROCK, John",
+      "LEIRIS, Michel",
+      "BARTHES, Roland",
+      "DERRIDA, Jacques",
+      "LÉVINAS, Emmanuel",
+      "NANCY, Jean-Luc",
+      "JEANNET, Frédéric-Yves",
+      "RIMBAUD, Arthur",
+      "LACOUE-LABARTHE, Philippe",
+      "ROYET-JOURNOUD, Claude",
+      "ARAGON, Louis"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Biografia",
+      "Escritura",
+      "Crítica",
+      "Silêncio",
+      "Filosofia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "LAPORTE, Roger"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\", (retrato de Roger Laporte), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T18:18:40.450888",
+    "_id": "1764451120450",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "17 de 39",
+    "ordem_exibicao": 18,
+    "idioma_01": "FRA",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Feuille volante",
+    "subtitulo_artigo": "",
+    "paginas": "p.73-76",
+    "resumo": "Manifesto literário em que Roger Laporte propõe uma inversão da relação entre vida e escrita, a partir da ideia de que  não é a escrita que deve registrar a vida, mas a vida que deve servir, amplificar e acolher a escrita. A tese central sustenta que os textos produzidos sob essa perspectiva não pertencem à literatura institucionalizada, pois articulam uma mutação análoga à da pintura abstrata em relação à figurativa, provocando a emergência de um novo elemento. Laporte mobiliza Kafka, cuja existência dependia da mesa de trabalho, como exemplo dessa problemática, contrapondo-o a Rousseau, que nas \"Confissões\" apenas reduplicaria a vida pela escrita. O texto assume um tom programático ao prometer, aos que aceitarem esse caminho, uma vida exaltante porém cruel, de trabalho desmesurado e pobreza irremediável, afirmando que essa tarefa não pode ser realizada individualmente. Publicado originalmente na revista Llanfairpwllgwyngyllgogerrychwyrndrobwlllantysiliogogogoch, n. 8, 1972. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LAPORTE, Roger"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "KRAMER, Micaela"
+    ],
+    "autores_citados": [
+      "ALBIACH, Anne-Marie",
+      "ROYET-JOURNOUD, Claude",
+      "RIMBAUD, Arthur",
+      "KAFKA, Franz",
+      "BROD, Max",
+      "ROUSSEAU, Jean-Jacques"
+    ],
+    "palavras_chave": [
+      "Manifesto",
+      "Poética",
+      "Literatura",
+      "Criação",
+      "Vanguarda"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:28:04.447465",
+    "_id": "1764451684447",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "18 de 39",
+    "ordem_exibicao": 19,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Leituras das versões portuguesas dum poema de Li Shangyin",
+    "subtitulo_artigo": "",
+    "paginas": "p.77-86",
+    "resumo": "Ensaio de Yao Jingming que discute a intraduzibilidade e a recriação poética, utilizando como estudo de caso um poema \"Sem Título\" do poeta da dinastia Tang, Li Shangyin. O autor articula conceitos de Henri Meschonnic, Roman Jakobson e Haroldo de Campos para defender a tradução como \"transposição criativa\" e reescrita histórica, em oposição à mera transferência semântica. O texto realiza uma análise comparativa detalhada de três versões portuguesas do poema chinês, assinadas por Li Ching, Gil de Carvalho e Haroldo de Campos, confrontando as soluções semânticas, fônicas e imagéticas adotadas por cada tradutor diante das especificidades da língua de partida, como a ambiguidade pronominal, o paralelismo e a condensação imagética. [Obras citadas: \"Propostas para Poética da Tradução\", \"A Arte no Horizonte do Provável\", \"A Operação do Texto\", \"Antologia da Poesia Chinesa\", \"The Art of Chinese Poetry\", \"Song of Immortals\", \"Capítulos Interiores\".]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "JINGMING, Yao"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "HAN, Yu",
+      "MESCHONNIC, Henri",
+      "LI, Shangyin",
+      "JAKOBSON, Roman",
+      "CAMPOS, Haroldo de",
+      "LI, Ching",
+      "CARVALHO, Gil",
+      "LIU, James Y.",
+      "XU, Yuanchong",
+      "TSE, Chuang"
+    ],
+    "palavras_chave": [
+      "Tradução",
+      "Poesia",
+      "China",
+      "Teoria Literária",
+      "Língua"
+    ],
+    "nome_pessoal_como_assunto": [
+      "LI, Shangyin"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de Sibila\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T18:39:47.851762",
+    "_id": "1764452387851",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "19 de 39",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "A lógica do erro",
+    "subtitulo_artigo": "",
+    "paginas": "p.86-97",
+    "resumo": "Entrevista concedida pelo poeta e ensaísta Affonso Ávila a cinco poetas brasileiros (Régis Bonvicino, Júlio Castañon Guimarães, Ronald Polito, Maria Esther Maciel e Cláudio Nunes de Morais), precedida de nota biobibliográfica da equipe da Sibila. O autor discute sua formação literária em meio à transição do modernismo, citando influências de Drummond, Murilo Mendes e João Cabral, além da descoberta de Fernando Pessoa. Aborda a relação simbiótica entre seu trabalho de pesquisa histórica sobre o Barroco mineiro e sua produção poética, exemplificada em obras como \"Cantaria Barroca\". Ávila esclarece sua posição em relação à Poesia Concreta e ao grupo Noigandres, definindo afinidades construtivistas e diferenças de método, e reflete sobre o conceito de \"lógica do erro\" como método de conhecimento poético e existencial, encerrando com comentários sobre seus projetos futuros, incluindo a antologia \"Estrada Real\". [Obras citadas no decorrer da entrevista: \"O Açude\", \"Sonetos da Descoberta\", \"Carta do Solo\", \"Código de Minas\", \"Cantaria Barroca\", \"Discurso da Difamação do Poeta\", \"Delírio dos Cinquent’anos\", \"O Belo e o Velho\", \"O Visto e o Imaginado\", \"Resíduos Seiscentistas em Minas\", \"O Poeta e a Consciência Crítica\", \"O Lúdico e as Projeções do Mundo Barroco\", \"A Lógica do Erro\", \"O Engenheiro\", \"Psicologia da Composição\", \"O Rio\", \"Matéria e Paisagem\", \"De Passagem\", \"Triz\", \"Xadrez Via Correspondência\", \"Remorso do Cosmos\", \"Carta sobre a Usura\", \"Oráculo de Etos\".]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ÁVILA, Affonso",
+      "BONVICINO, Régis",
+      "GUIMARÃES, Júlio Castañon",
+      "POLITO, Ronald",
+      "MACIEL, Maria Esther",
+      "MORAIS, Cláudio Nunes de"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "DRUMMOND, Carlos",
+      "MENDES, Murilo",
+      "CABRAL, João",
+      "LEÃO, Múcio",
+      "QUENTAL, Antero de",
+      "ANJOS, Augusto dos",
+      "CAMPOS, Paulo Mendes",
+      "FIGUEIREDO, Wilson",
+      "PESSOA, Fernando",
+      "ANDRADE, Oswald de",
+      "HOLLANDA, Sérgio Buarque de",
+      "CANNABRAVA, Euryalo",
+      "LACERDA, Jorge",
+      "MORAIS, Prudente de",
+      "PIGNATARI, Décio",
+      "CAMPOS, Haroldo de",
+      "CAMPOS, Augusto de",
+      "NUNES, Benedito"
+    ],
+    "palavras_chave": [
+      "Poesia Brasileira",
+      "Modernismo",
+      "Vanguarda",
+      "Barroco",
+      "Concretismo",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de Sibila\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Retrato de Affonso Ávila\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T18:46:16.477131",
+    "_id": "1764452776477",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "20 de 39",
+    "ordem_exibicao": 21,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Pois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.98-101",
+    "resumo": "Poemas: \"Cantiga de Nossa Senhora dos Mal-Nascidos\" e \"Cantiga de Nossa Senhora da Fartura\".",
+    "nota_edicao": "Do livro inédito \"Cantigas do Falso Alfonso El Sábio\".",
+    "autores_colaboradores": [
+      "ÁVILA, Affonso"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:49:11.516377",
+    "_id": "1764452951516",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "21 de 39",
+    "ordem_exibicao": 22,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Uma voz viva da Rússia",
+    "subtitulo_artigo": "",
+    "paginas": "p.102-109",
+    "resumo": "Entrevista de Arkadii Dragomoshchenko concedida a Odile Cisneros e Régis Bonvicino, realizada em Nova Iorque em 2003. O poeta russo discute o cenário literário de São Petersburgo e Moscou, traçando uma linhagem que vai da Era de Prata e dos \"Órfãos de Akhmátova\" até a geração contemporânea. Dragomoshchenko analisa o conceito de \"underground\" e sua validade histórica ligada à repressão soviética, reflete sobre a influência da Language Poetry norte-americana em seu trabalho e comenta a relação entre poesia, política e mercado na Rússia pós-soviética. O texto aborda ainda suas traduções de autores norte-americanos e suas opiniões sobre figuras canônicas como Khliébnikov, Maiakóvski e Mandelshtam. [Obras citadas na entrevista \"Description\", \"Oxota\", \"Xênia\", \"Kingfisher\".]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DRAGOMOSHCHENKO, Arkadii",
+      "CISNEROS, Odile",
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "OLSON, Charles",
+      "CREELEY, Robert",
+      "ASHBERY, John",
+      "PALMER, Michael",
+      "HOWE, Susan",
+      "HEJINIAN, Lyn",
+      "SHVARTS, Elena",
+      "KRIVULIN, Viktor",
+      "STRATANOVSKY, Sergei",
+      "MORONOV, Alexander",
+      "MANDELSTAM, Óssip",
+      "AKHMÁTOVA, Ana",
+      "BRODSKY, Joseph",
+      "KRUCHÔNIKH, Aleksiéi",
+      "ZABOLÓTSKY, Nicolai",
+      "PARSHCHIKOV, Alexei",
+      "KUTIK, Ilya",
+      "EREMENKO, Alexander",
+      "ZHDANOV, Ivan",
+      "SKIDNA, Alexandr",
+      "GOLYNKO-VOLFSON, Dmitri",
+      "ZAVIALOV, Sergei",
+      "KUCHERIAVKIN, Vladimir",
+      "KUZMIN, Dmitrii",
+      "BARSKOVA, Polina",
+      "SHULPIAKOV",
+      "KUKULIN",
+      "VODENNIKOV, Dmitrii",
+      "FANAJLOVA, Elena",
+      "GINSBERG, Allen",
+      "FREUD, Sigmund",
+      "KHLIÉBNIKOV, Vielímir",
+      "MAIAKÓVSKI, Vladímir",
+      "VVEDENSKY",
+      "HARMS",
+      "OLEINIKOV",
+      "PASTERNAK, Boris",
+      "TSVETÁIEVA, Marina",
+      "AIGUI, Guenadi",
+      "IEVTUCHENKO, Ievguêni",
+      "VOZNESENSKY, Andriéi",
+      "DAVIDSON, Michael",
+      "DERRIDA, Jacques",
+      "BLANCHOT, Maurice",
+      "KRISTEVA, Julia",
+      "WEINBERGER, Eliot",
+      "PROHOROVA, Irina",
+      "PAZ, Octavio",
+      "NERUDA, Pablo"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Rússia",
+      "Underground",
+      "Vanguarda",
+      "Tradução",
+      "Política"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:50:44.042339",
+    "_id": "1764453044042",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "22 de 39",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Reimaginando Dragomoshchenko",
+    "subtitulo_artigo": "",
+    "paginas": "p.110-111",
+    "resumo": "Régis Bonvicino, em seu ensaio, relata o processo de tradução dos poemas de Arkadii Dragomoshchenko para o português. O autor descreve a metodologia de tradução indireta a partir das versões inglesas de Lyn Hejinian e Michael Palmer, citando o diálogo com Odile Cisneros para a revisão técnica. O ensaio justifica escolhas semânticas e fonéticas específicas, como a substituição de \"joelhos\" por \"pés\" para manter a consonância, e contextualiza a seleção de poemas extraídos do livro \"Xenia\". [Obras citadas por Régis: \"Xenia\", \"Now for the Story\", \"To Speak of Poetry\", \"Poesia Russa Moderna\".] [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "DRAGOMOSHCHENKO, Arkadii",
+      "PALMER, Michael",
+      "HEJINIAN, Lyn",
+      "CISNEROS, Odile",
+      "BALASHOVA, Elena"
+    ],
+    "palavras_chave": [
+      "Tradução",
+      "Poesia",
+      "Rússia",
+      "Estados Unidos"
+    ],
+    "nome_pessoal_como_assunto": [
+      "DRAGOMOSHCHENKO, Arkadii"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:57:30.532672",
+    "_id": "1764453450532",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "23 de 39",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Para a estória / Para falar de poesia",
+    "subtitulo_artigo": "",
+    "paginas": "p.112-117",
+    "resumo": "[Reimaginações de Régis Bonvicino a partir de Dragomoshchenko.]",
+    "nota_edicao": "Reimaginações por Régis Bonvicino.",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T18:59:39.816534",
+    "_id": "1764453579816",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "24 de 39",
+    "ordem_exibicao": 25,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "Russian poetry 1917-1955",
+    "subtitulo_artigo": "",
+    "paginas": "p.118-120",
+    "resumo": "Resenha crítica de Mário Faustino, originalmente publicada no Jornal do Brasil em 1957, que analisa a antologia \"Russian Poetry 1917-1955\" organizada e traduzida por Jack Lindsay. O autor enaltece a qualidade das traduções para o inglês e a abrangência da seleção, que cobre desde as grandes figuras do século XIX até o período soviético pré e pós-guerra, destacando a supremacia de Vladimir Maiakóvski e a relevância de autores como Briússov e Blok. Faustino articula uma crítica severa à estagnação artística provocada pelo realismo socialista e pela intervenção partidária da União dos Escritores durante o stalinismo, vislumbrando na era pós-Stalin uma possível retomada da vanguarda russa. O texto é precedido por nota da Sibila que contextualiza a recepção da poesia russa no Brasil através das traduções de Boris Schnaiderman e dos irmãos Campos. [Obras citadas no texto: \"Anthologie de la poésie russe\", \"Poesia Russa Moderna\", \"O Homem que Ficou Sete Anos de Pé\", \"Vladimir Ilitch-Lênin\", \"Ótimo!\", \"Kirov Está Conosco\", \"Diante do Aragva, à Noite\", \"A Horda\".] (LINDSAY, Jack. \"Russian Poetry 1917-1955\", The Bodley Head, 1957).",
+    "nota_edicao": "Publicada originalmente no Suplemento Dominical do Jornal do Brasil, Rio de Janeiro, 20 de outubro de 1957.",
+    "autores_colaboradores": [
+      "FAUSTINO, Mário"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SCHNAIDERMAN, Boris",
+      "CAMPOS, Augusto de",
+      "CAMPOS, Haroldo de",
+      "DAVID, Jacques",
+      "LINDSAY, Jack",
+      "PUSHKIN",
+      "LORMÉNTOV",
+      "NECRÁSSOV",
+      "BRIÚSSOV",
+      "BIÉLI",
+      "BLOK",
+      "ESSÉNIN",
+      "MAIAKÓVSKI",
+      "LÊNIN",
+      "PASTERNAK",
+      "TICÔNOV",
+      "SIMÊNOV",
+      "FERRO, Antônio"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Rússia",
+      "Urss",
+      "Stalinismo",
+      "Tradução",
+      "Vanguarda"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:03:22.521311",
+    "_id": "1764453802521",
+    "notas_pesquisa": [
+      {
+        "id": "1764453870167",
+        "data": "2025-11-29T19:04:30.167672",
+        "titulo": "Recuperações",
+        "texto": "O texto, embora de 1957, não foi publicado na seção Recuperações, mas em Pares Contemporâneos.",
+        "tags": [
+          "#recuperações"
+        ],
+        "registro_id": "1764453802521"
+      }
+    ]
+  },
+  {
+    "n": "5",
+    "registro": "25 de 39",
+    "ordem_exibicao": 26,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Cultura",
+    "titulo_artigo": "A invenção da crítica de cinema no Brasil",
+    "subtitulo_artigo": "",
+    "paginas": "p.121-128",
+    "resumo": "Carlos Adriano analisa a antologia de críticas cinematográficas de José Lino Grünewald, organizada por Ruy Castro. O texto situa Grünewald como um marco na crítica brasileira, destacando sua conexão com a Poesia Concreta e o Suplemento Dominical do Jornal do Brasil. A resenha explora a abordagem teórica de Grünewald, fundamentada na fenomenologia, na teoria da informação e na defesa do cinema como estrutura e forma, e sua interlocução com cineastas como Jean-Luc Godard, Alain Resnais e os diretores do Cinema Novo. Carlos Adriano ressalta ainda a visão de Grünewald sobre a relação entre tecnologia, indústria e arte, exemplificada na análise de \"2001: Uma Odisseia no Espaço\". [Obras citadas no texto foram: \"Cidadão Kane\", \"Hiroshima Meu Amor\", \"Acossado\", \"A Ideia do Cinema\", \"Sens et Non-Sens\", \"Os Pássaros\", \"Deus e o Diabo na Terra do Sol\", \"Os Cantos\", \"Uma Mulher é uma Mulher\", \"Glória Feita de Sangue\", \"A Aventura\", \"Escreviver\".]",
+    "nota_edicao": "(GRÜNEWALD, José Lino. \"Um Filme é um Filme\", Organização de Ruy Castro)",
+    "autores_colaboradores": [
+      "ADRIANO, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "GRÜNEWALD, José Lino",
+      "CASTRO, Ruy",
+      "WELLES, Orson",
+      "FAUSTINO, Mário",
+      "TRUFFAUT, François",
+      "GODARD, Jean-Luc",
+      "MERLEAU-PONTY, Maurice",
+      "CASSIRER, Ernst",
+      "BENJAMIN, Walter",
+      "WIENER, Norbert",
+      "RESNAIS, Alain",
+      "ANTONIONI, Michelangelo",
+      "HITCHCOCK, Alfred",
+      "ROCHA, Glauber",
+      "BRESSANE, Julio",
+      "SGANZERLA, Rogério",
+      "POUND, Ezra",
+      "NETO, Torquato",
+      "STEIN, Gertrude",
+      "KUBRICK, Stanley",
+      "MOREAU, Jeanne",
+      "JOYCE, James",
+      "DOS PASSOS, John",
+      "MALLARMÉ, Stéphane",
+      "POE, Edgar Allan",
+      "PARAIN, Brice",
+      "KARINA, Anna",
+      "WHITEHEAD, Alfred North",
+      "BERKELEY, Busby",
+      "LEITE, Mauricio Gomes"
+    ],
+    "palavras_chave": [
+      "Cinema",
+      "Crítica",
+      "Concretismo",
+      "Vanguarda",
+      "Tecnologia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "GRÜNEWALD, José Lino"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T19:08:49.817760",
+    "_id": "1764454129817",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "26 de 39",
+    "ordem_exibicao": 27,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Arte e meio ambiente",
+    "subtitulo_artigo": "",
+    "paginas": "p.129-132",
+    "resumo": "Carlos Ávila  investiga as interações entre a produção artística e o meio ambiente no contexto da saturação tecnológica contemporânea. O autor mobiliza conceitos de Marshall McLuhan, Décio Pignatari e Buckminster Fuller para definir a arte como um \"antiambiente\" capaz de gerar consciência integral e crítica sobre o impacto industrial. O texto argumenta que, diante da crise ecológica, a criatividade estética atua como mecanismo de resensibilização e sobrevivência humana, oxigenando a cultura. [Obras citadas: \"Contracomunicação\", \"Os Meios de Comunicação como Extensões do Homem\", \"Ecologia e Cultura\".] [[O ensaio de Carlos Ávila estabelece uma análise teórica sobre a interdependência entre a produção artística e o meio ambiente, problematizando a função da arte em um cenário de saturação tecnológica e crise ecológica global. A tese central sustenta que a arte, longe de ser um ornamento supérfluo, atua como um \"antiambiente\" — conceito apropriado de Décio Pignatari e Marshall McLuhan — capaz de neutralizar a violência das transformações industriais e instaurar uma \"consciência integral\" necessária à sobrevivência da espécie. O autor articula a noção de \"espaçonave terra\" de Buckminster Fuller com a definição mcluhaniana do artista como antena social para argumentar que a criação estética opera uma reordenação da sensibilidade coletiva, oferecendo um contradiscurso crítico que permite à sociedade perceber e processar os impactos invisíveis das novas tecnologias. Por fim, o texto conclui que a experiência estética possui uma dimensão ecológica intrínseca, funcionando como um mecanismo de oxigenação cultural e reequilíbrio do oikos, sendo tão vital para a manutenção da vida quanto os recursos naturais biológicos]].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ÁVILA, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "FULLER, Buckminster",
+      "PIGNATARI, Décio",
+      "MCLUHAN, Marshall",
+      "LEWIS, Wyndham",
+      "DUARTE, Rodrigo",
+      "ANDRÉS, Maurício"
+    ],
+    "palavras_chave": [
+      "Arte",
+      "Meio Ambiente",
+      "Tecnologia",
+      "Comunicação",
+      "Ecologia",
+      "Cultura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:25:18.847742",
+    "notas_pesquisa": [],
+    "_id": "1764454177319"
+  },
+  {
+    "n": "5",
+    "registro": "27 de 39",
+    "ordem_exibicao": 28,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A literatura intercultural de Gino Chiellino",
+    "subtitulo_artigo": "",
+    "paginas": "p.133-136",
+    "resumo": "O texto de Fabiana Macchi trata sobre a trajetória e a obra do poeta ítalo-alemão Gino Chiellino, precursor da literatura intercultural na Alemanha. O texto traça a evolução histórica desse movimento literário, inicialmente focado na denúncia social da imigração, para uma fase de diálogo multicultural e experimentação estética. A autora analisa os livros de poesia de Chiellino, destacando a passagem do estranhamento em relação ao \"outro\" para a apropriação da língua alemã como ferramenta de construção de identidade e superação do isolamento. O ensaio aborda ainda a ressemantização do conceito de \"Fremde\" (diversidade) e situa a obra no contexto da literatura pós-guerra. [Obras citadas: \"Mein Fremder Alltag\", \"Sehnsucht nach Sprache\", \"Equilibri estranei\", \"Sich die Fremde nehmen\".] [[O ensaio de Fabiana Macchi  examina a produção literária do poeta e ensaísta ítalo-alemão Gino Chiellino, situando-o como figura central na consolidação da literatura intercultural na Alemanha. A autora argumenta que a obra de Chiellino transcende o caráter documental da \"literatura de imigrantes\" dos anos 1970 — inicialmente marcada pela denúncia da discriminação e do estranhamento — para estabelecer uma poética complexa de apropriação linguística e reconfiguração identitária. A análise percorre cronologicamente a produção do poeta, desde o confronto hostil com o \"outro\" em Mein Fremder Alltag , passando pela recusa à assimilação passiva e ao emudecimento em Sehnsucht nach Sprache — onde o autor dialoga intertextualmente com a tradição lírica alemã de Hölderlin e Celan —, até a síntese dialética alcançada em Sich die Fremde nehmen. Neste estágio, Macchi destaca a ressemantização do conceito de Fremde, que deixa de significar apenas o \"estrangeiro\" excludente para denotar a \"diversidade\" a ser ativamente incorporada pelo sujeito. Conclui-se que a escritura de Chiellino, para além da temática migratória, insere-se na problemática pós-guerra da busca por uma linguagem capaz de articular a subjetividade e resistir ao aniquilamento do indivíduo na sociedade de massas.]]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MACCHI, Fabiana"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CHIELLINO, Gino",
+      "SCHAMI, Rafik",
+      "KARASHOLI, Adel",
+      "MICIELI, Francesco",
+      "MORA, Terézia",
+      "TAWADA, Yoko",
+      "ÇIRAK, Zehra",
+      "VETERANYI, Aglaja",
+      "PASTIOR, Oskar",
+      "MÜLLER, Herta",
+      "HÖLDERLIN, Friedrich",
+      "CELAN, Paul",
+      "ANDERSCH, Alfred",
+      "KIRSCH, Sarah",
+      "AUSLÄNDER, Rose",
+      "BRECHT, Bertolt",
+      "JANDL, Ernst"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Alemanha",
+      "Imigração",
+      "Identidade",
+      "Linguagem"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CHIELLINO, Gino"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:26:03.517237",
+    "notas_pesquisa": [],
+    "_id": "1764454317939"
+  },
+  {
+    "n": "5",
+    "registro": "28 de 39",
+    "ordem_exibicao": 29,
+    "idioma_01": "ALE",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Verstummung / Emudecimento",
+    "subtitulo_artigo": "",
+    "paginas": "p.137",
+    "resumo": "Poema: \"Verstummung\" (\"Emudecimento\"). [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CHIELLINO, Gino"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MACCHI, Fabiana"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:16:16.773642",
+    "_id": "1764454576773",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "29 de 39",
+    "ordem_exibicao": 30,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "O olho do poeta",
+    "subtitulo_artigo": "experimentação crítica em Murilo Mendes",
+    "paginas": "p.138-146",
+    "resumo": "Júlio Castañon Guimarães analisa o volume \"L’occhio del poeta\", organizado por Luciana Stegagno Picchio, que reúne textos de crítica de arte escritos por Murilo Mendes em italiano. O ensaio discute a natureza híbrida desses textos — situados entre a crítica, o ensaio e o poema — e corrobora a tese de Giulio Carlo Argan de que a crítica de arte muriliana constitui um \"gênero literário\" e um laboratório de experimentação linguística. O texto aborda problemas editoriais relativos às versões e traduções (português/italiano/francês), a relação entre texto e imagem nos catálogos originais e a interlocução de Murilo Mendes com as vanguardas e artistas como Magnelli, Capogrossi e Duchamp. [Obras citadas: \"L’occhio del poeta\", \"Poesia completa e prosa\", \"A Invenção do Finito\", \"Retratos Relâmpagos\", \"Papiers\", \"Convergência\", \"Ipotesi\".]",
+    "nota_edicao": "(MENDES, Murilo. \"L’occhio del poeta\", Gangemi Editore, 2001)",
+    "autores_colaboradores": [
+      "GUIMARÃES, Júlio Castañon"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MENDES, Murilo",
+      "PICCHIO, Luciana Stegagno",
+      "ARGAN, Giulio Carlo",
+      "DORAZIO, Piero",
+      "PERILLI, Achille",
+      "MAGNELLI",
+      "MORANDI",
+      "FONTANA",
+      "VEDOVA",
+      "WEISSMANN, Franz",
+      "VOLPI, Alfredo",
+      "IANELLI, Arcangelo",
+      "LAMONICA, Roberto de",
+      "ARP, Jean",
+      "BRAUNER, Victor",
+      "DELAUNAY, Sonia",
+      "DUCHAMP, Marcel",
+      "ERNST, Max",
+      "TURCATO",
+      "CAPOGROSSI, Giuseppe",
+      "COLLA, Ettore",
+      "SANTORO, Pasquale",
+      "CONTE, Bruno",
+      "SMERALDI, Francesco",
+      "WELLER, Simona",
+      "VIVALDI, Cesare",
+      "ACCARDI, Carla",
+      "PEPPER, Beverly",
+      "TABUCCHI, Antonio",
+      "RUIVO, Henrique",
+      "BACH",
+      "BOILLE, Luigi",
+      "READ, Herbert",
+      "TAKAHASHI"
+    ],
+    "palavras_chave": [
+      "Crítica",
+      "Poesia",
+      "Artes Plásticas",
+      "Vanguarda",
+      "Itália"
+    ],
+    "nome_pessoal_como_assunto": [
+      "MENDES, Murilo"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Sem título\", (arte abstrata), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T19:18:08.889532",
+    "_id": "1764454688889",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "30 de 39",
+    "ordem_exibicao": 31,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Um ato suave de subversão",
+    "subtitulo_artigo": "",
+    "paginas": "p.147",
+    "resumo": "Esta nota introdutória, redigida pela equipe editorial da revista, contextualiza a publicação das reflexões do curador cubano Gerardo Mosquera acerca da exposição \"Panorama da Arte Brasileira 2003\". O documento estabelece a natureza do evento, realizado bienalmente pelo Museu de Arte Moderna de São Paulo (MAM-SP) desde 1969, e justifica a opção editorial de manter o texto crítico subsequente em seu idioma original, o espanhol. A apresentação cumpre função documental ao enumerar a totalidade dos artistas integrantes da mostra, reunindo nomes consagrados e emergentes da cena contemporânea, como Cildo Meireles, Adriana Varejão, Ernesto Neto e Leonilson, evidenciando o recorte curatorial proposto.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "MOSQUERA, Gerardo",
+      "CLIMACHAUSKA, Paulo",
+      "BARROS, Umberto da Costa",
+      "DAMASCENO, José",
+      "DELVOYE, Wim",
+      "GOMES, Fernanda",
+      "GUEDES, José",
+      "GUIMARAES, Adriano",
+      "GUIMARAES, Fernando",
+      "XUAN, Kan",
+      "LEONILSON",
+      "LEVITAN, Lucas",
+      "MOREIRA, Jailton",
+      "MACCHI, Jorge",
+      "MEIRELES, Cildo",
+      "MOREIRA, Marcone",
+      "MUNIZ, Vic",
+      "NETO, Ernesto",
+      "PATRÍCIO, José",
+      "RAMO, Sara",
+      "VAREJÃO, Adriana",
+      "VILLAR, Alex"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Museu",
+      "Brasil",
+      "Curadoria"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:20:20.342250",
+    "notas_pesquisa": [],
+    "_id": "1764454769914"
+  },
+  {
+    "n": "5",
+    "registro": "31 de 39",
+    "ordem_exibicao": 32,
+    "idioma_01": "ESP",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO",
+    "titulo_artigo": "19 Desarranjos",
+    "subtitulo_artigo": "",
+    "paginas": "p.148-150",
+    "resumo": "Ensaio curatorial de Gerardo Mosquera que propõe o conceito de \"desarreglo\" (desarranjo) como chave de leitura para a arte contemporânea brasileira. O autor argumenta que, embora exista uma inclinação construtiva predominante no Brasil, diversos artistas operam uma desconstrução interna dessa estrutura, estratégia herdada do Neoconcretismo. O texto diferencia a produção brasileira do \"sentido derridareano\" puro e do pós-minimalismo internacional, apontando para uma apropriação singular, subjetiva e material da linguagem artística global. A origem do termo \"desarreglo\" é atribuída às improvisações radicais do pianista cubano Felo Bergaza, servindo como metáfora para um mundo pós-utópico de transformações marginais. [[O ensaio de Gerardo Mosquera postula o conceito de \"desarreglo\" (desarranjo) como categoria analítica para compreender a produção artística brasileira contemporânea inserida na mostra Panorama da Arte Brasileira. O autor parte da premissa de que o estereótipo construtivo da arte brasileira é verdadeiro, mas incompleto, sendo subvertido por práticas que negam a estrutura a partir de seu interior, num movimento dialético de crítica e autocrítica. Mosquera identifica a gênese dessa operação no Neoconcretismo, o que confere aos artistas brasileiros uma especificidade subjetiva e material frente ao pós-minimalismo e à linguagem artística internacional. O texto apropria-se do termo utilizado pelo pianista cubano Felo Bergaza para descrever arranjos musicais radicais, transpondo-o para as artes visuais como metáfora de um \"ato suave de subversão\" típico de um contexto pós-utópico, onde as transformações ocorrem nos interstícios e readequações do sistema, e não pela ruptura total.]]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MOSQUERA, Gerardo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "DERRIDA, Jacques",
+      "BERGAZA, Felo"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Brasil",
+      "Neoconcretismo",
+      "Estrutura",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:23:06.943628",
+    "_id": "1764454986943",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "32 de 39",
+    "ordem_exibicao": 33,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "Novíssima poesia brasileira (2)",
+    "subtitulo_artigo": "",
+    "paginas": "p.151-156",
+    "resumo": "Resenha crítica de Paulo Ferraz sobre a poesia reunida de Marcos Siscar, com foco na obra \"Metade da Arte\". O autor analisa como Siscar se apropria e desconstrói o conceito de modernidade de Baudelaire, privilegiando o transitório e o contingente em detrimento do eterno. O texto examina a estrutura formal dos poemas — marcada pela ausência de pontuação e pelo enjambement — como recurso para simular o turbilhão contemporâneo, exigindo do leitor uma reconstrução ativa do sentido e do tempo. Ferraz destaca ainda a dimensão reflexiva da obra, caracterizando-a como \"poesia pensando\" e \"estética da dúvida\". [Obras citadas: \"Le peintre de la vie moderne\", \"Teoria da Poesia Concreta\".] [[A resenha de Paulo Ferraz examina a poética de Marcos Siscar reunida no volume Metade da Arte, analisando a estratégia do autor de dialogar com a definição baudelaireana de modernidade ao suprimir deliberadamente a dimensão do \"eterno\" para focar no \"transitório\" e no \"contingente\". Ferraz argumenta que a estrutura formal dos poemas de Siscar, caracterizada pela supressão da pontuação e pelo uso intensivo de enjambements, mimetiza o fluxo caótico e a velocidade da experiência urbana contemporânea, mas exige do leitor uma postura ativa de reconstrução rítmica e semântica para superar a vertigem inicial. O crítico define a obra como uma \"poesia pensando\" ou uma \"estética da dúvida\", onde o sujeito lírico fragmentado utiliza a contingência não como fim, mas como ponto de partida para uma reflexão sobre a perda, o tempo e a alteridade, transferindo ao leitor a responsabilidade de completar o sentido e conferir necessidade ao efêmero.]]",
+    "nota_edicao": "(SISCAR, Marcos. \"Metade da Arte\", Cosac & Naify, 7 Letras)",
+    "autores_colaboradores": [
+      "FERRAZ, Paulo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SISCAR, Marcos",
+      "BAUDELAIRE, Charles",
+      "ASSIS, Machado de"
+    ],
+    "palavras_chave": [
+      "Poesia Brasileira",
+      "Contemporâneo",
+      "Modernidade",
+      "Tempo",
+      "Leitor"
+    ],
+    "nome_pessoal_como_assunto": [
+      "SISCAR, Marcos"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T19:27:43.126389",
+    "_id": "1764455263126",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "33 de 39",
+    "ordem_exibicao": 34,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "... Joguei a sério ...",
+    "subtitulo_artigo": "",
+    "paginas": "p.157",
+    "resumo": "Nota de apresentação que introduz uma homenagem póstuma a Haroldo de Campos. A revista publica uma entrevista inédita concedida pelo poeta a Jardel Dias Cavalcanti e Mário Alex Rosa em 1990, em Mariana (MG), focada em temas e poetas brasileiros, além de dois depoimentos reflexivos escritos logo após seu falecimento em agosto de 2003.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "CAMPOS, Haroldo de",
+      "CAVALCANTI, Jardel Dias",
+      "ROSA, Mário Alex"
+    ],
+    "palavras_chave": [
+      "Poesia Brasileira",
+      "Homenagem",
+      "Entrevista"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CAMPOS, Haroldo de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T20:18:56.686962",
+    "_id": "1764458336686",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "34 de 39",
+    "ordem_exibicao": 35,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Entrevista com o poeta e tradutor Haroldo de Campos",
+    "subtitulo_artigo": "",
+    "paginas": "p.158-174",
+    "resumo": "Entrevista inédita de Haroldo de Campos concedida a Jardel Dias Cavalcanti e Mário Alex Rosa em 1990, em Mariana (MG). O poeta discute a crise técnica na poesia brasileira contemporânea, criticando a falta de rigor formal e a visão amadora da criação literária. Haroldo aborda sua teoria da tradução como \"recriação\" e \"transculturação\", exemplificando com seu trabalho sobre a Bíblia hebraica, onde busca evidenciar a função poética do texto sagrado. A conversa percorre temas como a influência do haicai e da visualidade em sua obra, a relação entre Estado e arte (com referências a Gerald Thomas), e avaliações críticas sobre poetas como João Cabral de Mello Neto, Carlos Drummond de Andrade, Paulo Leminski e Caetano Veloso. O entrevistado defende a poesia engajada apenas quando sustentada por uma forma revolucionária, citando Maiakóvski e Brecht. [Obras citadas: \"Anatomia da Crítica\", \"Poética e Linguagem\", \"Mensagem\", \"Rei da Vela\", \"Vestido de Noiva\", \"Lição de Coisas\", \"As Impurezas do Branco\", \"Galáxias\", \"Auto do Possesso\".] [[Nesta entrevista concedida em 1990, Haroldo de Campos articula uma defesa rigorosa da competência técnica na produção poética, diagnosticando uma crise na geração jovem brasileira decorrente do desprezo pelo estudo formal e pela métrica. O poeta rejeita a noção romântica de inspiração pura, definindo a poesia como um complexo de \"racionalismo sensível\" onde a dor e a emoção só ganham valor estético quando transfiguradas pela linguagem. Campos expõe sua metodologia de tradução como recriação isomórfica e transculturação, utilizando como estudo de caso sua versão laica e poética do Eclesiastes e do Livro de Jó, em oposição às traduções documentais ou religiosas. O diálogo avança para a crítica da subvenção estatal à arte, alinhando-se à posição de Gerald Thomas contra o dirigismo cultural, e culmina na avaliação do cânone contemporâneo, onde elege João Cabral de Mello Neto como o maior poeta vivo de língua portuguesa, superior ao Drummond final, e reconhece em Caetano Veloso e Paulo Leminski os herdeiros da invenção poética na música e na contracultura.]]",
+    "nota_edicao": "Entrevista gravada originalmente em fita cassete em 8 de junho de 1990.",
+    "autores_colaboradores": [
+      "CAMPOS, Haroldo de",
+      "CAVALCANTI, Jardel Dias",
+      "ROSA, Mário Alex"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "GUEVARA, Che",
+      "MAIAKÓVSKI, Vladímir",
+      "PESSOA, Fernando",
+      "VELOSO, Caetano",
+      "LEMINSKI, Paulo",
+      "BONVICINO, Régis",
+      "MACHADO, Duda",
+      "ANTUNES, Arnaldo",
+      "MANSUR, Guilherme",
+      "ÁVILA, Carlos",
+      "MARX, Karl",
+      "FRYE, Northrop",
+      "JAKOBSON, Roman",
+      "LUTERO, Martinho",
+      "NOVALIS",
+      "POUND, Ezra",
+      "ELIOT, T. S.",
+      "BASHÔ, Matsuo",
+      "THOMAS, Gerald",
+      "GORBATCHÓV, Mikhail",
+      "KHLIÉBNIKOV, Vielímir",
+      "MALLARMÉ, Stéphane",
+      "PASTERNAK, Boris",
+      "JOYCE, James",
+      "RIMBAUD, Arthur",
+      "ANDRADE, Oswald de",
+      "ANDRADE, Mário de",
+      "RODRIGUES, Nelson",
+      "MARTINEZ CORRÊA, José Celso",
+      "FILHO, Antunes",
+      "LESSA, Bia",
+      "MELLO NETO, João Cabral de",
+      "DRUMMOND DE ANDRADE, Carlos",
+      "PAZ, Octavio",
+      "VIEIRA, Trajano",
+      "ASCHER, Nelson",
+      "COELHO, Bete",
+      "GIL, Gilberto",
+      "BUARQUE, Chico",
+      "CAMÕES, Luís de",
+      "PETRARCA",
+      "BRECHT, Bertolt"
+    ],
+    "palavras_chave": [
+      "Poesia Brasileira",
+      "Tradução",
+      "Crítica",
+      "Vanguarda",
+      "Política"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CAMPOS, Haroldo de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T20:19:55.859456",
+    "_id": "1764458395859",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "35 de 39",
+    "ordem_exibicao": 36,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "O culto das coisas difíceis",
+    "subtitulo_artigo": "",
+    "paginas": "p.175-178",
+    "resumo": "Aurora Fornoni Bernardini escreve em homenagem a Haroldo de Campos seu ensaio estruturado em torno de seis características fundamentais do poeta e tradutor: entusiasmo, conhecimento do vernáculo, rigor, generosidade, brilhantismo e o \"culto das coisas difíceis\". A autora rememora a colaboração em traduções de poesia russa e italiana, detalhando o processo criativo e as discussões filológicas sobre obras de Maiakóvski e Ungaretti. O texto destaca a importância dos ensaios teóricos de Haroldo e sua rejeição ao facilismo retórico, exemplificada em obras complexas como \"Galáxias\" e nas traduções de textos clássicos e de vanguarda. [Obras citadas: \"Poesia Russa Moderna\", \"A Serguéi Essiênin\", \"De uma Estrela à Outra\", \"A Arte no Horizonte do Provável\", \"Metalinguagem e Outras Metas\", \"Ideograma\", \"Revisão de Sousândrade\", \"Galáxias\".][[Aurora Fornoni Bernardini elabora um ensaio memorialístico e crítico sobre a trajetória intelectual de Haroldo de Campos, estruturando a análise em torno de seis características fundamentais que definiam o poeta e tradutor, com ênfase no que denomina \"o culto das coisas difíceis\". A autora parte de sua colaboração com Haroldo na tradução de poesia russa e italiana para dissecar o método de trabalho haroldiano, pautado pelo rigor filológico, pela erudição vernácula e pela rejeição ao facilismo retórico. O texto detalha o processo de recriação poética, exemplificado pelas discussões semânticas em torno de Giuseppe Ungaretti e pela \"transposição criativa\" de Vladimir Maiakóvski, situando a práxis tradutória de Haroldo como um exercício de alta competência técnica que mobiliza desde a linguística de Roman Jakobson até a estética de Sergei Eisenstein. Bernardini destaca ainda a generosidade intelectual e a dimensão teórica de ensaios seminais como A Arte no Horizonte do Provável e a tradução de Dante Alighieri, concluindo que a obra de Haroldo, exemplificada pela complexidade de Galáxias, permanece como um texto catalisador que exige do leitor o enfrentamento do difícil como condição para a experiência estética.]]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BERNARDINI, Aurora Fornoni"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CAMPOS, Haroldo de",
+      "BURLIUK, David",
+      "SCHNAIDERMAN, Boris",
+      "KRISTEVA, Julia",
+      "TODOROV, Tzvetan",
+      "JAKOBSON, Roman",
+      "TCHERKÁSSOV, Nikolai",
+      "EISENSTEIN, Sergei",
+      "ESSIÊNIN, Serguéi",
+      "MAIAKÓVSKI, Vladimir",
+      "KHLIÉBNIKOV, Velimir",
+      "TSVETÁIEVA, Marina",
+      "UNGARETTI, Giuseppe",
+      "MONTALE, Eugenio",
+      "ZANZOTTO, Andrea",
+      "LUZI, Mario",
+      "SANGUINETI, Edoardo",
+      "ALIGHIERI, Dante",
+      "PAZ, Octavio",
+      "SOUSÂNDRADE, Joaquim de",
+      "HOMERO",
+      "JOYCE, James",
+      "GOETHE, Johann Wolfgang von",
+      "BARBOSA, João Alexandre",
+      "ROSA, João Guimarães"
+    ],
+    "palavras_chave": [
+      "Tradução",
+      "Poesia Russa",
+      "Poesia Italiana",
+      "Crítica",
+      "Homenagem"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CAMPOS, Haroldo de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T20:23:10.542822",
+    "_id": "1764458590542",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "36 de 39",
+    "ordem_exibicao": 37,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Algumas tensões na figura de Haroldo de Campos",
+    "subtitulo_artigo": "(Publicado originalmente no jornal Valor Econômico, 22 de agosto de 2003)",
+    "paginas": "p.179-183",
+    "resumo": "Artigo de Régis Bonvicino publicado postumamente à morte de Haroldo de Campos, analisando a trajetória do poeta sob a ótica da tensão entre o paradigma \"internacional-erudito\" e o \"nacional-popular\". O autor situa Haroldo na linhagem cosmopolita do Modernismo de 1922 (Mário e Oswald de Andrade) e do Concretismo, destacando sua atuação como tradutor e teórico que rompeu fronteiras nacionais. Bonvicino aponta \"Galáxias\" e \"A Educação dos Cinco Sentidos\" como momentos cruciais dessa dialética, onde o erudito se confronta com o popular e o tropicalismo. O texto conclui que, na fase final, Haroldo radicalizou o retorno ao paradigma universalista e passadista, afastando-se da vanguarda e do diálogo com a cultura de massas. [Obras citadas: \"Pauliciéia Desvairada\", \"Manifesto Antropofágico\", \"Auto do Possesso\", \"A Arte no Horizonte do Provável\", \"Metalinguagem e Outras Metas\", \"Ideograma\", \"Poesia Russa Moderna\", \"Galáxias\", \"A Educação dos Cinco Sentidos\", \"Transblanco\".] [[O artigo de Régis Bonvicino propõe uma leitura crítica da obra de Haroldo de Campos a partir da dialética entre dois paradigmas culturais: o \"internacional-erudito\" e o \"nacional-popular\". O autor sustenta que a relevância de Haroldo reside na prevalência do primeiro vetor, inserindo-o na tradição cosmopolita inaugurada pelo Modernismo de 1922 e radicalizada pelo Concretismo, movimento que repropôs a universalidade através da forma. Bonvicino identifica em Galáxias a síntese bem-sucedida dessa vocação — um \"caderno de viagens internacional\" — enquanto aponta em A Educação dos Cinco Sentidos as tensões problemáticas de um flerte com o popular e o Tropicalismo (Caetano Veloso, Gal Costa). A tese central sugere que, ao final da vida, Haroldo percebeu o esgotamento das vanguardas e do projeto tropicalista, operando um retorno ao \"passadismo\" erudito através das traduções de Homero, distanciando-se definitivamente da busca pela \"brasilidade\" e reafirmando sua filiação à alta cultura universal.]]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CAMPOS, Haroldo de",
+      "MATTOS, Gregório de",
+      "PÉCORA, Alcir",
+      "ANDRADE, Mário de",
+      "EVANGELISTA, São João",
+      "WHITMAN, Walt",
+      "MALLARMÉ, Stéphane",
+      "VERHAEREN",
+      "MARINETTI, Filippo Tommaso",
+      "ANDRADE, Oswald de",
+      "JOYCE, James",
+      "POUND, Ezra",
+      "CUMMINGS, E. E.",
+      "MONDRIAN, Piet",
+      "VELOSO, Caetano",
+      "SOUSÂNDRADE, Joaquim de",
+      "HOMERO",
+      "COSTA, Gal",
+      "SAFO",
+      "FRANCO, Francisco",
+      "ROSA, João Guimarães",
+      "MORAES, Vinícius de",
+      "BANDEIRA, Manuel",
+      "MELLO NETO, João Cabral de",
+      "DRUMMOND DE ANDRADE, Carlos",
+      "GULLAR, Ferreira",
+      "PAZ, Octavio",
+      "DIANA",
+      "MONTALE, Eugenio",
+      "ZÉ, Tom"
+    ],
+    "palavras_chave": [
+      "Poesia Brasileira",
+      "Modernismo",
+      "Concretismo",
+      "Tropicalismo",
+      "Vanguarda",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CAMPOS, Haroldo de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T20:27:44.191292",
+    "_id": "1764458864191",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "37 de 39",
+    "ordem_exibicao": 38,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Apresentação",
+    "subtitulo_artigo": "",
+    "paginas": "p.185-187",
+    "resumo": "Texto de apresentação da seção \"Recuperações\", introduzindo um artigo resgatado de Henriqueta Lisboa originalmente publicado em 1953 no jornal Folha de Minas. A nota editorial agradece a pesquisa de Carlos Ávila nos arquivos de Laís Corrêa de Araújo e Affonso Ávila e justifica a publicação como forma de combater o esquecimento da obra da poeta. O texto inclui breves citações críticas de Carlos Drummond de Andrade e Mário de Andrade enaltecendo o lirismo de Henriqueta.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "LISBOA, Henriqueta",
+      "ÁVILA, Carlos",
+      "ARAÚJO, Laís Corrêa de",
+      "ÁVILA, Affonso",
+      "ANDRADE, Carlos Drummond de",
+      "ANDRADE, Mário de"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Crítica",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [
+      "LISBOA, Henriqueta"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de Sibila\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Retrato de Henriqueta Lisboa\", por R. Werneck, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-29T20:29:51.169034",
+    "_id": "1764458991169",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "38 de 39",
+    "ordem_exibicao": 39,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Poesia, beleza e estética",
+    "subtitulo_artigo": "",
+    "paginas": "p.188-196",
+    "resumo": "Ensaio de Henriqueta Lisboa que investiga a complexa relação entre poesia e beleza, questionando se o belo artístico depende da harmonia formal ou da autenticidade da expressão. A autora percorre a evolução do conceito estético, contrastando a visão clássica e aristotélica de equilíbrio com a subjetividade romântica e a ruptura modernista, que incorporou o cotidiano e o \"feio\" ao vocabulário poético. Apoiada em teóricos como Baudelaire, Maritain e Croce, Henriqueta argumenta que a beleza na arte moderna reside na intensidade da emoção e na verdade interior do criador, citando exemplos de Fernando Pessoa, Mário de Andrade, Manuel Bandeira e Pablo Neruda para ilustrar a fusão entre forma e substância na representação da angústia contemporânea. [Obras citadas: \"Ode Marítima\", \"Meditação sobre o Tietê\", \"Nova Poética\".]. [[Henriqueta Lisboa propõe, neste ensaio, uma reavaliação ontológica da poesia em sua relação com o conceito de beleza, desafiando a noção tradicional que vincula o estético à harmonia formal e à amenidade sonora. A autora argumenta que o modernismo, exemplificado por obras como a \"Ode Marítima\" de Fernando Pessoa e a \"Meditação sobre o Tietê\" de Mário de Andrade, rompeu com os cânones clássicos ao provar que a beleza poética pode emergir da dissonância e do vocabulário prosaico (\"beco\", \"bigode\") quando estes são veículos autênticos de uma nova sensibilidade. Apoiando-se na dialética de Baudelaire entre o elemento eterno e o circunstancial do belo, Lisboa sustenta que a arte contemporânea, marcada pela angústia existencial e pela crise da alma moderna, não pode se limitar à reprodução do agradável, mas deve buscar a \"verdade interior\" e a \"intensidade expressiva\", conforme postulado por Croce e Amado Alonso. A conclusão aponta para uma estética onde a forma não é um ornamento, mas uma criação orgânica da força emocional, capaz de integrar o caos da experiência humana em uma ordem artística superior.]]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LISBOA, Henriqueta"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PESSOA, Fernando",
+      "ANDRADE, Mário de",
+      "GUIMARAENS, Alphonsus de",
+      "MARITAIN, Jacques",
+      "RILKE, Rainer Maria",
+      "BAUDELAIRE, Charles",
+      "VIRGÍLIO",
+      "ANDRADE, Carlos Drummond de",
+      "ELIOT, T. S.",
+      "CROCE, Benedetto",
+      "SEGUNDO, Juan Luiz",
+      "MONNEROT, Jules",
+      "BANDEIRA, Manuel",
+      "ALONSO, Amado",
+      "NERUDA, Pablo",
+      "ARISTÓTELES"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Estética",
+      "Modernismo",
+      "Beleza",
+      "Teoria Literária"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T20:30:47.258171",
+    "_id": "1764459047258",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "39 de 39",
+    "ordem_exibicao": 40,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Nossa Caixa",
+    "subtitulo_artigo": "O Banco de São Paulo",
+    "paginas": "202",
+    "resumo": "Informativo publicitário da Nossa Caixa: o banco de São Paulo",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "CAIXA, Nossa"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Publicidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "Informativo do banco Nossa Caixa"
+      }
+    ],
+    "_timestamp": "2025-11-29T20:32:42.857883",
+    "_id": "1764459162857",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "0 de 32",
+    "ordem_exibicao": 1,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "Informações da capa: \"nova poesia mexicana, a poética mundial de jerome rothenberg, dominique fourcade, paulo leminski ana cristina cesar, flávio de carvalho.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Sibila, (imagem da capa colorida), FONTES, Wladimir, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T00:11:11.310761",
+    "notas_pesquisa": [],
+    "_id": "1764642811203"
+  },
+  {
+    "n": "6",
+    "registro": "1 de 32 ",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Sibila",
+    "subtitulo_artigo": "",
+    "paginas": "2",
+    "resumo": "Reprodução em preto e branco da obra Sibila, de Wladimir Fontes, 2003.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FONTES, Wladimir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "Sibila, de Wladimir Fontes (p&b), 2003, p. 2"
+      }
+    ],
+    "_timestamp": "2025-12-02T00:11:39.601478",
+    "notas_pesquisa": [],
+    "_id": "1764643891013"
+  },
+  {
+    "n": "6",
+    "registro": "2 de 32",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "Editorial",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Editorial que apresenta os conteúdos da edição, destacando a seção \"Pares Contemporâneos\" dedicada à poesia mexicana atual, com ensaio de Rodolfo Mata e depoimento de Hugo Gola. Comenta a publicação do texto híbrido \"Tudo Acontece\" de Dominique Fourcade e o resgate da série jornalística \"A Moda e o Novo Homem\" (1956) de Flávio de Carvalho, relacionando-a ao cenário contemporâneo da moda e da arte. Ressalta a entrevista com o poeta e antologista Jerome Rothenberg sobre etnopoesia e modernismo, além de mencionar contribuições de Paolo Ruffini, Wilson Bueno e as resenhas críticas de Paulo Franchetti e Mario Cámara.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis",
+      "CISNEROS, Odile",
+      "SANTOS, Tatiana Longo dos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "DENIZ, Gerardo",
+      "PACHECO, José Emilio",
+      "CROSS, Elsa",
+      "HERNÁNDEZ, Francisco",
+      "HUERTA, David",
+      "BLANCO, Alberto",
+      "BRACHO, Coral",
+      "D'AQUINO, Alfonso",
+      "MATA, Rodolfo",
+      "GOLA, Hugo",
+      "PAZ, Octavio",
+      "FOURCADE, Dominique",
+      "MANET, Édouard",
+      "CARVALHO, Flávio de",
+      "BÜNDCHEN, Gisele",
+      "VELOSO, Caetano",
+      "GIL, Gilberto",
+      "BUARQUE, Chico",
+      "ROTHENBERG, Jerome",
+      "BERNSTEIN, Charles",
+      "VICUÑA, Cecília",
+      "PERLOFF, Marjorie",
+      "WILLIAMS, William Carlos",
+      "STEIN, Gertrude",
+      "POUND, Ezra",
+      "RUFFINI, Paolo",
+      "BERNARDINI, Aurora Fornoni",
+      "BUENO, Wilson",
+      "FRANCHETTI, Paulo",
+      "CESAR, Ana Cristina",
+      "LEMINSKI, Paulo",
+      "CÁMARA, Mario"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "México",
+      "Vanguarda",
+      "Moda",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:11:55.369464",
+    "notas_pesquisa": [],
+    "_id": "1764644464923"
+  },
+  {
+    "n": "6",
+    "registro": "3 de 32",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-11",
+    "resumo": "Seção de correspondência com comentários de leitores sobre edições anteriores da revista. Mauro Faccioni Filho reflete sobre a inconstância na produção atual de poemas. Fabiana Macchi elogia o pluralismo da publicação, comentando obras de Claudia Roquete-Pinto, Josely Vianna Baptista e Marjorie Perloff, além de mencionar a seção de Pares Contemporâneos e a homenagem a Haroldo de Campos. Inclui notas breves de Víctor Sosa, Matias Mariani e Júlio Castañon Guimarães parabenizando a edição.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FACCIONI FILHO, Mauro",
+      "MACCHI, Fabiana",
+      "SOSA, Víctor",
+      "MARIANI, Matias",
+      "GUIMARÃES, Júlio Castañon"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ROQUETE-PINTO, Claudia",
+      "BAPTISTA, Josely Vianna",
+      "PERLOFF, Marjorie",
+      "DRAGOMOSHCHENKO, Arkadii",
+      "ÁVILA, Affonso",
+      "CISNEROS, Odile",
+      "BONVICINO, Régis",
+      "CAMPOS, Haroldo de",
+      "CHIELLINO, Gino"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Tradução",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:12:09.107260",
+    "notas_pesquisa": [],
+    "_id": "1764644995004"
+  },
+  {
+    "n": "6",
+    "registro": "4 de 32",
+    "ordem_exibicao": 5,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Somos todos de Chula Vista",
+    "subtitulo_artigo": "",
+    "paginas": "p.12-16",
+    "resumo": "Entrevista coletiva com Jerome Rothenberg conduzida por Charles Bernstein, Cecília Vicuña, Régis Bonvicino e Marjorie Perloff, introduzida por texto de Bonvicino que situa a relevância do entrevistado na pós-modernidade. O texto aborda o conceito de etnopoesia desenvolvido por Rothenberg, que integra cânticos e narrativas indígenas às poéticas de vanguarda, e discute sua atuação como co-editor da antologia \"Poems for the Millennium\". Analisa-se a conexão entre a poesia norte-americana contemporânea e as vanguardas históricas, estabelecendo paralelos com o Modernismo brasileiro, especificamente a Antropofagia de Oswald de Andrade, e examina a fusão de estruturas arcaicas e modernas na produção literária.",
+    "nota_edicao": "Conversa com Jerome Rothenberg com Charles Bernstein, Cecília Vicuña, Régis Bonvicino e Marjorie Perloff",
+    "autores_colaboradores": [
+      "ROTHENBERG, Jerome",
+      "BERNSTEIN, Charles",
+      "VICUÑA, Cecília",
+      "BONVICINO, Régis",
+      "PERLOFF, Marjorie"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "REXROTH, Kenneth",
+      "DUNCAN, Robert",
+      "JORIS, Pierre",
+      "CREELEY, Robert",
+      "OLSON, Charles",
+      "GOMINGER, Eugen",
+      "SCHWITTERS, Kurt",
+      "GARCÍA LORCA, Federico",
+      "NEZVAL, Vitezlav",
+      "PICASSO, Pablo",
+      "WILLIAMS, William Carlos",
+      "STEIN, Gertrude",
+      "POUND, Ezra",
+      "MATTOS, Gregório de",
+      "DIAS, Gonçalves",
+      "SOUSÂNDRADE",
+      "ANDRADE, Oswald de",
+      "ANDRADE, Mário de",
+      "ANTIN, David"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Vanguarda",
+      "Tradução",
+      "Modernismo",
+      "Antropologia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Retrato de Jerome Rothenberg\", por SAGALYN, Adine, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de Sibila\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T00:26:46.319877",
+    "notas_pesquisa": [],
+    "_id": "1764645863819"
+  },
+  {
+    "n": "6",
+    "registro": "5 de 32",
+    "ordem_exibicao": 6,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Entrevista",
+    "subtitulo_artigo": "",
+    "paginas": "p.16-33",
+    "resumo": "Entrevista com Jerome Rothenberg, conduzida por Charles Bernstein, Cecília Vicuña, Régis Bonvicino e Marjorie Perloff. Rothenberg discute as dinâmicas poéticas transnacionais (Leste-Oeste vs. Norte-Sul), analisando a influência do modernismo europeu e a emergência de uma consciência poética nas Américas que integra vanguardas históricas e tradições indígenas. O autor detalha o desenvolvimento do conceito de etnopoética, a elaboração de suas antologias seminais como \"Technicians of the Sacred\" e \"Poems for the Millennium\", e a relação intrínseca entre tradução, composição e performance, citando suas experiências com a poesia Dada (Schwitters, Ball) e a poesia concreta. Aborda ainda a questão da \"testemunha\" (witness) na poesia contemporânea, o uso do \"eu\" lírico e suas experiências com rituais xamânicos, como o de María Sabina.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROTHENBERG, Jerome",
+      "BERNSTEIN, Charles",
+      "VICUÑA, Cecília",
+      "BONVICINO, Régis",
+      "PERLOFF, Marjorie"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "WHITMAN, Walt",
+      "POUND, Ezra",
+      "WILLIAMS, William Carlos",
+      "STEIN, Gertrude",
+      "CUMMINGS, E. E.",
+      "VALLEJO, César",
+      "NERUDA, Pablo",
+      "HUIDOBRO, Vicente",
+      "PARRA, Nicanor",
+      "PAZ, Octavio",
+      "ESHLEMAN, Clayton",
+      "BLY, Robert",
+      "TARN, Nathaniel",
+      "WRIGHT, James",
+      "BLACKBURN, Paul",
+      "DORN, Edward",
+      "WEINBERGER, Eliot",
+      "GUSS, David",
+      "CÉSAIRE, Aimé",
+      "DEPESTRE, René",
+      "WEISS, Mark",
+      "HYNER, Stefan",
+      "MACKEY, Nathaniel",
+      "ALLEN, Donald",
+      "SHAKESPEARE, William",
+      "WARREN, Austin",
+      "DICKINSON, Emily",
+      "GIELGUD, John",
+      "SITWELL, Edith",
+      "THOMAS, Dylan",
+      "ELIOT, T. S.",
+      "GUTHRIE, Woody",
+      "SEEGER, Pete",
+      "MAC LOW, Jackson",
+      "CAGE, John",
+      "FROBENIUS, Leo",
+      "DIAMOND, Stanley",
+      "MCALLESTER, David",
+      "MORROW, Charlie",
+      "TURETZKY, Bertram",
+      "OLIVEROS, Pauline",
+      "CORNER, Philip",
+      "LEWIS, George",
+      "QUASHA, George",
+      "VICO, Giambattista",
+      "SABINA, María",
+      "DUNCAN, Robert",
+      "JORIS, Pierre",
+      "CLAY, Steve",
+      "MALLARMÉ, Stéphane",
+      "SCHWITTERS, Kurt",
+      "BALL, Hugo",
+      "JANDL, Ernst",
+      "GOMRINGER, Eugen",
+      "TZARA, Tristan",
+      "PICABIA, Francis",
+      "MOTHERWELL, Robert",
+      "ARP, Hans",
+      "HUELSENBECK, Richard",
+      "CAMPOS, Haroldo de",
+      "JOHNNY JOHN, Richard",
+      "FENOLLOSA, Ernest",
+      "ANTIN, David",
+      "RIMBAUD, Arthur",
+      "ARIDJIS, Homero",
+      "CORTÁZAR, Julio",
+      "MONDRAGÓN, Sergio",
+      "RANDALL, Margaret",
+      "MUNN, Henry",
+      "ESTRADA, Álvaro"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Tradução",
+      "Vanguarda",
+      "Etnologia",
+      "Modernismo",
+      "América"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:38:11.372034",
+    "_id": "1764646691372",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "7 de 32",
+    "ordem_exibicao": 8,
+    "idioma_01": "FRA",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Tout arrive",
+    "subtitulo_artigo": "",
+    "paginas": "p.38-69",
+    "resumo": "Ensaio poético e experimental de Dominique Fourcade, traduzido por Micaela Kramer, que toma como ponto de partida a divisa \"Tout arrive\" (Tudo acontece) encontrada no papel de carta do pintor Édouard Manet. O autor contrapõe a poética da instantaneidade e do maravilhamento de Manet à postura programática de Stéphane Mallarmé, discutindo a incompreensão deste último frente à revolução estética do pintor. O texto explora a dissolução e a \"morte do sujeito\" na modernidade, estabelecendo conexões teóricas e sensoriais entre a escrita, a pintura de Paul Cézanne e a dança contemporânea, exemplificada pelas performances de Vera Mantero e Emmanuelle Huynh. Fourcade reflete sobre a natureza do tempo, a experiência do \"agora\" e a estrutura do poema, concluindo com uma dedicatória aos alunos e professores de Buffalo, contexto original de uma improvisação frustrada. [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FOURCADE, Dominique"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "KRAMER, Micaela"
+    ],
+    "autores_citados": [
+      "MANET, Édouard",
+      "MALLARMÉ, Stéphane",
+      "CADIOT, Olivier",
+      "MONDOR, Henri",
+      "WILSON-BAREAU, Juliet",
+      "CÉZANNE, Paul",
+      "PROUST, Marcel",
+      "MERCY, Dominique",
+      "DICKINSON, Emily",
+      "STEIN, Gertrude",
+      "OPPEN, George",
+      "CISSÉ, Madjiguène",
+      "MANTERO, Vera",
+      "HUYNH, Emmanuelle",
+      "BAUDELAIRE, Charles",
+      "NIETZSCHE, Friedrich",
+      "FAURÉ, Gabriel",
+      "BERNSTEIN, Charles",
+      "HOWE, Susan"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Pintura",
+      "Modernismo",
+      "Dança",
+      "Sujeito",
+      "Tempo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:49:10.403979",
+    "_id": "1764647350403",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "6 de 32",
+    "ordem_exibicao": 7,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Dominique Fourcade e \"Tout arrive\"",
+    "subtitulo_artigo": "",
+    "paginas": "p.34-37",
+    "resumo": "Apresentação crítica de Micaela Kramer sobre a trajetória e poética de Dominique Fourcade, introduzindo a tradução do texto \"Tout arrive\". A autora delineia o percurso biográfico de Fourcade, desde sua formação bilíngue até as duas fases distintas de sua produção literária: a primeira, marcada pela influência de René Char e o convencionalismo, e a segunda, surgida após um silêncio editorial de treze anos e imersão nas artes plásticas (Matisse, Cézanne, Degas) e no jazz. O texto analisa a ruptura formal de obras como \"Le ciel pas d'angle\", caracterizada pela ausência de pontuação e hibridismo linguístico. Sobre \"Tout arrive\", explicita-se a origem da expressão em um papel de carta de Édouard Manet, ressignificada pelo poeta como uma poética do maravilhamento e do fluxo associativo contínuo.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "KRAMER, Micaela"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "FOURCADE, Dominique",
+      "CHAR, René",
+      "MATISSE, Henri",
+      "CÉZANNE, Paul",
+      "DEGAS, Edgar",
+      "MANET, Édouard",
+      "WALDROP, Keith",
+      "KOCIK, Robert",
+      "BURAGLIO, Pierre",
+      "BONVICINO, Régis",
+      "FOLEY, John"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Pintura",
+      "Jazz",
+      "Vanguarda",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [
+      "FOURCADE, Dominique"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Retrato de Dominique Fourcade\", por FOLEY, John, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T00:49:42.543867",
+    "_id": "1764647382543",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "8 de 32",
+    "ordem_exibicao": 9,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Duas palavras",
+    "subtitulo_artigo": "",
+    "paginas": "p.69-74",
+    "resumo": "Texto de apresentação da seção \"Pares Contemporâneos\", que nesta edição traz a mostra \"A Liberação dos Espaços Saturados: Alguma Poesia Mexicana\". Os autores criticam a falta de informação sobre literatura estrangeira e a estagnação dos debates estéticos no Brasil, justificando a colaboração com Rodolfo Mata e Hugo Gola para a curadoria. O texto introduz brevemente os poetas selecionados: Gerardo Deniz, José Emilio Pacheco, Elsa Cross, Francisco Hernández, David Huerta, Alberto Blanco, Coral Bracho e Alfonso D'Aquino, situando-os nas gerações posteriores à hegemonia de Octavio Paz e destacando a diversidade de suas poéticas, que variam da transmutação do vocabulário científico e reflexões metapoéticas à reinvenção de mitologias e observações da natureza.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis",
+      "CISNEROS, Odile"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MATA, Rodolfo",
+      "PAZ, Octavio",
+      "DENIZ, Gerardo",
+      "ALMELA, Juan",
+      "D'AQUINO, Alfonso",
+      "GOLA, Hugo",
+      "PACHECO, José Emilio",
+      "CROSS, Elsa",
+      "HERNÁNDEZ, Francisco",
+      "SCHUMANN, Robert",
+      "HÖLDERLIN, Friedrich",
+      "TRAKL, Georg",
+      "RIMBAUD, Arthur",
+      "VERLAINE, Paul",
+      "HUERTA, David",
+      "BLANCO, Alberto",
+      "BRACHO, Coral",
+      "BAPTISTA, Josely Vianna",
+      "VELHO), PLÍNIO (o"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "México",
+      "Literatura",
+      "Crítica",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de apresentação da seção Pares Contemporâneos\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T01:07:28.192823",
+    "_id": "1764648448192",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "9 de 32",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Tensões e vertentes da poesia mexicana (1966-2004)",
+    "subtitulo_artigo": "",
+    "paginas": "p.75-86",
+    "resumo": "Panorama histórico e crítico da poesia mexicana contemporânea, estruturado através da análise das principais antologias publicadas entre 1966 e 2004, como \"Poesía en Movimiento\", \"Asamblea de Poetas Jóvenes\" e \"El Manantial Latente\". O autor mapeia as tensões estéticas entre uma poesia culta e metafórica (associada a Octavio Paz) e uma vertente coloquial e vitalista (associada a Jaime Sabines e Efraín Huerta). O ensaio examina a consolidação de diversas gerações, desde os \"Contemporáneos\" até os poetas nascidos nas décadas de 1960 e 1970, discutindo o impacto de eventos históricos como o massacre de Tlatelolco (1968) e a influência de tradições estrangeiras. Analisa-se também o surgimento de novas vozes na era digital e a reconfiguração do cânone após as mortes de Paz e Sabines.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MATA, Rodolfo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "SALVINO, Romulo Valle",
+      "CRESPO, Regina"
+    ],
+    "autores_citados": [
+      "PAZ, Octavio",
+      "CHUMACERO, Alí",
+      "PACHECO, José Emilio",
+      "ARIDJIS, Homero",
+      "LÓPEZ VELARDE, Ramón",
+      "TABLADA, José Juan",
+      "REYES, Alfonso",
+      "TORRI, Julio",
+      "VILLAURRUTIA, Xavier",
+      "PELLICER, Carlos",
+      "GOROSTIZA, José",
+      "NOVO, Salvador",
+      "OWEN, Gilberto",
+      "ORTIZ DE MONTELLANO, Bernardo",
+      "MAPLES ARCE, Manuel",
+      "LEDUC, Renato",
+      "HUERTA, Efraín",
+      "BONIFAZ NUÑO, Rubén",
+      "SABINES, Jaime",
+      "CASTELLANOS, Rosario",
+      "GARCÍA TERRÉS, Jaime",
+      "SEGOVIA, Tomás",
+      "LABASTIDA, Jaime",
+      "OLIVA, Óscar",
+      "CERVANTES, Francisco",
+      "ZEPEDA, Eraclio",
+      "SHELLEY, Jaime Augusto",
+      "BECERRA, José Carlos",
+      "MONDRAGÓN, Sergio",
+      "ZAID, Gabriel",
+      "FRAIRE, Isabel",
+      "BAÑUELOS, Juan",
+      "MONTES DE OCA, Marco Antonio",
+      "NAVA, Thelma",
+      "LIZALDE, Eduardo",
+      "MONSIVÁIS, Carlos",
+      "HUERTA, David",
+      "BLANCO, José Joaquín",
+      "ELIZONDO, Salvador",
+      "GONZÁLEZ DE LEÓN, Jorge",
+      "QUIRARTE, Vicente",
+      "CROSS, Elsa",
+      "HERNÁNDEZ, Francisco",
+      "DELTORO, Antonio",
+      "CAMPOS, Marco Antonio",
+      "COHEN, Sandro",
+      "YÁÑEZ, Ricardo",
+      "ESCALANTE, Evodio",
+      "BARTOLOMÉ, Efraín",
+      "RIVAS, José Luis",
+      "BLANCO, Alberto",
+      "BRACHO, Coral",
+      "MORÁBITO, Fabio",
+      "VOLKOW, Verónica",
+      "SICILIA, Javier",
+      "ESQUINCA, Jorge",
+      "SEGOVIA, Francisco",
+      "MENDIOLA, Víctor Manuel",
+      "ULACIA, Manuel",
+      "ESPINASA, José María",
+      "HURTADO, Eduardo",
+      "DERRIDA, Jacques",
+      "ELIOT, T. S.",
+      "PERSE, Saint-John",
+      "VALÉRY, Paul",
+      "JIMÉNEZ, Gustavo",
+      "FLORES, Malva",
+      "LÓPEZ MILLS, Tedi",
+      "D'AQUINO, Alfonso",
+      "RICO, Roberto",
+      "LUMBRERAS, Ernesto",
+      "AGUINAGA, Luis Vicente de",
+      "RAMÍREZ, Josué",
+      "BARANDA, María",
+      "AMARA, Luigi",
+      "FERNÁNDEZ GRANADOS, Jorge",
+      "VALERO, Sergio",
+      "ALANÍS, Salvador",
+      "BONILLA, Diego",
+      "ALANÍS PULIDO, Armando",
+      "TRUJILLO, Julio",
+      "NEPOTE, Mónica",
+      "HERBERT, Julián",
+      "SILVA MÁRQUEZ, César",
+      "BRAVO VARELA, Hernán",
+      "MILÁN, Eduardo",
+      "BACHELARD, Gaston",
+      "AUDEN, W. H.",
+      "HINOSTROZA, Rodolfo",
+      "LEZAMA LIMA, José",
+      "NERUDA, Pablo",
+      "VALENTE, José Ángel",
+      "CELAN, Paul"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "México",
+      "Antologia",
+      "Crítica",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:15:38.803773",
+    "_id": "1764648938803",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "10 de 32",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "A liberação dos espaços saturados",
+    "subtitulo_artigo": "Alguma poesia mexicana",
+    "paginas": "p.87",
+    "resumo": "Página de abertura da seção especial dedicada à poesia mexicana contemporânea que apresenta o título da antologia e os créditos de seleção e tradução a cargo de Rodolfo Mata e Odile Cisneros, com a colaboração de Régis Bonvicino. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MATA, Rodolfo",
+      "CISNEROS, Odile",
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Poesia",
+      "México"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica de Sibila\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T01:21:02.570349",
+    "notas_pesquisa": [],
+    "_id": "1764649204266"
+  },
+  {
+    "n": "6",
+    "registro": "11 de 32",
+    "ordem_exibicao": 12,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de Gerardo Deniz",
+    "subtitulo_artigo": "",
+    "paginas": "p.88-93",
+    "resumo": "Conjunto de poemas de Gerardo Deniz traduzidos por Odile Cisneros: \"Mito\", \"Cronista\" e \"Científico\". [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DENIZ, Gerardo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:25:08.179031",
+    "_id": "1764649508179",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "12 de 32",
+    "ordem_exibicao": 13,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de José Emilio Pacheco",
+    "subtitulo_artigo": "",
+    "paginas": "p.94-97",
+    "resumo": "Conjunto de poemas de José Emilio Pacheco traduzidos por Rodolfo Mata: \"Hamletiana\" e \"Cosas\" [Coisas]. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PACHECO, José Emilio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MATA, Rodolfo"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:27:35.266549",
+    "_id": "1764649655266",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "13 de 32",
+    "ordem_exibicao": 14,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de Elsa Cross",
+    "subtitulo_artigo": "",
+    "paginas": "p.98-103",
+    "resumo": "Conjunto de poemas de Elsa Cross traduzidos por Rodolfo Mata: \"Monzón\" [Monção] e \"Río Grijalva\". [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CROSS, Elsa"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MATA, Rodolfo"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:28:42.958440",
+    "_id": "1764649722958",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "14 de 32",
+    "ordem_exibicao": 15,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de Francisco Hernández",
+    "subtitulo_artigo": "",
+    "paginas": "p.104-109",
+    "resumo": "Conjunto de poemas de Francisco Hernández traduzidos por Odile Cisneros: \"De cómo Robert Schumann fue vencido por los demonios (fragmento)\" [De como Robert Schumann foi vencido pelos demônios] e \"Riñón bello hacia la ingle\" [Rim belo rumo à virilha]. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "HERNÁNDEZ, Francisco"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:34:57.581542",
+    "_id": "1764650097581",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "15 de 32",
+    "ordem_exibicao": 16,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de David Huerta",
+    "subtitulo_artigo": "",
+    "paginas": "p.110-113",
+    "resumo": "Poemas de David Huerta traduzidos por Rodolfo Mata: \"Personas\" [Pessoas] e \"Sharp as a razor blade\". [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "HUERTA, David"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MATA, Rodolfo"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:38:54.419710",
+    "_id": "1764650334419",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "16 de 32",
+    "ordem_exibicao": 17,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de Alberto Blanco",
+    "subtitulo_artigo": "",
+    "paginas": "p.114-119",
+    "resumo": "Poemas de Alberto Blanco traduzidos por Rodolfo Mata: \"Madrigal de la luna líquida\" [Madrigal da lua líquida] e \"Poema visto en el ventilador de un motel\" [Poema visto no ventilador de um hotel]. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BLANCO, Alberto"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MATA, Rodolfo"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:41:23.283588",
+    "_id": "1764650483283",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "17 de 32",
+    "ordem_exibicao": 18,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de Coral Bracho",
+    "subtitulo_artigo": "",
+    "paginas": "p.120-125",
+    "resumo": "Poemas de Coral Bracho traduzidos por Rodolfo Mata: \"Desde esta luz\" e \"Detrás de la cortina\" [Atrás da cortina]. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BRACHO, Coral"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MATA, Rodolfo"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:44:56.263759",
+    "_id": "1764650696263",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "18 de 32",
+    "ordem_exibicao": 19,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de Alfonso D'Aquino",
+    "subtitulo_artigo": "",
+    "paginas": "p.126-131",
+    "resumo": "Poemas de Alfonso D'Aquino: \"Radix ipsius\" e \"I (Canis ortus)\", traduzidas por Odile Cisneros, e \"(Aguamarina)\" [(Aquamarine)], traduzida por Régis Bonvicino. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "D'AQUINO, Alfonso"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile",
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:49:18.450034",
+    "_id": "1764650958450",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "19 de 32",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "El Poeta y su Trabajo",
+    "subtitulo_artigo": "contra a submissão acrítica e as tradições esclerosadas",
+    "paginas": "p.132-136",
+    "resumo": "Ensaio de Hugo Gola sobre sua trajetória editorial no México à frente das revistas \"El Poeta y su Trabajo\" e \"Poesía y Poética\", focado na introdução da poesia norte-americana contemporânea (Pound, Williams, Olson) e das vanguardas europeias como contraponto às tradições literárias locais. O autor critica o conservadorismo da poesia mexicana, a resistência à inovação linguística e o papel do Estado, cujo financiamento às artes tende a promover o conformismo e filtrar obras radicais. Gola defende uma postura editorial independente, voltada para a tradução e a \"poesia do mundo\", citando autores como Paul Celan, César Vallejo e a tradição chinesa, reafirmando a poesia como um ato crítico de profanação e renovação da língua.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GOLA, Hugo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BARROZO, Paula Hernandes"
+    ],
+    "autores_citados": [
+      "POUND, Ezra",
+      "WILLIAMS, William Carlos",
+      "OLSON, Charles",
+      "STEVENS, Wallace",
+      "CREELEY, Robert",
+      "LEVERTOV, Denise",
+      "ZUKOFSKY, Louis",
+      "STEIN, Gertrude",
+      "DOOLITTLE, Hilda",
+      "MONTALE, Eugenio",
+      "ZANZOTTO, Andrea",
+      "WESTPHALEN, Emilio Adolfo",
+      "EIELSON, Jorge Eduardo",
+      "VALÉRY, Paul",
+      "MELO NETO, João Cabral de",
+      "MANDELSTAM, Osip",
+      "ALIGHIERI, Dante",
+      "PAVESE, Cesare",
+      "SAER, Juan José",
+      "BAYLEY, Edgar",
+      "MICHAUX, Henri",
+      "AKHMÁTOVA, Ana",
+      "WEINBERGER, Eliot",
+      "CELAN, Paul",
+      "BACHELARD, Gaston",
+      "ROUBAUD, Jacques",
+      "VALLEJO, César",
+      "JUAN DE LA CRUZ, San"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "México",
+      "Vanguarda",
+      "Tradução",
+      "Estado",
+      "Crítica",
+      "Bíblia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:51:47.187068",
+    "_id": "1764651107187",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "20 de 32",
+    "ordem_exibicao": 21,
+    "idioma_01": "ITA",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Camera oscura",
+    "subtitulo_artigo": "",
+    "paginas": "p.137-141",
+    "resumo": "Poema de Paolo Ruffilli traduzido por Aurora Fornoni Bernardini: \"Camera oscura\" [Camera obscura]. Inclui nota biobibliográfica sobre o autor. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "RUFFILLI, Paolo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNARDINI, Aurora Fornoni"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Apresentação da seção 4 poetas brasileiros e 1 italiano\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T01:56:09.216662",
+    "_id": "1764651369216",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "21 de 32",
+    "ordem_exibicao": 22,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "Um monstro índio",
+    "subtitulo_artigo": "",
+    "paginas": "p.142-143",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BUENO, Wilson"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:57:26.840524",
+    "_id": "1764651446840",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "22 de 32",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Cronoalgia",
+    "subtitulo_artigo": "",
+    "paginas": "p.144-145",
+    "resumo": "Poema de Luis Dolhnikoff: \"Cronoalgia\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DOLHNIKOFF, Luis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T01:59:05.131256",
+    "_id": "1764651545131",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "23 de 32",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "Pantomima",
+    "subtitulo_artigo": "",
+    "paginas": "p.146-153",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MEDEIROS, Sérgio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T02:00:59.354255",
+    "_id": "1764651659354",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "24 de 32",
+    "ordem_exibicao": 25,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.154-155",
+    "resumo": "Poemas de Carlos Ávila: \"Eclipse\" e \"Clausura\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ÁVILA, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T02:05:40.171879",
+    "_id": "1764651940171",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "25 de 32",
+    "ordem_exibicao": 26,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "15º aniversário da morte ",
+    "subtitulo_artigo": "Um olhar portenho sobre Paulo Leminski",
+    "paginas": "p.158-163",
+    "resumo": "Ensaio crítico de Mario Cámara que revisita a obra de Paulo Leminski quinze anos após sua morte, focando na tensão entre o vitalismo espontâneo e o rigor formalista (herança do Concretismo). O autor analisa a obra \"Catatau\" (1975) e a correspondência com Régis Bonvicino como exemplos máximos do conceito leminskiano de \"rigorosa espontaneidade\" e da técnica de montagem e citação. Cámara propõe uma leitura de Leminski para além do ícone da contracultura ou do poeta de haicais, destacando sua capacidade de hibridismo (\"aufhebung\") entre vanguarda e tradição, erudito e popular, e a construção de uma textualidade de \"entre-lugar\".",
+    "nota_edicao": "(LEMINSKI, Paulo; BONVICINO, Régis. \"Envie meu Dicionário, Cartas e Alguma Crítica\", Editora 34, 1999)",
+    "autores_colaboradores": [
+      "CÁMARA, Mario"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "LEMINSKI, Paulo",
+      "CHAR, René",
+      "CAMPOS, Augusto de",
+      "RIMBAUD, Arthur",
+      "NASSAU, MAURÍCIO DE",
+      "DESCARTES, René",
+      "BONVICINO, Régis",
+      "SALVINO, Romulo Valle",
+      "OVÍDIO",
+      "HERÓDOTO",
+      "MARX, Karl",
+      "SANTIAGO, Silviano",
+      "BENJAMIN, Walter",
+      "ARENDT, Hannah",
+      "HEGEL, Georg Wilhelm Friedrich",
+      "PIGNATARI, Décio",
+      "AGAMBEN, Giorgio",
+      "ANDRADE, Oswald de",
+      "ANDRADE, Mário de",
+      "GUIMARÃES, Júlio Castañon"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Crítica",
+      "Vanguarda",
+      "Concretismo",
+      "Tropicalismo",
+      "Filosofia",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [
+      "LEMINSKI, Paulo"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Apresentação à seção resenhas e notas\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T02:08:01.474887",
+    "_id": "1764652081474",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "26 de 32",
+    "ordem_exibicao": 27,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "A narrativa híbrida em um diário de amizade",
+    "subtitulo_artigo": "",
+    "paginas": "p.164-166",
+    "resumo": "Resenha do livro \"Meu Diário de Lya\", de Elvia Bezerra, que mescla biografia e diário para narrar a vida de Lya Cavalcanti, jornalista e tradutora brasileira que atuou na BBC de Londres durante a Segunda Guerra Mundial. A autora destaca a amizade entre a biógrafa e a biografada, iniciada por intermédio de Nise da Silveira, e o círculo intelectual de Lya, que incluía Carlos Drummond de Andrade e Guimarães Rosa. O texto analisa a estrutura híbrida da obra, que intercala a narrativa biográfica com relatos pessoais de Elvia sobre suas próprias pesquisas literárias (como para o livro \"A Trinca do Curvelo\"), documentos, cartas e reflexões sobre a escrita memorialística.",
+    "nota_edicao": "(BEZERRA, Elvia. \"Meu Diário de Lya\", Topbooks, 2002)",
+    "autores_colaboradores": [
+      "PAULA, Rosângela Asche de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BEZERRA, Elvia",
+      "CAVALCANTI, Lya",
+      "SILVEIRA, Nise da",
+      "ROSA, João Guimarães",
+      "ANDRADE, Carlos Drummond de",
+      "MARGUERITTE, Victor",
+      "CAVALCANTI, Geraldo",
+      "BANDEIRA, Manuel",
+      "COUTO, Ribeiro"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Biografia",
+      "Memória",
+      "Jornalismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CAVALCANTI, Lya"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T02:11:20.881773",
+    "_id": "1764652280881",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "27 de 32",
+    "ordem_exibicao": 28,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Joan Ferraté",
+    "subtitulo_artigo": "",
+    "paginas": "p.167-168",
+    "resumo": "Texto de apresentação sobre a vida e obra do poeta e crítico catalão Joan Ferraté. Os autores traçam sua trajetória biográfica, desde a formação em Filologia Clássica até o exílio em Cuba e no Canadá, onde lecionou literatura comparada. Destacam-se seus estudos sobre T. S. Eliot, Ausiàs March e C. P. Cavafis, bem como sua produção poética reunida em \"Catàleg General\", marcada pela ironia e, no \"Llibre de Daniel\", pela temática homossexual. O tradução cita avaliações críticas de Salvador Oliva e Jordi Llovet, ressaltando a energia moral de sua escrita e o relativo esquecimento de sua obra na Catalunha, mencionando ainda que esta é a primeira vez que o autor é traduzido no Brasil.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PONSATÍ, Josep Domenech",
+      "PALITO, Ronald"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "FERRATÉ, Joan",
+      "ELIOT, T. S.",
+      "MARCH, Ausiàs",
+      "CAVAFY, C. P.",
+      "OLIVA, Salvador",
+      "LLOVET, Jordi"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Filologia",
+      "Exílio",
+      "Homossexualidade"
+    ],
+    "nome_pessoal_como_assunto": [
+      "FERRATÉ, Joan"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T02:15:14.746936",
+    "_id": "1764652514746",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "28 de 32",
+    "ordem_exibicao": 29,
+    "idioma_01": "CAT",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poesia i Gramàtica",
+    "subtitulo_artigo": "",
+    "paginas": "p.169-172",
+    "resumo": "Poema de Joan Ferraté, traduzido por Josep Domenech Ponsatí e Ronald Polito: \"Poesia i Gramàtica\" [Poesia e Gramática]. O texto dialoga com as definições de Pompeu Fabra e Noam Chomsky. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FERRATÉ, Joan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "PONSATÍ, Josep Domenech",
+      "POLITO, Ronald"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T02:19:59.013875",
+    "_id": "1764652799013",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "29 de 32",
+    "ordem_exibicao": 30,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "Na beira do andaime",
+    "subtitulo_artigo": "",
+    "paginas": "p.173-180",
+    "resumo": "Resenha crítica da seleta: \"Ana Cristina Cesar\", organizada por Armando Freitas Filho para a coleção Novas Seletas. Paulo Franchetti analisa como a recepção da obra de Ana Cristina é inevitavelmente mediada pelo \"desenho biográfico\" e pelo suicídio da autora, criando um \"complexo de Ofélia\" que tensiona a leitura literária e a mitificação pessoal. O texto discute a inserção da poeta na \"poesia marginal\" e na linhagem da \"confessional poetry\", argumentando que o estilo \"sem literatura\" de Ana Cristina é, na verdade, um sofisticado ideal literário construído sobre apropriações de Baudelaire, Bishop, Plath e modernistas brasileiros. Franchetti também sugere notas e correções à edição, apontando intertextualidades não registradas também com Baudelaire e Bishop, além de Mallarmé.",
+    "nota_edicao": "(CESAR, Ana Cristina. \"Ana Cristina Cesar\", Nova Fronteira, s/d)",
+    "autores_colaboradores": [
+      "FRANCHETTI, Paulo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CESAR, Ana Cristina",
+      "FREITAS FILHO, Armando",
+      "BAUDELAIRE, Charles",
+      "BISHOP, Elizabeth",
+      "PLATH, Sylvia",
+      "BANDEIRA, Manuel",
+      "ANDRADE, Carlos Drummond de",
+      "BACHELARD, Gaston",
+      "MALLARMÉ, Stéphane"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Crítica",
+      "Poesia Marginal",
+      "Biografia",
+      "Suicídio",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CESAR, Ana Cristina"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T02:24:03.929496",
+    "_id": "1764653043929",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "30 de 32",
+    "ordem_exibicao": 31,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Cultura e espetáculo em \"A Moda e o Novo Homem\", de Flávio de Carvalho",
+    "subtitulo_artigo": "",
+    "paginas": "p.181-187",
+    "resumo": "O ensaio de Régis Bonvicino apresenta a série \"A Moda e o Novo Homem\", de Flávio de Carvalho, publicada originalmente em 1956. O autor contrapõe a visão ritualística e antropológica de Carvalho — que vê na moda um prenúncio de rupturas históricas e políticas — à visão progressista e comercial de estilistas contemporâneos como Yves Saint Laurent. Bonvicino analisa o cenário cultural brasileiro atual, onde a moda (representada pela São Paulo Fashion Week e Gisele Bündchen) deslocou a MPB e o cinema como vórtice de inovação e espetáculo. O texto destaca o caráter premonitório, freudiano e behaviorista da obra de Carvalho, situando-o como precursor de Hélio Oiticica e seus Parangolés, e argumenta que a moda atual, apesar de seu vigor visual, ainda reproduz discursos conservadores de gênero.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CARVALHO, Flávio de",
+      "ROUSSEAU, Jean-Jacques",
+      "BLAKE, William",
+      "PAZ, Octavio",
+      "PÉCORA, Alcir",
+      "AMARAL, Tarsila do",
+      "SAINT LAURENT, Yves",
+      "CHANEL, Coco",
+      "BÜNDCHEN, Gisele",
+      "JACKSON, Michael",
+      "VELOSO, Caetano",
+      "GIL, Gilberto",
+      "BUARQUE, Chico",
+      "ROCHA, Glauber",
+      "SGANZERLA, Rogério",
+      "ECO, Umberto",
+      "HERCHCOVITCH, Alexandre",
+      "HATEN, Fause",
+      "LOURENÇO, Reinaldo",
+      "ALMEIDA, Ricardo",
+      "SOMMER, Marcelo",
+      "MADONNA",
+      "MEIRELLES, Fernando",
+      "SALLES, Walter",
+      "OITICICA, Hélio",
+      "FREUD, Sigmund",
+      "JUNG, Carl Gustav",
+      "EULÁLIO, Alexandre"
+    ],
+    "palavras_chave": [
+      "Moda",
+      "Corpo",
+      "Antropologia",
+      "Cultura Popular",
+      "Modernismo",
+      "Vanguarda"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CARVALHO, Flávio de"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica da seção Recuperações\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Foto de Flávio de Carvalho na Rua, com o \"New Look\", 1956, s/autoria."
+      }
+    ],
+    "_timestamp": "2025-12-02T02:26:56.011441",
+    "_id": "1764653216011",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "31 de 32",
+    "ordem_exibicao": 32,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Antropologia",
+    "titulo_artigo": "A Moda e o Novo Homem",
+    "subtitulo_artigo": "",
+    "paginas": "p.188-207",
+    "resumo": "Série de imagens com notas de Flávio de Carvalho, originalmente publicada no Diário de S. Paulo em 1956, que analisa a evolução da moda sob uma perspectiva antropológica, histórica e psicanalítica. O autor interpreta o vestuário como sintoma de transformações sociais e psicológicas profundas, relacionando, por exemplo, a moda feminina pré-Revolução Francesa à iminência da decapitação, e o uso de calças por mulheres no início do século XX como manifestação de feminismo e desejo de nivelamento com o homem. A análise abrange desde a indumentária da antiguidade (Sumerianos, Gregos) e rituais tribais (Novas Hébridas, índios do Araguaia), onde chapéus e capacetes representam a alma ou o totem, até a moda contemporânea da década de 1950, discutindo a função simbólica de adornos como plumas e a anatomia da silhueta feminina.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CARVALHO, Flávio de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MOREIRA, Eugênia Álvaro",
+      "GOUGES, Olympe de",
+      "BRETON, André",
+      "PLATÃO",
+      "PAQUIN, Jeanne",
+      "EPIRO, Eugênio",
+      "BLOOMER, Amelia"
+    ],
+    "palavras_chave": [
+      "Moda",
+      "Antropologia",
+      "História",
+      "Feminismo",
+      "Psicologia",
+      "Alma"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CARVALHO, Flávio de"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A gorjeira que apresentava a cabeça separada do corpo\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A mulher do século XVI\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"O estado da mulher três anos antes da tomada da Bastilha\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A mulher dez anos antes da tomada da Bastilha\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A mulher cinco anos antes da tomada da Bastilha\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Demônios fecundando a árvore da vida\", (relevo de alabastro), s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A imaginação do limite vagando pela rua\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Homem e mulher de Ur\", (friso sobre madeira), s/crédito, 3000 a.C."
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"O personagem da comédia italiana veneziana Pantaleone\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Nobre do século XV\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A senhora Bloomer em 1851 passeando pelas ruas de Nova York\", s/crédito, 1851"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Trajo reformista de 1902\", de EPIRO, Eugênio, 1902"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulher elegante de 1911 usando calças\", s/crédito, 1911"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulher elegante de 1911 usando calças e casaca\", s/crédito, 1911"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Desenho extraído de um modelo Transworld de 1956\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Capacete de guerreiro\", (bronze), s/crédito, 600 a.C."
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Escultura em madeira das Novas Hébridas\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulher usando chapéu com pássaro\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Guerreiro do rio Araguaia usando um capacete de chefe\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulheres de 1950 usando chapéus com plumas\", s/crédito, 1956"
+      }
+    ],
+    "_timestamp": "2025-12-02T02:34:54.608583",
+    "_id": "1764653694608",
+    "notas_pesquisa": []
   }
 ]
