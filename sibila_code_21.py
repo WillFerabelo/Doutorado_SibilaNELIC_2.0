@@ -11,6 +11,7 @@ from typing import Dict, List, Any, Optional, Tuple, Callable
 import hashlib
 import uuid
 from streamlit_option_menu import option_menu
+import re
 
 # ==========================================
 # 1. CONFIGURAÇÃO E ESTILO
@@ -1739,31 +1740,37 @@ def relatorio_bilinguismo(df):
 def relatorio_iconografia(df):
     st.markdown("#### Iconografia por número da revista")
     df_local = df.copy()
-    df_local['tem_iconografia'] = df_local['iconografias'].apply(
-        lambda x: isinstance(x, list) and len(x) > 0
+    
+    # Nova Lógica: Contar número de itens na lista de iconografias
+    df_local['qtd_imagens'] = df_local['iconografias'].apply(
+        lambda x: len(x) if isinstance(x, list) else 0
     )
+    
     resumo = (
-        df_local.groupby('n')['tem_iconografia']
-        .agg(total='count', com_icon='sum')
+        df_local.groupby('n')['qtd_imagens']
+        .agg(total_imagens='sum')
         .reset_index()
     )
-    resumo['% com iconografia'] = resumo.apply(
-        lambda r: (r['com_icon'] / r['total'] * 100) if r['total'] > 0 else 0, axis=1
-    )
+    
     resumo['n'] = resumo['n'].astype(str)
     resumo.index = resumo.index + 1
-    st.dataframe(resumo, width='stretch')
+    
+    # Renomear coluna para exibição
+    resumo_display = resumo.rename(columns={'total_imagens': 'Total de Imagens'})
+    
+    st.dataframe(resumo_display, width='stretch')
+    
     fig = px.bar(
         resumo,
         x='n',
-        y='% com iconografia',
-        text=resumo['% com iconografia'].map(lambda x: f"{x:.1f}%")
+        y='total_imagens',
+        text=resumo['total_imagens'].map(lambda x: f"{x}")
     )
     fig.update_layout(
         height=380,
-        title="% de registros com iconografia por revista",
+        title="Total de Imagens por Revista",
         xaxis_title="n.",
-        yaxis_title="% registros com iconografia"
+        yaxis_title="Quantidade de Imagens"
     )
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
@@ -2030,6 +2037,109 @@ def relatorio_palavras_chave(df):
         "📄 PDF",
         pdf_rel,
         f"rel_palavras_chave_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
+        width='stretch'
+    )
+
+def relatorio_densidade_paginas(df):
+    st.markdown("#### Densidade de Imagens por Páginas")
+    
+    def obter_ultima_pagina_revista(df_revista):
+        # Encontra o maior número de página citado em toda a edição
+        max_pag = 0
+        for pag in df_revista['paginas']:
+            try:
+                # Extrai todos os números e pega o último (ex: "10-25" -> 25)
+                nums = [int(n) for n in re.findall(r'\d+', str(pag))]
+                if nums:
+                    local_max = max(nums)
+                    if local_max > max_pag:
+                        max_pag = local_max
+            except:
+                continue
+        return max_pag if max_pag > 0 else 1 # Evita divisão por zero
+
+    def contar_imagens(row):
+        # Conta o número de itens na lista de iconografias
+        icons = row.get('iconografias', [])
+        if isinstance(icons, list):
+            return len(icons)
+        return 0
+
+    rows = []
+    # Agrupa por número da revista
+    for rev, sub in df.groupby('n'):
+        # Denominator: Última página física da revista
+        total_paginas_revista = obter_ultima_pagina_revista(sub)
+        
+        # Numerator: Soma da quantidade de itens de iconografia
+        soma_imagens = 0
+        for _, row in sub.iterrows():
+            soma_imagens += contar_imagens(row)
+            
+        # Densidade: Imagens por página (ou % de ocupação conforme solicitado, mas a lógica agora é Imagens / Páginas)
+        # O usuário pediu: "Numerador (Ocupação): Soma itens iconografia", "Denominador: Última página"
+        # O título original era "% da revista ocupada por ilustrações".
+        # Se tivermos 50 imagens em 100 páginas, a densidade é 0.5 imagens/página.
+        # Se multiplicarmos por 100, seria "50%".
+        # Vou manter a lógica de porcentagem/densidade mas com os novos valores.
+        
+        pct = (soma_imagens / total_paginas_revista * 100)
+        
+        rows.append({
+            "n.": str(rev),
+            "Total de Imagens": soma_imagens,
+            "Total Páginas Revista": total_paginas_revista,
+            "Densidade (Img/Pág %)": pct
+        })
+        
+    df_rel = pd.DataFrame(rows)
+    df_rel.index = df_rel.index + 1
+    
+    st.dataframe(df_rel, width='stretch')
+    
+    # Gráfico
+    fig = px.bar(
+        df_rel, 
+        x="n.", 
+        y="Densidade (Img/Pág %)", 
+        text=df_rel["Densidade (Img/Pág %)"].map(lambda x: f"{x:.1f}")
+    )
+    fig.update_layout(
+        height=380, 
+        title="Densidade de Imagens (Volume de Imagens / Total de Páginas)",
+        xaxis_title="n.",
+        yaxis_title="Densidade"
+    )
+    st.plotly_chart(fig, width='stretch')
+    
+    # Exportar
+    st.markdown("##### Exportar")
+    col1, col2, col3 = st.columns(3)
+    
+    excel_rel = UtilsModule.converter_excel(df_rel)
+    col1.download_button(
+        "📊 EXCEL",
+        excel_rel,
+        f"rel_densidade_imagens_{datetime.now().strftime('%Y%m%d')}.xlsx",
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        width='stretch'
+    )
+    
+    csv_rel = df_rel.to_csv(index=False, encoding='utf-8-sig')
+    col2.download_button(
+        "📋 CSV",
+        csv_rel,
+        f"rel_densidade_imagens_{datetime.now().strftime('%Y%m%d')}.csv",
+        "text/csv",
+        width='stretch'
+    )
+    
+    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(df_rel, "Densidade de Imagens por Páginas")
+    col3.download_button(
+        "📄 PDF",
+        pdf_rel,
+        f"rel_densidade_imagens_{datetime.now().strftime('%Y%m%d')}.pdf",
         "application/pdf",
         width='stretch'
     )
@@ -2935,7 +3045,8 @@ def main():
                     "Análise por tipos textuais",
                     "Manifesto",
                     "Sibila",
-                    "Palavras-chave"
+                    "Palavras-chave",
+                    "Densidade de Imagens por Páginas"
                 ]
             )
             if tipo_rel == "Volume de itens por revista":
@@ -2954,6 +3065,8 @@ def main():
                 relatorio_sibila(df)
             elif tipo_rel == "Palavras-chave":
                 relatorio_palavras_chave(df)
+            elif tipo_rel == "Densidade de Imagens por Páginas":
+                relatorio_densidade_paginas(df)
 
     # --- ANÁLISE COMPARATIVA ---
     elif menu == "ANÁLISE COMPARATIVA":

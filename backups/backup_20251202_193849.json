@@ -10632,11 +10632,11 @@
     "ordem_exibicao": 5,
     "idioma_01": "POR",
     "idioma_02": "",
-    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "vocabulario_controlado": "POEMA(S)",
     "titulo_artigo": "Desenhos",
     "subtitulo_artigo": "",
     "paginas": "p.19-20",
-    "resumo": "Reproduções de desenhos de autoria de Claude Royet-Journoud. As obras apresentam traços manuais e inscrições textuais, destacando-se as composições que podemos intitular como: \"One word\" e \"Looking for Régis?\", já que são palavras de destaque nos desenhos-poemas.",
+    "resumo": "Reproduções de desenhos-poemas de autoria de Claude Royet-Journoud. As obras apresentam traços manuais e inscrições textuais, destacando-se as composições que podemos intitular como: \"One word\" e \"Looking for Régis?\", já que são palavras de destaque nos desenhos-poemas.",
     "nota_edicao": "",
     "autores_colaboradores": [
       "ROYET-JOURNOUD, Claude"
@@ -10922,15 +10922,10 @@
     "nome_pessoal_como_assunto": [
       "PINTO, Manuel da Costa"
     ],
-    "iconografias": [
-      {
-        "tipo": "Ilustração",
-        "descricao": "\"s/título\" (apresentação da seção Pares Contemporâneos), s/crédito, s/d"
-      }
-    ],
-    "_timestamp": "2025-12-02T16:16:45.250226",
-    "_id": "1764703005250",
-    "notas_pesquisa": []
+    "iconografias": [],
+    "_timestamp": "2025-12-02T19:38:00.226770",
+    "notas_pesquisa": [],
+    "_id": "1764703005250"
   },
   {
     "n": "7",
@@ -11474,6 +11469,234 @@
     ],
     "_timestamp": "2025-12-02T17:50:53.249164",
     "_id": "1764708653249",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "24 de 26",
+    "ordem_exibicao": 25,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Na trilha da Navilouca",
+    "subtitulo_artigo": "",
+    "paginas": "p.185-214",
+    "resumo": "Entrevista concedida por Luciano Figueiredo aos pesquisadores Eucanaã Ferraz e Roberto Conduru, abordando a gênese e o impacto da revista \"Navilouca\" (1974) e a trajetória artística de Hélio Oiticica. Figueiredo descreve a publicação — editada por Torquato Neto e Waly Salomão — como um \"almanaque dos aqualoucos\" e um manifesto de \"edição única\" que reuniu neoconcretismo, poesia concreta e tropicalismo em uma estratégia de \"interdisciplinaridade selvagem\" para driblar a repressão da ditadura e o conservadorismo da esquerda ortodoxa. O diálogo aprofunda a relação de Oiticica com a música (especialmente Caetano Veloso e Gilberto Gil) e a poesia, argumentando que a colaboração e a alteridade tornaram-se estruturais em sua obra, visíveis em trabalhos como os penetráveis \"Tenda Caetano-Gil\", \"A Pureza É um Mito\" e nos parangolés com poemas como \"Da Adversidade Vivemos\" e \"Incorporo a Revolta\". A entrevista examina ainda a tensão entre a racionalidade projetual e a intuição sensorial nos Bólides e Parangolés, encerrando com uma defesa da institucionalização do acervo de Oiticica como única forma de preservar sua complexidade conceitual e permitir a recriação fidedigna de suas obras participativas.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FIGUEIREDO, Luciano",
+      "FERRAZ, Eucanaã",
+      "CONDURU, Roberto"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "NETO, Torquato",
+      "SALOMÃO, Waly",
+      "MACHADO, Duda",
+      "CARDOSO, Ivan",
+      "PIMENTEL, Luiz Otávio",
+      "SALOMÃO, Jorge",
+      "OITICICA, Hélio",
+      "DUARTE, Rogério",
+      "CHACAL",
+      "RAMOS, Óscar",
+      "VELOSO, Caetano",
+      "CLARK, Lygia",
+      "BERG, Stephen",
+      "CAMPOS, Haroldo de",
+      "CAMPOS, Augusto de",
+      "PIGNATARI, Décio",
+      "ABREU, Lúcio",
+      "GILBERTO, João",
+      "ROCHA, Glauber",
+      "PEDROSA, Mário",
+      "MANUEL, Antonio",
+      "DIAS, Antonio",
+      "GERCHMAN, Rubens",
+      "PAZ, Octavio",
+      "CÍCERO, Antonio",
+      "GULLAR, Ferreira",
+      "GIL, Gilberto",
+      "COSTA, Gal",
+      "CORREIA, Zé Celso Martinez",
+      "OITICICA, José",
+      "OITICICA FILHO, José",
+      "STEIN, Gertrude",
+      "POUND, Ezra",
+      "MILTON, John"
+    ],
+    "palavras_chave": [
+      "Contracultura",
+      "Tropicalismo",
+      "Vanguarda",
+      "Artes Plásticas",
+      "Poesia",
+      "Ditadura"
+    ],
+    "nome_pessoal_como_assunto": [
+      "OITICICA, Hélio",
+      "NETO, Torquato"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Navilouca\", capa da revista (primeira edição única), s/crédito, 1972"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Torquato Neto no penetrável PN2 'A pureza é um mito' / Tropicália\", s/crédito, Londres, 1969"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Apropriação\", 'Jeanne Rimbaud'Arc', Nova York, março 1971"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Foto de rua / Gênese do parangolé\", s/crédito, 1964"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Hélio Oiticica com B52 bólide saco 4, 1966-67 'Teu amor eu guardo aqui'\", s/crédito, 1966-67"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Hélio Oiticica, \"Parangolé 17, 1967\" ('Da adversidade vivemos'), s/crédito, 1967"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Contato do vivo/morto, bólide saco 4, 1966-67\", s/crédito, 1966-67"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Hélio Oiticica, \"Parangolé 21, 1968\" ('Guevaluta Baby'), s/crédito, 1968"
+      }
+    ],
+    "_timestamp": "2025-12-02T18:01:38.821124",
+    "_id": "1764709298821",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "25 de 26",
+    "ordem_exibicao": 26,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Hélio Oiticica ",
+    "subtitulo_artigo": "um escritor em seu labirinto",
+    "paginas": "p.215-232",
+    "resumo": "Ensaio crítico que investiga a vasta e labiríntica produção textual de Hélio Oiticica, propondo a leitura de seus escritos não apenas como complemento teórico à obra plástica, mas como uma \"poética secreta\" e autônoma de fabulação. Frederico Oliveira Coelho analisa como a experiência visceral de Oiticica na Mangueira (iniciada em 1964) e o posterior exílio em Londres e Nova York impulsionaram uma escrita que opera como \"saúde\" (na acepção deleuziana) e reterritorialização de um \"povo que falta\". O texto examina a construção consciente do arquivo pessoal do artista como estratégia de autopreservação e destaca a influência de interlocutores literários, como Haroldo de Campos, Waly Salomão e Silviano Santiago, na formação de um Hélio-personagem que, através de contos, cartas e poemas, dissolve as fronteiras entre biografia, arte e literatura.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "COELHO, Frederico Oliveira"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "OITICICA, Hélio",
+      "DELEUZE, Gilles",
+      "DUARTE, Rogério",
+      "ROCHA, Glauber",
+      "FAVARETTO, Celso",
+      "FIGUEIREDO, Luciano",
+      "BRETT, Guy",
+      "NETO, Torquato",
+      "MÁS, Daniel",
+      "SALOMÃO, Waly",
+      "CAMPOS, Haroldo de",
+      "VERGARA, Carlos",
+      "CLARK, Lygia",
+      "OITICICA, José",
+      "OITICICA FILHO, José",
+      "POUND, Ezra",
+      "MALLARMÉ, Stéphane",
+      "JOYCE, James",
+      "SOUSÂNDRADE",
+      "MAIAKÓVSKI, Vladimir",
+      "STEIN, Gertrude",
+      "NIETZSCHE, Friedrich",
+      "FREUD, Sigmund",
+      "LÉVI-STRAUSS, Claude",
+      "BERGSON, Henri",
+      "PAZ, Octavio",
+      "HUSSERL, Edmund",
+      "DEBORD, Guy",
+      "MERLEAU-PONTY, Maurice",
+      "DUCHAMP, Marcel",
+      "GERCHMAN, Rubens",
+      "RIBEIRO, Jackson",
+      "CASTRO, Amílcar de",
+      "JACQUES, Paola Bernstein",
+      "GINSBERG, Allen",
+      "BRESSANE, Julio",
+      "ALMEIDA, Neville de",
+      "SANTIAGO, Silviano",
+      "LÉVY, Tatiana Salem",
+      "MCLUHAN, Marshall",
+      "FIORE, Quentin",
+      "PAPE, Lygia",
+      "FOUCAULT, Michel",
+      "SADE, Marquês de",
+      "MONDRIAN, Piet",
+      "ANDRADE, Oswald de",
+      "POLLOCK, Jackson",
+      "KLEE, Paul",
+      "WARHOL, Andy",
+      "SMITH, Jack",
+      "JAKOBSON, Roman",
+      "MALEVITCH, Kasimir",
+      "DAVID, Catherine"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Artes Plásticas",
+      "Memória",
+      "Biografia",
+      "Cultura Popular",
+      "Vanguarda"
+    ],
+    "nome_pessoal_como_assunto": [
+      "OITICICA, Hélio"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Hélio Oiticica fotografado por seu pai José Oiticica\", Rio de Janeiro, 1954"
+      }
+    ],
+    "_timestamp": "2025-12-02T18:04:39.904616",
+    "_id": "1764709479904",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "26 de 26",
+    "ordem_exibicao": 27,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "INFORME",
+    "titulo_artigo": "O que faz a diferença para mim?",
+    "subtitulo_artigo": "",
+    "paginas": "234",
+    "resumo": "Informe publicitário da Nossa Caixa",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "CAIXA, Nossa"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "Nossa Caixa: o banco do coração de São Paulo"
+      }
+    ],
+    "_timestamp": "2025-12-02T18:07:00.881188",
+    "_id": "1764709620881",
     "notas_pesquisa": []
   }
 ]
