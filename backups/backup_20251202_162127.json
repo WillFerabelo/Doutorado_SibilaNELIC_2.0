@@ -10188,5 +10188,748 @@
     "_timestamp": "2025-12-02T02:24:03.929496",
     "_id": "1764653043929",
     "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "30 de 32",
+    "ordem_exibicao": 31,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Cultura e espetáculo em \"A Moda e o Novo Homem\", de Flávio de Carvalho",
+    "subtitulo_artigo": "",
+    "paginas": "p.181-187",
+    "resumo": "O ensaio de Régis Bonvicino apresenta a série \"A Moda e o Novo Homem\", de Flávio de Carvalho, publicada originalmente em 1956. O autor contrapõe a visão ritualística e antropológica de Carvalho — que vê na moda um prenúncio de rupturas históricas e políticas — à visão progressista e comercial de estilistas contemporâneos como Yves Saint Laurent. Bonvicino analisa o cenário cultural brasileiro atual, onde a moda (representada pela São Paulo Fashion Week e Gisele Bündchen) deslocou a MPB e o cinema como vórtice de inovação e espetáculo. O texto destaca o caráter premonitório, freudiano e behaviorista da obra de Carvalho, situando-o como precursor de Hélio Oiticica e seus Parangolés, e argumenta que a moda atual, apesar de seu vigor visual, ainda reproduz discursos conservadores de gênero.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CARVALHO, Flávio de",
+      "ROUSSEAU, Jean-Jacques",
+      "BLAKE, William",
+      "PAZ, Octavio",
+      "PÉCORA, Alcir",
+      "AMARAL, Tarsila do",
+      "SAINT LAURENT, Yves",
+      "CHANEL, Coco",
+      "BÜNDCHEN, Gisele",
+      "JACKSON, Michael",
+      "VELOSO, Caetano",
+      "GIL, Gilberto",
+      "BUARQUE, Chico",
+      "ROCHA, Glauber",
+      "SGANZERLA, Rogério",
+      "ECO, Umberto",
+      "HERCHCOVITCH, Alexandre",
+      "HATEN, Fause",
+      "LOURENÇO, Reinaldo",
+      "ALMEIDA, Ricardo",
+      "SOMMER, Marcelo",
+      "MADONNA",
+      "MEIRELLES, Fernando",
+      "SALLES, Walter",
+      "OITICICA, Hélio",
+      "FREUD, Sigmund",
+      "JUNG, Carl Gustav",
+      "EULÁLIO, Alexandre"
+    ],
+    "palavras_chave": [
+      "Moda",
+      "Corpo",
+      "Antropologia",
+      "Cultura Popular",
+      "Modernismo",
+      "Vanguarda"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CARVALHO, Flávio de"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Arte gráfica da seção Recuperações\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Foto de Flávio de Carvalho na Rua, com o \"New Look\", 1956, s/autoria."
+      }
+    ],
+    "_timestamp": "2025-12-02T02:26:56.011441",
+    "_id": "1764653216011",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "31 de 32",
+    "ordem_exibicao": 32,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Antropologia",
+    "titulo_artigo": "A Moda e o Novo Homem",
+    "subtitulo_artigo": "",
+    "paginas": "p.188-207",
+    "resumo": "Série de imagens com notas de Flávio de Carvalho, originalmente publicada no Diário de S. Paulo em 1956, que analisa a evolução da moda sob uma perspectiva antropológica, histórica e psicanalítica. O autor interpreta o vestuário como sintoma de transformações sociais e psicológicas profundas, relacionando, por exemplo, a moda feminina pré-Revolução Francesa à iminência da decapitação, e o uso de calças por mulheres no início do século XX como manifestação de feminismo e desejo de nivelamento com o homem. A análise abrange desde a indumentária da antiguidade (Sumerianos, Gregos) e rituais tribais (Novas Hébridas, índios do Araguaia), onde chapéus e capacetes representam a alma ou o totem, até a moda contemporânea da década de 1950, discutindo a função simbólica de adornos como plumas e a anatomia da silhueta feminina.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CARVALHO, Flávio de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MOREIRA, Eugênia Álvaro",
+      "GOUGES, Olympe de",
+      "BRETON, André",
+      "PLATÃO",
+      "PAQUIN, Jeanne",
+      "EPIRO, Eugênio",
+      "BLOOMER, Amelia"
+    ],
+    "palavras_chave": [
+      "Moda",
+      "Antropologia",
+      "História",
+      "Feminismo",
+      "Psicologia",
+      "Alma"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CARVALHO, Flávio de"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A gorjeira que apresentava a cabeça separada do corpo\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A mulher do século XVI\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"O estado da mulher três anos antes da tomada da Bastilha\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A mulher dez anos antes da tomada da Bastilha\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A mulher cinco anos antes da tomada da Bastilha\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Demônios fecundando a árvore da vida\", (relevo de alabastro), s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A imaginação do limite vagando pela rua\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Homem e mulher de Ur\", (friso sobre madeira), s/crédito, 3000 a.C."
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"O personagem da comédia italiana veneziana Pantaleone\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Nobre do século XV\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"A senhora Bloomer em 1851 passeando pelas ruas de Nova York\", s/crédito, 1851"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Trajo reformista de 1902\", de EPIRO, Eugênio, 1902"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulher elegante de 1911 usando calças\", s/crédito, 1911"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulher elegante de 1911 usando calças e casaca\", s/crédito, 1911"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Desenho extraído de um modelo Transworld de 1956\", s/crédito, 1956"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Capacete de guerreiro\", (bronze), s/crédito, 600 a.C."
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Escultura em madeira das Novas Hébridas\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulher usando chapéu com pássaro\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Guerreiro do rio Araguaia usando um capacete de chefe\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Mulheres de 1950 usando chapéus com plumas\", s/crédito, 1956"
+      }
+    ],
+    "_timestamp": "2025-12-02T02:34:54.608583",
+    "_id": "1764653694608",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "6",
+    "registro": "32 de 32",
+    "ordem_exibicao": 33,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "INFORME",
+    "titulo_artigo": "Publicidade Nossa Caixa",
+    "subtitulo_artigo": "",
+    "paginas": "p.210",
+    "resumo": "Página contendo peça publicitária institucional do banco Nossa Caixa:  o banco do coração de São Paulo.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Publicidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Publicidade",
+        "descricao": "\"Nossa Caixa: o banco do coração de São Paulo\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T02:37:55.912239",
+    "_id": "1764653875912",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "0 de 26",
+    "ordem_exibicao": 1,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "Capa da revista Sibila, Ano 4, número 7, de 2004. A edição apresenta como destaques: um balanço crítico da prosa e poesia brasileiras contemporâneas por Alcir Pécora; as vanguardas dos anos 1960 e 1970 por Luciano Figueiredo; conto inédito de Hélio Oiticica e reflexões sobre HO; A pedra de Drummond por Eder Chiodetto; Evandro Affonso Ferreira por Josely Vianna Baptista; Eucanaã Ferraz por Regina Silveira; Claude Royet-Journoud por Oliverio Girondo; e Néstor Perlongher. Imagem da capa de Maciej Laska (istockphoto.com).",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\", (imagem de capa), por Maciej Laska (istockphoto.com), s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T15:37:10.714357",
+    "_id": "1764700630714",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "1 de 26",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Série Armarinhos (Colchete de Gancho)",
+    "subtitulo_artigo": "",
+    "paginas": "p.2",
+    "resumo": "Reprodução de obra de artes plásticas da série Armarinhos (Colchete de Gancho), de autoria de Regina Silveira; obra inédita de 2002.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SILVEIRA, Regina"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Série Armarinhos (Colchete de Gancho)\", por Regina Silveira, inédito, 2002"
+      }
+    ],
+    "_timestamp": "2025-12-02T15:39:45.011688",
+    "_id": "1764700785011",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "2 de 26",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "Editorial",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Editorial assinado por Régis Bonvicino e Tatiana Longo dos Santos que apresenta o conteúdo da sétima edição da revista Sibila. O material destaca o ensaio de Alcir Pécora sobre a produção literária contemporânea, a entrevista com Luciano Figueiredo sobre as vanguardas e a publicação de inédito de Hélio Oiticica. São mencionados colaboradores como Claude Royet-Journoud, Else Lasker-Schüler e Néstor Perlongher. Na conclusão, os autores assumem posição política crítica à reeleição de George W. Bush nos Estados Unidos, denunciando o imperialismo e convocando intelectuais à resistência e ao dissenso, usando como exemplos Michael Moore e Michael Hardt.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis",
+      "SANTOS, Tatiana Longo dos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PÉCORA, Alcir",
+      "CANDIDO, Antonio",
+      "CAMPOS, Haroldo de",
+      "VELOSO, Caetano",
+      "CAMPOS, Augusto de",
+      "ANDRADE, Carlos Drummond de",
+      "FIGUEIREDO, Luciano",
+      "OITICICA, Hélio",
+      "COELHO, Frederico Oliveira",
+      "ROYET-JOURNOUD, Claude",
+      "LASKER-SCHÜLER, Else",
+      "REY, Antonio Domínguez",
+      "BAPTISTA, Josely Vianna",
+      "CAMPOS, Angela de",
+      "FERREIRA, Evandro Affonso",
+      "CHIODETTO, Eder",
+      "PERLONGHER, Néstor",
+      "GIRONDO, Oliverio",
+      "CLARK, Lígia",
+      "NETO, Torquato",
+      "FERRAZ, Eucanaã",
+      "MOORE, Michael",
+      "MESSERLI, Douglas",
+      "HARDT, Michael"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Política",
+      "Imperialismo",
+      "Estados Unidos",
+      "Vanguarda"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T15:43:14.818535",
+    "_id": "1764700994818",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "3 de 26",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Uma só palavra",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-18",
+    "resumo": "Conversa entre o poeta francês Claude Royet-Journoud e Régis Bonvicino, precedida por uma apresentação biográfica. A entrevista segue uma regra restrita: as respostas de Royet-Journoud limitam-se a uma única palavra. Os interlocutores abordam temas como a utilidade da poesia, a diferença entre prosa e poesia, vanguardas históricas e contemporâneas (Dadaísmo, Surrealismo, Poesia Concreta, Language Poetry), além de questões políticas envolvendo os EUA e a democracia. O texto é pontuado por avaliações sintéticas de dezenas de escritores e artistas plásticos. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis",
+      "ROYET-JOURNOUD, Claude"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "HOCQUARD, Emmanuel",
+      "MALLARMÉ, Stéphane",
+      "DUCHAMP, Marcel",
+      "CORBIÈRE, Tristan",
+      "LAFORGUE, Jules",
+      "VERLAINE, Paul",
+      "MATISSE, Henri",
+      "PICASSO, Pablo",
+      "FREDRIKSON, Lars",
+      "TZARA, Tristan",
+      "JOYCE, James",
+      "STEIN, Gertrude",
+      "PONGE, Francis",
+      "IONESCO, Eugène",
+      "BECKETT, Samuel",
+      "COLLOBERT, Danielle",
+      "SARTRE, Jean-Paul",
+      "DELEUZE, Gilles",
+      "LACAN, Jacques",
+      "DERRIDA, Jacques",
+      "JABÉS, Edmond",
+      "APOLLINAIRE, Guillaume",
+      "ZUKOFSKY, Louis",
+      "CHAR, René",
+      "BARTHES, Roland",
+      "PICABIA, Francis",
+      "PESSOA, Fernando",
+      "ANDRADE, Carlos Drummond de",
+      "POUND, Ezra",
+      "ALBIACH, Anne-Marie",
+      "RIMBAUD, Arthur",
+      "CENDRARS, Blaise",
+      "BRANCUSI, Constantin",
+      "JOUVE, Pierre Jean",
+      "WARHOL, Andy",
+      "GODARD, Jean-Luc",
+      "AZNAVOUR, Charles",
+      "DALÍ, Salvador",
+      "OPPEN, George",
+      "RAY, Man",
+      "MIRÓ, Joan",
+      "GARCÍA LORCA, Federico",
+      "SPICER, Jack",
+      "SAROYAN, Aram",
+      "FOURCADE, Dominique",
+      "CAMPOS, Haroldo de",
+      "ROUBAUD, Jacques",
+      "JOHNS, Jasper",
+      "AMARAL, Tarsila do",
+      "LÉGER, Fernand",
+      "BORGES, Jorge Luis",
+      "BRETON, André",
+      "DU BELLAY, Joachim",
+      "KLEE, Paul",
+      "LEMINSKI, Paulo"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Arte",
+      "Vanguarda",
+      "Crítica",
+      "Política",
+      "Literatura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Arte Gráfica",
+        "descricao": "\"s/título\", por Ricardo Assis, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T15:46:28.371194",
+    "_id": "1764701188371",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "4 de 26",
+    "ordem_exibicao": 5,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Desenhos",
+    "subtitulo_artigo": "",
+    "paginas": "p.19-20",
+    "resumo": "Reproduções de desenhos de autoria de Claude Royet-Journoud. As obras apresentam traços manuais e inscrições textuais, destacando-se as composições que podemos intitular como: \"One word\" e \"Looking for Régis?\", já que são palavras de destaque nos desenhos-poemas.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROYET-JOURNOUD, Claude"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"One word\", por Claude Royet-Journoud, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Looking for Régis?\", por Claude Royet-Journoud, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T15:48:53.112394",
+    "_id": "1764701333112",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "5 de 26",
+    "ordem_exibicao": 6,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "Prosas",
+    "subtitulo_artigo": "",
+    "paginas": "p.21-24",
+    "resumo": "Conjunto de narrativas curtas em prosa experimental de Evandro Affonso Ferreira, composto pelos textos: \"Punfas!\", \"Arre lá!\", \"Zelotipia\", \"Bordalengo\", \"Cafrice\", \"Basbalhoste\", \"Saca-trapo\", \"Enviscado\", \"Embiocado\", \"Alarifagem\" e \"Fatiloqqente\". [A escrita de Ferreira distingue-se pelo hibridismo entre prosa e poesia, utilizando onomatopeias, neologismos, coloquialismos e fragmentação sintática. Os fragmentos constroem alegorias que fundem características humanas e animais (bovarysmo, pavão, peixes, insetos, suínos) para explorar temas como vaidade, decrepitude, predação e morte, mobilizando referências irônicas à doutrina panteísta de Spinoza e à metafísica de Plotino.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FERREIRA, Evandro Affonso"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T15:50:34.061584",
+    "_id": "1764701434061",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "6 de 26",
+    "ordem_exibicao": 7,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Exercício espiritual",
+    "subtitulo_artigo": "",
+    "paginas": "p.25",
+    "resumo": "Poema: \"Exercício espiritual\". [Do livro inédito Moradas Nômades].",
+    "nota_edicao": "Do livro inédito \"Moradas Nômades\"",
+    "autores_colaboradores": [
+      "BAPTISTA, Josely Vianna"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T15:52:00.479214",
+    "_id": "1764701520479",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "7 de 26",
+    "ordem_exibicao": 8,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.26-28",
+    "resumo": "Poemas: \"Parador 05\", \"Parador 06\" e \"Parador 07\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CAMPOS, Angela de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T15:56:47.638285",
+    "_id": "1764701807638",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "8 de 26",
+    "ordem_exibicao": 9,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Fotográfico",
+    "titulo_artigo": "Ensaio",
+    "subtitulo_artigo": "",
+    "paginas": "p.29-38",
+    "resumo": "Ensaio fotográfico de Eder Chiodetto, composto por imagens em preto e branco (em escala de cinza). A série explora texturas urbanas com jogos de luz e sombra, e a presença constante da \"bicicleta\" (ou fração dela), frequentemente representada por silhuetas projetadas no asfalto ou fragmentos (rodas, aros) em diferentes contextos, como o submerso em água ou estacionados em ambientes arquitetônicos.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CHIODETTO, Eder"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (aro de bicicleta na água), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (fração em sombra da roda da bicicleta e do ciclista), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (sombra de construção, roda traseira, bagageiro e pés do ciclista), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (roda traseira da bicicleta vista de um local escuro), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (roda dianteira da bicicleta vista entre colunas), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (composição abstrata de asfalto e sombra), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (composição de bicicleta, pernas, pés nos pedais e imagem de bicicleta no asfalto), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (fragmento arquitetônico e sombra), por Eder Chiodetto, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\" (roda de bicicleta com duas sombras humanas), por Eder Chiodetto, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T16:07:28.258495",
+    "notas_pesquisa": [],
+    "_id": "1764702328964"
+  },
+  {
+    "n": "7",
+    "registro": "9 de 26",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "A fervura do aire",
+    "subtitulo_artigo": "",
+    "paginas": "p.39-42",
+    "resumo": "Poema: \"A fervura do aire\", de Antonio Domínguez Rey. Publicado na seção \"Destradução\" [(do Galego)].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "REY, Antonio Domínguez"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Arte Gráfica",
+        "descricao": "\"s/título\" (arte de introdução à seção Destradução), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T16:08:12.163411",
+    "_id": "1764702492163",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "7",
+    "registro": "10 de 26",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Momento crítico (meu meio século)",
+    "subtitulo_artigo": "",
+    "paginas": "p.43-87",
+    "resumo": "Texto híbrido entre narrativa ficcional e ensaio crítico, no qual Alcir Pécora relata a comemoração de seu aniversário de 50 anos em um restaurante árabe, recusando-se a comparecer a um debate sobre o livro \"Literatura Brasileira Hoje\", de Manuel da Costa Pinto (Publifolha). Por meio de diálogos com interlocutores reais transformados em personagens (como Paulo Franchetti, Régis Bonvicino, Eric Sabinson, Luís Dolhnikoff, entre outros), o autor tece uma crítica severa à obra de Costa Pinto. Os convivas apontam problemas teóricos, a falta de critérios rigorosos, o \"folhacentrismo\" (predominância de autores ligados à Folha de S. Paulo), a repetição de clichês sobre o Concretismo e o Modernismo, e omissões de autores como Paulo Leminski e Mário Faustino. O texto discute o cânone, a função da crítica e a distinção entre letra de música e poesia.",
+    "nota_edicao": "Nota do autor no texto: \"Esta é uma obra de ficção. Nenhum dos lugares, pessoas ou objetos variados referidos têm qualquer responsabilidade sobre o que vai inventado aqui\".",
+    "autores_colaboradores": [
+      "PÉCORA, Alcir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "PINTO, Manuel da Costa",
+      "OLIVEIRA, Carlos de",
+      "NESTROVSKI, Artur",
+      "ROCHA, João Cézar de Castro",
+      "CANDIDO, Antonio",
+      "FRANCHETTI, Paulo",
+      "SABINSON, Eric",
+      "BONVICINO, Régis",
+      "CAMPOS, Haroldo de",
+      "VELOSO, Caetano",
+      "ANDRADE, Carlos Drummond de",
+      "BAUDELAIRE, Charles",
+      "MALLARMÉ, Stéphane",
+      "CABRAL, João (Melo Neto)",
+      "BARROS, Manoel de",
+      "AZEVEDO, Carlito",
+      "WITTGENSTEIN, Ludwig",
+      "SISCAR, Marcos",
+      "LIMA, Luiz Costa",
+      "LEITE, Sebastião Uchoa",
+      "SALOMÃO, Waly",
+      "GULLAR, Ferreira",
+      "LEMINSKI, Paulo",
+      "ANDRADE, Mário de",
+      "ANDRADE, Oswald de",
+      "CONY, Carlos Heitor",
+      "SCLIAR, Moacyr",
+      "CARVALHO, Bernardo",
+      "AJZENBERG, Bernardo",
+      "BONASSI, Fernando",
+      "RIBEIRO, João Ubaldo",
+      "VERÍSSIMO, Luis Fernando",
+      "HILST, Hilda",
+      "TELLES, Lygia Fagundes",
+      "TREVISAN, Dalton",
+      "FONSECA, Rubem",
+      "SIMÃO, José",
+      "PIGNATARI, Décio",
+      "FAUSTINO, Mário",
+      "DANTAS, Francisco",
+      "BUENO, Wilson",
+      "NASSAR, Raduan",
+      "HATOUM, Milton",
+      "BARBOSA, Frederico",
+      "POUND, Ezra",
+      "CESAR, Ana Cristina",
+      "CHAMIE, Mário",
+      "ALCIDES, Sérgio",
+      "KEHL, Maria Rita",
+      "NETO, Afonso Henriques",
+      "WILLER, Claudio",
+      "PIVA, Roberto",
+      "MARTINS, Floriano",
+      "ASSUMPÇÃO, Ademir",
+      "ÁVILA, Afonso",
+      "HELDER, Herberto",
+      "MATTOSO, Glauco",
+      "PRADO, Adélia",
+      "FILHO, Armando Freitas",
+      "CÍCERO, Antonio",
+      "MOTTA, Waldo",
+      "MORICONI, Ítalo",
+      "ANTUNES, Arnaldo",
+      "TOLENTINO, Bruno",
+      "PESSOA, Fernando"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Poesia",
+      "Jornalismo",
+      "Cânone Literário",
+      "Modernismo"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PINTO, Manuel da Costa"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"s/título\" (apresentação da seção Pares Contemporâneos), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T16:16:45.250226",
+    "_id": "1764703005250",
+    "notas_pesquisa": []
   }
 ]
