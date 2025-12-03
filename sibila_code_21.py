@@ -552,22 +552,60 @@ class PDFModule:
             return ""
         if not isinstance(texto, str):
             texto = str(texto)
-        texto = (
-            texto
-            .replace('\u2013', '-')
-            .replace('\u2014', '-')
-            .replace('\u2015', '-')
-            .replace('\u2022', '*')
-        )
+        # Mapa de substituição de caracteres problemáticos
+        replacements = {
+            '\u201c': '"',  # Aspas duplas esquerda
+            '\u201d': '"',  # Aspas duplas direita
+            '\u2018': "'",  # Aspas simples esquerda
+            '\u2019': "'",  # Aspas simples direita
+            '\u2013': '-',  # Traço médio
+            '\u2014': '-',  # Travessão
+            '\u2022': '*'   # Bullet point
+        }
+        for char, repl in replacements.items():
+            texto = texto.replace(char, repl)
+        
         return texto.encode('latin-1', 'replace').decode('latin-1')
 
     @staticmethod
     def add_nelic_logo_to_pdf(pdf):
         if os.path.exists(LOGO_PATH):
             try:
-                pdf.image(LOGO_PATH, x=175, y=10, w=25, h=0)
+                # Logo fixo na direita (x=175, y=8, w=25)
+                pdf.image(LOGO_PATH, x=175, y=8, w=25, h=0)
             except Exception:
                 pass
+
+    @staticmethod
+    def _add_standard_header(pdf, title):
+        """
+        Cabeçalho Padrão (Global):
+        - Logo: Canto superior direito (via add_nelic_logo_to_pdf)
+        - Título: Alinhado à ESQUERDA, negrito, largura controlada.
+        - Data: Alinhada à ESQUERDA, abaixo do título.
+        - Linha Divisória: Obrigatória.
+        """
+        PDFModule.add_nelic_logo_to_pdf(pdf)
+        
+        # Título
+        pdf.set_xy(10, 10) # Texto começa na esquerda, alinhado ao topo visual do logo
+        pdf.set_font("Arial", 'B', 14)
+        # Limpeza: Remover prefixos se existirem, embora o ideal seja passar o título limpo
+        clean_title = title.replace("ESTATÍSTICAS - ", "").upper()
+        
+        # Largura controlada (160) para não cobrir o logo (x=175)
+        pdf.multi_cell(160, 8, PDFModule.to_latin1(clean_title), align='L')
+        
+        # Data
+        pdf.set_font("Arial", 'I', 10)
+        pdf.set_x(10)
+        pdf.cell(160, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='L')
+        
+        # Linha Divisória
+        # Garante que a linha fique abaixo do texto E do logo (assumindo logo h~25mm -> y_end ~33mm)
+        y_line = max(pdf.get_y() + 2, 35)
+        pdf.line(10, y_line, 200, y_line)
+        pdf.set_y(y_line + 5)
 
     @staticmethod
     def gerar_pdf_analitico(df, total, crit):
@@ -575,14 +613,9 @@ class PDFModule:
         try:
             pdf = FPDF()
             pdf.add_page()
-            PDFModule.add_nelic_logo_to_pdf(pdf)
-            pdf.set_font("Arial", 'B', 16)
-            pdf.set_xy(0, 15)
-            pdf.cell(0, 10, PDFModule.to_latin1("RELATÓRIO ANALÍTICO - PROJETO SIBILA"), ln=True, align='C')
-            pdf.set_font("Arial", '', 10)
-            pdf.set_x(35)
-            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
-            pdf.ln(5)
+            PDFModule._add_standard_header(pdf, "RELATÓRIO ANALÍTICO - PROJETO SIBILA")
+            
+            pdf.set_y(pdf.get_y() + 5)
             pdf.set_y(40)
             pdf.set_fill_color(240, 240, 240)
             pdf.rect(10, 45, 190, 25, 'F')
@@ -605,9 +638,11 @@ class PDFModule:
                     tit = PDFModule.to_latin1(r.get('titulo_artigo', ''))
                     tip = PDFModule.to_latin1(r.get('vocabulario_controlado', ''))
                     rev = PDFModule.to_latin1(r.get('n', ''))
-                    pags = PDFModule.to_latin1(r.get('paginas', ''))
+                    # Limpeza de páginas para evitar "p. p."
+                    raw_pag = str(r.get('paginas', '')).replace('pp.', '').replace('p.', '').strip()
+                    pags = PDFModule.to_latin1(raw_pag)
                     pdf.set_font("Arial", 'B', 11)
-                    pdf.multi_cell(0, 6, f"[{tip}] REVISTA {rev} | pp. {pags}")
+                    pdf.multi_cell(0, 6, f"[{tip}] REVISTA {rev} / p. {pags}")
                     if tit:
                         pdf.set_font("Arial", '', 10)
                         pdf.multi_cell(0, 5, tit)
@@ -618,8 +653,11 @@ class PDFModule:
                         else:
                             s_aut = DataModule.format_nome_abnt(aut)
                         s_aut = PDFModule.to_latin1(s_aut)
-                        pdf.set_font("Arial", 'I', 10)
-                        pdf.multi_cell(0, 6, f"Autores: {s_aut}")
+                        # Bloco de autores: Rótulo em Negrito, conteúdo Normal
+                        pdf.set_font("Arial", 'B', 10)
+                        pdf.write(5, PDFModule.to_latin1("Autores: "))
+                        pdf.set_font("Arial", '', 10)
+                        pdf.multi_cell(0, 5, s_aut)
                     nota_ed = r.get('nota_edicao', '')
                     if nota_ed:
                         ne = PDFModule.to_latin1(nota_ed)
@@ -671,14 +709,9 @@ class PDFModule:
         try:
             pdf = FPDF()
             pdf.add_page()
-            PDFModule.add_nelic_logo_to_pdf(pdf)
-            pdf.set_font("Arial", 'B', 16)
-            pdf.set_xy(35, 12)
-            pdf.cell(0, 10, PDFModule.to_latin1("RELATÓRIO DE BUSCA - PROJETO SIBILA"), ln=True, align='C')
-            pdf.set_font("Arial", '', 10)
-            pdf.set_x(35)
-            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
-            pdf.ln(5)
+            PDFModule._add_standard_header(pdf, "RELATÓRIO DE BUSCA - PROJETO SIBILA")
+
+            pdf.set_y(pdf.get_y() + 5)
             pdf.set_fill_color(240, 240, 240)
             pdf.rect(10, 45, 190, 30, 'F')
             pdf.set_y(48)
@@ -729,9 +762,11 @@ class PDFModule:
                     tit = PDFModule.to_latin1(r.get('titulo_artigo', ''))
                     tip = PDFModule.to_latin1(r.get('vocabulario_controlado', ''))
                     rev = PDFModule.to_latin1(r.get('n', ''))
-                    pags = PDFModule.to_latin1(r.get('paginas', ''))
+                    # Limpeza de páginas para evitar "p. p."
+                    raw_pag = str(r.get('paginas', '')).replace('pp.', '').replace('p.', '').strip()
+                    pags = PDFModule.to_latin1(raw_pag)
                     pdf.set_font("Arial", 'B', 11)
-                    pdf.multi_cell(0, 6, f"[{tip}] REVISTA {rev} | pp. {pags}")
+                    pdf.multi_cell(0, 6, f"[{tip}] REVISTA {rev} / p. {pags}")
                     if tit:
                         pdf.set_font("Arial", '', 10)
                         pdf.multi_cell(0, 5, tit)
@@ -742,8 +777,11 @@ class PDFModule:
                         else:
                             s_aut = DataModule.format_nome_abnt(aut)
                         s_aut = PDFModule.to_latin1(s_aut)
-                        pdf.set_font("Arial", 'I', 10)
-                        pdf.multi_cell(0, 6, f"Autores: {s_aut}")
+                        # Bloco de autores: Rótulo em Negrito, conteúdo Normal
+                        pdf.set_font("Arial", 'B', 10)
+                        pdf.write(5, PDFModule.to_latin1("Autores: "))
+                        pdf.set_font("Arial", '', 10)
+                        pdf.multi_cell(0, 5, s_aut)
                     nota_ed = r.get('nota_edicao', '')
                     if nota_ed:
                         ne = PDFModule.to_latin1(nota_ed)
@@ -774,14 +812,9 @@ class PDFModule:
         try:
             pdf = FPDF()
             pdf.add_page()
-            PDFModule.add_nelic_logo_to_pdf(pdf)
-            pdf.set_font("Arial", 'B', 14)
-            pdf.set_xy(0, 15)
-            pdf.cell(0, 10, PDFModule.to_latin1("FICHA NELIC – PROJETO SIBILA"), ln=True, align='C')
-            pdf.set_font("Arial", '', 9)
-            pdf.set_x(35)
-            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
-            pdf.ln(4)
+            PDFModule._add_standard_header(pdf, "FICHA NELIC – PROJETO SIBILA")
+            
+            pdf.set_y(pdf.get_y() + 5)
             pdf.set_y(40)
             def safe(text):
                 return PDFModule.to_latin1(text)
@@ -790,7 +823,11 @@ class PDFModule:
             pdf.set_font("Arial", '', 10)
             pdf.multi_cell(0, 5, safe(f"Nº revista: {registro.get('n','')}"))
             pdf.multi_cell(0, 5, safe(f"Registro: {registro.get('registro','')}"))
-            pdf.multi_cell(0, 5, safe(f"Páginas: {registro.get('paginas','')}"))
+            
+            # Limpeza de páginas para evitar "p. p."
+            raw_pag = str(registro.get('paginas', '')).replace('pp.', '').replace('p.', '').strip()
+            pdf.multi_cell(0, 5, safe(f"Páginas: p. {raw_pag}"))
+            
             pdf.multi_cell(0, 5, safe(f"Tipo textual: {registro.get('vocabulario_controlado','')}"))
             pdf.multi_cell(
                 0, 5,
@@ -899,35 +936,62 @@ class PDFModule:
         try:
             pdf = FPDF()
             pdf.add_page()
-            PDFModule.add_nelic_logo_to_pdf(pdf)
-            pdf.set_font("Arial", 'B', 16)
-            pdf.set_xy(35, 12)
-            pdf.cell(0, 10, PDFModule.to_latin1(f"ESTATÍSTICAS - {titulo.upper()}"), ln=True, align='C')
-            pdf.set_font("Arial", '', 10)
-            pdf.set_x(35)
-            pdf.cell(0, 6, PDFModule.to_latin1(f"Emissão: {datetime.now().strftime('%d/%m/%Y')}"), ln=True, align='C')
-            pdf.ln(10)
+            # Título limpo (sem "ESTATÍSTICAS - " se vier do argumento, mas a função _add_standard_header já trata)
+            PDFModule._add_standard_header(pdf, titulo)
+            
             cols = list(df_stats.columns)
             n_cols = len(cols)
             available_width = 190
             col_width = available_width / n_cols if n_cols > 0 else available_width
+            
+            # Cabeçalho da Tabela: Azul Escuro (#2f5f98) com texto Branco e Negrito
+            pdf.set_fill_color(47, 95, 152) 
+            pdf.set_text_color(255, 255, 255)
             pdf.set_font("Arial", 'B', 10)
             for col in cols:
-                pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C')
+                pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C', fill=True)
             pdf.ln()
+            
+            # Corpo da Tabela
+            pdf.set_text_color(0, 0, 0) # Reset para preto
             pdf.set_font("Arial", '', 9)
-            for _, row in df_stats.iterrows():
+            
+            for i, (_, row) in enumerate(df_stats.iterrows()):
+                # Zebra striping: linhas alternadas
+                if i % 2 == 0:
+                    pdf.set_fill_color(255, 255, 255) # Branco
+                else:
+                    pdf.set_fill_color(240, 240, 240) # Cinza claro
+                
+                # Quebra de página
                 if pdf.get_y() > 265:
                     pdf.add_page()
-                    pdf.ln(10)
+                    # Re-imprimir cabeçalho
+                    pdf.set_fill_color(47, 95, 152)
+                    pdf.set_text_color(255, 255, 255)
                     pdf.set_font("Arial", 'B', 10)
                     for col in cols:
-                        pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C')
+                        pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C', fill=True)
                     pdf.ln()
+                    pdf.set_text_color(0, 0, 0)
                     pdf.set_font("Arial", '', 9)
+                    # Restaurar cor de fundo da linha atual
+                    if i % 2 == 0:
+                        pdf.set_fill_color(255, 255, 255)
+                    else:
+                        pdf.set_fill_color(240, 240, 240)
+
                 for col in cols:
-                    txt = PDFModule.to_latin1(str(row[col]))
-                    pdf.cell(col_width, 6, txt, border=1)
+                    val = row[col]
+                    # Formatação numérica: 2 casas decimais para floats
+                    if isinstance(val, float):
+                        txt = f"{val:.2f}"
+                    else:
+                        txt = str(val)
+                    
+                    txt = PDFModule.to_latin1(txt)
+                    # Números sempre centralizados
+                    pdf.cell(col_width, 6, txt, border=1, align='C', fill=True)
                 pdf.ln()
             return pdf.output(dest='S').encode('latin-1', 'replace')
         except Exception as e:
@@ -936,6 +1000,96 @@ class PDFModule:
             pdf.add_page()
             pdf.set_font("Arial", '', 12)
             pdf.cell(0, 10, PDFModule.to_latin1("Erro ao gerar relatório de estatísticas"), ln=True)
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+
+    @staticmethod
+    def gerar_pdf_duas_tabelas(df1, titulo1, df2, titulo2, titulo_geral):
+        """
+        Gera PDF contendo duas tabelas sequenciais.
+        Útil para 'Autores como assunto vs colaboradores'.
+        """
+        try:
+            pdf = FPDF()
+            pdf.add_page()
+            PDFModule._add_standard_header(pdf, titulo_geral)
+            
+            # Função auxiliar para desenhar tabela
+            def desenhar_tabela(df, titulo_tabela):
+                pdf.set_font("Arial", 'B', 12)
+                pdf.cell(0, 8, PDFModule.to_latin1(titulo_tabela), ln=True)
+                pdf.ln(2)
+                
+                cols = list(df.columns)
+                n_cols = len(cols)
+                available_width = 190
+                col_width = available_width / n_cols if n_cols > 0 else available_width
+                
+                # Cabeçalho
+                pdf.set_fill_color(47, 95, 152) 
+                pdf.set_text_color(255, 255, 255)
+                pdf.set_font("Arial", 'B', 10)
+                for col in cols:
+                    pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C', fill=True)
+                pdf.ln()
+                
+                # Corpo
+                pdf.set_text_color(0, 0, 0)
+                pdf.set_font("Arial", '', 9)
+                for i, (_, row) in enumerate(df.iterrows()):
+                    # Zebra
+                    if i % 2 == 0:
+                        pdf.set_fill_color(255, 255, 255)
+                    else:
+                        pdf.set_fill_color(240, 240, 240)
+                        
+                    # Quebra de página
+                    if pdf.get_y() > 265:
+                        pdf.add_page()
+                        # Re-imprimir cabeçalho
+                        pdf.set_fill_color(47, 95, 152)
+                        pdf.set_text_color(255, 255, 255)
+                        pdf.set_font("Arial", 'B', 10)
+                        for col in cols:
+                            pdf.cell(col_width, 8, PDFModule.to_latin1(str(col)), border=1, align='C', fill=True)
+                        pdf.ln()
+                        pdf.set_text_color(0, 0, 0)
+                        pdf.set_font("Arial", '', 9)
+                        # Restaurar zebra
+                        if i % 2 == 0:
+                            pdf.set_fill_color(255, 255, 255)
+                        else:
+                            pdf.set_fill_color(240, 240, 240)
+
+                    for col in cols:
+                        val = row[col]
+                        # Formatação numérica
+                        if isinstance(val, float):
+                            txt = f"{val:.2f}"
+                        else:
+                            txt = str(val)
+                        txt = PDFModule.to_latin1(txt)
+                        pdf.cell(col_width, 6, txt, border=1, align='C', fill=True)
+                    pdf.ln()
+            
+            # Desenha Tabela 1
+            desenhar_tabela(df1, titulo1)
+            
+            pdf.ln(10)
+            
+            # Verifica espaço para Tabela 2 (estimativa grosseira de cabeçalho + algumas linhas)
+            if pdf.get_y() > 200:
+                pdf.add_page()
+                
+            # Desenha Tabela 2
+            desenhar_tabela(df2, titulo2)
+            
+            return pdf.output(dest='S').encode('latin-1', 'replace')
+        except Exception as e:
+            st.error(f"Erro ao gerar PDF de duas tabelas: {str(e)}")
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_font("Arial", '', 12)
+            pdf.cell(0, 10, PDFModule.to_latin1("Erro ao gerar relatório"), ln=True)
             return pdf.output(dest='S').encode('latin-1', 'replace')
 
 class UtilsModule:
@@ -1719,7 +1873,7 @@ def relatorio_bilinguismo(df):
     )
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     excel_rel = UtilsModule.converter_excel(resumo)
     col1.download_button(
         "📊 EXCEL",
@@ -1734,6 +1888,14 @@ def relatorio_bilinguismo(df):
         csv_rel,
         f"rel_bilinguismo_{datetime.now().strftime('%Y%m%d')}.csv",
         "text/csv",
+        width='stretch'
+    )
+    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(resumo, "Índice de publicações bilíngues")
+    col3.download_button(
+        "📄 PDF",
+        pdf_rel,
+        f"rel_bilinguismo_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
         width='stretch'
     )
 
@@ -1774,7 +1936,7 @@ def relatorio_iconografia(df):
     )
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     excel_rel = UtilsModule.converter_excel(resumo)
     col1.download_button(
         "📊 EXCEL",
@@ -1789,6 +1951,14 @@ def relatorio_iconografia(df):
         csv_rel,
         f"rel_iconografia_{datetime.now().strftime('%Y%m%d')}.csv",
         "text/csv",
+        width='stretch'
+    )
+    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(resumo_display, "Iconografia por revista")
+    col3.download_button(
+        "📄 PDF",
+        pdf_rel,
+        f"rel_iconografia_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
         width='stretch'
     )
 
@@ -1814,9 +1984,30 @@ def relatorio_autores_assunto_colab(df):
     st.markdown("---")
     st.markdown("##### Interseções (quem é autor e tema)")
     if intersect:
-        st.write(", ".join(sorted(intersect)))
+        st.write(", ".join(sorted(list(intersect))))
     else:
-        st.write("Nenhum nome aparece simultaneamente como colaborador e como assunto na amostra.")
+        st.write("Nenhuma interseção encontrada.")
+        
+    st.markdown("##### Exportar")
+    col1, col2 = st.columns(2)
+    
+    # Exportar Tabelas Completas (Top 20 apenas para visualização, mas exportação pode ser completa ou top 20. 
+    # O usuário pediu "Autores Colaboradores (Top 20)" e "Nomes Pessoais como Assunto (Top 20)" no PDF.
+    # Vamos exportar o Top 20 no PDF conforme solicitado.
+    
+    pdf_duplo = PDFModule.gerar_pdf_duas_tabelas(
+        df_colab.head(20), "Autores Colaboradores (Top 20)",
+        df_ass.head(20), "Nomes Pessoais como Assunto (Top 20)",
+        "Autores como Assunto vs Colaboradores"
+    )
+    
+    col1.download_button(
+        "📄 PDF (Top 20 de ambos)",
+        pdf_duplo,
+        f"rel_autores_assunto_colab_{datetime.now().strftime('%Y%m%d')}.pdf",
+        "application/pdf",
+        width='stretch'
+    )
 
 def relatorio_tipos_textuais(df):
     st.markdown("#### Análise por tipos textuais")
