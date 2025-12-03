@@ -1872,6 +1872,12 @@ def relatorio_bilinguismo(df):
         lambda r: (r['bil'] / r['total'] * 100) if r['total'] > 0 else 0, axis=1
     )
     resumo['n'] = resumo['n'].astype(str)
+    
+    # Garante ordenação correta no gráfico
+    if 'n' in resumo.columns:
+        resumo['n'] = pd.Categorical(resumo['n'], categories=ORDEM_SIBILA, ordered=True)
+        resumo = resumo.sort_values('n')
+
     resumo.index = resumo.index + 1
     st.dataframe(resumo, width='stretch')
     fig = px.bar(
@@ -1886,6 +1892,7 @@ def relatorio_bilinguismo(df):
         xaxis_title="n.",
         yaxis_title="% bilíngue"
     )
+    fig.update_xaxes(type='category', tickmode='linear')
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
     col1, col2, col3 = st.columns(3)
@@ -1930,6 +1937,12 @@ def relatorio_iconografia(df):
     )
     
     resumo['n'] = resumo['n'].astype(str)
+
+    # Garante ordenação correta no gráfico
+    if 'n' in resumo.columns:
+        resumo['n'] = pd.Categorical(resumo['n'], categories=ORDEM_SIBILA, ordered=True)
+        resumo = resumo.sort_values('n')
+
     resumo.index = resumo.index + 1
     
     # Renomear coluna para exibição
@@ -1949,6 +1962,7 @@ def relatorio_iconografia(df):
         xaxis_title="n.",
         yaxis_title="Quantidade de Imagens"
     )
+    fig.update_xaxes(type='category', tickmode='linear')
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
     col1, col2, col3 = st.columns(3)
