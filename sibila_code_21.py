@@ -14,6 +14,11 @@ from streamlit_option_menu import option_menu
 import re
 
 # ==========================================
+# CONSTANTES GLOBAIS
+# ==========================================
+ORDEM_SIBILA = ["0", "1", "2", "3", "4", "5", "6", "7", "8-9", "10", "11", "12"]
+
+# ==========================================
 # 1. CONFIGURAÇÃO E ESTILO
 # ==========================================
 
@@ -1664,7 +1669,11 @@ class FichasNotasView:
             return
 
         st.markdown("### 🔍 Navegação por Revista")
-        revistas_disponiveis = sorted(self.df['n'].astype(str).unique())
+        # Garante ordenação correta das revistas
+        revistas_disponiveis = sorted(
+            self.df['n'].astype(str).unique(),
+            key=lambda x: ORDEM_SIBILA.index(x) if x in ORDEM_SIBILA else 999
+        )
         revista_selecionada = st.selectbox(
             "Selecione a revista:",
             ["Todas as revistas"] + revistas_disponiveis,
@@ -1810,10 +1819,16 @@ def relatorio_mapa_colaboracao(df):
         return pd.DataFrame(rows)
     
     df_rel = itens_por_revista(df)
+    # Garante ordenação correta no gráfico
+    if 'n.' in df_rel.columns:
+        df_rel['n.'] = pd.Categorical(df_rel['n.'], categories=ORDEM_SIBILA, ordered=True)
+        df_rel = df_rel.sort_values('n.')
+    
     df_rel.index = df_rel.index + 1
     st.dataframe(df_rel, width='stretch')
     fig = px.bar(df_rel, x="n.", y="Quantidade de itens", text="Quantidade de itens")
     fig.update_layout(height=380, title="Volume de itens por número da revista")
+    fig.update_xaxes(type='category', tickmode='linear')
     st.plotly_chart(fig, width='stretch')
     
     st.markdown("##### Exportar")
@@ -2285,6 +2300,11 @@ def relatorio_densidade_paginas(df):
         })
         
     df_rel = pd.DataFrame(rows)
+    # Garante ordenação correta no gráfico
+    if 'n.' in df_rel.columns:
+        df_rel['n.'] = pd.Categorical(df_rel['n.'], categories=ORDEM_SIBILA, ordered=True)
+        df_rel = df_rel.sort_values('n.')
+
     df_rel.index = df_rel.index + 1
     
     st.dataframe(df_rel, width='stretch')
@@ -2302,6 +2322,7 @@ def relatorio_densidade_paginas(df):
         xaxis_title="n.",
         yaxis_title="Densidade"
     )
+    fig.update_xaxes(type='category', tickmode='linear')
     st.plotly_chart(fig, width='stretch')
     
     # Exportar
@@ -2492,6 +2513,12 @@ def main():
     dados = PersistenceModule.load_data()
     df = pd.DataFrame(dados)
     df = UtilsModule.sanitizar_dataframe(df)
+
+    # --- CORREÇÃO ESTRUTURAL: ORDENAÇÃO DE REVISTAS ---
+    # Converte a coluna 'n' para categórica com ordem definida
+    if 'n' in df.columns:
+        df['n'] = df['n'].astype(str)
+        df['n'] = pd.Categorical(df['n'], categories=ORDEM_SIBILA, ordered=True)
 
     # --- NELIC ---
     if menu == "NELIC":
@@ -2839,7 +2866,12 @@ def main():
             col1, col2, col3 = st.columns(3)
             with col1:
                 # Listar todas as revistas únicas
-                revistas_disponiveis = sorted(list(set([str(d.get('n', '')) for d in dados if d.get('n')])))
+                # Ordenação correta na lista de seleção manual
+                revs_existentes = list(set([str(d.get('n', '')) for d in dados if d.get('n')]))
+                revistas_disponiveis = sorted(
+                    revs_existentes,
+                    key=lambda x: ORDEM_SIBILA.index(x) if x in ORDEM_SIBILA else 999
+                )
                 revista_busca = st.selectbox("Nº REVISTA", [""] + revistas_disponiveis, key="busca_revista")
 
             with col2:
@@ -2924,7 +2956,10 @@ def main():
             tipos_clean = sorted(list(set(tipos_completos)))
 
             # Preparar listas para os filtros
-            revs = sorted(df['n'].astype(str).unique())
+            revs = sorted(
+                df['n'].astype(str).unique(),
+                key=lambda x: ORDEM_SIBILA.index(x) if x in ORDEM_SIBILA else 999
+            )
 
             # FILTROS
             col_filtros1, col_filtros2 = st.columns(2)
@@ -3270,7 +3305,10 @@ def main():
             def aplicar_filtros(df_base, prefix):
                 c1, c2, c3, c4 = st.columns(4)
                 termo = c1.text_input(f"{prefix} · termo livre (título/resumo)", key=f"termo_{prefix}")
-                revs_local = sorted(df_base['n'].astype(str).unique())
+                revs_local = sorted(
+                    df_base['n'].astype(str).unique(),
+                    key=lambda x: ORDEM_SIBILA.index(x) if x in ORDEM_SIBILA else 999
+                )
                 f_rev = c2.multiselect(f"{prefix} · revistas", revs_local, key=f"rev_{prefix}")
                 tipos_raw_local = df_base['vocabulario_controlado'].astype(str).unique()
                 tipos_clean_local = sorted(list(set([t.split(' - ')[0] for t in tipos_raw_local])))
@@ -4030,6 +4068,7 @@ def main():
                     text='Qtd'
                 )
                 fig2.update_layout(title="REGISTROS POR REVISTA", height=380)
+                fig2.update_xaxes(type='category', tickmode='linear')
                 st.plotly_chart(fig2, width='stretch')
 
             st.markdown("---")

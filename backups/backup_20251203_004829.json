@@ -10925,10 +10925,10 @@
     "iconografias": [
       {
         "tipo": "Ilustração",
-        "descricao": "arte gráfica de Sibila como introdução à seção Pares Contemporâneos"
+        "descricao": "Ilustração de introdução à seção Pares Contemporâneos"
       }
     ],
-    "_timestamp": "2025-12-02T19:40:06.972760",
+    "_timestamp": "2025-12-02T19:48:03.343843",
     "notas_pesquisa": [],
     "_id": "1764703005250"
   },
@@ -11702,6 +11702,1297 @@
     ],
     "_timestamp": "2025-12-02T18:07:00.881188",
     "_id": "1764709620881",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "0 de 33",
+    "ordem_exibicao": 1,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "Capa da revista Sibila, ano 4, número 8-9 (2005). Apresenta como destaques da edição: \"CD com leitura de poemas por Allen Ginsberg, Philip Glass, F. T. Marinetti, Kurt Schwitters, Ezra Pound, Enzo Minarelli e poetas do mundo todo\"; o dossiê \"Situação da crítica hoje\" com Paulo Franchetti, Eduardo Milán e Marcos Siscar; o artigo \"Furio Lonza: um basta aos bloggers\"; \"Textos de Fellini e Creeley\"; e \"O anti-Mané por Carlos Drummond de Andrade\". Crédito da imagem: Corbis/Stockphotos.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Capa\", Corbis/Stockphotos, 2005"
+      }
+    ],
+    "_timestamp": "2025-12-02T21:54:31.620800",
+    "_id": "1764723271620",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "1 de 33",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Contracapa",
+    "subtitulo_artigo": "",
+    "paginas": "p.2",
+    "resumo": "Contracapa da edição apresentando imagem de Garrincha em preto e branco. Crédito da imagem: Corbis/Stockphotos.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Garrincha\", Corbis/Stockphotos, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T21:58:57.643920",
+    "_id": "1764723537643",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "2 de 33",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "A voz como instrumento de criação",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Editorial de apresentação do número duplo (8-9) da revista Sibila. Destaca a publicação do ensaio \"A voz instrumento de criação: dos futuristas à poesia sonora\", de Enzo Minarelli, e o CD \"A Voz é Princesa\" encartado na edição, contendo performances de autores históricos das vanguardas e contemporâneos. Discute a escassez de poesia sonora autônoma no Brasil, citando experiências de modernistas e concretistas. Aborda a questão da crítica literária através do ensaio \"A demissão da crítica\", de Paulo Franchetti, e da entrevista com Eduardo Milán sobre a recepção crítica na América Latina.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis",
+      "PÉCORA, Alcir",
+      "FIGUEIREDO, Tatiana Longo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MINARELLI, Enzo",
+      "MARINETTI, Filippo Tommaso",
+      "KRUTCHÔNIKH, Aleksiéi",
+      "SCHWITTERS, Kurt",
+      "POUND, Ezra",
+      "GINSBERG, Allen",
+      "GLASS, Philip",
+      "JANDL, Ernst",
+      "MENDES, Murilo",
+      "ANDRADE, Carlos Drummond de",
+      "BANDEIRA, Manuel",
+      "MELLO NETO, João Cabral de",
+      "PIGNATARI, Décio",
+      "CAMPOS, Haroldo de",
+      "CAMPOS, Augusto de",
+      "BLAKE, William",
+      "FRANCHETTI, Paulo",
+      "MILÁN, Eduardo"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Crítica",
+      "Vanguarda",
+      "Literatura",
+      "América Latina"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T22:02:46.596349",
+    "_id": "1764723766596",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "3 de 33",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Foto",
+    "subtitulo_artigo": "",
+    "paginas": "p.10",
+    "resumo": "Fotografia em preto e branco de Claude Royet-Journoud. A imagem compõe uma natureza morta sobre uma superfície (possivelmente uma prateleira), apresentando um exemplar da revista Sibila n. ,  em pé, dois cálices escuros e uma figura recortada representando uma criança ou boneco.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROYET-JOURNOUD, Claude"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Fotografia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Foto\", por Claude Royet-Journoud, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T22:04:18.264612",
+    "_id": "1764723858264",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "4 de 33",
+    "ordem_exibicao": 5,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "A fragilidade da literatura",
+    "subtitulo_artigo": "",
+    "paginas": "p.11-24",
+    "resumo": "Entrevista precedida por uma apresentação biobibliográfica do poeta uruguaio Eduardo Milán. O diálogo articula um \"diagnóstico\" crítico do campo literário latino-americano, caracterizado por um déficit de crítica rigorosa, frequentemente confundida com agressão pessoal ou celebração vazia, resultando na fragilidade do sistema literário. Discute-se a vigência do conceito de vanguarda, propondo a manutenção de seu espírito crítico diante da realidade e da linguagem, a despeito do esgotamento histórico dos movimentos vanguardistas. Aborda a natureza serial da criação poética como deslocamento de centros de atenção e a definição do poema como acontecimento e não como objeto acabado. Analisa a relação geopolítica entre poesia e poder, contrastando a alienação dos poetas norte-americanos frente à política imperialista (Guerra do Iraque) com a condição histórica da poesia latino-americana. Revisitando a sentença de Theodor Adorno sobre a poesia após Auschwitz, examina-se a função ética da palavra poética no contexto da barbárie contemporânea e do capitalismo tardio.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MILÁN, Eduardo",
+      "GOLA, Hugo",
+      "OCHOA, Antonio",
+      "GRANADOS, Gabriel Bernal",
+      "MOLINA, José Luis",
+      "LUMBRERAS, Ernesto",
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "CAMPOS, Haroldo de",
+      "ULACIA, Manuel",
+      "VALENTE, José Ángel",
+      "VARELA, Blanca",
+      "SÁNCHEZ ROBAYNA, Andrés",
+      "VALÉRY, Paul",
+      "BAUDELAIRE, Charles",
+      "HÖLDERLIN, Friedrich",
+      "RIMBAUD, Arthur",
+      "MALLARMÉ, Stéphane",
+      "LAFORGUE, Jules",
+      "CORBIÈRE, Tristan",
+      "RABELAIS, François",
+      "STERNE, Laurence",
+      "CARROLL, Lewis",
+      "BEUYS, Joseph",
+      "DARÍO, Rubén",
+      "VALLEJO, César",
+      "GIRONDO, Oliverio",
+      "HUIDOBRO, Vicente",
+      "PARRA, Nicanor",
+      "LEZAMA LIMA, José",
+      "MARRAMAO, Giacomo",
+      "LIHN, Enrique",
+      "BUSH, George W.",
+      "NIETZSCHE, Friedrich",
+      "GÓNGORA, Luis de",
+      "LORCA, Federico García",
+      "ALBERTI, Rafael",
+      "CERNUDA, Luis",
+      "ADORNO, Theodor",
+      "CELAN, Paul",
+      "HORKHEIMER, Max",
+      "BOLÍVAR, Simón",
+      "VIDAL, Gore",
+      "CHOMSKY, Noam",
+      "ZINN, Howard",
+      "MAILER, Norman"
+    ],
+    "palavras_chave": [
+      "Crítica",
+      "Vanguarda",
+      "América Latina",
+      "Política",
+      "Poesia",
+      "Modernidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T22:06:13.288479",
+    "_id": "1764723973288",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "5 de 33",
+    "ordem_exibicao": 6,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A demissão da crítica",
+    "subtitulo_artigo": "",
+    "paginas": "p.25-40",
+    "resumo": "Ensaio sobre a precariedade da crítica literária no Brasil contemporâneo, diagnosticada como em estado de \"demissão\" em favor de práticas de compadrio, alinhamento partidário e interesses de mercado. O texto investiga os mecanismos de neutralização do debate intelectual, destacando o uso recorrente de abaixo-assinados como instrumento de censura e intimidação, citando casos envolvendo José Guilherme Merquior, Bruno Tolentino e Nelson Ascher. Argumenta-se que a universidade e a imprensa cultural operam em simbiose para substituir o embate crítico pela glosa acadêmica inócua ou pelo marketing editorial. Como estudo de caso, examina-se a recepção do texto \"Momento Crítico\", de Alcir Pécora (publicado na edição anterior de Sibila), descrevendo as estratégias de desqualificação moral e silenciamento público, acompanhadas de maledicência privada, utilizadas pelo meio literário para evitar o confronto direto com as objeções teóricas levantadas contra a obra de Manuel da Costa Pinto e a coleção \"Folha Explica\". No final, conclui com uma defesa da autonomia do pensamento crítico, independente de esperança ou medo.",
+    "nota_edicao": "Texto lido no lançamento do número 7 da revista Sibila, em 12 de abril de 2005, na Livraria Siciliano do Shopping Pátio Higienópolis, São Paulo.",
+    "autores_colaboradores": [
+      "FRANCHETTI, Paulo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ALVES, Rubem",
+      "MERQUIOR, José Guilherme",
+      "CHAUI, Marilena",
+      "LEFORT, Claude",
+      "TOLENTINO, Bruno",
+      "CAMPOS, Augusto de",
+      "LEITE, Sebastião Uchôa",
+      "ASCHER, Nelson",
+      "SAID, Edward",
+      "OLIVEIRA, Nelson de",
+      "PÉCORA, Alcir",
+      "PINTO, Manuel da Costa",
+      "ROCHA, João Cézar de Castro",
+      "CAETANO, Selma",
+      "SÁ, Sérgio de",
+      "BORGES, Julio Daio",
+      "POUND, Ezra"
+    ],
+    "palavras_chave": [
+      "Crítica",
+      "Literatura",
+      "Universidade",
+      "Mercado",
+      "Censura",
+      "Jornalismo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T22:17:45.350227",
+    "_id": "1764724665350",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "6 de 33",
+    "ordem_exibicao": 7,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "A cisma da poesia brasileira",
+    "subtitulo_artigo": "",
+    "paginas": "p.41-60",
+    "resumo": "Ensaio \"panorâmico\" sobre a poesia brasileira contemporânea (pós-1980), investigando o suposto esgotamento de projetos coletivos e o legado das vanguardas e da poesia marginal. O autor propõe o conceito de \"cisma\" para analisar a diversidade da produção atual, não como decadência, mas como um deslocamento de critérios em relação à tradição modernista e ao impasse da modernização conservadora no Brasil. Por meio da análise das poéticas de Ana Cristina Cesar, Paulo Leminski, Arnaldo Antunes, Manoel de Barros, Sebastião Uchoa Leite e Carlito Azevedo, examinam-se as tensões entre formalismo e subjetividade, técnica e primitivismo, e a relação com o cotidiano e a crise de sentido. Finaliza o texto dizendo que a poesia atual, marcada pela hesitação e pela resistência a classificações unívocas, configura-se como um lugar de promessa e maturação diante da insignificância do mundo globalizado.",
+    "nota_edicao": "Texto publicado simultaneamente na revista Europe (França), em número dedicado à literatura brasileira contemporânea.",
+    "autores_colaboradores": [
+      "SISCAR, Marcos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "MAGALHÃES, Milena"
+    ],
+    "autores_citados": [
+      "CACASO",
+      "CHACAL",
+      "ALVIM, Francisco",
+      "FONTELA, Orides",
+      "FREITAS FILHO, Armando",
+      "BARROS, Manoel de",
+      "PRADO, Adélia",
+      "PAES, José Paulo",
+      "HILST, Hilda",
+      "CAMPOS, Augusto de",
+      "CAMPOS, Haroldo de",
+      "AZEVEDO, Carlito",
+      "BANDEIRA, Manuel",
+      "ANDRADE, Carlos Drummond de",
+      "MELO NETO, João Cabral de",
+      "MENDES, Murilo",
+      "GULLAR, Ferreira",
+      "CESAR, Ana Cristina",
+      "LEMINSKI, Paulo",
+      "ANTUNES, Arnaldo",
+      "PONGE, Francis",
+      "GUIMARÃES ROSA, João",
+      "RIMBAUD, Arthur",
+      "PESSOA, Fernando",
+      "BRAQUE, Georges",
+      "LEITE, Sebastião Uchoa",
+      "MASSI, Augusto",
+      "MOZART, Wolfgang Amadeus",
+      "BAUDELAIRE, Charles",
+      "PONCE, Liliana"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Contemporâneo",
+      "Crítica",
+      "Modernismo",
+      "Vanguarda",
+      "Subjetividade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T22:39:53.883440",
+    "_id": "1764725993883",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "7 de 33",
+    "ordem_exibicao": 8,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Desenhos",
+    "subtitulo_artigo": "",
+    "paginas": "p.61-62",
+    "resumo": "Desenhos de Samantha Moreira: \"Do que guardo em mim\" e \"Sem título\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MOREIRA, Samantha"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Arte"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Do que guardo em mim\", (desenho), Samantha Moreira, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Sem título\", (desenho), Samantha Moreira, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T22:41:28.471160",
+    "_id": "1764726088471",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "8 de 33",
+    "ordem_exibicao": 9,
+    "idioma_01": "ESP",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "El diablo de mêdia-noche",
+    "subtitulo_artigo": "",
+    "paginas": "p.63-64",
+    "resumo": "",
+    "nota_edicao": "Do livro, ainda inédito, Cuentos Marafos, em que o autor retoma o portunhol mesclado de guarani, experimentado – até agora – somente em Mar Paraguayo (Iluminuras, 1991), considerado por muitos como um clássico contemporâneo.",
+    "autores_colaboradores": [
+      "BUENO, Wilson"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:01:16.869116",
+    "_id": "1764727276869",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "9 de 33",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "p.65-67",
+    "resumo": "Poema \"Lilith ali...\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MUTARELLI, Cristina"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:05:21.537744",
+    "_id": "1764727521537",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "10 de 33",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "FICÇÃO",
+    "titulo_artigo": "Anotações de alguém enquanto em São Paulo",
+    "subtitulo_artigo": "",
+    "paginas": "p.68-72",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MARIANI, Matias"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:05:48.856240",
+    "_id": "1764727548856",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "11 de 33",
+    "ordem_exibicao": 12,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.73-74",
+    "resumo": "Poemas \"Um gato a engolir a luz de uma sombra\", \"Bucólica\" e \"Expressões digitais\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FERREIRA BORGES, Paulo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:06:10.952966",
+    "_id": "1764727570952",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "12 de 33",
+    "ordem_exibicao": 13,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CORRESPONDÊNCIA(S)",
+    "titulo_artigo": "Carta de Federico Fellini a Andrea Zanzotto",
+    "subtitulo_artigo": "",
+    "paginas": "p.75-79",
+    "resumo": "Carta de 1976 em que Fellini solicita ao poeta Andrea Zanzotto colaboração linguística para a dublagem de seu filme sobre Casanova, rodado originalmente em inglês. O cineasta propõe renovar o dialeto vêneto, enrijecido em convenções, mediante fusão de registros arcaicos (Ruzzante), clássicos (Goldoni) e invenções fonéticas que espelhem o caráter visionário da obra. Duas demandas específicas estruturam o pedido: a composição de ladainhas rituais para a cena da emersão de uma cabeça feminina gigantesca no Canal Grande (metáfora do filme inteiro, segundo Fellini) e a criação de uma lengalenga em linguagem infantil (petel) para o episódio da giganta vêneta em Londres. A argumentação mobiliza explicitamente um vocabulário psicanalítico, imagens placentárias, amnióticas e relação neurótica com o feminino, para justificar a iconografia subaquática que atravessa o filme. A carta é precedida por uma apresentação biobibliográfica de Zanzotto, situando sua poesia entre Ungaretti, Leopardi, Petrarca, Hölderlin e Mallarmé.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FELLINI, Federico"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNARDINI, Aurora F."
+    ],
+    "autores_citados": [
+      "ZANZOTTO, Andrea",
+      "NALDINI, Nico",
+      "UNGARETTI, Giuseppe",
+      "LEOPARDI, Giacomo",
+      "PETRARCA, Francesco",
+      "HÖLDERLIN, Friedrich",
+      "MALLARMÉ, Stéphane",
+      "FORTINI, Franco",
+      "RUZZANTE",
+      "GOLDONI, Carlo",
+      "CASANOVA, Giacomo"
+    ],
+    "palavras_chave": [
+      "Cinema",
+      "Poesia",
+      "Linguagem",
+      "Tradução",
+      "Itália",
+      "Psicanálise"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ZANZOTTO, Andrea"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (desenho), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T23:13:10.399915",
+    "_id": "1764727990400",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "13 de 33",
+    "ordem_exibicao": 14,
+    "idioma_01": "ITA",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Filó",
+    "subtitulo_artigo": "",
+    "paginas": "p.80-86",
+    "resumo": "Poema \"Filó\"; tradução \"Filó\". [Publicação bilíngue]",
+    "nota_edicao": "Trecho selecionado de composição que, no original, se prolonga por 67 páginas (acompanha uma série de notas da tradutora).",
+    "autores_colaboradores": [
+      "ZANZOTTO, Andrea"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNARDINI, Aurora F."
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:14:11.437447",
+    "_id": "1764728051437",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "14 de 33",
+    "ordem_exibicao": 15,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Nota",
+    "subtitulo_artigo": "",
+    "paginas": "p.87-92",
+    "resumo": "Andrea Zanzotto discute a gênese de sua obra \"Filò\", elaborada no contexto da colaboração com Federico Fellini para o filme \"Casanova\". O autor problematiza a utilização do dialeto vêneto, contrastando-o com a língua padrão e analisando conceitos de diglossia, filologia e a \"incógnita\" da fala local. A argumentação defende o dialeto como uma reserva de vitalidade expressiva e um \"primeiro mistério\" que escapa à rigidez gramatical, servindo como guia para novas realidades poéticas e alteridades em um cenário de ameaça à diversidade linguística.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ZANZOTTO, Andrea"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNARDINI, Aurora F"
+    ],
+    "autores_citados": [
+      "FELLINI, Federico"
+    ],
+    "palavras_chave": [
+      "Língua",
+      "Linguística",
+      "Cinema",
+      "Oralidade",
+      "Poesia",
+      "Itália"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:22:24.685763",
+    "_id": "1764728544685",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "15 de 33",
+    "ordem_exibicao": 16,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Vítězslav Nezval",
+    "subtitulo_artigo": "",
+    "paginas": "p.93-97",
+    "resumo": "Ensaio de Odile Cisneros sobre a trajetória de Vítězslav Nezval e o papel do movimento \"poetismo\" na vanguarda tcheca do século XX. O texto contextualiza o otimismo cultural da Primeira República Tcheco-Eslovaca e a subsequente conexão com o surrealismo internacional. A autora analisa as especificidades da língua tcheca, especialmente a rima, como impulsionadora da criatividade poetista, contrastando-a com as tradições francesa e italiana. O foco recai sobre o poema \"ABECEDA\" (Abecedê), descrito como paradigma da integração entre elementos plásticos, fonéticos e coreográficos (com a colaboração da dançarina Milca Mayerová). O artigo discute ainda os desafios de tradução dessa obra e inclui excertos traduzidos pela autora.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CISNEROS, Odile"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "NEZVAL, Vítězslav",
+      "TEIGE, Karel",
+      "BRETON, André",
+      "PÉRET, Benjamin",
+      "ELUARD, Paul",
+      "MASARYK, Tomas Garrigue",
+      "SEIFERT, Jaroslav",
+      "BIEBL, Konstantin",
+      "ZAVADA, Vilém",
+      "HALAS, Franstisek",
+      "NEMCOVÁ, Bozena",
+      "MÁCHA, Karel Hynek",
+      "HUS, Jan",
+      "MAYEROVÁ, Milca"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Vanguarda",
+      "Surrealismo",
+      "Tradução",
+      "Fotografia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "NEZVAL, Vítězslav"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"ABECEDA\", (composições fotográficas com a dançarina Milca Mayerová), 1926"
+      }
+    ],
+    "_timestamp": "2025-12-02T23:24:23.559170",
+    "_id": "1764728663559",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "16 de 33",
+    "ordem_exibicao": 17,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "DE ABECEDA/ABECEDÊ",
+    "subtitulo_artigo": "",
+    "paginas": "p.98-103",
+    "resumo": "Seleção de poemas do livro \"Abeceda\" (Abecedê): \"A\" (\"Chamada seja cabana simples\"); \"C\" (\"brilha como a lua sobre as águas\"); \"D\" (\"arco que se tensa da direção oeste\"); \"F\" (\"bicam pássaros santos em Assis\"); \"JQ\" (\"Até a França através da Alemanha\"); \"RRRRR\" (\"Os tambores começaram sua marcha\"); \"S\" (\"Nas planícies da escura Índia\"); \"U\" (\"me lembras nossa meninice tranquila\"); \"V\" (\"reflexo da pirâmide na areia ardente\"); \"W\" (\"Cassiopéia imaculada como um piloto\"); \"X\" (\"signo de Caim na cabeça da víbora\"); \"Z\" (\"na despedida digamos adeus então\"). Tradução de Odile Cisneros. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "NEZVAL, Vítězslav"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:28:36.164965",
+    "_id": "1764728916164",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "17 de 33",
+    "ordem_exibicao": 18,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Suzanne Doppelt",
+    "subtitulo_artigo": "",
+    "paginas": "p.104-106",
+    "resumo": "Ensaio de Micaela Kramer apresentando a trajetória da fotógrafa e escritora Suzanne Doppelt. O texto analisa a natureza híbrida de sua obra, que mescla imagem e escrita sem subordinação ilustrativa, exemplificada em livros como \"Mange\" e \"Quelque Chose Cloche\". A autora discute o interesse de Doppelt por rituais e pela noção de \"enciclopédia\", tanto como catalogação do mundo quanto pela impossibilidade de um projeto totalizante. Aborda-se ainda a influência dos filósofos pré-socráticos e a colaboração com figuras como Pierre Alferi e Georges Aperghis.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "KRAMER, Micaela"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "DOPPELT, Suzanne",
+      "ALFERI, Pierre",
+      "PORTUGAL, Anne",
+      "APERGHIS, Georges",
+      "RONELL, Avital",
+      "DIDEROT, Denis",
+      "D'ALEMBERT, Jean Le Rond"
+    ],
+    "palavras_chave": [
+      "Fotografia",
+      "Poesia",
+      "Filosofia",
+      "Enciclopedismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [
+      "DOPPELT, Suzanne"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T23:31:06.883856",
+    "_id": "1764729066883",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "18 de 33",
+    "ordem_exibicao": 19,
+    "idioma_01": "POR",
+    "idioma_02": "FRA",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Trecho de \"Quelque Chose Cloche\"",
+    "subtitulo_artigo": "",
+    "paginas": "p.107-112",
+    "resumo": "[Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DOPPELT, Suzanne"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "KRAMER, Micaela",
+      "APERGHIS, Georges"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Imagem abstrata com textura granulada\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Círculo branco sobre fundo escuro\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Duas figuras escuras em silhueta contra fundo claro\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Superfície com padrão de ondas luminosas\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Grade escura sobre fundo claro\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Figura escura com estrelas esparsas\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"Colagem de múltiplas imagens em preto e branco\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T23:39:00.608476",
+    "_id": "1764729540608",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "19 de 33",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Mané e o sonho",
+    "subtitulo_artigo": "",
+    "paginas": "p.115-117",
+    "resumo": "Ensaio de Carlos Drummond de Andrade publicado originalmente no Jornal do Brasil em 1983, dois dias após a morte de Garrincha, no qual o poeta interpreta o jogador como símbolo cultural do Brasil. Drummond argumenta que Garrincha, com sua irreverência, inocência e genialidade antitécnica, tornou-se um mito capaz de sublimar as tristezas coletivas e os complexos nacionais, funcionando como um “irmão” do povo que oferecia alegria sem exigir esforço moral ou intelectual. O texto contrasta a glória efêmera do futebol com a ingratidão estrutural do esporte profissional e conclui que, na ausência de heróis sérios, a sociedade se agarra à lembrança mágica de figuras como Garrincha, cujo talento desafiava a lógica e a previsibilidade. [Publicação com autorização da Agência Literária BMSR. Homenagem de Sibila a Garrincha, 47 anos da Copa de 1958 e 43 anos do bicampeonato de 1962].",
+    "nota_edicao": "Homenagem de Sibila a Garrincha, que foi, ao lado de Pelé, o maior inovador do futebol brasileiro em todos os tempos, há 47 anos da conquista da Copa de 1958, na Suécia, e há 43 anos do bicampeonato no Chile, em 1962.",
+    "autores_colaboradores": [
+      "DRUMMOND, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Cultura",
+      "Futebol",
+      "Brasil",
+      "Mito",
+      "Memória",
+      "Identidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (arte gráfica de apresentação da seção \"Homenagem a Garrincha\"), s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Foto de Garrincha, imagem da capa Corbis/Stockphotos, s/d, p&b"
+      }
+    ],
+    "_timestamp": "2025-12-02T23:57:56.436718",
+    "notas_pesquisa": [],
+    "_id": "1764729867223"
+  },
+  {
+    "n": "8-9",
+    "registro": "20 de 33",
+    "ordem_exibicao": 21,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Cultura",
+    "titulo_artigo": "Blog ",
+    "subtitulo_artigo": "Quem não tem teto de vidro; usa óculos escuros",
+    "paginas": "p.120-125",
+    "resumo": "Lonza constrói uma crônica irônica sobre o fenômeno dos blogs: começa definindo-os como “vômito” visceral e espaço confessional em que jovens escritores expõem, em tom diarístico, suas idiossincrasias, misturando vida e literatura e transformando o blog em uma espécie de “comunismo de ideias” acessível a todos. Em seguida, caricaturiza a figura do blogger como outsider boêmio, alcoólico, tatuado de referências pop e rock, instalado em metrópoles como Rio e São Paulo, que rejeita rótulos enquanto encena todos os clichês da rebeldia urbana. O texto então insere uma fábula: um “vírus talibã” embaralha todos os blogs, dissolvendo autoria, cruzando trechos, confundindo citações e produzindo uma escrita coletiva anônima que é celebrada como experiência radical de despojamento, quase um revival dadaísta. Cansados da ingenuidade desse anonimato, os autores passam a se nutrir de Dostoiévski, Camus, Flaubert, Balzac, Stendhal, Carson McCullers, Sylvia Plath etc., adensando a psicologia, a crítica social e a elaboração formal, numa narrativa hiperbólica em que a literatura brasileira renasce, conquista leitores e chega até a um fantasioso Prêmio Nobel. Por fim, por volta de 2010, o ciclo se fecha: surge uma nova geração que volta aos blogs-diário com os mesmos motivos prosaicos de sexo, bebida, vômito, cotidiano trash e cultura pop, repetindo o repertório inicial sob a aparência de novidade. A “frase do mês” e a “música do mês”, de tom satírico, reforçam a crítica à figura do intelectual brasileiro e à espetacularização literária em eventos como a Feira de Paraty.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LONZA, Furio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BALZAC, Honoré de",
+      "BROWNING, Elizabeth",
+      "CAMUS, Albert",
+      "CARPENTER, Karen",
+      "CASSAVETES, John",
+      "DOSTOIÉVSKI, Fiódor",
+      "FLAUBERT, Gustave",
+      "MCCULLERS, Carson",
+      "PLATH, Sylvia",
+      "STENDHAL",
+      "WEILL, Kurt",
+      "WHARTON, Edith"
+    ],
+    "palavras_chave": [
+      "Cultura",
+      "Literatura",
+      "Mídia",
+      "Identidade",
+      "Dadaísmo",
+      "Comunicação"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (abertura da seção \"Resenhas e Notas\"), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-02T23:52:29.256864",
+    "_id": "1764730349256",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "21 de 33",
+    "ordem_exibicao": 22,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "Abstração",
+    "subtitulo_artigo": "vanguarda e parnasianismo em Jacques Roubaud",
+    "paginas": "p.126-129",
+    "resumo": "O texto apresenta Jacques Roubaud como um importante poeta francês contemporâneo, ligado ao grupo experimental OuLiPo, com obra vasta e traduzida em várias línguas, e situa o livro Quelque chose noir (traduzido como Algo: Preto) no contexto biográfico da morte da esposa, a fotógrafa Alix Cleo Roubaud. Régis Bonvicino comenta a edição brasileira, mediada pela tradutora Inês Oseki-Depré, que enfatiza o caráter vanguardista do livro e a articulação entre tradição (trovadores, poesia japonesa) e experimentação formal, mas lê o resultado em português como decepcionante. A crítica central de Bonvicino é que o poema, composto em prosa fragmentária com poucos versos, assume um tom “abstratizante”, subjetivo e por vezes kitsch, com imagética excessiva, frases filosofantes vagas e uso reiterado da segunda pessoa (“tu”), o que produz um efeito pretensamente elevado que dilui a materialidade da experiência do luto. Ao analisar o fragmento “Pexa e Hirsuta”, que mobiliza Dante e um jogo semântico com “hirsuto” (pedregulho / pelos), ele reconhece um dos melhores momentos do livro, em que a ausência se converte em nomeação, mas considera que a tentativa de conciliar tradição e vanguarda fracassa pela sobrecarga intelectualizante. Bonvicino admite alguns bons poemas, sobretudo quando Roubaud abandona a prosa ensaística e se aproxima de um despojamento à la Robert Creeley, como em “Luz, por exemplo”, mas conclui que Algo: Preto não é o livro que revela, em português, a importância de Roubaud como poeta.",
+    "nota_edicao": "ROUBAUD, Jacques. \"Algo: Preto\", Perspectiva, 2005",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ROUBAUD, Jacques",
+      "QUENEAU, Raymond",
+      "LE LIONNAIS, François",
+      "CALVINO, Ítalo",
+      "PAZ, Octavio",
+      "SANGUINETTI, Edoardo",
+      "TOMLINSON, Charles",
+      "OSEKI-DEPRÉ, Inês",
+      "ROUBAUD, Alix Cleo",
+      "WITTGENSTEIN, Ludwig",
+      "ALIGHIERI, Dante",
+      "CREELEY, Robert"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Vanguarda",
+      "Tradução",
+      "Erotismo",
+      "Morte"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ROUBAUD, Jacques"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:03:46.701960",
+    "notas_pesquisa": [],
+    "_id": "1764730960802"
+  },
+  {
+    "n": "8-9",
+    "registro": "22 de 33",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "DEPOIMENTO",
+    "titulo_artigo": "O dr. Lucio e o dr. Guimarães",
+    "subtitulo_artigo": "um testemunho",
+    "paginas": "p.130-134",
+    "resumo": "O texto é um testemunho de Maria Elisa Costa sobre a relação entre Lucio Costa e o engenheiro Augusto Guimarães Filho e sobre o papel decisivo deste na realização de Brasília. A autora articula lembranças pessoais (da chegada de Guimarães à casa da família após a morte de sua mãe, e da confiança que o pai depositou nele para cuidar dos assuntos práticos de sua própria morte) com trechos do depoimento que Guimarães deu no centenário de Lucio, em 2002. Nesse depoimento, o engenheiro destaca a magnanimidade, a modéstia e a inteligência de Lucio, narra como trabalhou com ele no projeto do Banco Aliança e relata o espanto sucessivo ao descobrir, pelo jornal, que o amigo havia vencido o concurso do Plano Piloto, ao saber que Lucio elaborara sozinho toda a apresentação do projeto e, por fim, ao ser convidado para chefiar a Divisão de Urbanismo da Novacap, tornando-se sua “segunda pessoa”. Menciona ainda o gesto simbólico de Lucio ao datar a planta como 10 de março, dia da morte da esposa Julieta, marcando a presença dela no encerramento de seu maior projeto. A partir desse percurso, Maria Elisa argumenta que ninguém além de Guimarães teria reunido as condições singulares para conduzir a implantação de Brasília: objetividade de engenheiro somada à sensibilidade de arquiteto, interesse antigo pela arquitetura moderna, apoio à mudança da capital e, sobretudo, um vínculo afetivo e uma lealdade que lhe permitiam defender Brasília com bravura, dialogar de igual para igual com Juscelino, Israel Pinheiro e outros, comandar uma equipe jovem e lidar com imprevistos sem perder a serenidade. Ela sublinha o trabalho minucioso, “de bastidor”, feito com prancheta, Facit manual e cálculos ponto a ponto de curvas de nível, terraplenos, vias, parcelamentos e edifícios, e mostra como, apenas tardiamente, Guimarães sai da sombra para registrar sua experiência no livro A Propósito de Brasília. Nesse manuscrito, ela reconhece nele não só o engenheiro arguto descrito por Lucio, mas um verdadeiro historiador, capaz de inserir Brasília no longo processo da formação brasileira, ligando caminhos de tropa do século XVIII, Cidade Livre, solidariedades anônimas e o gesto moderno de “recuperar o Brasil pelo Brasil”. O texto encerra retomando a frase de Darcy Ribeiro sobre o “bom humor” de Deus ao juntar JK, Israel, Lucio e Oscar, acrescentando que a mesma sorte se manifesta quando Lucio, ainda nos anos 1940, reconhece em Guimarães, no ambiente frio da construtora, uma presença humana excepcional.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "COSTA, Maria Elisa"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "COSTA, Lucio",
+      "GUIMARÃES FILHO, Augusto",
+      "PINHEIRO, Israel",
+      "MELLO FRANCO DE ANDRADE, Rodrigo",
+      "PORTINARI, Cândido",
+      "COSTA, Julieta Modesto Guimarães",
+      "TEIXEIRA, Anísio",
+      "KUBITSCHEK, Juscelino",
+      "RIBEIRO, Darcy",
+      "NIEMEYER, Oscar"
+    ],
+    "palavras_chave": [
+      "Brasília",
+      "Urbanismo",
+      "Arquitetura",
+      "Memória",
+      "Engenharia",
+      "História"
+    ],
+    "nome_pessoal_como_assunto": [
+      "COSTA, Lucio",
+      "GUIMARÃES FILHO, Augusto"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Lucio Costa e Augusto Guimarães Filho\", retrato em preto e branco dos dois profissionais sorrindo, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-03T00:12:39.604849",
+    "_id": "1764731559604",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "23 de 33",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Louis Zukofsky",
+    "subtitulo_artigo": "",
+    "paginas": "p.135-137",
+    "resumo": "Texto de apresentação da figura e da poética do escritor norte-americano Louis Zukofsky (1904-1978). Discute a invenção e a função do termo \"objetivismo\", associado a ele e a outros poetas como William Carlos Williams, a partir de uma edição da revista Poetry em 1931. Apresenta a definição da poética objetivista segundo Robert Creeley, que vê a poesia como evidência de sua própria atividade, sem referência externa ou sistema, identificando-a com a experiência corporal e o material musical. Contrasta essa visão com a prática imagista de Ezra Pound, outro poeta com quem Zukofsky dialogou. O texto também comenta a prática de Zukofsky de parafrasear textos canônicos, como o Livro de Zacarias, exemplificada no trecho de \"A\" 12 publicado, e conclui caracterizando o objetivismo como um hiper-realismo e antiabstracionismo que busca a presença no mundo material.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SABINSON, Eric Mitchell"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ZUKOFSKY, Louis",
+      "MONROE, Harriet",
+      "CREELEY, Robert",
+      "POUND, Ezra",
+      "WILLIAMS, William Carlos",
+      "ALLEN, Donald",
+      "TALMAN, Warren",
+      "ZACARIAS"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Estética",
+      "Modernismo",
+      "Vanguarda",
+      "Estados Unidos",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ZUKOFSKY, Louis"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:13:46.791336",
+    "_id": "1764731626791",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "24 de 33",
+    "ordem_exibicao": 25,
+    "idioma_01": "ING",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "De \"A\" 12",
+    "subtitulo_artigo": "",
+    "paginas": "p.138-153",
+    "resumo": "Trecho do poema \"DE 'A' 12\", de Louis Zukofsky, apresentado na sua 12ª parte. O texto poético apresenta uma paráfrase de visões do profeta Zacarias (cavaleiros e carruagens de cores simbólicas, o chamado do \"RAMO\") intercalada com reflexões metafísicas e epistemológicas sobre a natureza dos corpos, da imaginação, do tempo e do espaço. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ZUKOFSKY, Louis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "SABINSON, Eric Mitchell"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:16:05.170010",
+    "_id": "1764731765170",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "25 de 33",
+    "ordem_exibicao": 26,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Uma definição de poesia",
+    "subtitulo_artigo": "",
+    "paginas": "p.154-160",
+    "resumo": "Ensaio teórico de Louis Zukofsky no qual o autor propõe e desenvolve uma definição de poesia como \"uma ordem de palavras que, enquanto movimento e tom (ritmo e altura), aproxima-se em graus variados da arte não-verbal da música\". A partir dessa premissa, o texto investiga a relação da poesia com a existência cotidiana, a história e a cultura, traçando exemplos desde os antigos poemas egípcios e Homero até poetas modernos. Zukofsky analisa sistematicamente os meios (palavras derivadas dos sentidos e do pensamento) e objetos (poemas) da poesia, detalhando seus três componentes principais: imagem, som e jogo de conceitos. O ensaio também discute questões de técnica poética, métrica, prosódia e a relação entre forma e conteúdo, argumentando que a força de um poema reside em sua maestria técnica e na precisão da informação que transmite sobre a existência.  Zukofsky  afirma, no fim, a constância dos fundamentos da poesia ao longo dos séculos e incentivando a leitura direta dos poemas como forma de conhecimento.",
+    "nota_edicao": "Louis Zukofsky, 'A Statement for Poetry', em The Poetics of the New American Poetry, Editado por Donald Allen & Warren Tallman, New York, Grove Press, 1973, pp. 1.p-146 (Tradução: Alan Siqueira e Eric Mitchell Sabinson Revisão: Renato Marques de Oliveira)",
+    "autores_colaboradores": [
+      "ZUKOFSKY, Louis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "SIQUEIRA, Alan",
+      "SABINSON, Eric Mitchell",
+      "OLIVEIRA, Renato Marques"
+    ],
+    "autores_citados": [
+      "HARDY, George",
+      "YUKAWA, Hideki",
+      "ARISTÓTELES",
+      "HOMERO",
+      "LUCREZIO",
+      "BACH, Johann Sebastian",
+      "LONGINO",
+      "SHAKESPEARE, William",
+      "MILTON, John",
+      "CAMPION, Thomas",
+      "PURCELL, Henry",
+      "JOHNSON, Robert",
+      "ARNE, Thomas",
+      "BURNS, Robert",
+      "DONNE, John",
+      "MARVELL, Andrew",
+      "HEBERT, George",
+      "ROCHESTER, Lorde",
+      "FITZGERALD, Edward",
+      "ELIOT, T. S.",
+      "SIDNEY, Philip",
+      "ALLEN, Donald",
+      "TALLMAN, Warren",
+      "ODISSEU"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Poética",
+      "Teoria Literária",
+      "Estética",
+      "Tradução",
+      "História"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ZUKOFSKY, Louis"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:26:18.889659",
+    "_id": "1764732378889",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "26 de 33",
+    "ordem_exibicao": 27,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA - Literatura",
+    "titulo_artigo": "Louis Zukofsky",
+    "subtitulo_artigo": "Tudo",
+    "paginas": "p.161-165",
+    "resumo": "Resenha de Robert Creeley sobre a coletânea de poemas curtos de Louis Zukofsky, \"All: The Collected Short Poems, 1923-1958\". Creeley centra sua análise na poética objetivista de Zukofsky, definida pela ideia de que \"o que é dito diz o que é dito'\", recusando uma dimensão externa ou discursiva ('sobre') ao poema. O resenhista examina essa premissa através de poemas específicos como \"Poem beginning 'The'\", \"29 Songs\" e \"Mantis\", destacando o tratamento da forma (como a sextina em \"Mantis\") como presença íntima e necessária, não como ornamento. A resenha também situa Zukofsky em relação a outros poetas como Ezra Pound (a quem dedica o \"Guide to Kulchur\"), William Carlos Williams e Basil Bunting, e reflete sobre a concepção zukofskiana de poesia como integração de \"imagem, som e intelecção\". Inclui a tradução de um poema breve de Zukofsky, \"Anew (36)\", e uma nota do tradutor sobre questões de versão.",
+    "nota_edicao": "Louis Zukofsky: All: The Collected Short Poems, 1923-1958, New York, Grove Press, 1973",
+    "autores_colaboradores": [
+      "CREELEY, Robert"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BARRETO, Gabriela",
+      "MARQUES, Renato",
+      "SABINSON, Eric Mitchell"
+    ],
+    "autores_citados": [
+      "ZUKOFSKY, Louis",
+      "WILLIAMS, William Carlos",
+      "EMPSON, William",
+      "POUND, Ezra",
+      "BUNTING, Basil",
+      "DANTE",
+      "ALLEN, Donald",
+      "TALMAN, Warren",
+      "DAVI"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Poética",
+      "Objetivismo",
+      "Crítica",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ZUKOFSKY, Louis"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:30:48.501416",
+    "_id": "1764732648501",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "27 de 33",
+    "ordem_exibicao": 28,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Tu, minha anta, HH",
+    "subtitulo_artigo": "",
+    "paginas": "p.166-169",
+    "resumo": "Ensaio crítico de Alcir Pécora e João Adolfo Hansen que analisa o projeto literário de Hilda Hilst (HH). Os autores argumentam que, em um mundo onde nada é sagrado, a obscenidade e o sacrilégio na obra de Hilst são gestos histriônicos que desmontam a \"Regra\" (Deus, a Lei, a Gramática). Por meio do rebaixamento ostensivo, da exacerbação do \"baixo\" corporal (sexo, excremento, animalidade) e de uma \"incontinência verbivocossexual\", sua escrita recusa qualquer sublimação ou heroísmo, evidenciando a farsa global. O texto examina como essa prática desterritorializante configura uma \"utopia de uma vida fora da Lei\", onde animalidade e loucura figuram uma liberdade impossível. Os autores analisam a tríade álcool-sexo-literatura em Hilst como método de estudo da inconsciência e do nada, e discutem a inversão perversa entre letra e corpo, onde a obscenidade da escrita contesta a sexualidade da lei. O ensaio situa a radicalidade de Hilst na literatura brasileira, relacionando-a a heranças de Clarice Lispector e Guimarães Rosa, e a define como uma poesia que só se eleva afundando-se no lixo, sendo a consciência do inferno a única poesia possível.",
+    "nota_edicao": "Posfácio recusado por Hilda Hilst para Estar Sendo! Ter Sido, de Hilda Hilst",
+    "autores_colaboradores": [
+      "PÉCORA, Alcir",
+      "HANSEN, João Adolfo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "HILST, Hilda",
+      "JOYCE, James",
+      "VIEIRA, Antônio",
+      "LISPECTOR, Clarice",
+      "ROSA, Guimarães",
+      "ARISTÓTELES",
+      "PETRARCA",
+      "VITTORIO"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Erotismo",
+      "Obscenidade",
+      "Religião",
+      "Linguagem",
+      "Utopia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "HILST, Hilda"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:32:34.140798",
+    "_id": "1764732754140",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "28 de 33",
+    "ordem_exibicao": 29,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Jakob van Hoddis e Wilhelm Klemm",
+    "subtitulo_artigo": "Leituras e traduções de Mário de Andrade",
+    "paginas": "p.170-171",
+    "resumo": "Texto de apresentação de Rosângela Asche de Paula e Telê Ancona Lopez sobre a pesquisa das leituras e práticas tradutórias de Mário de Andrade voltadas para a poesia expressionista alemã. As autoras focam no exemplar da antologia \"Menschheitsdämmerung\" (organizada por Kurt Pinthus, 1920) pertencente à biblioteca do escritor brasileiro, destacando sua raridade (por ter sido alvo da queima de livros nazista) e o valor dos manuscritos marginais deixados por Mário, que incluem traduções e esboços de versos próprios em 109 poemas. O ensaio contextualiza historicamente a antologia e dois de seus poetas: Jakob van Hoddis (autor de \"Weltende\", considerado marco inicial do expressionismo poético) e Wilhelm Klemm (autor de \"Meine Zeit\"), fornecendo breves biografias que destacam a perseguição sofrida pelo regime nazista. O texto anuncia a publicação das traduções desses dois poemas, realizadas a partir dos esboços de Mário de Andrade complementados pelas autoras.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PAULA, Rosângela Asche de",
+      "LOPEZ, Telê Ancona"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "ANDRADE, Mário de",
+      "PINTHUS, Kurt",
+      "HODDIS, Jakob van",
+      "DAVIDSON, Hans",
+      "KLEMM, Wilhelm",
+      "BRAZIL, Felix"
+    ],
+    "palavras_chave": [
+      "Tradução",
+      "Vanguarda",
+      "Expressionismo",
+      "Poesia",
+      "Literatura Comparada",
+      "História"
+    ],
+    "nome_pessoal_como_assunto": [
+      "ANDRADE, Mário de"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-03T00:35:42.806255",
+    "_id": "1764732942806",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "29 de 33",
+    "ordem_exibicao": 30,
+    "idioma_01": "ALE",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "O fim do mundo",
+    "subtitulo_artigo": "",
+    "paginas": "p.172-173",
+    "resumo": "Poema \"O fim do mundo\" (\"Weltende\"), de Jakob van Hoddis, em tradução para o português por Mário de Andrade, Rosângela Asche de Paula e Telê Ancona Lopez. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "HODDIS, Jakob van"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ANDRADE, Mário de",
+      "PAULA, Rosângela Asche de",
+      "LOPEZ, Telê Ancona"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Fac-símile",
+        "descricao": "\"Weltende\", (poema original alemão), de Jakob van Hoddis, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-03T00:41:48.386296",
+    "_id": "1764733308386",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "8-9",
+    "registro": "30 de 33",
+    "ordem_exibicao": 31,
+    "idioma_01": "ALE",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Meu tempo",
+    "subtitulo_artigo": "",
+    "paginas": "p.174-175",
+    "resumo": "Poema \"Meu tempo\" (\"Meine Zeit\"), de Wilhelm Klemm, em tradução para o português por Mário de Andrade, Rosângela Asche de Paula e Telê Ancona Lopez. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "KLEMM, Wilhelm"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ANDRADE, Mário de",
+      "PAULA, Rosângela Asche de",
+      "LOPEZ, Telê Ancona"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Fac-símile",
+        "descricao": "\"Meine Zeit\", (poema original alemão), de Wilhelm Klemm, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-03T00:44:18.445909",
+    "_id": "1764733458445",
     "notas_pesquisa": []
   }
 ]
