@@ -14888,5 +14888,584 @@
     "_timestamp": "2025-12-04T16:23:06.871454",
     "notas_pesquisa": [],
     "_id": "1764876008535"
+  },
+  {
+    "n": "11",
+    "registro": "1 de 17",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "2",
+    "resumo": "Trabalho de Susan Bee, especialmente para este número de Sibila",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BEE, Susan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Arte em colagem de Susan Bee, especialmente para este número de Sibila, sem título."
+      }
+    ],
+    "_timestamp": "2025-12-04T16:34:14.087269",
+    "notas_pesquisa": [],
+    "_id": "1764876803693"
+  },
+  {
+    "n": "11",
+    "registro": "0 de 17",
+    "ordem_exibicao": 1,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Capa",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "Capa da revista Sibila, número 11, publicada em 2006 (Ano 6), com o tema \"Poesias: Poesia em Tempo de Guerra e Banalidade\". A edição destaca colaborações de Roberto Piva, Eduardo Milán, Leevi Lehto, Yao Feng, Arkadii Dragomoshchenko, Paulo Henriques Britto, Charles Bernstein e Nuno Ramos. A identidade visual conta com trabalhos de Susan Bee.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Arte de Susan Bee, especialmente para este número de Sibila"
+      }
+    ],
+    "_timestamp": "2025-12-04T16:33:52.703584",
+    "_id": "1764876832703",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "2 de 17",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "Editorial",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-9",
+    "resumo": "Editorial apresentando as mudanças na gestão da revista Sibila, agora tripartite com Régis Bonvicino, Alcir Pécora e Charles Bernstein, além da colaboração de Odile Cisneros. Relata a migração para a Martins Editora e a criação do site da revista. O texto contextualiza o seminário \"Poesia em tempo de guerra e banalidade\", realizado no Espaço Cultural CPFL, que reuniu poetas internacionais e brasileiros como Arkadii Dragomoshchenko, Eduardo Milán, Leevi Lehto, Yao Feng, Roberto Piva, Nuno Ramos e Paulo Henriques Britto. O editorial descreve o conteúdo da edição como resultado deste encontro, abordando questões de tradução, subjetividade e procedimentos poéticos, além de mencionar a publicação de Gustavo Caso Rosendi e as séries visuais de Zaven Paré e José Eduardo Barros.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "PÉCORA, Alcir",
+      "BERNSTEIN, Charles",
+      "CISNEROS, Odile",
+      "MARTINS FONTES, Evandro",
+      "DRAGOMOSHCHENKO, Arkadii",
+      "MILÁN, Eduardo",
+      "LEHTO, Leevi",
+      "FENG, Yao",
+      "PIVA, Roberto",
+      "RAMOS, Nuno",
+      "BRITTO, Paulo Henriques",
+      "RODRIGUES, Augusto",
+      "CASO ROSENDI, Gustavo",
+      "PARÉ, Zaven",
+      "BARROS, José Eduardo"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Guerra",
+      "Tradução",
+      "Literatura",
+      "Artes Plásticas",
+      "Fotografia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:37:59.711347",
+    "_id": "1764877079711",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "3 de 17",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "RUS",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-25",
+    "resumo": "Conjunto de poemas de Arkadii Dragomoshchenko: \"O vento esculpiu\", \"O papel sonha\", \"Mas, como no corpo de qualquer um\" e \"15h30min\". [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DRAGOMOSHCHENKO, Arkadii"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BONVICINO, Régis",
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [
+      "ROTHENBERG, Gerome",
+      "GUITAT",
+      "LIVIANI",
+      "FREDERIQUE"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (ilustração de abertura à seção Poesia em tempo de guerra e banalidade: poemas), s/crédito, s/d"
+      },
+      {
+        "tipo": "Ilustração",
+        "descricao": "Ilustração como transição para os poemas de Eduardo Milán, p.34"
+      }
+    ],
+    "_timestamp": "2025-12-04T16:40:24.317975",
+    "notas_pesquisa": [],
+    "_id": "1764877165649"
+  },
+  {
+    "n": "11",
+    "registro": "4 de 17",
+    "ordem_exibicao": 5,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "VII cantos xamânicos",
+    "subtitulo_artigo": "",
+    "paginas": "p.26-32",
+    "resumo": "\"VII cantos xamânicos\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PIVA, Roberto"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "WILLIAMS, William Carlos",
+      "CREVEL, René",
+      "NERVAL, Gérard de",
+      "HOMERO"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:42:07.664113",
+    "_id": "1764877327664",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "5 de 17",
+    "ordem_exibicao": 6,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.34-53",
+    "resumo": "Poemas: \"El sí hierático de piedra-hidra, unos arios\" (O SIM hierático da pedra-hidra, uns ários), \"Trabajó de pájaro durante algunos años\" (Trabalhou como pássaro alguns anos), \"Hueso del asunto\" (O osso da coisa), \"No gastar lo que no hay en ganas\" (Não gastar o que não há em vontades), \"Mitopoética personal\" (Mitopoética pessoal), \"Seguir el hilo de un sonido insinuado\" (Seguir o fio de um som insinuado), \"Días de no creer palabra\" (Dias de não crer em palavra), \"Un relajamiento-gato, una crispación\" (Um relaxamento-gato, uma crispação) e \"Homenaje no al hacer\" (Homenagem não ao fazer). [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MILÁN, Eduardo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile",
+      "PÉCORA, Alcir"
+    ],
+    "autores_citados": [
+      "AMARU, Tupac",
+      "THOREAU, Henry David"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:45:01.702645",
+    "_id": "1764877501702",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "6 de 17",
+    "ordem_exibicao": 7,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Anatomia geografia",
+    "subtitulo_artigo": "",
+    "paginas": "p.54-61",
+    "resumo": "Série de imagens (reproduções) do artista Zaven Paré, intitulada \"Anatomia geografia\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PARÉ, Zaven"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "s/título, da série \"Anatomia geografia\", por Zaven Paré, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T16:46:56.526440",
+    "_id": "1764877616526",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "7 de 17",
+    "ordem_exibicao": 8,
+    "idioma_01": "FIN",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.62-75",
+    "resumo": "Poemas: \"Mykkä ja verhottu suu\" (A boca muda e velada), \"Ääninen\" (Lago Onega), \"Suomalaiset kommunistit Itä-Karjalassa\" (Os comunistas finlandeses em Karélia do Leste) e \"Ihan toinen iankaikkisuus\" (Fragmentos de Bem outra eternidade). [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LEHTO, Leevi"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "LINTULAHTI OLANDIM, Marja Elisabeth",
+      "CISNEROS, Odile",
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [
+      "PUSHKIN, Alexander",
+      "FAULKNER, William",
+      "LENIN, Vladimir",
+      "SOULAGES, Pierre",
+      "KAFKA, Franz"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:48:25.015582",
+    "_id": "1764877705015",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "8 de 17",
+    "ordem_exibicao": 9,
+    "idioma_01": "CHI",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.76-93",
+    "resumo": "Poemas: \"狼来了\" (O lobo e as ovelhas), \"为大平煤矿死难者而写\" (Para os mortos na Mina de Carvão Taping), \"白夜\" (Noite branca), \"阿姆斯特丹\" (Amsterdã), \"结局\" (Fim), \"长满青苔的石头\" (Uma pedra coberta de musgo), \"寂寞的雨\" (Chuva ao fim da tarde), \"三月\" (Março) e \"咸鱼\" (Peixe salgado). [Publicação bilíngue.]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FENG, Yao"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "FENG, Yao",
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [
+      "VAN GOGH, Vincent"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:49:02.215549",
+    "_id": "1764877742215",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "9 de 17",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Crepuscular",
+    "subtitulo_artigo": "",
+    "paginas": "p.94-99",
+    "resumo": "Poema intitulado \"Crepuscular\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BRITTO, Paulo Henriques"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:51:09.137826",
+    "_id": "1764877869137",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "10 de 17",
+    "ordem_exibicao": 11,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Trechos de \"O mau vidraceiro\"",
+    "subtitulo_artigo": "",
+    "paginas": "p.100-109",
+    "resumo": "Trechos da obra \"O mau vidraceiro\": \"Deusa gorda\", \"Autorização\", \"Minha montanha\", \"Quem ele é\", \"Merda\" e \"Quem fala?\" (subdividido em \"O discurso do búfalo\", \"A resposta\", \"A réplica\", \"A tréplica\", \"O discurso da\" e \"A tréplica, de novo\").",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "RAMOS, Nuno"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:53:21.577510",
+    "_id": "1764878001577",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "11 de 17",
+    "ordem_exibicao": 12,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Manchas na pele, linguagem",
+    "subtitulo_artigo": "",
+    "paginas": "p.110-122",
+    "resumo": "Ensaio poético em que Nuno Ramos articula uma fenomenologia do corpo em envelhecimento com uma teoria da origem da linguagem. Partindo da observação de marcas dermatológicas e da autonomia fisiológica como signos da finitude, o autor desenvolve uma alegoria sobre a cisão entre a experiência física muda e a ferramenta linguística. O texto propõe hipóteses genealógicas sobre a fala humana, contrapondo uma \"comunidade de doentes\" que inventou a linguagem como consolo à figura dos \"heróis mudos\" extintos, e sugere a anterioridade hipotética de uma \"linguagem matérica\" perdida em um cataclismo, onde o próprio mundo físico constituía um texto legível. [Trecho do livro Ó].",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "RAMOS, Nuno"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Linguagem",
+      "Tempo",
+      "Morte",
+      "Filosofia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T16:56:55.975812",
+    "_id": "1764878215975",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "12 de 17",
+    "ordem_exibicao": 13,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Miséria invisível",
+    "subtitulo_artigo": "",
+    "paginas": "p.123-125",
+    "resumo": "Série de imagens (reproduções) de José Eduardo Barros intitulada \"Miséria invisível\". As obras retratam fragmentos de corpos de moradores de rua com cobertores, mas deixando partes expostas.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BARROS, José Eduardo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Fotografia",
+      "Sociedade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Miséria invisível\", por José Eduardo Barros, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Miséria invisível\", por José Eduardo Barros, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Miséria invisível\", por José Eduardo Barros, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T16:58:46.320563",
+    "_id": "1764878326320",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "14 de 17",
+    "ordem_exibicao": 15,
+    "idioma_01": "ING",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "War stories / Histórias da guerra",
+    "subtitulo_artigo": "",
+    "paginas": "p.134-144",
+    "resumo": "Poema colaborativo de Charles Bernstein e Régis Bonvicino intitulado \"War stories / Histórias da guerra\". [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles",
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "JACKSON, Michael"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T17:01:39.169844",
+    "_id": "1764878499169",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "15 de 17",
+    "ordem_exibicao": 16,
+    "idioma_01": "ING",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Definitions of Brazil",
+    "subtitulo_artigo": "",
+    "paginas": "p.145-147",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles",
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T17:04:03.435204",
+    "_id": "1764878643435",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "16 de 17",
+    "ordem_exibicao": 17,
+    "idioma_01": "POR",
+    "idioma_02": "ING",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.148-160",
+    "resumo": "Poemas de Régis Bonvicino: \"It’s not looking great!\" (com tradução para o inglês de Charles Bernstein e Maria do Carmo Zanini), \"Duas linhas\", \"Azulejo\" (Blue tile, traduzido por Charles Bernstein) e \"Me transformo\" (com tradução homofônica para o finlandês, \"Metronsa armo\", de Leevi Lehto). [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNSTEIN, Charles",
+      "ZANINI, Maria do Carmo",
+      "LEHTO, Leevi"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T17:06:34.841669",
+    "_id": "1764878794841",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "17 de 17",
+    "ordem_exibicao": 18,
+    "idioma_01": "ESP",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Soldados",
+    "subtitulo_artigo": "",
+    "paginas": "p.161-165",
+    "resumo": "Trechos de um poema sobre a Guerra das Malvinas, enviados pelo autor (ex-soldado no conflito) para a revista Sibila: \"Trinchera\", \"Pase inglés\", \"Monte Longdon\", \"Gurkas\" e \"Cementerio Darwin\".",
+    "nota_edicao": "O autor lutou como soldado na Guerra das Malvinas.",
+    "autores_colaboradores": [
+      "CASO ROSENDI, Gustavo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "GELMAN, Juan"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (apresentação à seção Destradução), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T17:07:23.832846",
+    "_id": "1764878843832",
+    "notas_pesquisa": []
   }
 ]
