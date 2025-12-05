@@ -15467,5 +15467,1013 @@
     "_timestamp": "2025-12-04T17:07:23.832846",
     "_id": "1764878843832",
     "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "0 de 24",
+    "ordem_exibicao": 1,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CAPA",
+    "titulo_artigo": "Cuba hoje",
+    "subtitulo_artigo": "",
+    "paginas": "p.1",
+    "resumo": "",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"s/título\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T20:44:17.759170",
+    "notas_pesquisa": [],
+    "_id": "1764890664977"
+  },
+  {
+    "n": "12",
+    "registro": "1 de 24",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "ING",
+    "vocabulario_controlado": "EDITORIAL",
+    "titulo_artigo": "Editorial",
+    "subtitulo_artigo": "",
+    "paginas": "p.5-6",
+    "resumo": "Editorial em que a revista comunica o encerramento da edição impressa e a migração exclusiva para o formato eletrônico, citando os custos de produção e o desejo de incorporar a estética da internet. Segue-se uma notícia sobre o crescimento da base de internautas e do mercado de publicidade on-line no Brasil. [Publicação bilíngue]",
+    "nota_edicao": "Goodbye, paper! Electronic reviews are the way to go / Brasil deve atingir base de 37 milhões de internautas até o final de 2007",
+    "autores_colaboradores": [
+      "MOREIRA, Daniela"
+    ],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "VIANA, Lilian"
+    ],
+    "palavras_chave": [
+      "Comunicação",
+      "Mercado",
+      "Brasil",
+      "Publicidade"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T20:44:32.042372",
+    "notas_pesquisa": [],
+    "_id": "1764890854516"
+  },
+  {
+    "n": "12",
+    "registro": "2 de 24",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "A exploração da intempérie",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-23",
+    "resumo": "Entrevista com o artista plástico Alfonso García, realizada e traduzida por Marcelo Flores. O escultor discute sua formação, suas viagens a países como Nepal e Egito, e a influência das vanguardas artísticas (suprematismo, minimalismo) e de filósofos como Heidegger em sua obra. García aborda conceitos centrais de sua poética, como a \"negativização\" do objeto, a representação do \"Nada\" e seus estudos sobre a morte (tanatologia), além de analisar o panorama da arte contemporânea europeia e espanhola, citando obras próprias como \"Swayambhu\", \"Eidolón\" e a série \"Ensoñaciones\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GARCÍA, Alfonso",
+      "FLORES, Marcelo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "FLORES, Marcelo"
+    ],
+    "autores_citados": [
+      "BECKETT, Samuel",
+      "COVA, Orlando",
+      "HERNÁNDEZ, Celestino",
+      "MALEVICH, Kazimir",
+      "VERONA, Néstor",
+      "HEIDEGGER, Martin",
+      "SAIRAD, Sara",
+      "BENJAMIN, Walter",
+      "LESKOV, Nikolai",
+      "ELIOT, T. S.",
+      "NERUDA, Pablo",
+      "ALEIXANDRE, Vicente",
+      "CERNUDA, Luis",
+      "VALLEJO, César",
+      "MARTÍ, José",
+      "WHITMAN, Walt",
+      "PAZ, Octavio",
+      "DARÍO, Rubén",
+      "RULFO, Juan",
+      "PESSOA, Fernando",
+      "CORTÁZAR, Julio",
+      "BORGES, Jorge Luis",
+      "KAVAFIS, Constantino",
+      "GARCÍA LORCA, Federico",
+      "HILDEBRAND, Adolf von",
+      "RODIN, Auguste",
+      "BRANCUSI, Constantin",
+      "MOORE, Henry",
+      "CERNI, Aguilera",
+      "VAN DOESBURG, Theo",
+      "MONDRIAN, Piet",
+      "WESTERDAHL, Eduardo",
+      "FONTANA, Lucio",
+      "ANDRÉ, Carl",
+      "ARTSCHWAGER, Richard",
+      "DE MARIA, Walter",
+      "FLAVIN, Dan",
+      "JUDD, Donald",
+      "KELLY, Ellsworth",
+      "LEWITT, Sol",
+      "MORRIS, Robert",
+      "WOLHEIM, Richard",
+      "GIRALT-MIRACLE, Daniel",
+      "DUCHAMP, Marcel",
+      "BUCHLOH, Benjamin",
+      "PICASSO, Pablo",
+      "GARGALLO, Pablo",
+      "FERRAN",
+      "FERREIRA",
+      "OTEIZA, Jorge",
+      "CHILLIDA, Eduardo",
+      "GONZÁLEZ, Julio",
+      "CHIRINO, Martín",
+      "ABAD, Francesc",
+      "AGUILAR, Sergi",
+      "PLENSA, Jaume",
+      "CARO, Anthony",
+      "CALDER, Alexander",
+      "LÓPEZ, Reinaldo",
+      "LACAN, Jacques",
+      "FROST, Robert"
+    ],
+    "palavras_chave": [
+      "Escultura",
+      "Artes Plásticas",
+      "Vanguarda",
+      "Estética",
+      "Morte",
+      "Filosofia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "GARCÍA, Alfonso"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"SIBILA\", A. GARCÍA, 1987"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"VOLÁTIL 2\", A. GARCÍA, 2007"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "\"DETALHE DE VOLÁTIL 8\", A. GARCÍA, 2007"
+      }
+    ],
+    "_timestamp": "2025-12-04T20:52:14.764059",
+    "_id": "1764892334764",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "3 de 24",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.24-26",
+    "resumo": "Nota biográfica sobre o poeta vietnamita-americano Linh Dinh.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "DINH, Linh"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Abertura da Seção: POESIA\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Foto",
+        "descricao": "Fotografia (em cores) do poeta Linh Dinh, s/d, sem autoria"
+      }
+    ],
+    "_timestamp": "2025-12-04T20:54:39.882170",
+    "_id": "1764892479882",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "4 de 24",
+    "ordem_exibicao": 5,
+    "idioma_01": "ING",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.27-38",
+    "resumo": "Contém os poemas \"Selected translations\" (traduzido como \"Traduções seletas\") e \"Raw, windswept, capital, regulated\" (traduzido como \"Cru, levado pelo vento, capital, regulado\"). [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DINH, Linh"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ALFARANO, Regina",
+      "ZANINI, Maria do Carmo",
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T20:59:36.766268",
+    "_id": "1764892776766",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "5 de 24",
+    "ordem_exibicao": 6,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Alturas de Machu Pichu, V",
+    "subtitulo_artigo": "",
+    "paginas": "p.39",
+    "resumo": "Nota biográfica sobre o poeta chileno Pablo Neruda.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "NERUDA, Pablo"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:05:11.739287",
+    "notas_pesquisa": [],
+    "_id": "1764892874374"
+  },
+  {
+    "n": "12",
+    "registro": "6 de 24",
+    "ordem_exibicao": 7,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Alturas de Machu Picchu, V",
+    "subtitulo_artigo": "",
+    "paginas": "p.40-41",
+    "resumo": "Poema \"Alturas de Machu Picchu, V\", traduzido por Régis Bonvicino. [Publicação bilíngue]",
+    "nota_edicao": "Em Pablo Neruda, Alturas de Machu Picchu (Santiago, Chile, LOM, 2000)",
+    "autores_colaboradores": [
+      "NERUDA, Pablo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:02:31.986461",
+    "_id": "1764892951986",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "7 de 24",
+    "ordem_exibicao": 8,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Charcos de Blumenau",
+    "subtitulo_artigo": "",
+    "paginas": "p.42",
+    "resumo": "Apresentação biográfica do cineasta e poeta Sylvio Back.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "BACK, Sylvio"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:04:16.687616",
+    "_id": "1764893056687",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "8 de 24",
+    "ordem_exibicao": 9,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Charcos de Blumenau",
+    "subtitulo_artigo": "",
+    "paginas": "p.43-46",
+    "resumo": "Poema \"Charcos de Blumenau\".",
+    "nota_edicao": "Poema inédito, do livro Halos.",
+    "autores_colaboradores": [
+      "BACK, Sylvio"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:07:07.940112",
+    "_id": "1764893227940",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "9 de 24",
+    "ordem_exibicao": 10,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Poemas de óbitos",
+    "subtitulo_artigo": "",
+    "paginas": "p.47-49",
+    "resumo": "Apresentação biográfica do poeta, médico e ensaísta cubano Pedro Marqués de Armas, membro do grupo DIASPORAS e exilado em Portugal.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "ARMAS, Pedro"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Abertura da Seção: Toda essa gente à sombra de quê: cuba hoje\", s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T21:25:19.702768",
+    "notas_pesquisa": [],
+    "_id": "1764893402294"
+  },
+  {
+    "n": "12",
+    "registro": "10 de 24",
+    "ordem_exibicao": 11,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas de óbitos",
+    "subtitulo_artigo": "",
+    "paginas": "p.50-65",
+    "resumo": "Poemas de Pedro Armas: \"(crónica)\" (traduzido como \"(crônica)\"), \"LONGUE DURÉE\", \"“Por última vez psicología”\" (traduzido como \"“Pela última vez psicologia”\"), \"También tu\" (traduzido como \"também tu\"), \"vi puercos en el agua\" (traduzido como \"vi porcos na água\"), \"(claraboya)\" (traduzido como \"(clarabóia)\") e \"La nueva estirpe...\" (traduzido como \"A nova estirpe...\"). Traduções de Marcelo Flores e Jorge Melícias. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ARMAS, Pedro"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "FLORES, Marcelo",
+      "MELÍCIAS, Jorge"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:11:43.445414",
+    "_id": "1764893503445",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "11 de 24",
+    "ordem_exibicao": 12,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.66-67",
+    "resumo": "Apresentação biográfica do escritor, poeta e ensaísta cubano Rolando Sanchez Mejías. Sibila destaca sua obra literária, a fundação do grupo e da revista DIASPORAS, sua atuação crítica contra a censura em Cuba e seu exílio em Barcelona.",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "SANCHEZ MEJÍAS, Rolando"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:13:55.708982",
+    "_id": "1764893635709",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "12 de 24",
+    "ordem_exibicao": 13,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.68-75",
+    "resumo": "Poemas de Rolando Sanchez Mejías: \"Nocturno\" (traduzido como \"Noturno\") e \"Jardin zen de Kyoto\" (traduzido como \"Jardim zen de Kyoto\"). Tradução de Régis Bonvicino. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SANCHEZ MEJÍAS, Rolando"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:15:46.638651",
+    "_id": "1764893746638",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "13 de 24",
+    "ordem_exibicao": 14,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "Poemas curtos",
+    "subtitulo_artigo": "",
+    "paginas": "p.76",
+    "resumo": "Apresentação biográfica do poeta, prosador e crítico literário cubano Efraín Rodríguez Santana. O texto menciona obras como \"El hacha de miel\" e \"Un país de agua\", e introduz a série inédita \"Poemas cortos\", traduzida por Régis Bonvicino. ",
+    "nota_edicao": "Da série inédita \"Poemas cortos\".",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "RODRÍGUEZ SANTANA, Efraín"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:18:21.783844",
+    "_id": "1764893901783",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "14 de 24",
+    "ordem_exibicao": 15,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Poemas curtos",
+    "subtitulo_artigo": "",
+    "paginas": "p.77-84",
+    "resumo": "Poemas: \"Alambrada\" (traduzido como \"Cerca de arame\"), \"Mudos\" (traduzido como \"Mudos\"), \"Un no decir\" (traduzido como \"Um não dizer\") e \"El dedo indica\" (traduzido como \"O dedo indica\"). Tradução de Régis Bonvicino. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "RODRÍGUEZ SANTANA, Efraín"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BONVICINO, Régis"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:20:10.269293",
+    "_id": "1764894010269",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "15 de 24",
+    "ordem_exibicao": 16,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "APRESENTAÇÃO",
+    "titulo_artigo": "De Crítica da razão puta",
+    "subtitulo_artigo": "",
+    "paginas": "p.85",
+    "resumo": "Apresentação biográfica do poeta, ensaísta e tradutor cubano Omar Pérez. Sibila destaca obras como \"Algo de lo sagrado\" e \"Lingua franca\", dando relevância a fusão de sua poesia com o zen-budismo. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [],
+    "entidade_coletiva": [
+      "SIBILA"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [
+      "PÉREZ, Omar"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:25:49.317389",
+    "notas_pesquisa": [],
+    "_id": "1764894183828"
+  },
+  {
+    "n": "12",
+    "registro": "16 de 24",
+    "ordem_exibicao": 17,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "De Crítica da razão puta",
+    "subtitulo_artigo": "",
+    "paginas": "p.86-89",
+    "resumo": "Poemas: \"Los especialistas\" (traduzido como \"Os especialistas\") e \"Traducción y culpa\" (traduzido como \"Tradução e culpa\"). Tradução de Marcelo Flores. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PÉREZ, Omar"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "FLORES, Marcelo"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:24:30.225864",
+    "_id": "1764894270225",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "17 de 24",
+    "ordem_exibicao": 18,
+    "idioma_01": "ESP",
+    "idioma_02": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "De Lingua franca",
+    "subtitulo_artigo": "",
+    "paginas": "p.90-92",
+    "resumo": "Poemas: \"Apuntes persas\", \"Je chante pour moi même\" e \"Rigmarole\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PÉREZ, Omar"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:31:55.509905",
+    "_id": "1764894715509",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "18 de 24",
+    "ordem_exibicao": 19,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Um pintor negro em Cuba",
+    "subtitulo_artigo": "",
+    "paginas": "p.93-102",
+    "resumo": "Entrevista com o pintor cubano Reinaldo López, realizada por Marcelo Flores em Havana. O artista discute a influência das raízes negras e da santeria em sua obra, o ensino de artes plásticas em Cuba antes e depois da Revolução de 1959, e sua relação com a tradição modernista. López critica o elitismo cultural e comenta sobre o mercado de arte e a crítica em seu país (A conversa conta com intervenções de sua esposa, a antropóloga Martha Teresa Ximeno, e de seu filho, o poeta David López Ximeno).",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "LÓPEZ, Reinaldo",
+      "FLORES, Marcelo",
+      "XIMENO, Martha Teresa",
+      "LÓPEZ XIMENO, David"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "FLORES, Marcelo"
+    ],
+    "autores_citados": [
+      "LEYVA, José Ángel",
+      "CASTRO, Fidel",
+      "MELO NETO, João Cabral de",
+      "PICASSO, Pablo",
+      "LAM, Wifredo",
+      "DIAGO, Roberto",
+      "GARCÍA MÁRQUEZ, Gabriel",
+      "MIRÓ, Joan"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Negros",
+      "Cuba",
+      "Religião",
+      "Pintura",
+      "Modernismo"
+    ],
+    "nome_pessoal_como_assunto": [
+      "LÓPEZ, Reinaldo"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Foto",
+        "descricao": "\"Reinaldo López\", por Marcelo Flores, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"EMBARAZADAS\", R. LÓPEZ, s/crédito, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"SEM TÍTULO\", R. LÓPEZ, por Marcelo Flores, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"LA FLAUTA MÁGICA\", R. LÓPEZ, s/crédito, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"LA MÁSCAR\", R. LÓPEZ, s/crédito, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"TIMBICLETA\", R. LÓPEZ, s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-12-04T21:34:34.892888",
+    "_id": "1764894874892",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "19 de 24",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Política",
+    "titulo_artigo": "Retrato de família com Raúl",
+    "subtitulo_artigo": "",
+    "paginas": "p.103-108",
+    "resumo": "A autora traça um perfil crítico de Raúl Castro a partir de memórias pessoais de sua convivência com a família de Álvaro Prendes, oficial das Forças Armadas cubanas. O texto analisa a falta de carisma de Raúl em comparação a Fidel Castro, seu papel na execução do general Arnaldo Ochoa e as expectativas políticas em torno de sua sucessão, citando análises de Alcibíades Hidalgo sobre o caráter do dirigente.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MOREJÓN ARNAIZ, Idalia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "CISNEROS, Odile"
+    ],
+    "autores_citados": [
+      "FRANQUI, Carlos",
+      "CASTRO, Fidel",
+      "CASTRO, Raúl",
+      "GAGÁRIN, Yuri",
+      "GUEVARA, Che",
+      "PRENDES, Álvaro",
+      "BATISTA, Fulgencio",
+      "ESPÍN, Vilma",
+      "OCHOA, Arnaldo",
+      "XIAOPING, Deng",
+      "HIDALGO, Alcibíades",
+      "MARTÍ, José"
+    ],
+    "palavras_chave": [
+      "Cuba",
+      "Política",
+      "Revolução",
+      "Memória",
+      "Ditadura",
+      "Comunismo"
+    ],
+    "nome_pessoal_como_assunto": [
+      "CASTRO, Raúl"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:37:00.628266",
+    "_id": "1764895020628",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "20 de 24",
+    "ordem_exibicao": 21,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENTREVISTA",
+    "titulo_artigo": "Na questão de Cuba, o Brasil perde importância e voz por não ter dito o que devia dizer",
+    "subtitulo_artigo": "",
+    "paginas": "p.109-119",
+    "resumo": "Entrevista com o sociólogo e geógrafo Demétrio Magnoli, conduzida por Carlos Costa e Luísa Pécora. O entrevistado analisa a situação política de Cuba diante da doença de Fidel Castro e a sucessão de Raúl Castro, criticando a falta de posicionamento assertivo do governo Lula em relação ao bloqueio norte-americano e à ausência de liberdades na ilha. Magnoli discute a inviabilidade da aplicação do \"modelo chinês\" em Cuba, o papel da diáspora cubana, a dilapidação do capital social (infraestrutura) pós-revolução e o cenário geopolítico latino-americano com as figuras de Hugo Chávez e Evo Morales.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MAGNOLI, Demétrio",
+      "COSTA, Carlos",
+      "PÉCORA, Luísa"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SADER, Emir",
+      "CASTRO, Fidel",
+      "CASTRO, Raúl",
+      "OCHOA, Arnaldo",
+      "GUEVARA, Che",
+      "GAGÁRIN, Yuri",
+      "CABRERA INFANTE, Guillermo",
+      "CARPENTIER, Alejo",
+      "RODRÍGUEZ, Mariano",
+      "MARTINEZ, Raúl",
+      "BRUGUERA, Tania",
+      "TOIRAC, José",
+      "EIRIZ, Antonia",
+      "GUTIÉRREZ, Pedro Juan",
+      "BUSH, George W.",
+      "CHÁVEZ, Hugo",
+      "MORALES, Evo",
+      "LULA DA SILVA, Luiz Inácio",
+      "KIRSCHNER, Néstor",
+      "BOLÍVAR, Simón"
+    ],
+    "palavras_chave": [
+      "Cuba",
+      "Brasil",
+      "América Latina",
+      "Política",
+      "Relações Internacionais",
+      "Regime Político"
+    ],
+    "nome_pessoal_como_assunto": [
+      "MAGNOLI, Demétrio"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:39:27.238047",
+    "_id": "1764895167238",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "21 de 24",
+    "ordem_exibicao": 22,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Filosofia",
+    "titulo_artigo": "Pós-escrito sobre as sociedades de controle",
+    "subtitulo_artigo": "",
+    "paginas": "p.120-127",
+    "resumo": "Gilles Deleuze diagnostica a transição histórica das sociedades disciplinares (analisadas por Foucault) para as sociedades de controle. O autor argumenta que as instituições de confinamento (prisão, escola, fábrica) estão em crise e sendo substituídas por mecanismos de controle contínuo e modulação a céu aberto. O texto contrapõe a lógica do molde à da modulação, o indivíduo ao \"dividual\" e a fábrica à empresa, analisando a mutação do capitalismo para um modelo de serviços e sobreprodução, onde o marketing se torna o instrumento de controle social e a dívida substitui o confinamento.",
+    "nota_edicao": "Texto original em: Gilles Deleuze, Pourparlers 1972-90 (Paris, Minuit, 1990).",
+    "autores_colaboradores": [
+      "DELEUZE, Gilles"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "HANSEN, João Adolfo"
+    ],
+    "autores_citados": [
+      "FOUCAULT, Michel",
+      "BURROUGHS, William",
+      "VIRILIO, Paul",
+      "KAFKA, Franz",
+      "GUATTARI, Félix"
+    ],
+    "palavras_chave": [
+      "Filosofia",
+      "Sociedade",
+      "Política",
+      "Capitalismo",
+      "Tecnologia",
+      "Mercado"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:41:48.317390",
+    "_id": "1764895308317",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "22 de 24",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA",
+    "titulo_artigo": "León Ferrari versus Gregor Samsa",
+    "subtitulo_artigo": "",
+    "paginas": "p.128-136",
+    "resumo": "Resenha crítica do livro retrospectivo sobre o artista argentino León Ferrari na qual Régis Bonvicino estabelece um paralelo entre a obra de Ferrari e a literatura de Franz Kafka, interpretando a produção do artista como um confronto com a \"máquina operante\" da sociedade, similar aos labirintos de \"O Processo\" e à transformação de Gregor Samsa em \"A Metamorfose\". O texto analisa diversas obras, desde esculturas abstratas até colagens políticas e anti-religiosas como \"A justiça\", \"Jeová\" e \"Liquidificador\", destacando o ceticismo e a iconoclastia de Ferrari.",
+    "nota_edicao": "GIUNTA, Andrea (Org.). \"León Ferrari: Retrospectiva. Obras 1954-2006\", Cosacnaify/Pinacoteca do Estado/Imprensa Oficial, 2006",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SILVEIRA, Regina",
+      "PLAZA, Júlio",
+      "ZANINI, Walter",
+      "AMARAL, Aracy",
+      "LEMINSKI, Paulo",
+      "BALLESTRINI, Nanni",
+      "GIUNTA, Andrea",
+      "NOÉ, Luis Felipe",
+      "KAFKA, Franz",
+      "HELLER, Erich",
+      "ALBERTI, Rafael",
+      "WILLIAMS, William Carlos",
+      "TROUILLE, Clovis",
+      "BOSH, Jeronimus"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Política",
+      "Religião",
+      "Escultura",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [
+      "FERRARI, León"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Apresentação da seção resenhas e notas\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"História de minha morte\", LEÓN FERRARI, 1965"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Sem título\", LEÓN FERRARI, 1983"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Última ceia\", LEÓN FERRARI, 2000"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Jeová\", LEÓN FERRARI, 1989"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Homem\", LEÓN FERRARI, 1964"
+      }
+    ],
+    "_timestamp": "2025-12-04T21:48:59.438956",
+    "_id": "1764895739438",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "23 de 24",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Verso introjetivo",
+    "subtitulo_artigo": "",
+    "paginas": "p.137-141",
+    "resumo": "Charles Bernstein dialoga com o manifesto \"Projective Verse\" de Charles Olson (1950) por meio de uma série de inversões satíricas e críticas. O autor propõe o \"verso introjetivo\" ou \"centrípeto\", caracterizado pela \"malcomposição\", pela inutilidade e pela recusa da respiração como medida do verso. O texto foi escrito em resposta a um pedido dos editores Pierre Alferi e Olivier Cadiot, questionando a masculinidade da poética de Olson e defendendo uma estética do desimportante, onde a forma é uma \"extensão do descontente\".",
+    "nota_edicao": "Em Charles Bernstein, My way: speeches and poems (Chicago, University of Chicago, 1999).",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ZANINI, Maria do Carmo"
+    ],
+    "autores_citados": [
+      "BERNSTEIN, Charles",
+      "OLSON, Charles",
+      "ALFERI, Pierre",
+      "CADIOT, Olivier",
+      "WILDE, Oscar",
+      "CLEASE",
+      "BRUCE",
+      "BALL"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Linguagem",
+      "Cultura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:51:53.965899",
+    "_id": "1764895913965",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "24 de 24",
+    "ordem_exibicao": 25,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Irrelevância social e cânones autogerados",
+    "subtitulo_artigo": "do século XX rumo à poesia neo-italiana",
+    "paginas": "p.142-152",
+    "resumo": "Ensaio de Stela trata sobre a crise do \"mandato social\" da poesia e a fragmentação do cânone literário contemporâneo, a partir das análises de Guido Mazzoni em \"La poesia moderna\", no qual discute a perda de poder simbólico da poesia para a música pop e rock, a proliferação de \"cânones autogerados\" por grupos de pressão editorial e a emergência de uma poesia neo-italiana de migração. O texto analisa ainda as teorias de Harold Bloom, Pierre Bourdieu e Cesare Segre sobre a formação da canonicidade, defendendo a existência de um cânone implícito baseado na polifuncionalidade das obras.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "STELLA, Francesco"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNARDINI, Aurora"
+    ],
+    "autores_citados": [
+      "MAZZONI, Guido",
+      "BENJAMIN, Walter",
+      "BOURDIEU, Pierre",
+      "GIOVANARDI, Stefano",
+      "MALLARMÉ, Stéphane",
+      "APOLLINAIRE, Guillaume",
+      "CARDUCCI, Giosuè",
+      "D’ANNUNZIO, Gabriele",
+      "UNGARETTI, Giuseppe",
+      "PASOLINI, Pier Paolo",
+      "LUZI, Mario",
+      "MENGALDO, Pier Vincenzo",
+      "AFRIBO, Andrea",
+      "GRÄF, Dieter",
+      "GRAHAM, Jorie",
+      "YOSHIMASU, Gozo",
+      "BONNEFOY, Yves",
+      "FOSTIRERIS, Antonis",
+      "MUNARRIZ, José",
+      "MIKOLAJEWSKI, Jaroslaw",
+      "ALEXANDER, Mecna",
+      "BLOOM, Harold",
+      "KERMODE, Frank",
+      "LEOPARDI, Giacomo",
+      "HEANEY, Seamus",
+      "MCCARTNEY, Paul",
+      "CORTELLESSA, Andrea",
+      "PELLINI, Pierluigi",
+      "RICCARDI, Antonio",
+      "MUSSAPI, Roberto",
+      "SARTO, DEL",
+      "DE ANGELIS, Milo",
+      "MAGRELLI, Valerio",
+      "CELAN, Paul",
+      "DEIDIER, Roberto",
+      "GUGLIELMI, Guido",
+      "SHEFFY, Rakefet",
+      "EVEN-ZOHAR, Itamar",
+      "RE, Lucia",
+      "LECOMTE, Mia",
+      "VON HALLBERG, Robert",
+      "SMITH, Barbara Herrnstein",
+      "SEGRE, Cesare",
+      "LOTMAN, Jurij",
+      "USPENSKIJ, Boris"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cânone Literário",
+      "Crítica",
+      "Sociedade",
+      "Música"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:53:23.986385",
+    "_id": "1764896003986",
+    "notas_pesquisa": []
   }
 ]
