@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Script principal do aplicativo NELIC
+# Sistema NELIC - Desenvolvimento 3.0
+
+# Obtém o diretório raiz do projeto (2 níveis acima de MacOS)
+APP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd ../../.. && pwd )"
+
+# Navega para o diretório do projeto
+cd "$APP_DIR"
+
+# Ativa o ambiente virtual se existir
+if [ -d "venv" ]; then
+    source venv/bin/activate
+fi
+
+# Abre o Terminal para mostrar o progresso
+osascript <<EOF
+tell application "Terminal"
+    activate
+    do script "cd '$APP_DIR' && echo '🚀 Iniciando Sistema NELIC - Desenvolvimento 3.0...' && echo '📍 Diretório: $APP_DIR' && echo '🌐 Abrindo em: http://localhost:8502' && echo '' && echo '⚠️  Para encerrar, pressione Ctrl+C' && echo '' && streamlit run sibila_code_21.py --server.port 8502 --browser.gatherUsageStats false"
+end tell
+EOF
