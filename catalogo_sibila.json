@@ -1157,6 +1157,33 @@
   },
   {
     "n": "1",
+    "registro": "9 de 35",
+    "ordem_exibicao": 10,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.30-33",
+    "resumo": "Conjunto de poemas de Cecilia Vicuña: \"Con un cuadernito en el Met\" (traduzido como \"Com um caderninho no Met\") e \"Lino\" (traduzido como \"Linho\"). Tradução de Orfa Carneiro Reis. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "VICUÑA, Cecilia"
+    ],
+    "tradutores": [
+      "REIS, Orfa Carneiro"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:05:23.232000",
+    "notas_pesquisa": [],
+    "_id": "1764896723232"
+  },
+  {
+    "n": "1",
     "registro": "10 de 35",
     "ordem_exibicao": 11,
     "idioma_01": "ING",
@@ -1495,6 +1522,31 @@
     "_timestamp": "2025-11-25T16:35:29.759376",
     "_id": "1764099329759",
     "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "19 de 35",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "DOIS POEMAS",
+    "subtitulo_artigo": "",
+    "paginas": "p.84",
+    "resumo": "Conjunto de poemas de Jorge Melícias: \"O braço...\" e \"A vara cantada ao longo dos dedos,...\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MELÍCIAS, Jorge"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:07:45.224000",
+    "notas_pesquisa": [],
+    "_id": "1764896865224"
   },
   {
     "n": "1",
@@ -1840,6 +1892,46 @@
     "_timestamp": "2025-11-25T17:01:09.298560",
     "_id": "1764100869298",
     "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "30 de 35",
+    "ordem_exibicao": 31,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "REPORTAGEM",
+    "titulo_artigo": "Belgais: um novo espaço para a arte",
+    "subtitulo_artigo": "",
+    "paginas": "p.131-134",
+    "resumo": "Relato sobre o Centro de Artes de Belgais, na Beira Baixa, fundado pela pianista Maria João Pires que descreve a paisagem e a arquitetura do local, destacando o projeto pedagógico experimental voltado para a relação espontânea com a música e a descentralização cultural em Portugal. A autora narra também sua experiência em um workshop interdisciplinar de poesia e composição musical, com a participação do pianista Caio Pagano e do compositor James DeMars, concluindo com uma reflexão sobre a persistência da arte baseada em Jorge de Sena.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CAPINHA, Graça"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "SENA, Jorge de",
+      "PIRES, Maria João",
+      "PAGANO, Caio",
+      "DEMARS, James",
+      "PESSOA, Fernando"
+    ],
+    "palavras_chave": [
+      "Arte",
+      "Música",
+      "Educação",
+      "Portugal",
+      "Cultura",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PIRES, Maria João"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:12:00.502000",
+    "notas_pesquisa": [],
+    "_id": "1764897119502"
   },
   {
     "n": "1",
@@ -3008,6 +3100,31 @@
     "_timestamp": "2025-11-26T16:12:34.869761",
     "_id": "1764184354869",
     "notas_pesquisa": []
+  },
+  {
+    "n": "2",
+    "registro": "29 de 41",
+    "ordem_exibicao": 30,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.129-130",
+    "resumo": "Conjunto de poemas de Antonio Carlos Secchin: \"ARTE\" e \"PAISAGEM\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SECCHIN, Antonio Carlos"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:15:07.265000",
+    "notas_pesquisa": [],
+    "_id": "1764897307265"
   },
   {
     "n": "2",
@@ -14891,36 +15008,6 @@
   },
   {
     "n": "11",
-    "registro": "1 de 17",
-    "ordem_exibicao": 2,
-    "idioma_01": "POR",
-    "idioma_02": "",
-    "vocabulario_controlado": "ARTES PLÁSTICAS",
-    "titulo_artigo": "Sem título",
-    "subtitulo_artigo": "",
-    "paginas": "2",
-    "resumo": "Trabalho de Susan Bee, especialmente para este número de Sibila",
-    "nota_edicao": "",
-    "autores_colaboradores": [
-      "BEE, Susan"
-    ],
-    "entidade_coletiva": [],
-    "tradutores": [],
-    "autores_citados": [],
-    "palavras_chave": [],
-    "nome_pessoal_como_assunto": [],
-    "iconografias": [
-      {
-        "tipo": "Ilustração",
-        "descricao": "Arte em colagem de Susan Bee, especialmente para este número de Sibila, sem título."
-      }
-    ],
-    "_timestamp": "2025-12-04T16:34:14.087269",
-    "notas_pesquisa": [],
-    "_id": "1764876803693"
-  },
-  {
-    "n": "11",
     "registro": "0 de 17",
     "ordem_exibicao": 1,
     "idioma_01": "POR",
@@ -14948,6 +15035,36 @@
     "_timestamp": "2025-12-04T16:33:52.703584",
     "_id": "1764876832703",
     "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "1 de 17",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "2",
+    "resumo": "Trabalho de Susan Bee, especialmente para este número de Sibila",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BEE, Susan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Arte em colagem de Susan Bee, especialmente para este número de Sibila, sem título."
+      }
+    ],
+    "_timestamp": "2025-12-04T16:34:14.087269",
+    "notas_pesquisa": [],
+    "_id": "1764876803693"
   },
   {
     "n": "11",
