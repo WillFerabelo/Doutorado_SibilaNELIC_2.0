@@ -655,9 +655,7 @@
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [],
-    "palavras_chave": [
-      "Artes Plásticas"
-    ],
+    "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
     "iconografias": [
       {
@@ -665,9 +663,9 @@
         "descricao": "\"Donkey\", (desenho), por Claude Royet-Journoud, s/d"
       }
     ],
-    "_timestamp": "2025-11-24T22:55:51.177416",
-    "_id": "1764035751177",
-    "notas_pesquisa": []
+    "_timestamp": "2025-12-04T22:28:52.860240",
+    "notas_pesquisa": [],
+    "_id": "1764035751177"
   },
   {
     "n": "0",

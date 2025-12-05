@@ -1157,6 +1157,33 @@
   },
   {
     "n": "1",
+    "registro": "9 de 35",
+    "ordem_exibicao": 10,
+    "idioma_01": "ESP",
+    "idioma_02": "POR",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.30-33",
+    "resumo": "Conjunto de poemas de Cecilia Vicuña: \"Con un cuadernito en el Met\" (traduzido como \"Com um caderninho no Met\") e \"Lino\" (traduzido como \"Linho\"). Tradução de Orfa Carneiro Reis. [Publicação bilíngue]",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "VICUÑA, Cecilia"
+    ],
+    "tradutores": [
+      "REIS, Orfa Carneiro"
+    ],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:05:23.232000",
+    "notas_pesquisa": [],
+    "_id": "1764896723232"
+  },
+  {
+    "n": "1",
     "registro": "10 de 35",
     "ordem_exibicao": 11,
     "idioma_01": "ING",
@@ -1495,6 +1522,31 @@
     "_timestamp": "2025-11-25T16:35:29.759376",
     "_id": "1764099329759",
     "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "19 de 35",
+    "ordem_exibicao": 20,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "DOIS POEMAS",
+    "subtitulo_artigo": "",
+    "paginas": "p.84",
+    "resumo": "Conjunto de poemas de Jorge Melícias: \"O braço...\" e \"A vara cantada ao longo dos dedos,...\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MELÍCIAS, Jorge"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:07:45.224000",
+    "notas_pesquisa": [],
+    "_id": "1764896865224"
   },
   {
     "n": "1",
@@ -1840,6 +1892,46 @@
     "_timestamp": "2025-11-25T17:01:09.298560",
     "_id": "1764100869298",
     "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "30 de 35",
+    "ordem_exibicao": 31,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "REPORTAGEM",
+    "titulo_artigo": "Belgais: um novo espaço para a arte",
+    "subtitulo_artigo": "",
+    "paginas": "p.131-134",
+    "resumo": "Relato sobre o Centro de Artes de Belgais, na Beira Baixa, fundado pela pianista Maria João Pires que descreve a paisagem e a arquitetura do local, destacando o projeto pedagógico experimental voltado para a relação espontânea com a música e a descentralização cultural em Portugal. A autora narra também sua experiência em um workshop interdisciplinar de poesia e composição musical, com a participação do pianista Caio Pagano e do compositor James DeMars, concluindo com uma reflexão sobre a persistência da arte baseada em Jorge de Sena.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CAPINHA, Graça"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "SENA, Jorge de",
+      "PIRES, Maria João",
+      "PAGANO, Caio",
+      "DEMARS, James",
+      "PESSOA, Fernando"
+    ],
+    "palavras_chave": [
+      "Arte",
+      "Música",
+      "Educação",
+      "Portugal",
+      "Cultura",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [
+      "PIRES, Maria João"
+    ],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:12:00.502000",
+    "notas_pesquisa": [],
+    "_id": "1764897119502"
   },
   {
     "n": "1",
@@ -3008,6 +3100,31 @@
     "_timestamp": "2025-11-26T16:12:34.869761",
     "_id": "1764184354869",
     "notas_pesquisa": []
+  },
+  {
+    "n": "2",
+    "registro": "29 de 41",
+    "ordem_exibicao": 30,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "POEMA(S)",
+    "titulo_artigo": "Dois poemas",
+    "subtitulo_artigo": "",
+    "paginas": "p.129-130",
+    "resumo": "Conjunto de poemas de Antonio Carlos Secchin: \"ARTE\" e \"PAISAGEM\".",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SECCHIN, Antonio Carlos"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T22:15:07.265000",
+    "notas_pesquisa": [],
+    "_id": "1764897307265"
   },
   {
     "n": "2",
@@ -14891,36 +15008,6 @@
   },
   {
     "n": "11",
-    "registro": "1 de 17",
-    "ordem_exibicao": 2,
-    "idioma_01": "POR",
-    "idioma_02": "",
-    "vocabulario_controlado": "ARTES PLÁSTICAS",
-    "titulo_artigo": "Sem título",
-    "subtitulo_artigo": "",
-    "paginas": "2",
-    "resumo": "Trabalho de Susan Bee, especialmente para este número de Sibila",
-    "nota_edicao": "",
-    "autores_colaboradores": [
-      "BEE, Susan"
-    ],
-    "entidade_coletiva": [],
-    "tradutores": [],
-    "autores_citados": [],
-    "palavras_chave": [],
-    "nome_pessoal_como_assunto": [],
-    "iconografias": [
-      {
-        "tipo": "Ilustração",
-        "descricao": "Arte em colagem de Susan Bee, especialmente para este número de Sibila, sem título."
-      }
-    ],
-    "_timestamp": "2025-12-04T16:34:14.087269",
-    "notas_pesquisa": [],
-    "_id": "1764876803693"
-  },
-  {
-    "n": "11",
     "registro": "0 de 17",
     "ordem_exibicao": 1,
     "idioma_01": "POR",
@@ -14948,6 +15035,36 @@
     "_timestamp": "2025-12-04T16:33:52.703584",
     "_id": "1764876832703",
     "notas_pesquisa": []
+  },
+  {
+    "n": "11",
+    "registro": "1 de 17",
+    "ordem_exibicao": 2,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ARTES PLÁSTICAS",
+    "titulo_artigo": "Sem título",
+    "subtitulo_artigo": "",
+    "paginas": "2",
+    "resumo": "Trabalho de Susan Bee, especialmente para este número de Sibila",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BEE, Susan"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "Arte em colagem de Susan Bee, especialmente para este número de Sibila, sem título."
+      }
+    ],
+    "_timestamp": "2025-12-04T16:34:14.087269",
+    "notas_pesquisa": [],
+    "_id": "1764876803693"
   },
   {
     "n": "11",
@@ -16279,6 +16396,201 @@
     "iconografias": [],
     "_timestamp": "2025-12-04T21:41:48.317390",
     "_id": "1764895308317",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "22 de 24",
+    "ordem_exibicao": 23,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "RESENHA",
+    "titulo_artigo": "León Ferrari versus Gregor Samsa",
+    "subtitulo_artigo": "",
+    "paginas": "p.128-136",
+    "resumo": "Resenha crítica do livro retrospectivo sobre o artista argentino León Ferrari na qual Régis Bonvicino estabelece um paralelo entre a obra de Ferrari e a literatura de Franz Kafka, interpretando a produção do artista como um confronto com a \"máquina operante\" da sociedade, similar aos labirintos de \"O Processo\" e à transformação de Gregor Samsa em \"A Metamorfose\". O texto analisa diversas obras, desde esculturas abstratas até colagens políticas e anti-religiosas como \"A justiça\", \"Jeová\" e \"Liquidificador\", destacando o ceticismo e a iconoclastia de Ferrari.",
+    "nota_edicao": "GIUNTA, Andrea (Org.). \"León Ferrari: Retrospectiva. Obras 1954-2006\", Cosacnaify/Pinacoteca do Estado/Imprensa Oficial, 2006",
+    "autores_colaboradores": [
+      "BONVICINO, Régis"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SILVEIRA, Regina",
+      "PLAZA, Júlio",
+      "ZANINI, Walter",
+      "AMARAL, Aracy",
+      "LEMINSKI, Paulo",
+      "BALLESTRINI, Nanni",
+      "GIUNTA, Andrea",
+      "NOÉ, Luis Felipe",
+      "KAFKA, Franz",
+      "HELLER, Erich",
+      "ALBERTI, Rafael",
+      "WILLIAMS, William Carlos",
+      "TROUILLE, Clovis",
+      "BOSH, Jeronimus"
+    ],
+    "palavras_chave": [
+      "Artes Plásticas",
+      "Política",
+      "Religião",
+      "Escultura",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [
+      "FERRARI, León"
+    ],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "\"Apresentação da seção resenhas e notas\", s/crédito, s/d"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"História de minha morte\", LEÓN FERRARI, 1965"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Sem título\", LEÓN FERRARI, 1983"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Última ceia\", LEÓN FERRARI, 2000"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Jeová\", LEÓN FERRARI, 1989"
+      },
+      {
+        "tipo": "Reprodução",
+        "descricao": "\"Homem\", LEÓN FERRARI, 1964"
+      }
+    ],
+    "_timestamp": "2025-12-04T21:48:59.438956",
+    "_id": "1764895739438",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "23 de 24",
+    "ordem_exibicao": 24,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Verso introjetivo",
+    "subtitulo_artigo": "",
+    "paginas": "p.137-141",
+    "resumo": "Charles Bernstein dialoga com o manifesto \"Projective Verse\" de Charles Olson (1950) por meio de uma série de inversões satíricas e críticas. O autor propõe o \"verso introjetivo\" ou \"centrípeto\", caracterizado pela \"malcomposição\", pela inutilidade e pela recusa da respiração como medida do verso. O texto foi escrito em resposta a um pedido dos editores Pierre Alferi e Olivier Cadiot, questionando a masculinidade da poética de Olson e defendendo uma estética do desimportante, onde a forma é uma \"extensão do descontente\".",
+    "nota_edicao": "Em Charles Bernstein, My way: speeches and poems (Chicago, University of Chicago, 1999).",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "ZANINI, Maria do Carmo"
+    ],
+    "autores_citados": [
+      "BERNSTEIN, Charles",
+      "OLSON, Charles",
+      "ALFERI, Pierre",
+      "CADIOT, Olivier",
+      "WILDE, Oscar",
+      "CLEASE",
+      "BRUCE",
+      "BALL"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Linguagem",
+      "Cultura"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:51:53.965899",
+    "_id": "1764895913965",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "12",
+    "registro": "24 de 24",
+    "ordem_exibicao": 25,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "ENSAIO - Literatura",
+    "titulo_artigo": "Irrelevância social e cânones autogerados",
+    "subtitulo_artigo": "do século XX rumo à poesia neo-italiana",
+    "paginas": "p.142-152",
+    "resumo": "Ensaio de Stela trata sobre a crise do \"mandato social\" da poesia e a fragmentação do cânone literário contemporâneo, a partir das análises de Guido Mazzoni em \"La poesia moderna\", no qual discute a perda de poder simbólico da poesia para a música pop e rock, a proliferação de \"cânones autogerados\" por grupos de pressão editorial e a emergência de uma poesia neo-italiana de migração. O texto analisa ainda as teorias de Harold Bloom, Pierre Bourdieu e Cesare Segre sobre a formação da canonicidade, defendendo a existência de um cânone implícito baseado na polifuncionalidade das obras.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "STELLA, Francesco"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [
+      "BERNARDINI, Aurora"
+    ],
+    "autores_citados": [
+      "MAZZONI, Guido",
+      "BENJAMIN, Walter",
+      "BOURDIEU, Pierre",
+      "GIOVANARDI, Stefano",
+      "MALLARMÉ, Stéphane",
+      "APOLLINAIRE, Guillaume",
+      "CARDUCCI, Giosuè",
+      "D’ANNUNZIO, Gabriele",
+      "UNGARETTI, Giuseppe",
+      "PASOLINI, Pier Paolo",
+      "LUZI, Mario",
+      "MENGALDO, Pier Vincenzo",
+      "AFRIBO, Andrea",
+      "GRÄF, Dieter",
+      "GRAHAM, Jorie",
+      "YOSHIMASU, Gozo",
+      "BONNEFOY, Yves",
+      "FOSTIRERIS, Antonis",
+      "MUNARRIZ, José",
+      "MIKOLAJEWSKI, Jaroslaw",
+      "ALEXANDER, Mecna",
+      "BLOOM, Harold",
+      "KERMODE, Frank",
+      "LEOPARDI, Giacomo",
+      "HEANEY, Seamus",
+      "MCCARTNEY, Paul",
+      "CORTELLESSA, Andrea",
+      "PELLINI, Pierluigi",
+      "RICCARDI, Antonio",
+      "MUSSAPI, Roberto",
+      "SARTO, DEL",
+      "DE ANGELIS, Milo",
+      "MAGRELLI, Valerio",
+      "CELAN, Paul",
+      "DEIDIER, Roberto",
+      "GUGLIELMI, Guido",
+      "SHEFFY, Rakefet",
+      "EVEN-ZOHAR, Itamar",
+      "RE, Lucia",
+      "LECOMTE, Mia",
+      "VON HALLBERG, Robert",
+      "SMITH, Barbara Herrnstein",
+      "SEGRE, Cesare",
+      "LOTMAN, Jurij",
+      "USPENSKIJ, Boris"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cânone Literário",
+      "Crítica",
+      "Sociedade",
+      "Música"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-04T21:53:23.986385",
+    "_id": "1764896003986",
     "notas_pesquisa": []
   }
 ]
