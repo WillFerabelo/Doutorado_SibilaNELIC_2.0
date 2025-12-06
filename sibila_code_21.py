@@ -4141,12 +4141,12 @@ def main():
                                     node_degrees = dict(G_viz.degree())
                                     sorted_nodes = sorted(node_degrees.items(), key=lambda item: item[1], reverse=True)
 
-                                    # Manter TOP N nós + autor selecionado (se houver)
-                                    nodes_to_keep = set([n[0] for n in sorted_nodes[:top_n_nodes]])
-
-                                    # Sempre incluir autor selecionado e seus vizinhos diretos
+                                    # LOGICA DE FILTRO:
+                                    # Se um autor estiver selecionado, focar EXCLUSIVAMENTE nele e seus vizinhos (Ego Network).
+                                    # Caso contrário, mostrar os Top N autores mais conectados (Visão Geral).
+                                    
                                     if autor_pref and autor_pref in G_viz.nodes():
-                                        nodes_to_keep.add(autor_pref)
+                                        nodes_to_keep = {autor_pref}
                                         # Adicionar vizinhos do autor selecionado
                                         if G_viz.is_directed():
                                             for _, v in G_viz.out_edges(autor_pref):
@@ -4156,6 +4156,9 @@ def main():
                                         else:
                                             for neighbor in G_viz.neighbors(autor_pref):
                                                 nodes_to_keep.add(neighbor)
+                                    else:
+                                        # Visão Geral: Top N nós
+                                        nodes_to_keep = set([n[0] for n in sorted_nodes[:top_n_nodes]])
 
                                     G_viz = G_viz.subgraph(list(nodes_to_keep)).copy()
 
@@ -4210,23 +4213,129 @@ def main():
                                             except Exception:
                                                 return str(txt)
 
+                                        # --- GERAR PDF PADRONIZADO (Estilo Relatório de Busca) ---
                                         try:
                                             pdf = FPDF()
                                             pdf.add_page()
-                                            pdf.set_font("Arial", 'B', 14)
-                                            pdf.cell(0, 10, _safe_text("Rede de Autores - Visualização Filtrada"), ln=1)
-                                            pdf.set_font("Arial", '', 11)
-                                            pdf.cell(0, 8, _safe_text(f"Autores: {G_viz.number_of_nodes()} | Citações: {G_viz.number_of_edges()}"), ln=1)
-                                            pdf.cell(0, 8, _safe_text(f"Distância entre nós: {spacing_distance}"), ln=1)
-                                            pdf.cell(0, 8, _safe_text(f"Comunidades coloridas: {'Sim' if use_community else 'Não'}"), ln=1)
-                                            pdf.ln(4)
-                                            pdf.set_font("Arial", 'B', 12)
-                                            pdf.cell(0, 8, _safe_text("Top autores mais citados"), ln=1)
-                                            pdf.set_font("Arial", '', 11)
-                                            for autor, val in sorted(G_viz.in_degree(), key=lambda x: x[1], reverse=True)[:10]:
-                                                pdf.cell(0, 7, _safe_text(f"{autor}: {val}"), ln=1)
+                                            
+                                            # Título Dinâmico
+                                            if autor_pref and autor_pref in G_viz.nodes():
+                                                title_pdf = f"REDE DE AUTORAS(ES): {autor_pref.upper()}"
+                                                
+                                                # Cabeçalho Padrão
+                                                PDFModule._add_standard_header(pdf, title_pdf)
+                                                
+                                                # Métricas Específicas (Pedido do Usuário)
+                                                # Autores relacionados: Total - 1 (o próprio)
+                                                qtd_relacionados = max(0, G_viz.number_of_nodes() - 1)
+                                                
+                                                # Cita e Citado Por (Grafo Dirigido)
+                                                try:
+                                                    qtd_cita = G_viz.out_degree(autor_pref)
+                                                    qtd_citado = G_viz.in_degree(autor_pref)
+                                                except:
+                                                    qtd_cita = 0
+                                                    qtd_citado = 0
+                                                
+                                                pdf.set_y(pdf.get_y() + 5)
+                                                pdf.set_font("Arial", 'B', 10)
+                                                
+                                                # Linha de métricas
+                                                metrics_text = f"Autores relacionados: {qtd_relacionados}  |  Cita: {qtd_cita}  |  Citado por: {qtd_citado}"
+                                                pdf.cell(0, 8, PDFModule.to_latin1(metrics_text), ln=1)
+                                                pdf.ln(5)
+
+                                                # Função auxiliar para buscar contexto no DF
+                                                def get_contexto(source, target, df_ref):
+                                                    matches = []
+                                                    for _, row in df_ref.iterrows():
+                                                        cols = row.get('autores_colaboradores', [])
+                                                        cits = row.get('autores_citados', [])
+                                                        if isinstance(cols, list) and isinstance(cits, list):
+                                                            if source in cols and target in cits:
+                                                                n_rev = row.get('n', '?')
+                                                                tit = row.get('titulo_artigo', '[sem título]')
+                                                                # Formatação solicitada: revista número; Título: ...; (número do registro)
+                                                                reg_n = row.get('registro', '?')
+                                                                matches.append(f"Revista {n_rev}; Título: {tit}; ({reg_n})")
+                                                    return matches
+
+                                                # 1. QUEM O AUTOR CITA (Out-Degree)
+                                                cited_by_author = sorted([v for _, v in G_viz.out_edges(autor_pref)])
+                                                
+                                                if cited_by_author:
+                                                    pdf.set_font("Arial", 'B', 12)
+                                                    pdf.cell(0, 10, PDFModule.to_latin1("AUTORES QUE CITA"), ln=1)
+                                                    pdf.set_font("Arial", '', 10)
+                                                    
+                                                    for cited in cited_by_author:
+                                                        pdf.set_font("Arial", 'B', 10)
+                                                        # Apenas o nome do autor aqui
+                                                        pdf.cell(0, 6, PDFModule.to_latin1(f"{cited}"), ln=1)
+                                                        
+                                                        # Contexto
+                                                        contextos = get_contexto(autor_pref, cited, df)
+                                                        
+                                                        if contextos:
+                                                            pdf.set_font("Arial", 'I', 9)
+                                                            pdf.cell(0, 5, PDFModule.to_latin1("Obras em que cita:"), ln=1)
+                                                            
+                                                            pdf.set_font("Arial", '', 9)
+                                                            pdf.set_text_color(60, 60, 60)
+                                                            for ctx in contextos:
+                                                                pdf.cell(5) # Indent
+                                                                pdf.cell(0, 5, PDFModule.to_latin1(f"- {ctx}"), ln=1)
+                                                            pdf.set_text_color(0, 0, 0)
+                                                        pdf.ln(3)
+
+                                                pdf.ln(5)
+
+                                                # 2. QUEM CITA O AUTOR (In-Degree)
+                                                citing_author = sorted([u for u, _ in G_viz.in_edges(autor_pref)])
+                                                
+                                                if citing_author:
+                                                    pdf.set_font("Arial", 'B', 12)
+                                                    pdf.cell(0, 10, PDFModule.to_latin1("CITADO POR"), ln=1)
+                                                    pdf.set_font("Arial", '', 10)
+                                                    
+                                                    for citing in citing_author:
+                                                        pdf.set_font("Arial", 'B', 10)
+                                                        pdf.cell(0, 6, PDFModule.to_latin1(f"{citing}"), ln=1)
+                                                        
+                                                        contextos = get_contexto(citing, autor_pref, df)
+                                                        
+                                                        if contextos:
+                                                            pdf.set_font("Arial", 'I', 9)
+                                                            # AQUI A MUDANÇA: 'Obras em que foi citado'
+                                                            pdf.cell(0, 5, PDFModule.to_latin1("Obras em que foi citada(o):"), ln=1)
+                                                            
+                                                            pdf.set_font("Arial", '', 9)
+                                                            pdf.set_text_color(60, 60, 60)
+                                                            for ctx in contextos:
+                                                                pdf.cell(5)
+                                                                pdf.cell(0, 5, PDFModule.to_latin1(f"- {ctx}"), ln=1)
+                                                            pdf.set_text_color(0, 0, 0)
+                                                        pdf.ln(3)
+
+                                            else:
+                                                # Visão Geral (sem autor selecionado)
+                                                title_pdf = "REDE DE AUTORAS(ES) (VISÃO GERAL)"
+                                                PDFModule._add_standard_header(pdf, title_pdf)
+                                                pdf.set_y(pdf.get_y() + 5)
+                                                metrics_text = f"Total de Autores: {G_viz.number_of_nodes()} | Total de Conexões: {G_viz.number_of_edges()}"
+                                                pdf.set_font("Arial", '', 11)
+                                                pdf.cell(0, 8, PDFModule.to_latin1(metrics_text), ln=1)
+                                                pdf.ln(5)
+                                                
+                                                pdf.set_font("Arial", 'B', 12)
+                                                pdf.cell(0, 10, PDFModule.to_latin1("Autores mais conectados (Visão Geral):"), ln=1)
+                                                pdf.set_font("Arial", '', 10)
+                                                for autor, val in sorted(G_viz.in_degree(), key=lambda x: x[1], reverse=True)[:50]:
+                                                    pdf.cell(0, 7, PDFModule.to_latin1(f"{autor}: {val} citações"), ln=1)
+
                                             pdf_output = pdf.output(dest="S").encode("latin-1", "replace")
-                                        except Exception:
+                                        except Exception as e:
+                                            # st.error(f"Erro PDF: {e}") 
                                             pdf_output = b""
 
                                         if True:  # Sempre gerar novo grafo
@@ -4381,9 +4490,7 @@ def main():
                                                 "autor_focus": autor_focus,
                                             }
                                             st.session_state["_pyvis_last"] = viz_state
-                                            # Renderiza imediatamente para evitar nova interação
-                                            components.html(render_html, height=710, scrolling=True)
-                                            st.stop()
+                                            # Flow continues to main render block below...
                                     
                             except Exception as e:
                                 import traceback
@@ -4406,22 +4513,38 @@ def main():
                         st.markdown("##### 📊 Grafo de Relações")
 
                         # Injetar botões de controle funcionais em azul no HTML
+                        # Injetar botões de controle funcionais com estilo nativo
                         control_buttons_html = """
-                        <div style="margin-bottom: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
-                            <button onclick="if(window.network){window.network.moveTo({scale: window.network.getScale() * 1.3});}"
-                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                        <style>
+                            .viz-btn {
+                                background-color: #0068c9 !important;
+                                color: white !important;
+                                border: none;
+                                padding: 6px 12px;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                font-weight: 600;
+                                font-size: 0.85rem;
+                                transition: opacity 0.2s;
+                                flex: 1;
+                                min-width: 100px;
+                                text-align: center;
+                            }
+                            .viz-btn:hover {
+                                opacity: 0.9;
+                            }
+                        </style>
+                        <div style="margin-bottom: 15px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+                            <button onclick="if(window.network){window.network.moveTo({scale: window.network.getScale() * 1.3});}" class="viz-btn">
                                 🔍+ Zoom In
                             </button>
-                            <button onclick="if(window.network){window.network.moveTo({scale: window.network.getScale() * 0.7});}"
-                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                            <button onclick="if(window.network){window.network.moveTo({scale: window.network.getScale() * 0.7});}" class="viz-btn">
                                 🔍- Zoom Out
                             </button>
-                            <button onclick="if(window.network){window.network.fit();}"
-                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                            <button onclick="if(window.network){window.network.fit();}" class="viz-btn">
                                 🔄 Ajustar Tela
                             </button>
-                            <button onclick="if(window.network){window.network.moveTo({position: {x: 0, y: 0}});}"
-                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                            <button onclick="if(window.network){window.network.moveTo({position: {x: 0, y: 0}});}" class="viz-btn">
                                 🎯 Centralizar
                             </button>
                         </div>
@@ -4445,7 +4568,8 @@ def main():
                                 data=viz_state.get("pdf", b""),
                                 file_name="rede_autores.pdf",
                                 mime="application/pdf",
-                                key="btn_pdf_dl"
+                                key="btn_pdf_dl",
+                                use_container_width=True
                             )
                         with col_dl2:
                             st.download_button(
@@ -4453,7 +4577,8 @@ def main():
                                 data=viz_state.get("gexf", b""),
                                 file_name="rede_autores.gexf",
                                 mime="application/gexf+xml",
-                                key="btn_gexf_dl"
+                                key="btn_gexf_dl",
+                                use_container_width=True
                             )
                         with col_dl3:
                             st.download_button(
@@ -4461,7 +4586,8 @@ def main():
                                 data=viz_state.get("nodes_csv", ""),
                                 file_name="autores_nos.csv",
                                 mime="text/csv",
-                                key="btn_nodes_dl"
+                                key="btn_nodes_dl",
+                                use_container_width=True
                             )
                         with col_dl4:
                             st.download_button(
@@ -4469,7 +4595,8 @@ def main():
                                 data=viz_state.get("edges_csv", ""),
                                 file_name="citacoes_arestas.csv",
                                 mime="text/csv",
-                                key="btn_edges_dl"
+                                key="btn_edges_dl",
+                                use_container_width=True
                             )
                     else:
                         st.info("Clique em 'GERAR GRAFO' para visualizar a rede de autores.")
@@ -5050,12 +5177,13 @@ def main():
         </div>
         """, unsafe_allow_html=True)
 
-        tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
             "📝 Catalogação",
             "🔍 Busca e Exploração",
             "📊 Análises e Relatórios",
             "🎓 Metodologia Detalhada",
-            "💡 Dicas de Uso"
+            "💡 Dicas de Uso",
+            "🚀 Potencialidades e Usos"
         ])
 
         with tab1:
@@ -5437,6 +5565,42 @@ def main():
             podem revelar inconsistências de preenchimento, diferenças indesejadas de grafia ou campos sem dados em lugares estratégicos. Nesse
             sentido, a exploração não apenas extrai informação analítica, mas retroalimenta o cuidado com o banco de dados, fortalecendo a
             confiabilidade do sistema de indexação como um todo.</p>
+            </div>
+            """, unsafe_allow_html=True)
+
+
+        with tab6:
+            st.markdown("### 🚀 Potencialidades de Pesquisa e Usos do Sistema")
+            
+            st.markdown("""
+            <div class="metod-section">
+            <p>O Sistema NELIC estrutura a massa textual da revista Sibila em um banco de dados relacional. Essa organização permite superar a leitura linear ou impressionista, habilitando o pesquisador a interrogar o corpus por meio de filtros combinados e projeções gráficas. A ferramenta não substitui a interpretação crítica, mas oferece uma base empírica verificável para testar hipóteses sobre a história intelectual e material da publicação.</p>
+            </div>
+            
+            <div class="metod-section">
+            <h4>1. ANÁLISE QUANTITATIVA (Bibliometria)</h4>
+            <p>A bibliometria aplicada à revista Sibila objetiva mensurar suas <strong>transformações editoriais</strong>. A contagem sistemática de tipos textuais revela as prioridades de cada fase da publicação. Se nos primeiros números predomina a poesia inédita, a análise dos dados pode indicar se houve um deslocamento progressivo para a crítica ou o ensaio teórico nos anos finais (2006-2007).</p>
+            
+            <p>A análise de produtividade lança luz sobre a <strong>demografia autoral</strong>, isto é, o perfil coletivo de quem escreve na revista (quem são, de onde vêm e quanto produzem). A aplicação de métricas de frequência distingue o núcleo duro de colaboradores regulares dos participantes esporádicos. Da mesma forma, o mapeamento de idiomas quantifica a <strong>abertura internacional ou a manutenção dos vínculos</strong> locais da revista, permitindo identificar quais tradições linguísticas (inglesa, francesa, hispânica) tiveram maior trânsito nas páginas da Sibila.</p>
+            </div>
+
+            <div class="metod-section">
+            <h4>2. ANÁLISE DAS REDES (SNA)</h4>
+            <p>A Análise das Redes <strong>cartografa</strong> o campo literário em <strong>grafos de conexão</strong> — diagramas visuais que traduzem relações sociais e intelectuais em uma geometria de <strong>pontos (nós, representando os autores)</strong> e <strong>linhas (arestas, representando as citações ou colaborações entre eles)</strong>. O sistema processa as listas de Colaboradores e Autores Citados para desenhar a <strong>estrutura de influência da revista</strong>, revelando explicitamente quais figuras de autoridade (o "cânone interno") sustentam teórica e esteticamente o grupo editorial. Uma rede de citações densa em torno de nomes específicos (como Mallarmé ou João Cabral) demonstra empiricamente essas hierarquias e linhagens.</p>
+            
+            <p>A rede semântica conecta os artigos pelos seus temas. Isso permite visualizar <strong>agrupamentos ("clusters")</strong> de assuntos, ou seja, núcleos de termos que tendem a orbitar juntos. É possível verificar empiricamente hipóteses complexas, como a associação entre nacionalidade e tema; ao cruzar filtros na aba "Explorar Dados", o pesquisador pode investigar se a palavra-chave "Política", por exemplo, predomina em artigos de autores de uma determinada origem ou se concentra em períodos específicos de crise, transformando a intuição de leitura em evidência estruturada.</p>
+            </div>
+
+            <div class="metod-section">
+            <h4>3. ANÁLISE QUALITATIVA</h4>
+            <p>A indexação estruturada orienta o retorno ao texto para uma leitura atenta (<em>Close Reading</em>). O sistema funciona como um índice remissivo inteligente: o levantamento de frequência de termos apontado na análise quantitativa dirige o olhar do pesquisador para os textos fundamentais. Se os dados mostram uma recorrência estatística de conceitos como "barroco" ou "concreto", o crítico pode selecionar apenas os ensaios que mobilizam esses termos para investigar <em>como</em> eles são definidos, disputados ou ressignificados, definindo o vocabulário teórico que sustenta o projeto editorial.</p>
+            
+            <p>O índice iconográfico, por sua vez, revela o projeto visual da revista como uma camada de sentido autônoma. Ao classificar cada imagem (Foto, Reprodução, Ilustração), o sistema expõe o investimento em visualidade não como mero adorno, mas como discurso. Uma predominância de reproduções de arte contemporânea em detrimento de fotos documentais, por exemplo, sinaliza uma postura editorial que valoriza a intervenção estética contemporânea sobre o registro histórico ou documental, dado que pode ser cruzado com a análise dos textos sobre arte na mesma edição.</p>
+            </div>
+            
+            <div class="metod-section">
+            <h4>4. ESCALAS DE ANÁLISE</h4>
+            <p>A ferramenta articula três níveis de observação, permitindo ao pesquisador transitar do detalhe ao panorama sem perder o rigor. No <strong>Nível Macro</strong>, observam-se as séries longas: os movimentos de constância e ruptura de toda a coleção (2001-2007), permitindo testar hipóteses sobre a linha editorial (ex: "a revista tornou-se mais acadêmica com o tempo?"). No <strong>Nível Meso</strong>, examina-se a edição como unidade de sentido (o objeto "revista"): como os textos de poesia e ensaio dialogam dentro do volume duplo 8-9? Há uma coerência interna proposital? No <strong>Nível Micro</strong>, acessa-se a "anatomia" do documento: o dado singular, como a escolha de um tradutor específico para um único poema ou uma nota de rodapé polêmica, elementos que muitas vezes contêm a chave de leitura para as escalas maiores.</p>
             </div>
             """, unsafe_allow_html=True)
 
