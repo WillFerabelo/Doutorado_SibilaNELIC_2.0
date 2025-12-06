@@ -234,6 +234,10 @@ CANONICAL_AUTHORS = {
     "WOOLF, Virgínia": "WOOLF, Virginia",
     "XAVIER": "XAVIER, Valêncio",
     "ÁVILA, Afonso": "ÁVILA, Affonso",
+    
+    # NOVAS REGRAS (LOTE 5 - Pente Fino)
+    "COSTA, Lúcio": "COSTA, Lucio",
+    "SALVINO, Rômulo Valle": "SALVINO, Romulo Valle",
 }
 
 # Caminhos de arquivos
