@@ -140,7 +140,101 @@ st.set_page_config(
 # Vocabulário Controlado e Metodologia (agora em um módulo de dados)
 # (Dados movidos para dentro da classe DataModule para encapsulamento)
 # Tipos textuais que NÃO exigem resumo analítico
+# Tipos textuais que NÃO exigem resumo analítico
 TIPOS_SEM_RESUMO = {"POEMA", "POEMA(S)", "FICÇÃO", "CAPA", "IMAGEM", "HQ/CHARGE", "HQ", "CHARGE", "ARTES PLÁSTICAS"}
+
+# Mapeamento de Autores Canônicos (Normalização de Nomes)
+CANONICAL_AUTHORS = {
+    # BACH
+    "BACH": "BACH, Johann Sebastian",
+    "BACH, J. S.": "BACH, Johann Sebastian",
+    "BACH, Johann S.": "BACH, Johann Sebastian",
+    
+    # NOVAS REGRAS
+    "ADORNO, Theodor": "ADORNO, Theodor W.",
+    "ALIGHIERI, DANTE": "ALIGHIERI, Dante",
+    "ALLEN, Donald": "ALLEN, Donald M.",
+    "ALVIM, Chico": "ALVIM, Francisco",
+    "ARAÚJO, Lais Corrêa de": "ARAÚJO, Laís Corrêa de",
+    "ARISTÓTELES, Aristóteles": "ARISTÓTELES",
+    "BALL": "BALL, Hugo",
+    "BUENO": "BUENO, Wilson",
+    "BYRON": "BYRON, Lord",
+    "CABRAL, João": "CABRAL, João (de Melo Neto)",
+    "CABRAL, João (Melo Neto)": "CABRAL, João (de Melo Neto)",
+    "CAMÕES, Luís de": "CAMÕES, Luís Vaz de",
+    "CAYMMI, Dori": "CAYMMI, Dorival",
+    "CHOPIN, Fryderyk": "CHOPIN, Frédéric",
+    "CLARK, Lígia": "CLARK, Lygia",
+    "CORBUSIER, LE": "CORBUSIER, Le",
+    "CRISTOBO, Anibal": "CRISTOBO, Aníbal",
+    "CUMMINGS, E. E.": "CUMMINGS, e. e.",
+    "CUMMINGS, e.e.": "CUMMINGS, e. e.",
+    "DAO, BEI": "DAO, Bei",
+    "DICK, André": "DICK, André Henrique",
+    "DOLHNIKOFF, Luís": "DOLHNIKOFF, Luis",
+    
+    # NOVAS REGRAS (LOTE 2)
+    "DRUMMOND, Carlos": "DRUMMOND, Carlos (de Andrade)",
+    "DRUMMOND, Drummond": "DRUMMOND, Carlos (de Andrade)",
+    "ANDRADE, Carlos Drummond de": "DRUMMOND, Carlos (de Andrade)",
+    "DUFRÊNE": "DUFRÊNE, François",
+    "EISENSTEIN, Sergei": "EISENSTEIN, Sergei M.",
+    "ELIOT, T.S.": "ELIOT, T. S.",
+    "FERRARI, Léon": "FERRARI, León",
+    "FERREIRA": "FERREIRA, Evandro Affonso",
+    "FONTANA": "FONTANA, Lucio",
+    "FROTA": "FROTA, Eduardo",
+    "GIL": "GIL, Gilberto",
+    "GOETHE": "GOETHE, Johann Wolfgang von",
+    "GOLDSMITH, Kenny": "GOLDSMITH, Kenneth",
+
+    # NOVAS REGRAS (LOTE 3)
+    "GUIMARÃES, Júlio C.": "GUIMARÃES, Júlio Castañon",
+    "HOLLANDA, Heloisa Buarque de": "HOLLANDA, Heloísa Buarque de",
+    "JOBIM, Tom": "JOBIM, Antônio Carlos",
+    "JOHNSON": "JOHNSON, Robert",
+    "JOYCE": "JOYCE, James",
+    "KHLIÉBNIKOV, Vielímir": "KHLIÉBNIKOV, Velimir",
+    "KHLÉBNIKOV, Velimir": "KHLIÉBNIKOV, Velimir",
+    "KHLÉBNIKOV, Velímir": "KHLIÉBNIKOV, Velimir",
+    "KOZER, Jos": "KOZER, José",
+    "KOZER, Jose": "KOZER, José",
+    "LAUTRÉAMONT": "LAUTRÉAMONT, Conde de",
+    "LEITE, Sebastião Uchôa": "LEITE, Sebastião Uchoa",
+    "LIMA, Manoel Ricardo": "LIMA, Manoel Ricardo de",
+    "MAIAKÓVSKI": "MAIAKÓVSKI, Vladímir",
+    "MAIAKÓVSKI, Vladimir": "MAIAKÓVSKI, Vladímir",
+    "MANDELSTAM, Óssip": "MANDELSTAM, Osip",
+    "MORAES, Vinícius de": "MORAES, Vinicius de",
+    "MORAIS, Vinícius de": "MORAES, Vinicius de",
+    "MOURA, Antonio": "MOURA, Antônio",
+    "MÃE, Valter Hugo": "MÃE, valter hugo",
+    "NEZVAL, Vitezlav": "NEZVAL, Vítězslav",
+    "PASTERNAK": "PASTERNAK, Boris",
+    "PETRARCA": "PETRARCA, Francesco",
+    "PLAZA, Júlio": "PLAZA, Julio",
+    
+    # NOVAS REGRAS (LOTE 4)
+    "PUSHKIN": "PUSHKIN, Alexander",
+    "RODRÍGUEZ, Américo": "RODRIGUES, Américo",
+    "ROQUETTE-PINTO, Cláudia": "ROQUETTE-PINTO, Claudia",
+    "ROSA, Guimarães": "ROSA, João Guimarães",
+    "ROSA, Mario Alex": "ROSA, Mário Alex",
+    "ROTHENBERG, Gerome": "ROTHENBERG, Jerome",
+    "SABINSON, Eric": "SABINSON, Eric Mitchell",
+    "SALOMÃO, Wally": "SALOMÃO, Waly",
+    "SALVINO, Rômullo Valle": "SALVINO, Romulo Valle",
+    "SOSA, Víctor": "SOSA, Victor",
+    "SOUSÂNDRADE, Joaquim de": "SOUSÂNDRADE",
+    "SOUSÂNDRADE, Joaquim de Sousa Andrade": "SOUSÂNDRADE",
+    "VICUÑA, Cecília": "VICUÑA, Cecilia",
+    "WARCHAVCHIK, Gregorio": "WARCHAVCHIK, Gregori",
+    "WEBERN, Anton von": "WEBERN, Anton",
+    "WOOLF, Virgínia": "WOOLF, Virginia",
+    "XAVIER": "XAVIER, Valêncio",
+    "ÁVILA, Afonso": "ÁVILA, Affonso",
+}
 
 # Caminhos de arquivos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -465,6 +559,9 @@ class DataModule:
         "HQ/Charge", "Ilustração", "Publicidade", "Reprodução"
     ]
 
+    # Referência ao dicionário global para acesso dentro da classe se necessário
+    CANONICAL_AUTHORS = CANONICAL_AUTHORS
+
     TIPOS_TEXTUAIS = {
         "APRESENTAÇÃO": ["Sem especificação", "Literatura"],
         "ARTES PLÁSTICAS": ["Sem especificação"],
@@ -515,7 +612,21 @@ class DataModule:
             return ""
         if not isinstance(nome, str):
             nome = str(nome)
+        
+        # 0. Verificação de Autores Canônicos (Normalização prévia)
+        # Verifica se o nome exato (ou variante simples) está na lista
+        if nome.strip() in DataModule.CANONICAL_AUTHORS:
+             return DataModule.CANONICAL_AUTHORS[nome.strip()]
+        
+        # Verifica também se variantes comuns estão na lista (ex: "Bach" -> "BACH, Johann Sebastian")
+        # Mas cuidado para não pegar substrings indevidas. Aqui verifica match exato da string limpa.
+        
         s = " ".join(nome.strip().split())
+        
+        # Check again with standardized spacing
+        if s in DataModule.CANONICAL_AUTHORS:
+             return DataModule.CANONICAL_AUTHORS[s]
+
         if not s:
             return ""
         if "," in s:
@@ -3556,8 +3667,8 @@ def main():
                     (df_local['resumo'].astype(str).str.strip() == '')
                 )
             ]
-            t1, t2, t3, t4 = st.tabs(
-                ["Sem páginas", "Sem título", "Sem resumo (quando exigido)", "Duplicidade de registro"]
+            t1, t2, t3, t4, t5 = st.tabs(
+                ["Sem páginas", "Sem título", "Sem resumo (quando exigido)", "Duplicidade de registro", "Autores Similares"]
             )
             with t1:
                 st.markdown("#### Registros sem informação de páginas")
@@ -3622,12 +3733,56 @@ def main():
                                             else:
                                                 st.error("❌ Erro ao salvar os dados após exclusão.")
                             else:
-                                # Visitantes veem apenas as informações, sem botão de exclusão
-                                st.write(f"**ID:** {row['_id']} | **Título:** {row['titulo_artigo']} | **Páginas:** {row['paginas']}")
-                        st.markdown("---")
+                                st.write(f"**ID:** {row['_id']} (login necessário para excluir)")
+
+
                 else:
                     st.success("✅ Nenhuma duplicidade detectada! Todos os registros possuem combinações únicas de Revista + Registro.")
                 df_local = df_local.drop(columns=['chave_unica'])
+
+            with t5:
+                st.markdown("#### 🕵️ Potenciais Duplicatas de Autores")
+                st.info("Esta aba agrupa autores pelo SOBRENOME para ajudar a identificar variações de grafia (ex: 'SILVA, Jose' e 'SILVA, J.').")
+
+                # 1. Coletar todos os autores normalizados
+                all_authors = DataModule.get_normalized_series(df, 'autores_colaboradores')
+                # Adicionar autores citados também? O usuário pediu "mesmos autores", geralmente refere-se a colaboradores, mas citados também importa.
+                all_cited = DataModule.get_normalized_series(df, 'autores_citados')
+                
+                # Unir e pegar únicos
+                unique_authors = sorted(list(set(all_authors.tolist() + all_cited.tolist())))
+                
+                # 2. Agrupar por sobrenome (primeira palavra antes da vírgula ou espaço)
+                groups = {}
+                for auth in unique_authors:
+                    if not auth: continue
+                    # Assumindo formato ABNT "SOBRENOME, Nome"
+                    sobrenome = auth.split(',')[0].strip()
+                    if sobrenome not in groups:
+                        groups[sobrenome] = []
+                    groups[sobrenome].append(auth)
+                
+                # 3. Filtrar apenas grupos com > 1 variação
+                potential_dupes = []
+                for surname, names in groups.items():
+                    if len(names) > 1:
+                        potential_dupes.append({
+                            "Sobrenome": surname,
+                            "Variações Encontradas": ", ".join(sorted(names)),
+                            "Qtd": len(names)
+                        })
+                
+                if potential_dupes:
+                    df_dupes = pd.DataFrame(potential_dupes).sort_values("Sobrenome")
+                    st.write(f"Total de grupos suspeitos: {len(df_dupes)}")
+                    st.dataframe(df_dupes, width='stretch', hide_index=True)
+                    
+                    st.markdown("""
+                    **Como corrigir?**
+                    Se identificar autores que são a mesma pessoa (ex: "BACH" e "BACH, J.S."), anote esses casos e me informe para que eu adicione à regra de unificação automática (`CANONICAL_AUTHORS`).
+                    """)
+                else:
+                    st.success("Nenhuma duplicata óbvia baseada em sobrenome encontrada.")
 
     # ==========================================
     # --- ANÁLISE AVANÇADA (Humanidades Digitais) ---
