@@ -14,6 +14,114 @@ from streamlit_option_menu import option_menu
 import re
 
 # ==========================================
+# IMPORTS PARA ANÁLISE AVANÇADA (Humanidades Digitais)
+# ==========================================
+# Imports condicionais para evitar quebra se bibliotecas não estiverem instaladas
+try:
+    import networkx as nx
+    NETWORKX_AVAILABLE = True
+except ImportError:
+    NETWORKX_AVAILABLE = False
+
+try:
+    import matplotlib.pyplot as plt
+    import matplotlib
+    matplotlib.use('Agg')  # Backend não-interativo para Streamlit
+    MATPLOTLIB_AVAILABLE = True
+except ImportError:
+    MATPLOTLIB_AVAILABLE = False
+
+try:
+    import seaborn as sns
+    SEABORN_AVAILABLE = True
+except ImportError:
+    SEABORN_AVAILABLE = False
+
+except ImportError:
+    SEABORN_AVAILABLE = False
+
+try:
+    from pyvis.network import Network
+    import streamlit.components.v1 as components
+    PYVIS_AVAILABLE = True
+except ImportError:
+    PYVIS_AVAILABLE = False
+
+try:
+    from collections import Counter
+    import string
+    
+    # Tentativa de usar NLTK (conforme solicitado no plano avançado)
+    try:
+        import nltk
+        try:
+            nltk.data.find('corpora/stopwords')
+        except LookupError:
+            nltk.download('stopwords', quiet=True)
+        from nltk.corpus import stopwords
+        STOP_WORDS_PT = set(stopwords.words('portuguese'))
+        NLP_AVAILABLE = True
+    except (ImportError, Exception):
+        # Fallback para lista embutida caso NLTK falhe
+        STOP_WORDS_PT = {
+            'a', 'à', 'ao', 'aos', 'aquela', 'aquelas', 'aquele', 'aqueles', 'aquilo', 'as', 'às',
+            'até', 'com', 'como', 'da', 'das', 'de', 'dela', 'delas', 'dele', 'deles', 'depois',
+            'do', 'dos', 'e', 'é', 'ela', 'elas', 'ele', 'eles', 'em', 'entre', 'era', 'eram',
+            'essa', 'essas', 'esse', 'esses', 'esta', 'estas', 'este', 'estes', 'eu', 'foi',
+            'fomos', 'for', 'fora', 'foram', 'forem', 'formos', 'fosse', 'fossem', 'fui', 'há',
+            'isso', 'isto', 'já', 'lhe', 'lhes', 'lo', 'mais', 'mas', 'me', 'mesmo', 'meu',
+            'meus', 'minha', 'minhas', 'muito', 'na', 'não', 'nas', 'nem', 'no', 'nos', 'nós',
+            'nossa', 'nossas', 'nosso', 'nossos', 'num', 'numa', 'o', 'os', 'ou', 'para', 'pela',
+            'pelas', 'pelo', 'pelos', 'por', 'qual', 'quando', 'que', 'quem', 'são', 'se', 'seja',
+            'sejam', 'sejamos', 'sem', 'ser', 'será', 'serão', 'seria', 'seriam', 'seríamos',
+            'seu', 'seus', 'só', 'somos', 'sou', 'sua', 'suas', 'também', 'te', 'tem', 'tém',
+            'temos', 'tenha', 'tenham', 'tenhamos', 'tenho', 'ter', 'teu', 'teus', 'ti', 'tido',
+            'tinha', 'tinham', 'tínhamos', 'tive', 'tivemos', 'tiver', 'tivera', 'tiveram',
+            'tiverem', 'tivermos', 'tivesse', 'tivessem', 'tivéssemos', 'tu', 'tua', 'tuas',
+            'um', 'uma', 'umas', 'uns', 'você', 'vocês', 'vos', 'vossa', 'vossas', 'vosso',
+            'vossos', 'ainda', 'assim', 'bem', 'bom', 'cada', 'coisa', 'coisas', 'dele', 'desse',
+            'desses', 'dessa', 'dessas', 'deste', 'destes', 'desta', 'destas', 'disto', 'daquele',
+            'daqueles', 'daquela', 'daquelas', 'daquilo', 'donde', 'então', 'etc', 'fazer', 'feito',
+            'grande', 'grandes', 'há', 'isto', 'lá', 'la', 'lo', 'lugar', 'maior', 'maiores',
+            'melhor', 'melhores', 'menor', 'menores', 'menos', 'mesma', 'mesmas', 'mesmos', 'muita',
+            'muitas', 'muitos', 'nada', 'nela', 'nelas', 'nele', 'neles', 'nenhum', 'nenhuma',
+            'nesse', 'nesses', 'nessa', 'nessas', 'neste', 'nestes', 'nesta', 'nestas', 'ninguém',
+            'nisso', 'nisto', 'novo', 'novos', 'onde', 'ora', 'outra', 'outras', 'outro', 'outros',
+            'parte', 'partes', 'pois', 'pouca', 'poucas', 'pouco', 'poucos', 'primeira', 'primeiras',
+            'primeiro', 'primeiros', 'própria', 'próprias', 'próprio', 'próprios', 'qual', 'quais',
+            'qualquer', 'quase', 'quatro', 'segundo', 'segunda', 'sempre', 'ser', 'seus', 'tal',
+            'tais', 'tanto', 'tantos', 'tanta', 'tantas', 'ter', 'toda', 'todas', 'todo', 'todos',
+            'três', 'tudo', 'última', 'últimas', 'último', 'últimos', 'vai', 'vão', 'vários',
+            'várias', 'ver', 'vez', 'vezes', 'vindo', 'vir', 'sobre', 'sob', 'sendo', 'sido',
+            'tendo', 'tendo', 'partir', 'através', 'apenas', 'alguns', 'algumas', 'algum', 'alguma',
+            'algo', 'aqui', 'ali', 'aí', 'lá', 'cá', 'lhe', 'lhes', 'me', 'mim', 'nos', 'vos',
+            'si', 'consigo', 'comigo', 'contigo', 'conosco', 'convosco'
+        }
+        NLP_AVAILABLE = True
+
+    # Tentar importar SPACY para análise gramatical mais robusta (Substantivos/Adjetivos)
+    try:
+        import spacy
+        try:
+            # Tenta carregar modelo pequeno para português
+            nlp_spacy = spacy.load("pt_core_news_sm")
+            SPACY_AVAILABLE = True
+        except OSError:
+            # Tenta baixar se não encontrar e carrega novamente
+            from spacy.cli import download
+            download("pt_core_news_sm")
+            nlp_spacy = spacy.load("pt_core_news_sm")
+            SPACY_AVAILABLE = True
+    except Exception:
+        SPACY_AVAILABLE = False
+        nlp_spacy = None
+        
+except Exception:
+    NLP_AVAILABLE = False
+    STOP_WORDS_PT = set()
+    SPACY_AVAILABLE = False
+
+# ==========================================
 # CONSTANTES GLOBAIS
 # ==========================================
 ORDEM_SIBILA = ["0", "1", "2", "3", "4", "5", "6", "7", "8-9", "10", "11", "12"]
@@ -2439,11 +2547,12 @@ def main():
             "EXPLORAR DADOS",
             "RELATÓRIOS",
             "ANÁLISE COMPARATIVA",
-            "QUALIDADE DOS DADOS",
+            "ANÁLISE AVANÇADA",  # Nova aba para Humanidades Digitais
             "DIÁRIO DE PESQUISA",
             "METODOLOGIA",
             "MAIS DADOS",
-            "EXPORTAR"
+            "EXPORTAR",
+            "QUALIDADE DOS DADOS"
         ]
         icones_menu = [
             "house-fill",
@@ -2452,11 +2561,12 @@ def main():
             "search",
             "graph-up",
             "diagram-3",
-            "shield-check",
+            "lightbulb",  # Ícone para Análise Avançada
             "journal-text",
             "book",
             "database",
-            "download"
+            "download",
+            "shield-check"
         ]
     else:
         # Menu público (apenas visualização)
@@ -2466,9 +2576,10 @@ def main():
             "EXPLORAR DADOS",
             "RELATÓRIOS",
             "ANÁLISE COMPARATIVA",
-            "QUALIDADE DOS DADOS",
+            "ANÁLISE AVANÇADA",  # Nova aba para Humanidades Digitais
             "METODOLOGIA",
-            "MAIS DADOS"
+            "MAIS DADOS",
+            "QUALIDADE DOS DADOS"
         ]
         icones_menu = [
             "house-fill",
@@ -2476,9 +2587,10 @@ def main():
             "search",
             "graph-up",
             "diagram-3",
-            "shield-check",
+            "lightbulb",  # Ícone para Análise Avançada
             "book",
-            "database"
+            "database",
+            "shield-check"
         ]
 
     # ===== MENU DE NAVEGAÇÃO LIMPO =====
@@ -2631,8 +2743,12 @@ def main():
         st.markdown("## 4. Pesquisadores Principais")
 
         # Maria Lucia de Barros Camargo
-        with st.expander("👩‍🏫 **Maria Lucia de Barros Camargo** - Fundadora e Pesquisadora Sênior"):
+        with st.expander("**Maria Lucia de Barros Camargo** - Fundadora e Pesquisadora Sênior"):
             st.markdown("""
+            **Bolsista de Produtividade em Pesquisa do CNPq - Nível 1B**
+            
+            Endereço para acessar o Lattes: http://lattes.cnpq.br/7854330137879524
+
             **Trajetória:**
             - Doutora em Letras (Teoria Literária e Literatura Comparada) pela USP (1990)
             - Tese sobre a poesia de **Ana Cristina Cesar**
@@ -2654,8 +2770,12 @@ def main():
             """)
 
         # Carlos Eduardo Schmidt Capela
-        with st.expander("👨‍🏫 **Carlos Eduardo Schmidt Capela** - Coordenador Atual"):
+        with st.expander("**Carlos Eduardo Schmidt Capela** - Coordenador Atual"):
             st.markdown("""
+            **Bolsista de Produtividade em Pesquisa do CNPq - Nível 1D**
+            
+            Endereço para acessar o Lattes: http://lattes.cnpq.br/6619827107636765
+
             **Coordenação:**
             - Coordenador docente do NELIC
             - Editor do Boletim de Pesquisa NELIC
@@ -2670,8 +2790,10 @@ def main():
             """)
 
         # Raúl Antelo
-        with st.expander("👨‍🏫 **Raúl Antelo** - Pesquisador Sênior"):
+        with st.expander("**Raúl Antelo** - Pesquisador Sênior"):
             st.markdown("""
+            Endereço para acessar o Lattes: http://lattes.cnpq.br/4828668706498888
+
             **Trajetória:**
             - Crítico e teórico argentino-brasileiro (n. 1950)
             - Professor titular de Literatura Brasileira na UFSC (aposentado)
@@ -3506,6 +3628,1151 @@ def main():
                 else:
                     st.success("✅ Nenhuma duplicidade detectada! Todos os registros possuem combinações únicas de Revista + Registro.")
                 df_local = df_local.drop(columns=['chave_unica'])
+
+    # ==========================================
+    # --- ANÁLISE AVANÇADA (Humanidades Digitais) ---
+    # ==========================================
+    elif menu == "ANÁLISE AVANÇADA":
+        st.title("🔬 ANÁLISE AVANÇADA")
+        st.markdown("""
+        Ferramentas de análise para **Humanidades Digitais**: análise de redes,
+        processamento de linguagem natural e correlações entre dados do catálogo.
+        """)
+
+        if df.empty:
+            st.warning("⚠️ Base de dados vazia. Adicione registros primeiro.")
+        else:
+            # Sub-abas dentro da Análise Avançada
+            tab_redes, tab_nlp, tab_correlacao, tab_dna = st.tabs([
+                "🕸️ Análise de Redes",
+                "📝 Análise Textual (NLP)",
+                "📊 Matriz de Correlação",
+                "🧬 DNA das Edições"
+            ])
+
+            # ========================================
+            # TAB 1: ANÁLISE DE REDES
+            # ========================================
+            with tab_redes:
+                st.markdown("### 🕸️ Análise de Redes: Autores e Citações")
+                st.markdown("""
+                Visualize as relações entre **autores colaboradores** e **autores citados**.
+                Esta análise permite identificar padrões de citação e redes de influência.
+                """)
+
+                if not NETWORKX_AVAILABLE:
+                    st.error("❌ Biblioteca `networkx` não disponível. Instale com: `pip install networkx`")
+                else:
+                    try:
+                        # Extrair dados para o grafo
+                        edges_autor_citacao = []
+                        for _, row in df.iterrows():
+                            autores = row.get('autores_colaboradores', [])
+                            citados = row.get('autores_citados', [])
+                            if isinstance(autores, list) and isinstance(citados, list):
+                                for autor in autores:
+                                    for citado in citados:
+                                        if autor and citado:
+                                            edges_autor_citacao.append((autor.strip(), citado.strip()))
+
+                        if not edges_autor_citacao:
+                            st.info("ℹ️ Não há dados suficientes para gerar o grafo. Verifique se existem registros com autores colaboradores E autores citados.")
+                        else:
+                            # Criar grafo
+                            G = nx.DiGraph()
+                            G.add_edges_from(edges_autor_citacao)
+
+                            # Métricas do grafo
+                            col1, col2, col3, col4 = st.columns(4)
+                            with col1:
+                                st.metric("Nós (Autores)", G.number_of_nodes())
+                            with col2:
+                                st.metric("Arestas (Citações)", G.number_of_edges())
+                            with col3:
+                                densidade = nx.density(G)
+                                st.metric("Densidade", f"{densidade:.4f}")
+                            with col4:
+                                componentes = nx.number_weakly_connected_components(G)
+                                st.metric("Componentes", componentes)
+
+                            st.markdown("---")
+
+                            # Top autores mais citados
+                            st.markdown("#### 📊 Autores Mais Citados")
+                            in_degree = sorted(G.in_degree(), key=lambda x: x[1], reverse=True)[:15]
+                            if in_degree:
+                                df_in = pd.DataFrame(in_degree, columns=['Autor', 'Vezes Citado'])
+                                fig_in = px.bar(df_in, x='Vezes Citado', y='Autor', orientation='h',
+                                               title='15 Autores Mais Citados')
+                                fig_in.update_layout(yaxis={'categoryorder': 'total ascending'})
+                                st.plotly_chart(fig_in, use_container_width=True)
+
+                            # Top autores que mais citam
+                            st.markdown("#### 📊 Autores que Mais Citam")
+                            out_degree = sorted(G.out_degree(), key=lambda x: x[1], reverse=True)[:15]
+                            if out_degree:
+                                df_out = pd.DataFrame(out_degree, columns=['Autor', 'Citações Feitas'])
+                                fig_out = px.bar(df_out, x='Citações Feitas', y='Autor', orientation='h',
+                                                title='15 Autores que Mais Citam Outros')
+                                fig_out.update_layout(yaxis={'categoryorder': 'total ascending'})
+                                st.plotly_chart(fig_out, use_container_width=True)
+
+                            st.markdown("---")
+
+                            # Exportação
+                            st.markdown("#### 💾 Exportar Dados da Rede")
+                            col_exp1, col_exp2, col_exp3 = st.columns(3)
+
+                            with col_exp1:
+                                # Exportar GEXF (para Gephi)
+                                try:
+                                    import io
+                                    gexf_buffer = io.BytesIO()
+                                    nx.write_gexf(G, gexf_buffer)
+                                    gexf_data = gexf_buffer.getvalue()
+                                    st.download_button(
+                                        "📥 Baixar GEXF (Gephi)",
+                                        data=gexf_data,
+                                        file_name="rede_autores_citacoes.gexf",
+                                        mime="application/gexf+xml",
+                                        key="btn_gexf"
+                                    )
+                                except Exception as e:
+                                    st.warning(f"Erro ao gerar GEXF: {e}")
+
+                            with col_exp2:
+                                # CSV de nós
+                                nodes_data = []
+                                for node in G.nodes():
+                                    nodes_data.append({
+                                        'id': node,
+                                        'label': node,
+                                        'in_degree': G.in_degree(node),
+                                        'out_degree': G.out_degree(node)
+                                    })
+                                df_nodes = pd.DataFrame(nodes_data)
+                                csv_nodes = df_nodes.to_csv(index=False)
+                                st.download_button(
+                                    "📥 Baixar Nós (CSV)",
+                                    data=csv_nodes,
+                                    file_name="autores_nos.csv",
+                                    mime="text/csv",
+                                    key="btn_nodes_csv"
+                                )
+
+                            with col_exp3:
+                                # CSV de arestas
+                                edges_data = [{'source': e[0], 'target': e[1]} for e in G.edges()]
+                                df_edges = pd.DataFrame(edges_data)
+                                csv_edges = df_edges.to_csv(index=False)
+                                st.download_button(
+                                    "📥 Baixar Arestas (CSV)",
+                                    data=csv_edges,
+                                    file_name="citacoes_arestas.csv",
+                                    mime="text/csv",
+                                    key="btn_edges_csv"
+                                )
+
+                    except Exception as e:
+                        st.error(f"❌ Erro na análise de redes: {str(e)}")
+
+                    # ==========================================
+                    # VIZ INTERATIVA PYVIS
+                    # ==========================================
+                    st.markdown("#### 🕸️ VISUALIZAÇÃO INTERATIVA") # (PYVIS)
+                    st.markdown("Clique no botão abaixo para gerar o grafo. *Para grandes volumes de dados, isso pode levar alguns segundos.*")
+                    
+                    if not PYVIS_AVAILABLE:
+                        st.warning("⚠️ Biblioteca `pyvis` não instalada. Instale com `pip install pyvis` para ver o grafo interativo.")
+                    elif 'G' in locals() and G.number_of_nodes() > 0:
+                        # Função de scroll (no-op se não for usada)
+                        def _scroll_to_pyvis():
+                            try:
+                                st.markdown(
+                                    "<div id='pyvis_anchor'></div>",
+                                    unsafe_allow_html=True
+                                )
+                            except Exception:
+                                pass
+
+                        def _reset_pyvis_state():
+                            # Limpa estados corrompidos (ex.: bool) para evitar erros de iteração
+                            cache_state = st.session_state.get("_pyvis_cache")
+                            last_state = st.session_state.get("_pyvis_last")
+
+                            if not isinstance(cache_state, dict):
+                                st.session_state["_pyvis_cache"] = {}
+                            else:
+                                st.session_state["_pyvis_cache"] = {
+                                    k: v for k, v in cache_state.items() if isinstance(v, str)
+                                }
+
+                            if not isinstance(last_state, dict):
+                                st.session_state["_pyvis_last"] = {}
+                            else:
+                                # Mantém apenas se render_html for string e graph for nx.Graph
+                                graph_ok = isinstance(last_state.get("graph"), nx.Graph)
+                                html_ok = isinstance(last_state.get("render_html"), str)
+                                st.session_state["_pyvis_last"] = last_state if graph_ok and html_ok else {}
+
+                        _reset_pyvis_state()
+
+                        # ========== CONTROLES SIMPLIFICADOS ==========
+                        st.markdown("##### 🎯 Selecione um autor para destacar:")
+                        try:
+                            autor_options = ["(nenhum)"] + sorted(G.nodes())
+                        except Exception:
+                            autor_options = ["(nenhum)"] + [str(n) for n in G.nodes()]
+
+                        autor_pref_label = st.selectbox(
+                            "Autor",
+                            autor_options,
+                            index=0,
+                            key="pyvis_autor_select"
+                        )
+                        autor_pref = None if autor_pref_label == "(nenhum)" else autor_pref_label
+
+                        # Mostrar relações do autor IMEDIATAMENTE ao selecionar
+                        if autor_pref and autor_pref in G.nodes():
+                            st.success(f"**Autor selecionado:** {autor_pref}")
+
+                            # Calcular citações - ordenadas alfabeticamente
+                            # REGRA: Excluir o próprio autor (não pode citar/ser citado por si mesmo)
+                            # NOTA: O grafo não armazena citações múltiplas, então cada relação aparece 1 vez
+                            try:
+                                # Quem o autor cita - lista alfabética
+                                citas_raw = [v for _, v in G.out_edges(autor_pref) if v != autor_pref]
+                                citas_lista = sorted(list(set(citas_raw)))
+
+                                # Quem cita o autor - lista alfabética
+                                citado_raw = [u for u, _ in G.in_edges(autor_pref) if u != autor_pref]
+                                citado_lista = sorted(list(set(citado_raw)))
+                            except:
+                                citas_lista = []
+                                citado_lista = []
+
+                            col_cita, col_citado = st.columns(2)
+
+                            with col_cita:
+                                st.markdown(f"**→ Cita ({len(citas_lista)} autores):**")
+                                if citas_lista:
+                                    # Mostrar os 15 primeiros (ordem alfabética)
+                                    for autor_c in citas_lista[:15]:
+                                        st.write(f"• {autor_c}")
+
+                                    # Se houver mais, mostrar expander
+                                    if len(citas_lista) > 15:
+                                        with st.expander(f"📋 Ver todos os {len(citas_lista)} autores citados"):
+                                            st.markdown("**Lista completa (ordem alfabética):**")
+                                            for i, autor_c in enumerate(citas_lista, 1):
+                                                st.write(f"{i}. {autor_c}")
+
+                                            # Gerar PDF para download
+                                            try:
+                                                pdf_cita = FPDF()
+                                                pdf_cita.add_page()
+                                                pdf_cita.set_font("Arial", 'B', 14)
+                                                pdf_cita.cell(0, 10, f"Autores citados por {autor_pref}", ln=1)
+                                                pdf_cita.set_font("Arial", '', 10)
+                                                pdf_cita.cell(0, 8, f"Total: {len(citas_lista)} autores (ordem alfabetica)", ln=1)
+                                                pdf_cita.ln(5)
+                                                for i, autor_c in enumerate(citas_lista, 1):
+                                                    texto = f"{i}. {autor_c}"
+                                                    texto_safe = texto.encode('latin-1', 'replace').decode('latin-1')
+                                                    pdf_cita.cell(0, 6, texto_safe, ln=1)
+                                                pdf_bytes_cita = pdf_cita.output(dest='S').encode('latin-1', 'replace')
+
+                                                st.download_button(
+                                                    "📥 Exportar lista (PDF)",
+                                                    data=pdf_bytes_cita,
+                                                    file_name=f"citados_por_{autor_pref.replace(' ', '_')}.pdf",
+                                                    mime="application/pdf",
+                                                    key="btn_pdf_cita"
+                                                )
+                                            except Exception as e:
+                                                st.caption(f"Erro ao gerar PDF: {e}")
+                                else:
+                                    st.write("_Nenhum_")
+
+                            with col_citado:
+                                st.markdown(f"**← Citado por ({len(citado_lista)} autores):**")
+                                if citado_lista:
+                                    # Mostrar os 15 primeiros (ordem alfabética)
+                                    for autor_c in citado_lista[:15]:
+                                        st.write(f"• {autor_c}")
+
+                                    # Se houver mais, mostrar expander
+                                    if len(citado_lista) > 15:
+                                        with st.expander(f"📋 Ver todos os {len(citado_lista)} autores que citam"):
+                                            st.markdown("**Lista completa (ordem alfabética):**")
+                                            for i, autor_c in enumerate(citado_lista, 1):
+                                                st.write(f"{i}. {autor_c}")
+
+                                            # Gerar PDF para download
+                                            try:
+                                                pdf_citado = FPDF()
+                                                pdf_citado.add_page()
+                                                pdf_citado.set_font("Arial", 'B', 14)
+                                                pdf_citado.cell(0, 10, f"Autores que citam {autor_pref}", ln=1)
+                                                pdf_citado.set_font("Arial", '', 10)
+                                                pdf_citado.cell(0, 8, f"Total: {len(citado_lista)} autores (ordem alfabetica)", ln=1)
+                                                pdf_citado.ln(5)
+                                                for i, autor_c in enumerate(citado_lista, 1):
+                                                    texto = f"{i}. {autor_c}"
+                                                    texto_safe = texto.encode('latin-1', 'replace').decode('latin-1')
+                                                    pdf_citado.cell(0, 6, texto_safe, ln=1)
+                                                pdf_bytes_citado = pdf_citado.output(dest='S').encode('latin-1', 'replace')
+
+                                                st.download_button(
+                                                    "📥 Exportar lista (PDF)",
+                                                    data=pdf_bytes_citado,
+                                                    file_name=f"citam_{autor_pref.replace(' ', '_')}.pdf",
+                                                    mime="application/pdf",
+                                                    key="btn_pdf_citado"
+                                                )
+                                            except Exception as e:
+                                                st.caption(f"Erro ao gerar PDF: {e}")
+                                else:
+                                    st.write("_Nenhum_")
+
+                        st.markdown("---")
+                        st.markdown("##### 🛠️ Configurações do Grafo")
+
+                        col_cfg1, col_cfg2 = st.columns(2)
+                        with col_cfg1:
+                            top_n_nodes = st.slider(
+                                "Principais autores",
+                                10, 200, 50,
+                                key="pyvis_top_n"
+                            )
+                        with col_cfg2:
+                            spacing_distance = st.slider(
+                                "Distância visual",
+                                20, 150, 50,
+                                key="pyvis_spacing"
+                            )
+
+                        col_cfg3, col_cfg4 = st.columns(2)
+                        with col_cfg3:
+                            use_community = st.checkbox("Colorir por comunidade", value=True, key="pyvis_community")
+                            show_arrows = st.checkbox("Mostrar setas", value=True, key="pyvis_arrows")
+                        with col_cfg4:
+                            disable_physics = st.checkbox("Layout fixo", value=True, key="pyvis_physics")
+                            small_node_mode = st.checkbox("Fontes menores", value=False, key="pyvis_compact")
+
+                        # Botão de gerar grafo
+                        if st.button("🔄 GERAR GRAFO", key="btn_gerar_grafo_main", type="primary", use_container_width=True):
+                            st.session_state["_pyvis_cache"] = {}
+                            st.session_state["_pyvis_last"] = {}
+                            st.session_state["_pyvis_params"] = {
+                                "autor_pref": autor_pref,
+                                "top_n_nodes": top_n_nodes,
+                                "spacing_distance": spacing_distance,
+                                "use_community": use_community,
+                                "show_arrows": show_arrows,
+                                "disable_physics": disable_physics,
+                                "small_node_mode": small_node_mode
+                            }
+                            try:
+                                with st.spinner("Gerando visualização..."):
+                                    if not isinstance(G, nx.Graph):
+                                        raise TypeError(f"G esperado como Graph, recebeu {type(G)}")
+
+                                    G_viz = G.copy()
+                                    node_degrees = dict(G_viz.degree())
+                                    sorted_nodes = sorted(node_degrees.items(), key=lambda item: item[1], reverse=True)
+
+                                    # Manter TOP N nós + autor selecionado (se houver)
+                                    nodes_to_keep = set([n[0] for n in sorted_nodes[:top_n_nodes]])
+
+                                    # Sempre incluir autor selecionado e seus vizinhos diretos
+                                    if autor_pref and autor_pref in G_viz.nodes():
+                                        nodes_to_keep.add(autor_pref)
+                                        # Adicionar vizinhos do autor selecionado
+                                        if G_viz.is_directed():
+                                            for _, v in G_viz.out_edges(autor_pref):
+                                                nodes_to_keep.add(v)
+                                            for u, _ in G_viz.in_edges(autor_pref):
+                                                nodes_to_keep.add(u)
+                                        else:
+                                            for neighbor in G_viz.neighbors(autor_pref):
+                                                nodes_to_keep.add(neighbor)
+
+                                    G_viz = G_viz.subgraph(list(nodes_to_keep)).copy()
+
+                                    if G_viz.number_of_nodes() == 0:
+                                        st.warning("Nenhum autor encontrado com os filtros atuais.")
+                                    else:
+                                        stabilization_iterations = 200
+
+                                        current_controls = {
+                                            "top_n": top_n_nodes,
+                                            "use_community": use_community,
+                                            "show_arrows": show_arrows,
+                                            "disable_physics": disable_physics,
+                                            "stabilization_iterations": stabilization_iterations,
+                                            "small_node_mode": small_node_mode,
+                                            "spacing_distance": spacing_distance,
+                                            "autor_pref": autor_pref,
+                                        }
+                                        prev_controls = st.session_state.get("_pyvis_controls")
+                                        if prev_controls != current_controls:
+                                            st.session_state["_pyvis_controls"] = current_controls
+                                            st.session_state["_pyvis_last"] = {}
+
+                                        render_html = None
+
+                                        # Exportações do subgrafo filtrado
+                                        try:
+                                            gexf_buffer = BytesIO()
+                                            nx.write_gexf(G_viz, gexf_buffer)
+                                            gexf_data_viz = gexf_buffer.getvalue()
+                                        except Exception:
+                                            gexf_data_viz = b""
+
+                                        nodes_data_viz = []
+                                        for node in G_viz.nodes():
+                                            nodes_data_viz.append({
+                                                'id': node,
+                                                'label': node,
+                                                'in_degree': G_viz.in_degree(node),
+                                                'out_degree': G_viz.out_degree(node)
+                                            })
+                                        df_nodes_viz = pd.DataFrame(nodes_data_viz)
+                                        csv_nodes_viz = df_nodes_viz.to_csv(index=False)
+
+                                        edges_data_viz = [{'source': e[0], 'target': e[1]} for e in G_viz.edges()]
+                                        df_edges_viz = pd.DataFrame(edges_data_viz)
+                                        csv_edges_viz = df_edges_viz.to_csv(index=False)
+
+                                        def _safe_text(txt: str) -> str:
+                                            try:
+                                                return str(txt).encode("latin-1", "replace").decode("latin-1")
+                                            except Exception:
+                                                return str(txt)
+
+                                        try:
+                                            pdf = FPDF()
+                                            pdf.add_page()
+                                            pdf.set_font("Arial", 'B', 14)
+                                            pdf.cell(0, 10, _safe_text("Rede de Autores - Visualização Filtrada"), ln=1)
+                                            pdf.set_font("Arial", '', 11)
+                                            pdf.cell(0, 8, _safe_text(f"Autores: {G_viz.number_of_nodes()} | Citações: {G_viz.number_of_edges()}"), ln=1)
+                                            pdf.cell(0, 8, _safe_text(f"Distância entre nós: {spacing_distance}"), ln=1)
+                                            pdf.cell(0, 8, _safe_text(f"Comunidades coloridas: {'Sim' if use_community else 'Não'}"), ln=1)
+                                            pdf.ln(4)
+                                            pdf.set_font("Arial", 'B', 12)
+                                            pdf.cell(0, 8, _safe_text("Top autores mais citados"), ln=1)
+                                            pdf.set_font("Arial", '', 11)
+                                            for autor, val in sorted(G_viz.in_degree(), key=lambda x: x[1], reverse=True)[:10]:
+                                                pdf.cell(0, 7, _safe_text(f"{autor}: {val}"), ln=1)
+                                            pdf_output = pdf.output(dest="S").encode("latin-1", "replace")
+                                        except Exception:
+                                            pdf_output = b""
+
+                                        if True:  # Sempre gerar novo grafo
+                                            # 2. ESTILIZAÇÃO PROFISSIONAL (Clean & Clear)
+                                            sub_degrees = dict(G_viz.degree())
+                                            nx.set_node_attributes(
+                                                G_viz,
+                                                {n: max(6, min(26, 8 + (d * 2))) for n, d in sub_degrees.items()},
+                                                'size'
+                                            )
+
+                                            if use_community:
+                                                try:
+                                                    from networkx.algorithms import community
+                                                    communities = list(community.greedy_modularity_communities(G_viz))
+                                                    colors = [
+                                                        '#E6194B', '#3CB44B', '#FFE119', '#4363D8', '#F58231',
+                                                        '#911EB4', '#46F0F0', '#F032E6', '#BCF60C', '#FABEBE',
+                                                        '#008080', '#E6BEFF', '#9A6324', '#FFFAC8', '#800000',
+                                                        '#AAFFC3', '#808000', '#FFD8B1', '#000075', '#808080'
+                                                    ]
+                                                    color_map = {}
+                                                    for i, comm in enumerate(communities):
+                                                        c = colors[i % len(colors)]
+                                                        for node in comm:
+                                                            color_map[node] = c
+                                                    nx.set_node_attributes(G_viz, color_map, 'color')
+                                                except Exception:
+                                                    nx.set_node_attributes(G_viz, '#4e79a7', 'color')
+                                            else:
+                                                nx.set_node_attributes(G_viz, '#59a14f', 'color')
+
+                                            # 3. CONFIGURAÇÃO PYVIS - Layout com distância configurável
+                                            node_font_size = 11 if small_node_mode or G_viz.number_of_nodes() > 300 else 13
+                                            base_bg_color = "#ffffff" if small_node_mode else "#f7f9fb"
+                                            label_color = "#0f172a"
+
+                                            # k controla a distância ideal entre nós (maior k = mais espaço)
+                                            # Escala: 20->0.3, 60->0.9, 150->2.25
+                                            k_value = spacing_distance / 66.0
+                                            pos = nx.spring_layout(G_viz, k=k_value, iterations=80, seed=42)
+
+                                            # Multiplicador de escala para visualização (maior spacing = mais spread)
+                                            scale_factor = 400 + (spacing_distance * 8)
+                                            for node_id, (x_pos, y_pos) in pos.items():
+                                                G_viz.nodes[node_id]['x'] = float(x_pos * scale_factor)
+                                                G_viz.nodes[node_id]['y'] = float(y_pos * scale_factor)
+
+                                            net = Network(height="700px", width="100%", bgcolor="#ffffff", font_color="#000000", directed=show_arrows)
+                                            net.from_nx(G_viz)
+
+                                            # Garante rótulo visível em cada nó
+                                            for n in net.nodes:
+                                                n["label"] = str(n.get("label") or n.get("id"))
+
+                                            for n in net.nodes:
+                                                node_border = n.get("color", "#4e79a7")
+                                                n.update({
+                                                    "shape": "box",
+                                                    "color": {
+                                                        "background": base_bg_color,
+                                                        "border": node_border,
+                                                        "highlight": {"background": "#ffffff", "border": "#111827"}
+                                                    },
+                                                    "font": {"size": node_font_size, "face": "Helvetica", "color": label_color},
+                                                    "shadow": False,
+                                                })
+
+                                            physics_options = {
+                                                "solver": "repulsion",
+                                                "repulsion": {
+                                                    "nodeDistance": spacing_distance,
+                                                    "centralGravity": 0.035,
+                                                    "springLength": max(60, int(spacing_distance * 0.85)),
+                                                    "springConstant": 0.02,
+                                                    "damping": 0.1
+                                                },
+                                                "minVelocity": 0.2,
+                                                "stabilization": {
+                                                    "enabled": True,
+                                                    "iterations": stabilization_iterations
+                                                }
+                                            }
+
+                                            physics_config = json.dumps({"enabled": False}) if disable_physics else json.dumps(physics_options)
+
+                                            edge_smooth_config = False
+
+                                            full_options = f"""
+                                            var options = {{
+                                              "physics": {physics_config},
+                                              "nodes": {{
+                                                "shape": "box",
+                                                "font": {{"size": {node_font_size}, "face": "Helvetica", "color": "{label_color}"}},
+                                                "borderWidth": 1
+                                              }},
+                                          "edges": {{
+                                            "color": {{"color": "#7aa4d8", "highlight": "#1d4ed8", "opacity": 0.65}},
+                                            "smooth": {json.dumps(edge_smooth_config)},
+                                            "arrows": {{"to": {{"enabled": {str(show_arrows).lower()}, "scaleFactor": 0.6, "type": "arrow"}}}},
+                                            "width": 1.0
+                                          }},
+                                              "interaction": {{
+                                                "hover": true,
+                                                "tooltipDelay": 200,
+                                                "hideEdgesOnDrag": true,
+                                                "navigationButtons": true,
+                                                "zoomView": true
+                                              }}
+                                            }}
+                                            """
+                                            net.set_options(full_options)
+
+                                            try:
+                                                if use_community and G_viz.number_of_nodes() > 300:
+                                                    from networkx.algorithms import community as nx_comm
+                                                    comms = list(nx_comm.greedy_modularity_communities(G_viz))
+                                                    for i, comm in enumerate(comms):
+                                                        if len(comm) > 25:
+                                                            nodes_list = list(comm)
+                                                            try:
+                                                                net.cluster(nodes=nodes_list)
+                                                            except Exception:
+                                                                pass
+                                            except Exception:
+                                                pass
+
+                                            path = os.path.join(os.getcwd(), "pyvis_graph.html")
+                                            net.save_graph(path)
+
+                                            try:
+                                                with open(path, 'r', encoding='utf-8') as f:
+                                                    source_code = f.read()
+                                            except Exception:
+                                                with open(path, 'r', encoding='utf-8') as f:
+                                                    source_code = f.read()
+
+                                            render_html = source_code
+
+                                        if render_html:
+                                            autor_focus = autor_pref if autor_pref in G_viz.nodes() else None
+                                            viz_state = {
+                                                "graph": G_viz,
+                                                "render_html": render_html,
+                                                "gexf": gexf_data_viz,
+                                                "nodes_csv": csv_nodes_viz,
+                                                "edges_csv": csv_edges_viz,
+                                                "pdf": pdf_output,
+                                                "spacing": spacing_distance,
+                                                "use_community": use_community,
+                                                "show_arrows": show_arrows,
+                                                "autor_focus": autor_focus,
+                                            }
+                                            st.session_state["_pyvis_last"] = viz_state
+                                            # Renderiza imediatamente para evitar nova interação
+                                            components.html(render_html, height=710, scrolling=True)
+                                            st.stop()
+                                    
+                            except Exception as e:
+                                import traceback
+                                st.error(f"Erro ao gerar viz PyVis: {e}")
+                                st.code("".join(traceback.format_exc()))
+                    
+                    # Exibir última visualização salva
+                    viz_state = st.session_state.get("_pyvis_last") if PYVIS_AVAILABLE else None
+                    if viz_state is not None and not isinstance(viz_state, dict):
+                        viz_state = None
+                    if viz_state is not None and viz_state.get("render_html") and not isinstance(viz_state.get("render_html"), str):
+                        viz_state = None
+                    if viz_state is not None and not isinstance(viz_state.get("graph"), nx.Graph):
+                        viz_state = None
+
+                    if viz_state and viz_state.get("render_html"):
+                        render_html = viz_state["render_html"]
+
+                        st.markdown("---")
+                        st.markdown("##### 📊 Grafo de Relações")
+
+                        # Injetar botões de controle funcionais em azul no HTML
+                        control_buttons_html = """
+                        <div style="margin-bottom: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button onclick="if(window.network){window.network.moveTo({scale: window.network.getScale() * 1.3});}"
+                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                🔍+ Zoom In
+                            </button>
+                            <button onclick="if(window.network){window.network.moveTo({scale: window.network.getScale() * 0.7});}"
+                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                🔍- Zoom Out
+                            </button>
+                            <button onclick="if(window.network){window.network.fit();}"
+                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                🔄 Ajustar Tela
+                            </button>
+                            <button onclick="if(window.network){window.network.moveTo({position: {x: 0, y: 0}});}"
+                                    style="background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                                🎯 Centralizar
+                            </button>
+                        </div>
+                        """
+
+                        # Injetar os botões no HTML do grafo
+                        if "<body>" in render_html:
+                            render_html = render_html.replace("<body>", f"<body>{control_buttons_html}")
+                        else:
+                            render_html = control_buttons_html + render_html
+
+                        # Exibir o grafo
+                        components.html(render_html, height=750, scrolling=True)
+
+                        # Botões de download
+                        st.markdown("##### 📥 Exportar dados")
+                        col_dl1, col_dl2, col_dl3, col_dl4 = st.columns(4)
+                        with col_dl1:
+                            st.download_button(
+                                "PDF",
+                                data=viz_state.get("pdf", b""),
+                                file_name="rede_autores.pdf",
+                                mime="application/pdf",
+                                key="btn_pdf_dl"
+                            )
+                        with col_dl2:
+                            st.download_button(
+                                "GEXF",
+                                data=viz_state.get("gexf", b""),
+                                file_name="rede_autores.gexf",
+                                mime="application/gexf+xml",
+                                key="btn_gexf_dl"
+                            )
+                        with col_dl3:
+                            st.download_button(
+                                "Nós CSV",
+                                data=viz_state.get("nodes_csv", ""),
+                                file_name="autores_nos.csv",
+                                mime="text/csv",
+                                key="btn_nodes_dl"
+                            )
+                        with col_dl4:
+                            st.download_button(
+                                "Arestas CSV",
+                                data=viz_state.get("edges_csv", ""),
+                                file_name="citacoes_arestas.csv",
+                                mime="text/csv",
+                                key="btn_edges_dl"
+                            )
+                    else:
+                        st.info("Clique em 'GERAR GRAFO' para visualizar a rede de autores.")
+
+            # ========================================
+            # TAB 2: ANÁLISE TEXTUAL (NLP)
+            # ========================================
+            with tab_nlp:
+                st.markdown("### 📝 Análise Textual dos Resumos")
+                st.markdown("""
+                Visualize as palavras mais frequentes nos resumos do catálogo.
+                As palavras comuns sem valor semântico são automaticamente removidas.
+                """)
+
+                if not NLP_AVAILABLE:
+                    st.error("❌ Módulo de NLP não disponível.")
+                else:
+                    try:
+                        # Coletar todos os resumos
+                        resumos = df['resumo'].dropna().astype(str).tolist()
+                        resumos = [r for r in resumos if r.strip() and r.strip() not in ['', 'nan', 'None']]
+
+                        if not resumos:
+                            st.info("ℹ️ Não há resumos disponíveis para análise.")
+                        else:
+                            # st.success(f"✅ Analisando **{len(resumos)}** resumos...") # Removido para limpar a UI se desejar, mas vou manter o feedback de contagem simples se não foi pedido para tirar.
+                            # O usuário pediu para retirar a info do spacy.
+                            
+                            # Juntar texto
+                            texto_completo = ' '.join(resumos)
+                            
+                            # Ordem importa: substituir frases maiores primeiro
+                            replacements = [
+                                (r'\b[Rr][éèe]gis\s+[Bb]onvicino\b', 'Régis_Bonvicino'), 
+                                (r'\b[Rr][éèe]gis\b', 'Régis_Bonvicino'), 
+                                (r'\b[Bb]onvicino\b', 'Régis_Bonvicino'),
+                                (r'\b[Cc]harles\s+[Bb]ernstein\b', 'Charles_Bernstein'),
+                                (r'\b[Cc]harles\b', 'Charles_Bernstein'),
+                                (r'\b[Bb]ernstein\b', 'Charles_Bernstein'),
+                                (r'\b[Oo]dile\s+[Cc]isneros\b', 'Odile_Cisneros'),
+                                (r'\b[Oo]dile\b', 'Odile_Cisneros'),
+                                (r'\b[Cc]isneros\b', 'Odile_Cisneros'),
+                                (r'\b[Pp]oetas?\b', 'poeta(s)'),     
+                                (r'\b[Pp]oemas?\b', 'poema(s)'),
+                                (r'\b[Ss]ibila\b', 'Sibila'),             
+                                (r'\b[Hh]aarlem\b', 'Haarlem'),
+                            ]
+                            
+                            # Palavras a EXCLUIR explicitamente (Regras do Usuário)
+                            EXCLUSOES = {
+                                'sobre', 'seção', 'destacando', 'destaca', 'apresenta', 'traz', 
+                                'autor', 'autores', 'autora', 'autoras', 'texto', 'textos', 'revista', 'obra', 'obras',
+                                'parte', 'partes', 'forma', 'formas', 'ser', 'ter', 'estar', 'haver',
+                                'artigo', 'ensaio', 'resumo', 'publicação', 'bilíngue', 'paulo',
+                                'produção', 'anos', 'apresentação', 'entrevista', 'papel',
+                                'carlos', 'livro', 'escrita', 'edição', 'leitura', 'editorial', 'número', 'meio'
+                            }
+
+                            final_tokens = []
+
+                            if SPACY_AVAILABLE:
+                                # Processamento com Spacy
+                                nlp_spacy.max_length = len(texto_completo) + 100000
+                                doc = nlp_spacy(texto_completo)
+                                
+                                for token in doc:
+                                    if token.pos_ not in ['NOUN', 'PROPN', 'ADJ']:
+                                        continue
+                                    
+                                    word = token.text.strip()
+                                    word_lower = word.lower()
+                                    
+                                    if word_lower in STOP_WORDS_PT or word_lower in EXCLUSOES or len(word) < 3:
+                                        continue
+                                        
+                                    if word_lower in ['régis', 'regis', 'bonvicino']:
+                                        final_tokens.append('Régis Bonvicino')
+                                        continue
+
+                                    if word_lower in ['charles', 'bernstein']:
+                                        final_tokens.append('Charles Bernstein')
+                                        continue
+                                        
+                                    if word_lower in ['odile', 'cisneros']:
+                                        final_tokens.append('Odile Cisneros')
+                                        continue
+
+                                    if word_lower in ['poeta', 'poetas']:
+                                        final_tokens.append('poeta(s)')
+                                        continue
+
+                                    if word_lower in ['poema', 'poemas']:
+                                        final_tokens.append('poema(s)')
+                                        continue
+
+                                    if word_lower == 'sibila':
+                                        final_tokens.append('Sibila')
+                                        continue
+                                        
+                                    if word_lower == 'poesia':
+                                        final_tokens.append('poesia')
+                                        continue
+
+                                    if word_lower == 'arte':
+                                        final_tokens.append('arte')
+                                        continue
+
+                                    if token.pos_ == 'PROPN' or list(word)[0].isupper():
+                                        final_tokens.append(word)
+                                    else:
+                                        final_tokens.append(word.lower())
+
+                            else:
+                                # Fallback NLTK
+                                texto_proc = texto_completo
+                                for pattern, repl in replacements:
+                                    import re
+                                    texto_proc = re.sub(pattern, repl, texto_proc, flags=re.IGNORECASE)
+                                
+                                tokens = texto_proc.split()
+                                for t in tokens:
+                                    t_clean = t.strip(string.punctuation)
+                                    if not t_clean: continue
+                                    
+                                    t_lower = t_clean.lower()
+                                    
+                                    if t_lower in STOP_WORDS_PT or t_lower in EXCLUSOES or len(t_clean) < 3:
+                                        continue
+                                        
+                                    final_tokens.append(t_clean.replace('_', ' '))
+
+                            # Contar frequências
+                            freq = Counter(final_tokens)
+
+                            # Controle de quantidade
+                            n_palavras = st.slider("Número de palavras a exibir:", 10, 50, 25)
+
+                            # Top palavras
+                            top_palavras = freq.most_common(n_palavras)
+
+                            if top_palavras:
+                                df_freq = pd.DataFrame(top_palavras, columns=['Palavra', 'Frequência'])
+
+                                # Gráfico de barras
+                                fig_freq = px.bar(
+                                    df_freq,
+                                    x='Frequência',
+                                    y='Palavra',
+                                    orientation='h',
+                                    title='Palavras mais frequentes nos resumos',
+                                    color='Frequência',
+                                    color_continuous_scale='Blues'
+                                )
+                                fig_freq.update_layout(yaxis={'categoryorder': 'total ascending'})
+                                st.plotly_chart(fig_freq, use_container_width=True)
+
+                                # Tabela de frequências
+                                with st.expander("📋 Ver tabela completa de frequências"):
+                                    st.dataframe(df_freq, use_container_width=True)
+
+                                # Estatísticas
+                                st.markdown("#### 📊 Estatísticas")
+                                col1, col2 = st.columns(2)
+                                with col1:
+                                    st.metric("Palavras únicas (Conceitos)", len(freq))
+                                with col2:
+                                    st.metric("Total Considerado", len(final_tokens))
+
+                                # Download
+                                csv_freq = df_freq.to_csv(index=False)
+                                st.download_button(
+                                    "📥 Baixar frequências (CSV)",
+                                    data=csv_freq,
+                                    file_name="frequencia_conceitos_resumos.csv",
+                                    mime="text/csv",
+                                    key="btn_freq_csv"
+                                )
+                            else:
+                                st.warning("Não foi possível extrair palavras significativas dos resumos.")
+
+                    except Exception as e:
+                        st.error(f"❌ Erro na análise textual: {str(e)}")
+                        # Debug em caso de erro no Spacy
+                        import traceback
+                        st.code(traceback.format_exc())
+
+            # ========================================
+            # TAB 3: MATRIZ DE CORRELAÇÃO
+            # ========================================
+            with tab_correlacao:
+                st.markdown("### 📊 Matriz de Correlação: Gêneros × Palavras-chave")
+                st.markdown("""
+                Visualização: tipos textuais (vocabulário controlado) associados às palavras-chave
+                """)
+
+                if not SEABORN_AVAILABLE or not MATPLOTLIB_AVAILABLE:
+                    st.error("❌ Bibliotecas `seaborn` e/ou `matplotlib` não disponíveis.")
+                else:
+                    try:
+                        # Construir matriz de co-ocorrência
+                        generos = []
+                        palavras_chave_todas = []
+
+                        for _, row in df.iterrows():
+                            genero = row.get('vocabulario_controlado', '')
+                            pcs = row.get('palavras_chave', [])
+                            if genero and isinstance(pcs, list) and pcs:
+                                for pc in pcs:
+                                    if pc:
+                                        generos.append(str(genero).strip())
+                                        palavras_chave_todas.append(str(pc).strip())
+
+                        if not generos or not palavras_chave_todas:
+                            st.info("ℹ️ Não há dados suficientes para gerar a matriz. Verifique se existem registros com vocabulário controlado E palavras-chave.")
+                        else:
+                            # Criar DataFrame de co-ocorrências
+                            df_cooc = pd.DataFrame({'genero': generos, 'palavra_chave': palavras_chave_todas})
+
+                            # Contar co-ocorrências
+                            matriz = pd.crosstab(df_cooc['genero'], df_cooc['palavra_chave'])
+
+                            # Filtrar para mostrar apenas as mais frequentes
+                            n_generos = st.slider("Número de gêneros a exibir:", 5, 20, 10, key="slider_generos")
+                            n_palavras_chave = st.slider("Número de palavras-chave a exibir:", 5, 30, 15, key="slider_pc")
+
+                            # Top gêneros e palavras-chave por frequência total
+                            top_generos = matriz.sum(axis=1).nlargest(n_generos).index.tolist()
+                            top_pcs = matriz.sum(axis=0).nlargest(n_palavras_chave).index.tolist()
+
+                            matriz_filtrada = matriz.loc[top_generos, top_pcs]
+
+                            if matriz_filtrada.empty:
+                                st.warning("Matriz vazia após filtragem.")
+                            else:
+                                # Criar heatmap com matplotlib/seaborn
+                                fig, ax = plt.subplots(figsize=(12, 8))
+                                sns.heatmap(
+                                    matriz_filtrada,
+                                    annot=True,
+                                    fmt='d',
+                                    cmap='Blues',
+                                    ax=ax,
+                                    cbar_kws={'label': 'Frequência'}
+                                )
+                                ax.set_xlabel('Palavras-chave', fontsize=12)
+                                ax.set_ylabel('Gênero/Tipo Textual', fontsize=12)
+                                ax.set_title('Correlação entre Gêneros e Palavras-chave', fontsize=14)
+                                plt.xticks(rotation=45, ha='right')
+                                plt.yticks(rotation=0)
+                                plt.tight_layout()
+
+                                st.pyplot(fig)
+                                plt.close()
+
+                                # Estatísticas
+                                st.markdown("#### 📊 Estatísticas da Matriz")
+                                col1, col2, col3 = st.columns(3)
+                                with col1:
+                                    st.metric("Gêneros únicos", len(matriz.index))
+                                with col2:
+                                    st.metric("Palavras-chave únicas", len(matriz.columns))
+                                with col3:
+                                    st.metric("Associações totais", len(df_cooc))
+
+                                # Download matriz
+                                csv_matriz = matriz_filtrada.to_csv()
+                                st.download_button(
+                                    "📥 Baixar matriz (CSV)",
+                                    data=csv_matriz,
+                                    file_name="matriz_generos_palavras_chave.csv",
+                                    mime="text/csv",
+                                    key="btn_matriz_csv"
+                                )
+
+                    except Exception as e:
+                        st.error(f"❌ Erro ao gerar matriz de correlação: {str(e)}")
+
+            # ========================================
+            # TAB 4: DNA DAS EDIÇÕES (RADAR CHART)
+            # ========================================
+            with tab_dna:
+                st.markdown("### 🧬 Perfil Estrutural das Edições")
+                st.markdown("""
+                Compare as características estruturais de diferentes números da Sibila.
+                O gráfico abaixo traça uma 'impressão digital' baseada em 4 dimensões:
+                
+                *   **Internacionalização**: Proporção de textos em língua estrangeira ou com segundo idioma.
+                *   **Tradução**: Proporção de textos que envolvem tradução.
+                *   **Visualidade**: Densidade de imagens por artigo (normalizada).
+                *   **Ensaísmo**: Proporção de textos classificados como 'Ensaio' ou 'Crítica'.
+                """)
+                
+                try:
+                    import plotly.graph_objects as go
+                    
+                    # Preparar dados por edição
+                    revistas_unicas = sorted(list(set(df['n'].dropna().astype(str).unique())), 
+                                           key=lambda x: ORDEM_SIBILA.index(x) if x in ORDEM_SIBILA else 999)
+                    
+                    dados_radar = []
+                    
+                    # Calcular métricas para todas as revistas para normalizar visualidade
+                    max_visualidade_dataset = 0
+                    temp_metrics = {}
+
+                    for rev in revistas_unicas:
+                        df_rev = df[df['n'].astype(str) == rev]
+                        if df_rev.empty: continue
+                        
+                        total_items = len(df_rev)
+                        
+                        # 1. Internacionalização
+                        # Idioma 1 diferente de POR ou PRESENÇA de idioma 2
+                        internac_count = df_rev[
+                            (df_rev['idioma_01'].str.upper() != 'POR') | 
+                            (df_rev['idioma_02'].notna() & (df_rev['idioma_02'] != ''))
+                        ].shape[0]
+                        score_internac = (internac_count / total_items) * 100
+                        
+                        # 2. Tradução
+                        # Lista de tradutores não vazia
+                        traducao_count = df_rev[df_rev['tradutores'].apply(lambda x: len(x) > 0 if isinstance(x, list) else False)].shape[0]
+                        score_traducao = (traducao_count / total_items) * 100
+                        
+                        # 3. Visualidade (Densidade)
+                        # Total de ícones / Total de artigos
+                        total_icones = df_rev['iconografias'].apply(lambda x: len(x) if isinstance(x, list) else 0).sum()
+                        density_visual = total_icones / total_items
+                        if density_visual > max_visualidade_dataset:
+                            max_visualidade_dataset = density_visual
+                            
+                        # 4. Ensaísmo vs Poesia
+                        # Contar 'Ensaio', 'Crítica', 'Resenha' vs Tudo
+                        ensaios_count = df_rev[
+                            df_rev['vocabulario_controlado'].astype(str).str.upper().str.contains('ENSAIO|CRÍTICA|RESENHA|ENTREVISTA')
+                        ].shape[0]
+                        score_ensaismo = (ensaios_count / total_items) * 100
+                        
+                        temp_metrics[rev] = {
+                            'Internacionalização': score_internac,
+                            'Tradução': score_traducao,
+                            'Raw_Visualidade': density_visual,
+                            'Ensaísmo': score_ensaismo
+                        }
+                        
+                    # Seletor de revistas
+                    opcoes_padrao = revistas_unicas[:3] if len(revistas_unicas) >= 3 else revistas_unicas
+                    revistas_selecionadas = st.multiselect(
+                        "Selecione as edições para comparar:",
+                        revistas_unicas,
+                        default=opcoes_padrao
+                    )
+                    
+                    if not revistas_selecionadas:
+                        st.warning("Selecione pelo menos uma revista.")
+                    else:
+                        fig = go.Figure()
+                        
+                        # Dados para exportação
+                        export_data = []
+                        
+                        for rev in revistas_selecionadas:
+                            metrics = temp_metrics.get(rev)
+                            if not metrics: continue
+                            
+                            # Normalizar visualidade (0-100 relativo ao máximo do dataset)
+                            norm_visualidade = (metrics['Raw_Visualidade'] / max_visualidade_dataset * 100) if max_visualidade_dataset > 0 else 0
+                            
+                            valores = [
+                                metrics['Internacionalização'],
+                                metrics['Tradução'],
+                                norm_visualidade,
+                                metrics['Ensaísmo'],
+                                metrics['Internacionalização'] # Fechar o ciclo
+                            ]
+                            
+                            categorias = ['Internacionalização', 'Tradução', 'Visualidade', 'Ensaísmo', 'Internacionalização']
+                            
+                            fig.add_trace(go.Scatterpolar(
+                                r=valores,
+                                theta=categorias,
+                                fill='toself',
+                                name=f'Revista {rev}'
+                            ))
+
+                            # Coletar dados para tabela de exportação
+                            export_data.append({
+                                'Revista': rev,
+                                'Internacionalização (%)': round(metrics['Internacionalização'], 2),
+                                'Tradução (%)': round(metrics['Tradução'], 2),
+                                'Ensaísmo (%)': round(metrics['Ensaísmo'], 2),
+                                'Visualidade (Índice Bruto)': round(metrics['Raw_Visualidade'], 4),
+                                'Visualidade (Normalizada 0-100)': round(norm_visualidade, 2)
+                            })
+                            
+                        fig.update_layout(
+                            polar=dict(
+                                radialaxis=dict(
+                                    visible=True,
+                                    range=[0, 100]
+                                )
+                            ),
+                            showlegend=True,
+                            title={
+                                'text': "Perfil Estrutural das Edições",
+                                'y':0.95,
+                                'x':0.5,
+                                'xanchor': 'center',
+                                'yanchor': 'top'
+                            },
+                            height=850, # Aumentado conforme solicitado
+                            width=1000,
+                            margin=dict(l=80, r=80, t=100, b=80)
+                        )
+                        
+                        # Configuração da barra de ferramentas para permitir download SVG/PNG
+                        st.plotly_chart(fig, use_container_width=True, config={
+                            'toImageButtonOptions': {
+                                'format': 'svg', # SVG é vetorial, ideal para "PDF" ou alta qualidade
+                                'filename': 'dna_sibila_radar',
+                                'height': 850,
+                                'width': 1000,
+                                'scale': 2 # Alta resolução
+                            },
+                            'displayModeBar': True,
+                            'displaylogo': False
+                        })
+                        
+                        st.caption(f"*Visualidade normalizada relativa à edição mais visual (Max Densidade: {max_visualidade_dataset:.2f} img/artigo)")
+
+                        # Botões de Exportação dos Dados
+                        if export_data:
+                            st.markdown("### 📥 Exportar Dados do Gráfico")
+                            df_export_radar = pd.DataFrame(export_data)
+                            
+                            col_rad1, col_rad2 = st.columns(2)
+                            
+                            # CSV
+                            csv_radar = df_export_radar.to_csv(index=False)
+                            col_rad1.download_button(
+                                "📋 Baixar Dados (CSV)",
+                                data=csv_radar,
+                                file_name="dna_sibila_dados.csv",
+                                mime="text/csv",
+                                key="btn_radar_csv_export"
+                            )
+                            
+                            # Excel
+                            try:
+                                excel_radar = UtilsModule.converter_excel(df_export_radar)
+                                col_rad2.download_button(
+                                    "📊 Baixar Dados (Excel)",
+                                    data=excel_radar,
+                                    file_name="dna_sibila_dados.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_radar_excel_export"
+                                )
+                            except Exception as e:
+                                col_rad2.warning(f"Excel indisponível: {e}")
+
+                except Exception as e:
+                    st.error(f"❌ Erro ao gerar Radar Chart: {str(e)}")
 
     # --- DIÁRIO DE PESQUISA ---
     elif menu == "DIÁRIO DE PESQUISA":
