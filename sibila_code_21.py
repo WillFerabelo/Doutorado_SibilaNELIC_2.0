@@ -3685,15 +3685,15 @@ def main():
                             # Métricas do grafo
                             col1, col2, col3, col4 = st.columns(4)
                             with col1:
-                                st.metric("Nós (Autores)", G.number_of_nodes())
+                                st.metric("Autores", G.number_of_nodes())
                             with col2:
-                                st.metric("Arestas (Citações)", G.number_of_edges())
+                                st.metric("Citações", G.number_of_edges())
                             with col3:
                                 densidade = nx.density(G)
-                                st.metric("Densidade", f"{densidade:.4f}")
+                                st.metric("Densidade", f"{densidade:.4f}", help="Indica o quão conectada é a rede. Se fosse 1.0, todos os autores citariam todos os outros. Valor baixo indica rede esparsa.")
                             with col4:
                                 componentes = nx.number_weakly_connected_components(G)
-                                st.metric("Componentes", componentes)
+                                st.metric("Componentes", componentes, help="Número de grupos isolados de autores. Se for 1, todos estão conectados. Se for maior, existem 'ilhas' de citação separadas.")
 
                             st.markdown("---")
 
