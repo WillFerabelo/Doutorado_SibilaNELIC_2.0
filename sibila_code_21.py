@@ -225,6 +225,8 @@ CANONICAL_AUTHORS = {
     "SABINSON, Eric": "SABINSON, Eric Mitchell",
     "SALOMÃO, Wally": "SALOMÃO, Waly",
     "SALVINO, Rômullo Valle": "SALVINO, Romulo Valle",
+    "SALVINO, Romullo Valle": "SALVINO, Romulo Valle",
+    "SALVINO, Rômulo Valle": "SALVINO, Romulo Valle",
     "SOSA, Víctor": "SOSA, Victor",
     "SOUSÂNDRADE, Joaquim de": "SOUSÂNDRADE",
     "SOUSÂNDRADE, Joaquim de Sousa Andrade": "SOUSÂNDRADE",
@@ -238,6 +240,7 @@ CANONICAL_AUTHORS = {
     # NOVAS REGRAS (LOTE 5 - Pente Fino)
     "COSTA, Lúcio": "COSTA, Lucio",
     "SALVINO, Rômulo Valle": "SALVINO, Romulo Valle",
+    "SALVINO, Romullo Valle": "SALVINO, Romulo Valle",
 }
 
 # Caminhos de arquivos
@@ -3979,17 +3982,18 @@ def main():
                         # ========== CONTROLES SIMPLIFICADOS ==========
                         st.markdown("##### 🎯 Selecione um autor para destacar:")
                         try:
-                            autor_options = ["(nenhum)"] + sorted(G.nodes())
+                            autor_options = sorted(G.nodes())
                         except Exception:
-                            autor_options = ["(nenhum)"] + [str(n) for n in G.nodes()]
+                            autor_options = [str(n) for n in G.nodes()]
 
                         autor_pref_label = st.selectbox(
                             "Autor",
                             autor_options,
-                            index=0,
+                            index=None,
+                            placeholder="Digite ou selecione um autor...",
                             key="pyvis_autor_select"
                         )
-                        autor_pref = None if autor_pref_label == "(nenhum)" else autor_pref_label
+                        autor_pref = autor_pref_label
 
                         # Mostrar relações do autor IMEDIATAMENTE ao selecionar
                         if autor_pref and autor_pref in G.nodes():
@@ -4391,63 +4395,88 @@ def main():
                                             for n in net.nodes:
                                                 n["label"] = str(n.get("label") or n.get("id"))
 
+                                            # --- ESTILIZAÇÃO DE ARESTAS (SOLICITAÇÃO DO USUÁRIO) ---
+                                            # Cor distinta e destaque visual
+                                            for edge in net.edges:
+                                                edge['color'] = {
+                                                    'color': '#888888',     # Cinza médio visível
+                                                    'highlight': '#d32f2f', # Vermelho forte ao clicar
+                                                    'hover': '#d32f2f',
+                                                    'inherit': False        # Importante: não herdar cor dos nós
+                                                }
+                                                edge['width'] = 1.0
+                                                edge['arrows'] = {
+                                                    'to': {'enabled': True, 'scaleFactor': 0.6}
+                                                }
+                                                # title (tooltip)
+                                                edge['title'] = "Cita"
+
                                             for n in net.nodes:
                                                 node_border = n.get("color", "#4e79a7")
                                                 n.update({
-                                                    "shape": "box",
+                                                    "borderWidth": 1,
+                                                    "borderWidthSelected": 3,
                                                     "color": {
-                                                        "background": base_bg_color,
+                                                        "background": n.get("color", "#4e79a7"),
                                                         "border": node_border,
-                                                        "highlight": {"background": "#ffffff", "border": "#111827"}
+                                                        "highlight": {
+                                                            "background": "#ffdd57",
+                                                            "border": "#ff3860"
+                                                        }
                                                     },
-                                                    "font": {"size": node_font_size, "face": "Helvetica", "color": label_color},
-                                                    "shadow": False,
+                                                    # Sombra leve
+                                                    "shadow": {"enabled": True, "color": "rgba(0,0,0,0.1)", "size": 5, "x": 2, "y": 2}
                                                 })
 
-                                            physics_options = {
-                                                "solver": "repulsion",
-                                                "repulsion": {
-                                                    "nodeDistance": spacing_distance,
-                                                    "centralGravity": 0.035,
-                                                    "springLength": max(60, int(spacing_distance * 0.85)),
-                                                    "springConstant": 0.02,
-                                                    "damping": 0.1
-                                                },
-                                                "minVelocity": 0.2,
-                                                "stabilization": {
-                                                    "enabled": True,
-                                                    "iterations": stabilization_iterations
-                                                }
-                                            }
-
-                                            physics_config = json.dumps({"enabled": False}) if disable_physics else json.dumps(physics_options)
-
-                                            edge_smooth_config = False
-
-                                            full_options = f"""
-                                            var options = {{
-                                              "physics": {physics_config},
-                                              "nodes": {{
-                                                "shape": "box",
-                                                "font": {{"size": {node_font_size}, "face": "Helvetica", "color": "{label_color}"}},
-                                                "borderWidth": 1
-                                              }},
-                                          "edges": {{
-                                            "color": {{"color": "#7aa4d8", "highlight": "#1d4ed8", "opacity": 0.65}},
-                                            "smooth": {json.dumps(edge_smooth_config)},
-                                            "arrows": {{"to": {{"enabled": {str(show_arrows).lower()}, "scaleFactor": 0.6, "type": "arrow"}}}},
-                                            "width": 1.0
-                                          }},
-                                              "interaction": {{
-                                                "hover": true,
-                                                "tooltipDelay": 200,
-                                                "hideEdgesOnDrag": true,
-                                                "navigationButtons": true,
-                                                "zoomView": true
-                                              }}
+                                            # OPÇÕES AVANÇADAS DE INTERAÇÃO
+                                            options_json = f"""
+                                            {{
+                                                "interaction": {{
+                                                    "hover": true,
+                                                    "tooltipDelay": 200,
+                                                    "selectable": true,
+                                                    "selectConnectedEdges": true,
+                                                    "multiselect": true,
+                                                    "navigationButtons": true,
+                                                    "keyboard": true,
+                                                    "highlightNearest": true
+                                                }},
+                                                "nodes": {{
+                                                    "font": {{
+                                                        "size": {node_font_size},
+                                                        "face": "Arial",
+                                                        "color": "{label_color}",
+                                                        "strokeWidth": 3,
+                                                        "strokeColor": "{base_bg_color}"
+                                                    }},
+                                                    "shape": "dot"
+                                                }},
+                                                "edges": {{
+                                                    "smooth": {{
+                                                        "type": "continuous",
+                                                        "forceDirection": "none"
+                                                    }},
+                                                    "selectionWidth": 2.5
+                                                }},
+                                                "physics": {{
+                                                    "enabled": {str(not disable_physics).lower()},
+                                                    "stabilization": {{
+                                                        "enabled": true,
+                                                        "iterations": {stabilization_iterations},
+                                                        "updateInterval": 50
+                                                    }},
+                                                    "barnesHut": {{
+                                                        "gravitationalConstant": -10000,
+                                                        "centralGravity": 0.2,
+                                                        "springLength": {90 + spacing_distance},
+                                                        "springConstant": 0.04,
+                                                        "damping": 0.09,
+                                                        "avoidOverlap": 0.2
+                                                    }}
+                                                }}
                                             }}
                                             """
-                                            net.set_options(full_options)
+                                            net.set_options(options_json)
 
                                             try:
                                                 if use_community and G_viz.number_of_nodes() > 300:

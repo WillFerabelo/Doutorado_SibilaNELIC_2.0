@@ -45,10 +45,10 @@
     ],
     "tradutores": [],
     "autores_citados": [
-      "DRUMMOND, Drummond",
+      "DRUMMOND, Carlos (de Andrade)",
       "MENDES, Murilo",
       "CAPOGROSSI, Giuseppe",
-      "ARISTÓTELES, Aristóteles"
+      "ARISTÓTELES"
     ],
     "palavras_chave": [
       "Literatura",
@@ -274,7 +274,7 @@
     "nota_edicao": "",
     "autores_colaboradores": [
       "BONVICINO, Régis",
-      "KOZER, Jose",
+      "KOZER, José",
       "BAPTISTA, Josely Vianna",
       "JIMÉNEZ, Reynaldo",
       "CRISTOBO, Aníbal",
@@ -284,7 +284,7 @@
       "MANSUR, Guilherme",
       "SOSA, Victor",
       "CONTRERAS, Manuel",
-      "KOZER, Jos"
+      "KOZER, José"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -321,10 +321,10 @@
       "ANDRADE, Oswald de",
       "BOPP, Raul",
       "DIAS, Gonçalves",
-      "SOUSÂNDRADE, Joaquim de",
+      "SOUSÂNDRADE",
       "LAS CASAS, Bartolomé de",
       "MELO NETO, João Cabral de",
-      "CAMÕES, Luís de",
+      "CAMÕES, Luís Vaz de",
       "PESSANHA, Camilo",
       "PESSOA, Fernando",
       "CAMPOS, Álvaro de",
@@ -615,7 +615,7 @@
       "NOVALIS",
       "WORDSWORTH, William",
       "MAGRITTE, René",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "GOMES, Aíla de Oliveira",
       "BONVICINO, Régis",
       "CÍCERO",
@@ -865,7 +865,7 @@
   },
   {
     "n": "1",
-    "registro": "2 de 35",
+    "registro": "2.1 de 35",
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -876,19 +876,7 @@
     "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "KOZER, José",
-      "ARRUDA, Gustavo",
-      "MAIA, Maria Armandina",
-      "COLE, Norma",
-      "GINZBURG, Jaime",
-      "MAINARDI, Diogo",
-      "ROYET-JOURNOUD, Claude",
-      "JINGMING, Yao",
-      "JIMÉNEZ, Reynaldo",
-      "BENNETT, Guy",
-      "FLICK, Robert",
-      "CREELEY, Robert",
-      "VERDI, Maria Lucia"
+      "KOZER, José"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -897,13 +885,128 @@
       "MENDES, Murilo",
       "LEMINSKI, Paulo",
       "COSTA, Horácio",
-      "JINGMING, Yao",
-      "BONVICINO, Régis",
-      "AMANCIO",
-      "BUENO",
-      "FROTA",
-      "FLICK, Robert",
-      "MESSERLI, Douglas",
+      "JINGMING, Yao"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635771",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.2 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ARRUDA, Gustavo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635772",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.3 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MAIA, Maria Armandina"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635773",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.4 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "COLE, Norma"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635774",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.5 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GINZBURG, Jaime"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
       "LIMA, Manoel Ricardo de"
     ],
     "palavras_chave": [],
@@ -915,7 +1018,262 @@
       }
     ],
     "_timestamp": "2025-11-25T15:33:55.770875",
-    "_id": "1764095635770",
+    "_id": "1764095635775",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.6 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MAINARDI, Diogo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "AMÂNCIO, Moacir",
+      "BUENO, Wilson"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635776",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.7 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROYET-JOURNOUD, Claude"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "FROTA, Eduardo",
+      "FLICK, Robert"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635777",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.8 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "JINGMING, Yao"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635778",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.9 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "JIMÉNEZ, Reynaldo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635779",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.10 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BENNETT, Guy"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "MESSERLI, Douglas"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635780",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.11 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "FLICK, Robbert"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BERNSTEIN, Charles",
+      "FLICK, Robert"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635781",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.12 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CREELEY, Robert"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635782",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "1",
+    "registro": "2.13 de 35",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.6-8",
+    "resumo": "Seção de cartas de leitores comentando a edição número zero da revista Sibila. Inclui manifestações de José Kozer, Gustavo Arruda, Maria Armandina Maia (Instituto Camões, Portugal), Norma Cole, Jaime Ginzburg, Diogo Mainardi, Claude Royet-Journoud, Yao Jingming, Reynaldo Jiménez, Guy Bennett, Robert Flick, Robert Creeley e Maria Lucia Verdi. Os leitores elogiam a seleção de poemas, ensaios, traduções, trabalhos fotográficos e registro gráfico, destacando colaboradores como Charles Bernstein, Murilo Mendes, Paulo Leminski, Horácio Costa, Régis Bonvicino e outros. ",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "VERDI, Maria Lucia"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "JINGMING, Yao",
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [
+      {
+        "tipo": "Ilustração",
+        "descricao": "s/título, (fotografia p&b), s/crédito, s/d"
+      }
+    ],
+    "_timestamp": "2025-11-25T15:33:55.770875",
+    "_id": "1764095635783",
     "notas_pesquisa": []
   },
   {
@@ -1321,7 +1679,7 @@
     "resumo": "Ensaio dividido em duas seções que analisa o conceito de vanguarda artística e suas transformações históricas. Na primeira parte, 'Vanguardas históricas', discute a origem e características dos movimentos vanguardistas do início do século XX (futurismo, cubismo, expressionismo, dadaísmo), examinando suas relações com o conceito de modernidade e sua ênfase no novo, no presente e na ruptura com o passado. Analisa o sentido do termo 'moderno' desde suas origens latinas, passando pela substantivação no século XIX com Baudelaire, até sua apropriação pelas vanguardas. Aborda contradições internas desses movimentos, como a questão/tensão entre criatividade individual e subordinação aos manifestos coletivos, e entre impulsos de ruptura e desejo de racionalidade. Na segunda parte, 'Vanguardas hoje', questiona a viabilidade do conceito de vanguarda na contemporaneidade, argumentando que o paradigma do novo se esgotou e que vanguardas tardias como o Concretismo brasileiro ainda mantinham fé no progresso, impossível após Auschwitz e Hiroshima. Defende que o termo 'vanguarda' hoje só tem sentido relativo, por contraste, não mais como categoria histórica. E termina o ensaio refletindo que a arte contemporânea necessita reafirmar-se dialogando com seu tempo, buscando oferecer sentidos sem enrijecer significados.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "SALVINO, Romullo Valle"
+      "SALVINO, Romulo Valle"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -1391,12 +1749,12 @@
     "tradutores": [],
     "autores_citados": [
       "ANDERSON, Benedict",
-      "SOUSÂNDRADE, Joaquim de Sousa Andrade",
+      "SOUSÂNDRADE",
       "LOBO, Luiza",
       "CAMPOS, Haroldo de",
       "CAMPOS, Augusto de",
       "HOMERO",
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "SHAKESPEARE, William",
       "BYRON, Lord",
       "LAMARTINE, Alphonse de",
@@ -1456,7 +1814,7 @@
       "NOOTEBOOM, Cees",
       "SAGASTA, Praxédes Mateo",
       "COUTO, Mia",
-      "ROSA, Guimarães",
+      "ROSA, João Guimarães",
       "LABAN"
     ],
     "palavras_chave": [
@@ -1488,7 +1846,7 @@
     "resumo": "No ensaio de valter hugo mãe sobre a poesia portuguesa contemporânea dos anos 90, o autor argumenta que a nova geração de poetas é 'perseguida' por propostas anteriores, usando apenas velocidades diferentes sem criar paradigmas próprios identificáveis. Afirma que as vanguardas e militâncias estéticas estão enterradas, havendo apenas dispersão com dois traços de união visíveis: o veio de melancolia tradicional da arte portuguesa e a dedicação às 'coisas mínimas' ou 'acontecimento mínimo', segundo Rosa Maria Martelo. Identifica dois percursos principais: primeiro, poetas como Ana Luísa Amaral, Luís Quintais e Rui Pires Cabral que exploram o fragmento narrativo e a micronarrativa; segundo, Jorge Melícias, Sandra Augusto França, José Tolentino Mendonça, Carlos Poças Falcão e Daniel Faria que retornam à metapoesia e metafísica, recuperando deixas dos anos 60 (Herberto Helder). Analisa especialmente Melícias como caso raro que reabilita a metapoética sem receio de dar sequência aos anos 60/70, abrindo novas perspectivas dentro da metáfora e poder lírico e argumenta ainda que a poesia portuguesa recente busca o absoluto e universalidade, possibilitando novo domínio estético como saída para décadas de 'quotidianismo umbiguista'. Propõe a união entre 'total e mínimo' que configuraria 'um modernismo novo' em Portugal.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "MÃE, Valter Hugo"
+      "MÃE, valter hugo"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -1588,7 +1946,7 @@
     ],
     "entidade_coletiva": [],
     "tradutores": [
-      "ROQUETTE-PINTO, Cláudia"
+      "ROQUETTE-PINTO, Claudia"
     ],
     "autores_citados": [],
     "palavras_chave": [],
@@ -1636,7 +1994,7 @@
     "resumo": "Poemas: 'Em,', 'Gesto,'.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "LIMA, Manoel Ricardo"
+      "LIMA, Manoel Ricardo de"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -1778,7 +2136,7 @@
       "PIGNATARI, Décio",
       "LEMINSKI, Paulo",
       "BANDEIRA, Manuel",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "MENDES, Murilo",
       "MELO NETO, João Cabral de",
       "BONVICINO, Régis",
@@ -1790,7 +2148,7 @@
       "BARROS, Manoel de",
       "BUARQUE, Chico",
       "MATTOS, Gregório de",
-      "MAIAKÓVSKI, Vladimir",
+      "MAIAKÓVSKI, Vladímir",
       "ZOLA, Émile",
       "KURZ, Robert"
     ],
@@ -1840,7 +2198,7 @@
       "BUARQUE, Chico",
       "ANTONIONI, Michelangelo",
       "SALOMÃO, Waly",
-      "JOBIM, Tom"
+      "JOBIM, Antônio Carlos"
     ],
     "palavras_chave": [
       "Música",
@@ -1949,7 +2307,7 @@
     ],
     "tradutores": [],
     "autores_citados": [
-      "COSTA, Lúcio"
+      "COSTA, Lucio"
     ],
     "palavras_chave": [],
     "nome_pessoal_como_assunto": [],
@@ -1983,7 +2341,7 @@
     "autores_citados": [
       "PIRONDI, Ciro",
       "BONVICINO, Régis",
-      "COSTA, Lúcio"
+      "COSTA, Lucio"
     ],
     "palavras_chave": [
       "Arquitetura",
@@ -1991,7 +2349,7 @@
       "Arte"
     ],
     "nome_pessoal_como_assunto": [
-      "COSTA, Lúcio"
+      "COSTA, Lucio"
     ],
     "iconografias": [
       {
@@ -2016,13 +2374,13 @@
     "resumo": "Projeto curatorial detalhado de Lúcio Costa (anos 60) para exposição de arte brasileira destinada ao público europeu no Petit Palais, Paris (que não se realizou). Propõe itinerário expositivo iniciando com impacto provocado por maloca autêntica do Alto Xingu no saguão, estabelecendo confronto entre pré-história indígena e Brasília contemporânea. Sequência prevê documentário de Brasília, arquitetura contemporânea (com homenagem a Le Corbusier e referência a Warchavchik), obras da Pampulha, sala especial dedicada a Antonio Francisco Lisboa (Aleijadinho) com moldagem da portada franciscana de Ouro Preto. Cronologia retrospectiva inclui: jardins de Roberto Burle Marx, gravura/pintura/escultura contemporâneas, obras acadêmicas do século XIX e período imperial, arquitetura do ciclo do café, experiência de Vauthier e obra de Glaziou, época da Independência (missão Lebreton, documentários de Debret, Enders e Rugendas), Brasil Colônia (barroco, talha, imaginária, azulejos), presença flamenga no Recife de Nassau (Barleus, Post, Eckhout), arte popular (vínculo africano e sertanejo, fotografias de Verger e Gautheir), cerâmica de Marajó e Santarém. Conclui com referência à França Antártica. Argumenta que obra colonial brasileira não é imitação portuguesa mas 'legítima obra portuguesa do ultramar'.",
     "nota_edicao": "[Texto da seção Recuperações. Escrito nos anos 60, pensado para inclusão em 'Registro de uma vivência' mas não publicado porque exposição não se realizou]",
     "autores_colaboradores": [
-      "COSTA, Lúcio"
+      "COSTA, Lucio"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "WARCHAVCHIK, Gregorio",
-      "CORBUSIER, LE",
+      "WARCHAVCHIK, Gregori",
+      "CORBUSIER, Le",
       "LISBOA, Antonio Francisco",
       "BURLE MARX, Roberto",
       "VAUTHIER",
@@ -2044,7 +2402,7 @@
       "Cultura"
     ],
     "nome_pessoal_como_assunto": [
-      "COSTA, Lúcio"
+      "COSTA, Lucio"
     ],
     "iconografias": [],
     "_timestamp": "2025-11-25T17:12:38.863975",
@@ -2075,7 +2433,7 @@
     "resumo": "Poema: 'Britania rules the waves...'.",
     "nota_edicao": "[Poema publicado na seção Recuperações. Escrito em 09.08.94 (9 de agosto de 1994). Enviado por Maria Elisa Costa em 13 de agosto de 2001, descrito por ela como 'pequena anotação dos anos 90 que podem entendê-la como um poema, num certo sentido evocador de sua infância']",
     "autores_colaboradores": [
-      "COSTA, Lúcio"
+      "COSTA, Lucio"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -2190,7 +2548,7 @@
   },
   {
     "n": "2",
-    "registro": "2 de 41",
+    "registro": "2.1 de 41",
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -2202,29 +2560,373 @@
     "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "ALMINO, João",
-      "HATHEYER, Pedro Paulo",
-      "SALAZAR, Jussara",
-      "MOURA, Antonio",
-      "MARIANI, Matias",
-      "TOLMAN, Jon M.",
-      "ROQUETTE-PINTO, Claudia",
+      "ALMINO, João"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991762"
+  },
+  {
+    "n": "2",
+    "registro": "2.2 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "HATHEYER, Pedro Paulo"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "GUIMARÃES, Lúcia",
+      "BLINDER, Caio",
+      "CISNEROS, Odile"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991763"
+  },
+  {
+    "n": "2",
+    "registro": "2.3 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SALAZAR, Jussara"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991764"
+  },
+  {
+    "n": "2",
+    "registro": "2.4 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MOURA, Antonio"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991765"
+  },
+  {
+    "n": "2",
+    "registro": "2.5 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MARIANI, Matias"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "ANDREWS, Bruce",
+      "BERNSTEIN, Charles"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991766"
+  },
+  {
+    "n": "2",
+    "registro": "2.6 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "TOLMAN, Jon M"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "CISNEROS, Odile"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991767"
+  },
+  {
+    "n": "2",
+    "registro": "2.7 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROQUETTE-PINTO, Claudia"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
+      "CISNEROS, Odile"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991768"
+  },
+  {
+    "n": "2",
+    "registro": "2.8 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SANDMAN, Marcelo"
+    ],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991769"
+  },
+  {
+    "n": "2",
+    "registro": "2.9 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MARINS, Álvaro"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "SALVINO, Romulo Valle"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991770"
+  },
+  {
+    "n": "2",
+    "registro": "2.10 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GALVÃO, Donizete"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "SALVINO, Romulo Valle",
+      "PERLOFF, Marjorie",
       "SANDMAN, Marcelo",
-      "MARINS, Álvaro",
-      "GALVÃO, Donizete",
-      "BERNSTEIN, Charles",
+      "VELOSO, Caetano"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991771"
+  },
+  {
+    "n": "2",
+    "registro": "2.11 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BERNSTEIN, Charles"
+    ],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Cinema",
+      "Estados Unidos",
+      "Brasil",
+      "Rio de Janeiro",
+      "São Paulo"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_id": "1765232991772"
+  },
+  {
+    "n": "2",
+    "registro": "2.12 de 41",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "entidade_coletiva": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-9",
+    "resumo": "Seção de correspondência reunindo mensagens de leitores e colaboradores sobre o lançamento da revista Sibila no Brasil e nos Estados Unidos. As cartas comentam ensaios, poemas e entrevistas da edição anterior, mencionam eventos em Nova York (KGB Bar) e São Paulo (MAM), e discutem a recepção internacional da publicação.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
       "DEVINENI, Ram"
     ],
     "tradutores": [],
     "autores_citados": [
-      "GUIMARÃES, Lúcia",
-      "BLINDER, Caio",
-      "CISNEROS, Odile",
-      "ANDREWS, Bruce",
-      "BERNSTEIN, Charles",
-      "BONVICINO, Régis",
-      "PERLOFF, Marjorie",
-      "VELOSO, Caetano",
       "ROCHA, Flavia",
       "TORRES, Edwin"
     ],
@@ -2238,7 +2940,8 @@
       "São Paulo"
     ],
     "nome_pessoal_como_assunto": [],
-    "iconografias": []
+    "iconografias": [],
+    "_id": "1765232991773"
   },
   {
     "n": "2",
@@ -2361,14 +3064,14 @@
       "VILLAURRUTIA, Xavier",
       "DAO, Bei",
       "BISHOP, Elizabeth",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "STRAND, Mark",
       "LOWELL, Robert",
       "BERRYMAN, John",
       "JARRELL, Randall",
       "RUKEYSER, Muriel",
       "MALLARMÉ, Stéphane",
-      "CUMMINGS, E. E.",
+      "CUMMINGS, e. e.",
       "HOWE, Susan",
       "STEIN, Gertrude",
       "BONVICINO, Régis",
@@ -2448,7 +3151,7 @@
     "autores_citados": [
       "VALLEJO, César",
       "MALLARMÉ, Stéphane",
-      "MAIAKÓVSKI, Vladimir",
+      "MAIAKÓVSKI, Vladímir",
       "ARTAUD, Antonin",
       "BAUDELAIRE, Charles",
       "BENJAMIN, Walter"
@@ -2508,7 +3211,7 @@
     "resumo": "Reprodução da obra \"Borges para cegos\" do artista argentino Léon Ferrari. ",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "FERRARI, Léon"
+      "FERRARI, León"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -2646,7 +3349,7 @@
       "BESSA, A. S."
     ],
     "autores_citados": [
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "MELO NETO, João Cabral de"
     ],
     "palavras_chave": [
@@ -2832,7 +3535,7 @@
     "tradutores": [],
     "autores_citados": [
       "NETO, Torquato",
-      "SALOMÃO, Wally",
+      "SALOMÃO, Waly",
       "VELOSO, Caetano",
       "CARDOSO, Ivan",
       "ZÉ, Tom",
@@ -2847,9 +3550,9 @@
       "LEMINSKI, Paulo",
       "PIGNATARI, Décio",
       "CAMPOS, Augusto de",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "ROSA, Noel",
-      "MORAES, Vinícius de",
+      "MORAES, Vinicius de",
       "CÉSAR, Ana Cristina",
       "ARTAUD, Antonin",
       "FAUSTINO, Mário",
@@ -3262,7 +3965,7 @@
     ],
     "tradutores": [],
     "autores_citados": [
-      "LAUTRÉAMONT",
+      "LAUTRÉAMONT, Conde de",
       "ROSA, João Guimarães",
       "LISPECTOR, Clarice",
       "BLOOM, Harold",
@@ -3365,7 +4068,7 @@
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "CAMÕES, Luís de",
+      "CAMÕES, Luís Vaz de",
       "PESSANHA, Camilo",
       "WU, Li",
       "TI, Ya"
@@ -3725,7 +4428,7 @@
   },
   {
     "n": "3",
-    "registro": "3 de 54",
+    "registro": "3.1 de 54",
     "ordem_exibicao": 4,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -3736,28 +4439,12 @@
     "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "ZÉ, Tom",
-      "CÁMARA, Mario",
-      "BOSI, Viviana",
-      "ROSA, Mario Alex",
-      "CARVALHO, Ricardo Schmitt",
-      "MACCHI, Fabiana",
-      "BESSA, A.S.",
-      "TOSCANO, Rodrigo"
+      "ZÉ, Tom"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "BONVICINO, Régis",
-      "SALVINO, Rômulo Valle",
-      "WEINBERGER, Eliot",
-      "VETERANYI, Aglaja",
-      "STOCK, Robert",
-      "MARTINS, Luciana",
-      "FAUSTINO, Mário",
-      "VILLAÇA, Alcides Celso de Oliveira",
-      "NETO, Torquato",
-      "MEIRELES, Cecília"
+      "BONVICINO, Régis"
     ],
     "palavras_chave": [
       "Literatura",
@@ -3768,7 +4455,233 @@
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
     "_timestamp": "2025-11-27T12:47:56.880633",
-    "_id": "1764258476880",
+    "_id": "1764258476881",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.2 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CÁMARA, Mario"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SALVINO, Romulo Valle"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476882",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.3 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BOSI, Viviana"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "WEINBERGER, Eliot",
+      "VETERANYI, Aglaja"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476883",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.4 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ROSA, Mário Alex"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476884",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.5 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "CARVALHO, Ricardo Schmitt"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "STOCK, Robert",
+      "MARTINS, Luciana",
+      "FAUSTINO, Mário",
+      "VILLAÇA, Alcides Celso de Oliveira"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476885",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.6 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MACCHI, Fabiana"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476886",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.7 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BESSA, A.S."
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "WEINBERGER, Eliot",
+      "NETO, Torquato",
+      "MEIRELES, Cecília",
+      "FAUSTINO, Mário",
+      "SALVINO, Romulo Valle"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476887",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "3",
+    "registro": "3.8 de 54",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "TOSCANO, Rodrigo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Crítica",
+      "Tradução",
+      "Poesia"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T12:47:56.880633",
+    "_id": "1764258476888",
     "notas_pesquisa": []
   },
   {
@@ -3866,7 +4779,7 @@
       "O'HARA, Frank",
       "OLSON, Charles",
       "CREELEY, Robert",
-      "ELIOT, T.S.",
+      "ELIOT, T. S.",
       "GINSBERG, Allen",
       "MCCAFFERY, Steve",
       "HEJINIAN, Lyn",
@@ -3883,7 +4796,7 @@
       "WALLACE, Mark",
       "MARKS, Steven",
       "SPAHR, Juliana",
-      "GOLDSMITH, Kenny",
+      "GOLDSMITH, Kenneth",
       "LIN, Tan",
       "DORIS, Stacy",
       "MULLEN, Harreyette",
@@ -3894,7 +4807,7 @@
       "CAMPOS, Augusto de",
       "CAGE, John",
       "POUND, Ezra",
-      "CUMMINGS, e.e.",
+      "CUMMINGS, e. e.",
       "STEVENS, Wallace",
       "CRANE, Hart",
       "OPPEN, George",
@@ -4538,7 +5451,7 @@
     "resumo": "Ensaio que articula a memória pessoal da infância nas Caxinas com a análise crítica da dramaturgia de Gil Vicente. Valter Hugo Mãe estabelece um paralelo entre a dramaticidade da vida piscatória e a universalidade dos tipos vicentinos, argumentando que a obra do dramaturgo possui uma nitidez atemporal capaz de espelhar a condição humana para além do século XVI. O texto defende a atualidade da crítica social de Vicente, cuja \"malícia inteligente\" e suspensão da inocência continuam a expor o caráter moral da sociedade portuguesa contemporânea.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "MÃE, Valter Hugo"
+      "MÃE, valter hugo"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -4673,10 +5586,10 @@
       "STEIN, Gertrude",
       "POUND, Ezra",
       "JOYCE, James",
-      "ELIOT, T.S.",
+      "ELIOT, T. S.",
       "DICKINSON, Emily",
       "GABLER, Hans",
-      "JOHNSON",
+      "JOHNSON, Robert",
       "FRANKLIN, R. W.",
       "HOWE, Susan",
       "MELLOW, James",
@@ -4715,7 +5628,7 @@
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "ELIOT, T.S.",
+      "ELIOT, T. S.",
       "PESSOA, Fernando",
       "PAZ, Octavio",
       "MELO NETO, João Cabral de",
@@ -4723,7 +5636,7 @@
       "MALLARMÉ, Stéphane",
       "MIASKOWSKI",
       "MENDES, Murilo",
-      "ARAÚJO, Lais Corrêa de"
+      "ARAÚJO, Laís Corrêa de"
     ],
     "palavras_chave": [
       "Poesia",
@@ -4917,7 +5830,7 @@
       "SERRA, Richard",
       "DUCHAMP, Marcel",
       "COSTA, Lucio",
-      "CORBUSIER, LE",
+      "CORBUSIER, Le",
       "AMARAL, Tarsila do",
       "ANDRADE, Mário de",
       "ANDRADE, Oswald de"
@@ -4996,16 +5909,16 @@
       "BOTO, Antonio",
       "RIMBAUD, Arthur",
       "LISPECTOR, Clarice",
-      "CAMÕES, Luís de",
+      "CAMÕES, Luís Vaz de",
       "PESSOA, Fernando",
       "GULLAR, Ferreira",
-      "CRISTOBO, Anibal",
-      "DRUMMOND, Carlos",
+      "CRISTOBO, Aníbal",
+      "DRUMMOND, Carlos (de Andrade)",
       "PIVA, Roberto",
       "LIMA, Jorge de",
       "MENDES, Murilo",
       "BANDEIRA, Manuel",
-      "ALVIM, Chico",
+      "ALVIM, Francisco",
       "CACASO",
       "HORÁCIO",
       "PEIXOTO, Alvarenga",
@@ -5286,9 +6199,9 @@
     "tradutores": [],
     "autores_citados": [
       "PERLOFF, Marjorie",
-      "ALLEN, Donald",
+      "ALLEN, Donald M.",
       "OLSON, Charles",
-      "ELIOT, T.S.",
+      "ELIOT, T. S.",
       "BERNSTEIN, Charles",
       "HEJINIAN, Lyn",
       "FLAUBERT, Gustave",
@@ -5298,7 +6211,7 @@
       "DAVIDSON, Michael",
       "STEIN, Gertrude",
       "DUCHAMP, Marcel",
-      "KHLÉBNIKOV, Velimir",
+      "KHLIÉBNIKOV, Velimir",
       "JAKOBSON, Roman",
       "GINSBERG, Allen",
       "DOVE, Rita",
@@ -5361,7 +6274,7 @@
       "ITARARÉ, Barão de",
       "ANTONIONI, Michelangelo",
       "SÁ-CARNEIRO, Mário de",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "NETO, Torquato",
       "BAKHTIN, Mikhail",
       "BRESSANE, Julio"
@@ -5430,9 +6343,9 @@
       "LINS, Ivan",
       "GIL, Gilberto",
       "BEN, Jorge",
-      "CAYMMI, Dori",
+      "CAYMMI, Dorival",
       "DJAVAN",
-      "JOYCE",
+      "JOYCE, James",
       "BYRNE, David",
       "ZÉ, Tom",
       "SUBA",
@@ -5444,13 +6357,13 @@
       "BOCATO",
       "TOBIN, Amon",
       "CALDATO JR., Mário",
-      "MORAIS, Vinícius de",
+      "MORAES, Vinicius de",
       "VALLE, Marcos",
       "VALLE, Paulo Sérgio",
       "GARZA, Renato",
       "MELLO, Chico",
       "OCOUGNE, Silvia",
-      "JOBIM, Tom",
+      "JOBIM, Antônio Carlos",
       "LYRA, Carlos",
       "MENESCAL, Roberto",
       "OTTO"
@@ -5595,7 +6508,7 @@
     "autores_citados": [
       "BONVICINO, Régis",
       "MELO NETO, João Cabral de",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "BERNARDINI, Aurora Fornoni",
       "CÉSAR, Ana Cristina",
       "SECCHIN, Antonio Carlos",
@@ -5645,7 +6558,7 @@
       "LEITE, Sebastião Uchoa",
       "ANDRADE, Mário de",
       "ANDRADE, Oswald de",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "CAMPOS, Augusto de",
       "CAMPOS, Haroldo de",
       "PIGNATARI, Décio",
@@ -5656,7 +6569,7 @@
       "BRINGHURST, Robert",
       "KEYS, Kerry",
       "GINSBERG, Allen",
-      "ELIOT, T.S.",
+      "ELIOT, T. S.",
       "POUND, Ezra",
       "WILLIAMS, William Carlos",
       "CASTRO, Fidel",
@@ -5812,7 +6725,7 @@
   },
   {
     "n": "4",
-    "registro": "2 de 37",
+    "registro": "2.1 de 37",
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -5823,23 +6736,138 @@
     "resumo": "Seção de correspondência reunindo comentários de leitores e colaboradores. Décio Pignatari analisa a contribuição teórica das revistas Sibila e Babel para a nova poesia, destacando a conexão com os \"language poets\" e a entrevista de Charles Bernstein. Outros missivistas, como Marcelo Diniz e Diana Toneto, discutem a produção literária própria e buscam canais de publicação, citando referências como Agustina Bessa-Luís e Manuel Bandeira. Carlos Ávila comenta especificamente o conteúdo da edição anterior, elogiando traduções de Ungaretti e Tablada, além de textos de Régis Bonvicino, João Almino e Romulo Valle Salvino.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "PIGNATARI, Décio",
-      "MOURA, Carolina Bassi de",
-      "DINIZ, Marcelo",
-      "TONETO, Diana",
-      "BUZZO, Elisa Andrade",
-      "ÁVILA, Carlos"
+      "PIGNATARI, Décio"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
       "BERNSTEIN, Charles",
-      "BONVICINO, Régis",
-      "HOLLANDA, Heloisa Buarque de",
-      "MARTINS, Fred",
-      "DUNCAN, Zélia",
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Música Popular"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T20:09:48.046940",
+    "_id": "1764284988047",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "4",
+    "registro": "2.2 de 37",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência reunindo comentários de leitores e colaboradores. Décio Pignatari analisa a contribuição teórica das revistas Sibila e Babel para a nova poesia, destacando a conexão com os \"language poets\" e a entrevista de Charles Bernstein. Outros missivistas, como Marcelo Diniz e Diana Toneto, discutem a produção literária própria e buscam canais de publicação, citando referências como Agustina Bessa-Luís e Manuel Bandeira. Carlos Ávila comenta especificamente o conteúdo da edição anterior, elogiando traduções de Ungaretti e Tablada, além de textos de Régis Bonvicino, João Almino e Romulo Valle Salvino.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MOURA, Carolina Bassi de"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Música Popular"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T20:09:48.046940",
+    "_id": "1764284988048",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "4",
+    "registro": "2.3 de 37",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência reunindo comentários de leitores e colaboradores. Décio Pignatari analisa a contribuição teórica das revistas Sibila e Babel para a nova poesia, destacando a conexão com os \"language poets\" e a entrevista de Charles Bernstein. Outros missivistas, como Marcelo Diniz e Diana Toneto, discutem a produção literária própria e buscam canais de publicação, citando referências como Agustina Bessa-Luís e Manuel Bandeira. Carlos Ávila comenta especificamente o conteúdo da edição anterior, elogiando traduções de Ungaretti e Tablada, além de textos de Régis Bonvicino, João Almino e Romulo Valle Salvino.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "TONETO, Diana"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
       "BESSA-LUÍS, Agustina",
-      "BANDEIRA, Manuel",
+      "BANDEIRA, Manuel"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Música Popular"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T20:09:48.046940",
+    "_id": "1764284988049",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "4",
+    "registro": "2.4 de 37",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência reunindo comentários de leitores e colaboradores. Décio Pignatari analisa a contribuição teórica das revistas Sibila e Babel para a nova poesia, destacando a conexão com os \"language poets\" e a entrevista de Charles Bernstein. Outros missivistas, como Marcelo Diniz e Diana Toneto, discutem a produção literária própria e buscam canais de publicação, citando referências como Agustina Bessa-Luís e Manuel Bandeira. Carlos Ávila comenta especificamente o conteúdo da edição anterior, elogiando traduções de Ungaretti e Tablada, além de textos de Régis Bonvicino, João Almino e Romulo Valle Salvino.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "BUZZO, Elisa Andrade"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Música Popular"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-27T20:09:48.046940",
+    "_id": "1764284988050",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "4",
+    "registro": "2.5 de 37",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência reunindo comentários de leitores e colaboradores. Décio Pignatari analisa a contribuição teórica das revistas Sibila e Babel para a nova poesia, destacando a conexão com os \"language poets\" e a entrevista de Charles Bernstein. Outros missivistas, como Marcelo Diniz e Diana Toneto, discutem a produção literária própria e buscam canais de publicação, citando referências como Agustina Bessa-Luís e Manuel Bandeira. Carlos Ávila comenta especificamente o conteúdo da edição anterior, elogiando traduções de Ungaretti e Tablada, além de textos de Régis Bonvicino, João Almino e Romulo Valle Salvino.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "ÁVILA, Carlos"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis",
       "UNGARETTI, Giuseppe",
       "TABLADA, José Juan",
       "BEE, Susan",
@@ -5857,7 +6885,7 @@
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
     "_timestamp": "2025-11-27T20:09:48.046940",
-    "_id": "1764284988046",
+    "_id": "1764284988051",
     "notas_pesquisa": []
   },
   {
@@ -6753,7 +7781,7 @@
     "autores_citados": [
       "CHOPIN, Frédéric",
       "VILLA-LOBOS, Heitor",
-      "JOBIM, Tom",
+      "JOBIM, Antônio Carlos",
       "BUARQUE, Chico",
       "VELOSO, Caetano",
       "GONZAGA, Luiz",
@@ -6834,7 +7862,7 @@
       "STOCKHAUSEN, Karlheinz",
       "NONO, Luigi",
       "LACHENMANN, Helmut",
-      "WEBERN, Anton von",
+      "WEBERN, Anton",
       "BONAPARTE, Napoleão"
     ],
     "palavras_chave": [
@@ -6879,7 +7907,7 @@
       "ENDER, Thomas",
       "TAUNAY, Félix Émile",
       "BAUCH, Emil",
-      "COSTA, Lúcio",
+      "COSTA, Lucio",
       "ROHE, Mies van der",
       "CAPANEMA, Gustavo",
       "LEÃO, Carlos",
@@ -6892,7 +7920,7 @@
       "ROBERTO, Milton",
       "NUNES, Luiz",
       "MEMÓRIA, Archimedes",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "RENAULT, Abgar",
       "ANTÔNIO, Celso",
       "MELO NETO, João Cabral de",
@@ -6947,10 +7975,10 @@
     "tradutores": [],
     "autores_citados": [
       "COSTA, Lucio",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "ANDRADE, Mário de",
       "ANDRADE, Rodrigo Melo Franco de",
-      "MORAES, Vinícius de",
+      "MORAES, Vinicius de",
       "NIEMEYER, Oscar",
       "KUBITSCHEK, Juscelino",
       "ANDRADE, Oswald de",
@@ -7087,7 +8115,7 @@
       "ASSUNÇÃO, Ademir",
       "CORONA, Ricardo",
       "LOPES, Rodrigo Garcia",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "MELO NETO, João Cabral de",
       "ROSA, João Guimarães",
       "MORAES, Vinicius de",
@@ -7116,7 +8144,7 @@
       "AZEVEDO, Carlito",
       "ROQUETTE-PINTO, Claudia",
       "ALMINO, João",
-      "CUMMINGS, E. E."
+      "CUMMINGS, e. e."
     ],
     "palavras_chave": [
       "Poesia",
@@ -7150,12 +8178,12 @@
     "tradutores": [],
     "autores_citados": [
       "DIEGUES, Douglas",
-      "DICK, André",
+      "DICK, André Henrique",
       "CALIXTO, Fabiano",
       "BARROS, Manoel de",
       "ANDRADE, Oswald de",
       "HOPPER, Edward",
-      "GUIMARÃES, Júlio C."
+      "GUIMARÃES, Júlio Castañon"
     ],
     "palavras_chave": [
       "Poesia",
@@ -7166,7 +8194,7 @@
     ],
     "nome_pessoal_como_assunto": [
       "DIEGUES, Douglas",
-      "DICK, André"
+      "DICK, André Henrique"
     ],
     "iconografias": [],
     "_timestamp": "2025-11-28T14:38:10.868829",
@@ -7338,7 +8366,7 @@
   },
   {
     "n": "5",
-    "registro": "2 de 39",
+    "registro": "2.1 de 39",
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -7349,24 +8377,184 @@
     "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "MULLER, Adalberto",
-      "PÉCORA, Alcir",
-      "GULLAR, Ferreira",
-      "GOLA, Hugo",
-      "MALTA, P.",
+      "MULLER, Adalberto"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "SANDMAN, Marcelo",
+      "CELAN, Paul"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Política",
+      "Democracia",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:38:04.709422",
+    "_id": "1764448684710",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "2.2 de 39",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "PÉCORA, Alcir"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Política",
+      "Democracia",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:38:04.709422",
+    "_id": "1764448684711",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "2.3 de 39",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GULLAR, Ferreira"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Política",
+      "Democracia",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:38:04.709422",
+    "_id": "1764448684712",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "2.4 de 39",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GOLA, Hugo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Política",
+      "Democracia",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:38:04.709422",
+    "_id": "1764448684713",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "2.5 de 39",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MALTA, P."
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Poesia",
+      "Cultura",
+      "Política",
+      "Democracia",
+      "Modernismo",
+      "Tradução"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-11-29T17:38:04.709422",
+    "_id": "1764448684714",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "5",
+    "registro": "2.6 de 39",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência contendo cartas de Adalberto Muller (com errata sobre tradução de Paul Celan), Alcir Pécora, Ferreira Gullar, Hugo Gola e P. Malta. Inclui trecho da resenha \"A Luta da Palavra com o Espaço em Branco\", de Kathrin H. Rosenfield, publicada originalmente na Folha de S. Paulo, analisando a postura política, cultural e editorial da revista Sibila.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
       "ROSENFIELD, Kathrin H."
     ],
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "SANDMANN, Marcelo",
-      "CELAN, Paul",
-      "BONVICINO, Régis",
       "HARDT, Michael",
       "NEGRI, Antonio",
       "BRECHT, Bertolt",
       "GENET, Jean",
       "CREELEY, Robert",
+      "BONVICINO, Régis",
       "MESSERLI, Douglas"
     ],
     "palavras_chave": [
@@ -7380,7 +8568,7 @@
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
     "_timestamp": "2025-11-29T17:38:04.709422",
-    "_id": "1764448684709",
+    "_id": "1764448684715",
     "notas_pesquisa": []
   },
   {
@@ -7417,7 +8605,7 @@
       "JINGMING, Yao",
       "SHANGYIN, Li",
       "LISBOA, Henriqueta",
-      "ANDRADE, Carlos Drummond de"
+      "DRUMMOND, Carlos (de Andrade)"
     ],
     "palavras_chave": [
       "Poesia",
@@ -7464,7 +8652,7 @@
       "MANN, Thomas",
       "BRECHT, Bertolt",
       "FEUCHTWANGER, Lion",
-      "ADORNO, Theodor",
+      "ADORNO, Theodor W.",
       "LANG, Fritz",
       "CAGE, John",
       "STEIN, Leonard",
@@ -7658,7 +8846,7 @@
     "resumo": "Poemas intitulados \"Mais uma lua\", \"Fotos em Sarajevo\" e \"Quem fala quando acabam as palavras...\".",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "ROQUETTE-PINTO, Cláudia"
+      "ROQUETTE-PINTO, Claudia"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -7821,7 +9009,7 @@
     "resumo": "Poemas: \"Las tres gracias\" e \"Austrohúngara\". Traduções para o português (\"As três graças\" e \"Austro-húngara\") de Jussara Salazar. [Publicação bilíngue.]",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "SOSA, Víctor"
+      "SOSA, Victor"
     ],
     "entidade_coletiva": [],
     "tradutores": [
@@ -8034,9 +9222,9 @@
     ],
     "tradutores": [],
     "autores_citados": [
-      "DRUMMOND, Carlos",
+      "DRUMMOND, Carlos (de Andrade)",
       "MENDES, Murilo",
-      "CABRAL, João",
+      "CABRAL, João (de Melo Neto)",
       "LEÃO, Múcio",
       "QUENTAL, Antero de",
       "ANJOS, Augusto dos",
@@ -8133,7 +9321,7 @@
       "KRIVULIN, Viktor",
       "STRATANOVSKY, Sergei",
       "MORONOV, Alexander",
-      "MANDELSTAM, Óssip",
+      "MANDELSTAM, Osip",
       "AKHMÁTOVA, Ana",
       "BRODSKY, Joseph",
       "KRUCHÔNIKH, Aleksiéi",
@@ -8154,7 +9342,7 @@
       "FANAJLOVA, Elena",
       "GINSBERG, Allen",
       "FREUD, Sigmund",
-      "KHLIÉBNIKOV, Vielímir",
+      "KHLIÉBNIKOV, Velimir",
       "MAIAKÓVSKI, Vladímir",
       "VVEDENSKY",
       "HARMS",
@@ -8273,16 +9461,16 @@
       "CAMPOS, Haroldo de",
       "DAVID, Jacques",
       "LINDSAY, Jack",
-      "PUSHKIN",
+      "PUSHKIN, Alexander",
       "LORMÉNTOV",
       "NECRÁSSOV",
       "BRIÚSSOV",
       "BIÉLI",
       "BLOK",
       "ESSÉNIN",
-      "MAIAKÓVSKI",
+      "MAIAKÓVSKI, Vladímir",
       "LÊNIN",
-      "PASTERNAK",
+      "PASTERNAK, Boris",
       "TICÔNOV",
       "SIMÊNOV",
       "FERRO, Antônio"
@@ -8523,7 +9711,7 @@
       "PERILLI, Achille",
       "MAGNELLI",
       "MORANDI",
-      "FONTANA",
+      "FONTANA, Lucio",
       "VEDOVA",
       "WEISSMANN, Franz",
       "VOLPI, Alfredo",
@@ -8546,7 +9734,7 @@
       "PEPPER, Beverly",
       "TABUCCHI, Antonio",
       "RUIVO, Henrique",
-      "BACH",
+      "BACH, Johann Sebastian",
       "BOILLE, Luigi",
       "READ, Herbert",
       "TAKAHASHI"
@@ -8770,7 +9958,7 @@
       "BASHÔ, Matsuo",
       "THOMAS, Gerald",
       "GORBATCHÓV, Mikhail",
-      "KHLIÉBNIKOV, Vielímir",
+      "KHLIÉBNIKOV, Velimir",
       "MALLARMÉ, Stéphane",
       "PASTERNAK, Boris",
       "JOYCE, James",
@@ -8789,8 +9977,8 @@
       "COELHO, Bete",
       "GIL, Gilberto",
       "BUARQUE, Chico",
-      "CAMÕES, Luís de",
-      "PETRARCA",
+      "CAMÕES, Luís Vaz de",
+      "PETRARCA, Francesco",
       "BRECHT, Bertolt"
     ],
     "palavras_chave": [
@@ -8833,9 +10021,9 @@
       "TODOROV, Tzvetan",
       "JAKOBSON, Roman",
       "TCHERKÁSSOV, Nikolai",
-      "EISENSTEIN, Sergei",
+      "EISENSTEIN, Sergei M.",
       "ESSIÊNIN, Serguéi",
-      "MAIAKÓVSKI, Vladimir",
+      "MAIAKÓVSKI, Vladímir",
       "KHLIÉBNIKOV, Velimir",
       "TSVETÁIEVA, Marina",
       "UNGARETTI, Giuseppe",
@@ -8845,7 +10033,7 @@
       "SANGUINETI, Edoardo",
       "ALIGHIERI, Dante",
       "PAZ, Octavio",
-      "SOUSÂNDRADE, Joaquim de",
+      "SOUSÂNDRADE",
       "HOMERO",
       "JOYCE, James",
       "GOETHE, Johann Wolfgang von",
@@ -8897,16 +10085,16 @@
       "ANDRADE, Oswald de",
       "JOYCE, James",
       "POUND, Ezra",
-      "CUMMINGS, E. E.",
+      "CUMMINGS, e. e.",
       "MONDRIAN, Piet",
       "VELOSO, Caetano",
-      "SOUSÂNDRADE, Joaquim de",
+      "SOUSÂNDRADE",
       "HOMERO",
       "COSTA, Gal",
       "SAFO",
       "FRANCO, Francisco",
       "ROSA, João Guimarães",
-      "MORAES, Vinícius de",
+      "MORAES, Vinicius de",
       "BANDEIRA, Manuel",
       "MELLO NETO, João Cabral de",
       "DRUMMOND DE ANDRADE, Carlos",
@@ -8954,7 +10142,7 @@
       "ÁVILA, Carlos",
       "ARAÚJO, Laís Corrêa de",
       "ÁVILA, Affonso",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "ANDRADE, Mário de"
     ],
     "palavras_chave": [
@@ -9004,7 +10192,7 @@
       "RILKE, Rainer Maria",
       "BAUDELAIRE, Charles",
       "VIRGÍLIO",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "ELIOT, T. S.",
       "CROCE, Benedetto",
       "SEGUNDO, Juan Luiz",
@@ -9159,7 +10347,7 @@
       "BUARQUE, Chico",
       "ROTHENBERG, Jerome",
       "BERNSTEIN, Charles",
-      "VICUÑA, Cecília",
+      "VICUÑA, Cecilia",
       "PERLOFF, Marjorie",
       "WILLIAMS, William Carlos",
       "STEIN, Gertrude",
@@ -9187,7 +10375,7 @@
   },
   {
     "n": "6",
-    "registro": "3 de 32",
+    "registro": "3.1 de 32",
     "ordem_exibicao": 4,
     "idioma_01": "POR",
     "idioma_02": "",
@@ -9198,22 +10386,47 @@
     "resumo": "Seção de correspondência com comentários de leitores sobre edições anteriores da revista. Mauro Faccioni Filho reflete sobre a inconstância na produção atual de poemas. Fabiana Macchi elogia o pluralismo da publicação, comentando obras de Claudia Roquete-Pinto, Josely Vianna Baptista e Marjorie Perloff, além de mencionar a seção de Pares Contemporâneos e a homenagem a Haroldo de Campos. Inclui notas breves de Víctor Sosa, Matias Mariani e Júlio Castañon Guimarães parabenizando a edição.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "FACCIONI FILHO, Mauro",
-      "MACCHI, Fabiana",
-      "SOSA, Víctor",
-      "MARIANI, Matias",
-      "GUIMARÃES, Júlio Castañon"
+      "FACCIONI FILHO, Mauro"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Tradução",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:12:09.107260",
+    "notas_pesquisa": [],
+    "_id": "1764644995005"
+  },
+  {
+    "n": "6",
+    "registro": "3.2 de 32",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-11",
+    "resumo": "Seção de correspondência com comentários de leitores sobre edições anteriores da revista. Mauro Faccioni Filho reflete sobre a inconstância na produção atual de poemas. Fabiana Macchi elogia o pluralismo da publicação, comentando obras de Claudia Roquete-Pinto, Josely Vianna Baptista e Marjorie Perloff, além de mencionar a seção de Pares Contemporâneos e a homenagem a Haroldo de Campos. Inclui notas breves de Víctor Sosa, Matias Mariani e Júlio Castañon Guimarães parabenizando a edição.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MACCHI, Fabiana"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "ROQUETE-PINTO, Claudia",
+      "ROQUETTE-PINTO, Claudia",
       "BAPTISTA, Josely Vianna",
       "PERLOFF, Marjorie",
       "DRAGOMOSHCHENKO, Arkadii",
       "ÁVILA, Affonso",
       "CISNEROS, Odile",
-      "BONVICINO, Régis",
       "CAMPOS, Haroldo de",
       "CHIELLINO, Gino"
     ],
@@ -9227,7 +10440,101 @@
     "iconografias": [],
     "_timestamp": "2025-12-02T00:12:09.107260",
     "notas_pesquisa": [],
-    "_id": "1764644995004"
+    "_id": "1764644995006"
+  },
+  {
+    "n": "6",
+    "registro": "3.3 de 32",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-11",
+    "resumo": "Seção de correspondência com comentários de leitores sobre edições anteriores da revista. Mauro Faccioni Filho reflete sobre a inconstância na produção atual de poemas. Fabiana Macchi elogia o pluralismo da publicação, comentando obras de Claudia Roquete-Pinto, Josely Vianna Baptista e Marjorie Perloff, além de mencionar a seção de Pares Contemporâneos e a homenagem a Haroldo de Campos. Inclui notas breves de Víctor Sosa, Matias Mariani e Júlio Castañon Guimarães parabenizando a edição.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "SOSA, Víctor"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Tradução",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:12:09.107260",
+    "notas_pesquisa": [],
+    "_id": "1764644995007"
+  },
+  {
+    "n": "6",
+    "registro": "3.4 de 32",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-11",
+    "resumo": "Seção de correspondência com comentários de leitores sobre edições anteriores da revista. Mauro Faccioni Filho reflete sobre a inconstância na produção atual de poemas. Fabiana Macchi elogia o pluralismo da publicação, comentando obras de Claudia Roquete-Pinto, Josely Vianna Baptista e Marjorie Perloff, além de mencionar a seção de Pares Contemporâneos e a homenagem a Haroldo de Campos. Inclui notas breves de Víctor Sosa, Matias Mariani e Júlio Castañon Guimarães parabenizando a edição.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "MARIANI, Matias"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Tradução",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:12:09.107260",
+    "notas_pesquisa": [],
+    "_id": "1764644995008"
+  },
+  {
+    "n": "6",
+    "registro": "3.5 de 32",
+    "ordem_exibicao": 4,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.10-11",
+    "resumo": "Seção de correspondência com comentários de leitores sobre edições anteriores da revista. Mauro Faccioni Filho reflete sobre a inconstância na produção atual de poemas. Fabiana Macchi elogia o pluralismo da publicação, comentando obras de Claudia Roquete-Pinto, Josely Vianna Baptista e Marjorie Perloff, além de mencionar a seção de Pares Contemporâneos e a homenagem a Haroldo de Campos. Inclui notas breves de Víctor Sosa, Matias Mariani e Júlio Castañon Guimarães parabenizando a edição.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "GUIMARÃES, Júlio Castañon"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "BONVICINO, Régis"
+    ],
+    "palavras_chave": [
+      "Poesia",
+      "Literatura",
+      "Tradução",
+      "Crítica"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2025-12-02T00:12:09.107260",
+    "notas_pesquisa": [],
+    "_id": "1764644995009"
   },
   {
     "n": "6",
@@ -9244,7 +10551,7 @@
     "autores_colaboradores": [
       "ROTHENBERG, Jerome",
       "BERNSTEIN, Charles",
-      "VICUÑA, Cecília",
+      "VICUÑA, Cecilia",
       "BONVICINO, Régis",
       "PERLOFF, Marjorie"
     ],
@@ -9259,7 +10566,7 @@
       "GOMINGER, Eugen",
       "SCHWITTERS, Kurt",
       "GARCÍA LORCA, Federico",
-      "NEZVAL, Vitezlav",
+      "NEZVAL, Vítězslav",
       "PICASSO, Pablo",
       "WILLIAMS, William Carlos",
       "STEIN, Gertrude",
@@ -9308,7 +10615,7 @@
     "autores_colaboradores": [
       "ROTHENBERG, Jerome",
       "BERNSTEIN, Charles",
-      "VICUÑA, Cecília",
+      "VICUÑA, Cecilia",
       "BONVICINO, Régis",
       "PERLOFF, Marjorie"
     ],
@@ -9319,7 +10626,7 @@
       "POUND, Ezra",
       "WILLIAMS, William Carlos",
       "STEIN, Gertrude",
-      "CUMMINGS, E. E.",
+      "CUMMINGS, e. e.",
       "VALLEJO, César",
       "NERUDA, Pablo",
       "HUIDOBRO, Vicente",
@@ -9338,7 +10645,7 @@
       "WEISS, Mark",
       "HYNER, Stefan",
       "MACKEY, Nathaniel",
-      "ALLEN, Donald",
+      "ALLEN, Donald M.",
       "SHAKESPEARE, William",
       "WARREN, Austin",
       "DICKINSON, Emily",
@@ -10221,7 +11528,7 @@
       "CAVALCANTI, Lya",
       "SILVEIRA, Nise da",
       "ROSA, João Guimarães",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "MARGUERITTE, Victor",
       "CAVALCANTI, Geraldo",
       "BANDEIRA, Manuel",
@@ -10336,7 +11643,7 @@
       "BISHOP, Elizabeth",
       "PLATH, Sylvia",
       "BANDEIRA, Manuel",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "BACHELARD, Gaston",
       "MALLARMÉ, Stéphane"
     ],
@@ -10665,7 +11972,7 @@
       "CAMPOS, Haroldo de",
       "VELOSO, Caetano",
       "CAMPOS, Augusto de",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "FIGUEIREDO, Luciano",
       "OITICICA, Hélio",
       "COELHO, Frederico Oliveira",
@@ -10678,7 +11985,7 @@
       "CHIODETTO, Eder",
       "PERLONGHER, Néstor",
       "GIRONDO, Oliverio",
-      "CLARK, Lígia",
+      "CLARK, Lygia",
       "NETO, Torquato",
       "FERRAZ, Eucanaã",
       "MOORE, Michael",
@@ -10745,7 +12052,7 @@
       "BARTHES, Roland",
       "PICABIA, Francis",
       "PESSOA, Fernando",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "POUND, Ezra",
       "ALBIACH, Anne-Marie",
       "RIMBAUD, Arthur",
@@ -11018,14 +12325,14 @@
       "ROCHA, João Cézar de Castro",
       "CANDIDO, Antonio",
       "FRANCHETTI, Paulo",
-      "SABINSON, Eric",
+      "SABINSON, Eric Mitchell",
       "BONVICINO, Régis",
       "CAMPOS, Haroldo de",
       "VELOSO, Caetano",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "BAUDELAIRE, Charles",
       "MALLARMÉ, Stéphane",
-      "CABRAL, João (Melo Neto)",
+      "CABRAL, João (de Melo Neto)",
       "BARROS, Manoel de",
       "AZEVEDO, Carlito",
       "WITTGENSTEIN, Ludwig",
@@ -11066,7 +12373,7 @@
       "PIVA, Roberto",
       "MARTINS, Floriano",
       "ASSUMPÇÃO, Ademir",
-      "ÁVILA, Afonso",
+      "ÁVILA, Affonso",
       "HELDER, Herberto",
       "MATTOSO, Glauco",
       "PRADO, Adélia",
@@ -11266,16 +12573,16 @@
       "CAMUS, Albert",
       "LAFAYETTE, Madame de",
       "STAEL, Madame de",
-      "GOETHE",
-      "BYRON",
+      "GOETHE, Johann Wolfgang von",
+      "BYRON, Lord",
       "PUCHKIN",
       "HUGO, Victor",
       "KIERKEGAARD, Søren",
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "PROUST, Marcel",
       "JOYCE, James",
       "STEIN, Gertrude",
-      "WOOLF, Virgínia",
+      "WOOLF, Virginia",
       "BERGSON, Henri",
       "EINSTEIN, Albert"
     ],
@@ -11319,12 +12626,12 @@
       "BORGES, Jorge Luis",
       "VELOSO, Caetano",
       "RODRIGUES, Lupicínio",
-      "MAIAKÓVSKI, Vladimir",
+      "MAIAKÓVSKI, Vladímir",
       "KHLIÉBNIKOV, Velimir",
       "CAGE, John",
       "CUMMINGS, e. e.",
       "APOLLINAIRE, Guillaume",
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "JOYCE, James",
       "POUND, Ezra",
       "MALLARMÉ, Stéphane",
@@ -11366,15 +12673,15 @@
     "resumo": "O trabalho de Luís Dolhnikoff é dedicado a uma análise estrutural e semântica de \"No meio do caminho\", de Carlos Drummond de Andrade. O autor examina como a repetição dos versos, aliada ao encadeamento frasal e ao efeito de parada sintática, materializa no corpo do poema o próprio impasse que o texto enuncia. Dolhnikoff argumenta que o poema não se organiza por metáforas abertas, mas pela reprodução formal da experiência de bloqueio, o que aproxima sua estrutura daquilo que descreve. A análise compara o procedimento drummondiano a recursos presentes em Verlaine e e. e. cummings, destacando como o ritmo, os cortes e a visualidade também configuram significados. O ensaio discute ainda as tensões entre o passado lírico tradicional e a modernidade formal do poema, relacionando-o à \"Commedia\" de Dante e ao mito de Sísifo, tal como retomado por Camus, para evidenciar o alcance existencial do impasse recriado pelo texto.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "DOLHNIKOFF, Luís"
+      "DOLHNIKOFF, Luis"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
     "autores_citados": [
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "VERLAINE, Paul",
       "CUMMINGS, e. e.",
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "CAMUS, Albert"
     ],
     "palavras_chave": [
@@ -11386,7 +12693,7 @@
       "Crítica Literária"
     ],
     "nome_pessoal_como_assunto": [
-      "ANDRADE, Carlos Drummond de"
+      "DRUMMOND, Carlos (de Andrade)"
     ],
     "iconografias": [],
     "_timestamp": "2025-12-02T17:39:58.938554",
@@ -11415,7 +12722,7 @@
       "CABRAL DE MELO NETO, João",
       "NEGREIROS, Almada",
       "VIEIRA DA SILVA, Maria Helena",
-      "XAVIER"
+      "XAVIER, Valêncio"
     ],
     "palavras_chave": [
       "Literatura",
@@ -11785,7 +13092,7 @@
       "MALLARMÉ, Stéphane",
       "JOYCE, James",
       "SOUSÂNDRADE",
-      "MAIAKÓVSKI, Vladimir",
+      "MAIAKÓVSKI, Vladímir",
       "STEIN, Gertrude",
       "NIETZSCHE, Friedrich",
       "FREUD, Sigmund",
@@ -11960,7 +13267,7 @@
       "GLASS, Philip",
       "JANDL, Ernst",
       "MENDES, Murilo",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "BANDEIRA, Manuel",
       "MELLO NETO, João Cabral de",
       "PIGNATARI, Décio",
@@ -12069,7 +13376,7 @@
       "LORCA, Federico García",
       "ALBERTI, Rafael",
       "CERNUDA, Luis",
-      "ADORNO, Theodor",
+      "ADORNO, Theodor W.",
       "CELAN, Paul",
       "HORKHEIMER, Max",
       "BOLÍVAR, Simón",
@@ -12116,7 +13423,7 @@
       "LEFORT, Claude",
       "TOLENTINO, Bruno",
       "CAMPOS, Augusto de",
-      "LEITE, Sebastião Uchôa",
+      "LEITE, Sebastião Uchoa",
       "ASCHER, Nelson",
       "SAID, Edward",
       "OLIVEIRA, Nelson de",
@@ -12175,7 +13482,7 @@
       "CAMPOS, Haroldo de",
       "AZEVEDO, Carlito",
       "BANDEIRA, Manuel",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "MELO NETO, João Cabral de",
       "MENDES, Murilo",
       "GULLAR, Ferreira",
@@ -12652,7 +13959,7 @@
     "resumo": "Ensaio de Carlos Drummond de Andrade publicado originalmente no Jornal do Brasil em 1983, dois dias após a morte de Garrincha, no qual o poeta interpreta o jogador como símbolo cultural do Brasil. Drummond argumenta que Garrincha, com sua irreverência, inocência e genialidade antitécnica, tornou-se um mito capaz de sublimar as tristezas coletivas e os complexos nacionais, funcionando como um “irmão” do povo que oferecia alegria sem exigir esforço moral ou intelectual. O texto contrasta a glória efêmera do futebol com a ingratidão estrutural do esporte profissional e conclui que, na ausência de heróis sérios, a sociedade se agarra à lembrança mágica de figuras como Garrincha, cujo talento desafiava a lógica e a previsibilidade. [Publicação com autorização da Agência Literária BMSR. Homenagem de Sibila a Garrincha, 47 anos da Copa de 1958 e 43 anos do bicampeonato de 1962].",
     "nota_edicao": "Homenagem de Sibila a Garrincha, que foi, ao lado de Pelé, o maior inovador do futebol brasileiro em todos os tempos, há 47 anos da conquista da Copa de 1958, na Suécia, e há 43 anos do bicampeonato no Chile, em 1962.",
     "autores_colaboradores": [
-      "DRUMMOND, Carlos"
+      "DRUMMOND, Carlos (de Andrade)"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -12851,7 +14158,7 @@
       "CREELEY, Robert",
       "POUND, Ezra",
       "WILLIAMS, William Carlos",
-      "ALLEN, Donald",
+      "ALLEN, Donald M.",
       "TALMAN, Warren",
       "ZACARIAS"
     ],
@@ -12941,7 +14248,7 @@
       "FITZGERALD, Edward",
       "ELIOT, T. S.",
       "SIDNEY, Philip",
-      "ALLEN, Donald",
+      "ALLEN, Donald M.",
       "TALLMAN, Warren",
       "ODISSEU"
     ],
@@ -12989,7 +14296,7 @@
       "POUND, Ezra",
       "BUNTING, Basil",
       "DANTE",
-      "ALLEN, Donald",
+      "ALLEN, Donald M.",
       "TALMAN, Warren",
       "DAVI"
     ],
@@ -13031,9 +14338,9 @@
       "JOYCE, James",
       "VIEIRA, Antônio",
       "LISPECTOR, Clarice",
-      "ROSA, Guimarães",
+      "ROSA, João Guimarães",
       "ARISTÓTELES",
-      "PETRARCA",
+      "PETRARCA, Francesco",
       "VITTORIO"
     ],
     "palavras_chave": [
@@ -13187,7 +14494,7 @@
       "FARFA",
       "DEPERO, Fortunato",
       "KRUTCHÔNIKH, Aleksiéi",
-      "KHLÉBNIKOV, Velímir",
+      "KHLIÉBNIKOV, Velimir",
       "POE, Edgar Allan",
       "JAKOBSON, Roman",
       "SCHWITTERS, Kurt",
@@ -13202,7 +14509,7 @@
       "ARZUBIDE, Lizt",
       "ZAPATA, Emiliano",
       "DIAZ, Porfirio",
-      "CHOPIN, Fryderyk",
+      "CHOPIN, Frédéric",
       "WAGNER, Richard",
       "BAUDELAIRE, Charles",
       "ARISTÓFANES",
@@ -13212,7 +14519,7 @@
       "MALLARMÉ, Stéphane",
       "GARNIER, Pierre",
       "WOLMAN, Gil",
-      "DUFRÊNE",
+      "DUFRÊNE, François",
       "BRAU, Jean-Louis",
       "GYSIN, Brion",
       "HEIDSIECK, Bernard",
@@ -13435,7 +14742,7 @@
       "DÍAZ INFANTE, Juan José",
       "AGUIAR, Fernando",
       "ROMAN, Ivette",
-      "RODRÍGUEZ, Américo",
+      "RODRIGUES, Américo",
       "DOCTOROVICH, Fabio",
       "SUMMERS, Rod",
       "BLAINE, Julien",
@@ -14005,7 +15312,7 @@
       "BALZAC, Honoré de",
       "KAFKA, Franz",
       "AMADO, Jorge",
-      "DAO, BEI",
+      "DAO, Bei",
       "ZHAO, Zhenkai",
       "YU, Jian",
       "BLAKE, William",
@@ -14087,7 +15394,7 @@
       "ADORNO, Theodor W.",
       "PAZ, Octavio",
       "CALINESCU, Matei",
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "POPE, Alexander",
       "DONNE, John",
       "BLAKE, William",
@@ -14108,7 +15415,7 @@
       "ROSA, Noel",
       "CARTOLA",
       "CAYMMI, Dorival",
-      "JOBIM, Tom",
+      "JOBIM, Antônio Carlos",
       "VIOLA, Paulinho da",
       "LOBO, Edu",
       "BUARQUE, Chico",
@@ -14324,7 +15631,7 @@
       "PERLOFF, Marjorie",
       "RIBEIRO, Bernardim",
       "VIRGÍLIO",
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "FOUCAULT, Michel"
     ],
     "palavras_chave": [
@@ -14390,7 +15697,7 @@
       "SCOTT, Peter",
       "OSBORN, Kevin",
       "MESSBORN, Katie",
-      "GOLDSMITH, Kenny",
+      "GOLDSMITH, Kenneth",
       "ROSS, Joe",
       "DERRIDA, Jacques",
       "MAYENNE, Daniel",
@@ -14433,7 +15740,7 @@
       "BISHOP, Elizabeth",
       "MELO NETO, João Cabral de",
       "MENDES, Murilo",
-      "ANDRADE, Carlos Drummond de",
+      "DRUMMOND, Carlos (de Andrade)",
       "ANDRADE, Oswald de",
       "BOPP, Raul",
       "POUND, Ezra",
@@ -14533,7 +15840,7 @@
       "BERNARDINI, Aurora"
     ],
     "autores_citados": [
-      "ALIGHIERI, DANTE",
+      "ALIGHIERI, Dante",
       "CERVANTES, Miguel de",
       "BACH, Johann Sebastian",
       "MOZART, Wolfgang Amadeus",
@@ -15186,7 +16493,7 @@
       "CISNEROS, Odile"
     ],
     "autores_citados": [
-      "ROTHENBERG, Gerome",
+      "ROTHENBERG, Jerome",
       "GUITAT",
       "LIVIANI",
       "FREDERIQUE"
@@ -15768,7 +17075,7 @@
       "PICASSO, Pablo",
       "GARGALLO, Pablo",
       "FERRAN",
-      "FERREIRA",
+      "FERREIRA, Evandro Affonso",
       "OTEIZA, Jorge",
       "CHILLIDA, Eduardo",
       "GONZÁLEZ, Julio",
@@ -16467,7 +17774,7 @@
     "tradutores": [],
     "autores_citados": [
       "SILVEIRA, Regina",
-      "PLAZA, Júlio",
+      "PLAZA, Julio",
       "ZANINI, Walter",
       "AMARAL, Aracy",
       "LEMINSKI, Paulo",
@@ -16548,7 +17855,7 @@
       "WILDE, Oscar",
       "CLEASE",
       "BRUCE",
-      "BALL"
+      "BALL, Hugo"
     ],
     "palavras_chave": [
       "Literatura",
