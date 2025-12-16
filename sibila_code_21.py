@@ -959,7 +959,7 @@ class PDFModule:
             pdf.ln(10)
             if df_citados is not None and not df_citados.empty:
                 pdf.set_font("Arial", 'B', 11)
-                pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores citados na seleção (Top 10)"))
+                pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores citados na seleção"))
                 pdf.set_font("Arial", '', 10)
                 for _, row in df_citados.head(10).iterrows():
                     if pdf.get_y() > 260:
@@ -972,7 +972,7 @@ class PDFModule:
                 pdf.ln(6)
             if df_colab is not None and not df_colab.empty:
                 pdf.set_font("Arial", 'B', 11)
-                pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores colaboradores na seleção (Top 10)"))
+                pdf.multi_cell(0, 6, PDFModule.to_latin1("Autores colaboradores na seleção"))
                 pdf.set_font("Arial", '', 10)
                 for _, row in df_colab.head(10).iterrows():
                     if pdf.get_y() > 260:
@@ -2058,9 +2058,9 @@ def relatorio_mapa_colaboracao(df):
     st.plotly_chart(fig, width='stretch')
     
     st.markdown("##### Exportar")
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     
-    excel_rel = UtilsModule.converter_excel(df_rel)
+    excel_rel = UtilsModule.converter_excel(df_rel.rename(columns={'n.': 'Nº Revista'}))
     col1.download_button(
         "📊 EXCEL",
         excel_rel,
@@ -2068,16 +2068,9 @@ def relatorio_mapa_colaboracao(df):
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
-    csv_rel = df_rel.to_csv(index=False, encoding='utf-8-sig')
-    col2.download_button(
-        "📋 CSV",
-        csv_rel,
-        f"rel_mapa_colaboracao_{datetime.now().strftime('%Y%m%d')}.csv",
-        "text/csv",
-        width='stretch'
-    )
+    
     pdf_rel = PDFModule.gerar_pdf_analitico(df, len(df), "Volume de itens por revista")
-    col3.download_button(
+    col2.download_button(
         "📄 PDF (lista completa)",
         pdf_rel,
         f"rel_mapa_colaboracao_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2121,8 +2114,8 @@ def relatorio_bilinguismo(df):
     fig.update_xaxes(type='category', tickmode='linear')
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
-    col1, col2, col3 = st.columns(3)
-    excel_rel = UtilsModule.converter_excel(resumo)
+    col1, col2 = st.columns(2)
+    excel_rel = UtilsModule.converter_excel(resumo.rename(columns={'n': 'Nº Revista', 'total': 'Total', 'bil': 'Bilíngues'}))
     col1.download_button(
         "📊 EXCEL",
         excel_rel,
@@ -2130,16 +2123,9 @@ def relatorio_bilinguismo(df):
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
-    csv_rel = resumo.to_csv(index=False, encoding='utf-8-sig')
-    col2.download_button(
-        "📋 CSV",
-        csv_rel,
-        f"rel_bilinguismo_{datetime.now().strftime('%Y%m%d')}.csv",
-        "text/csv",
-        width='stretch'
-    )
+    
     pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(resumo, "Índice de publicações bilíngues")
-    col3.download_button(
+    col2.download_button(
         "📄 PDF",
         pdf_rel,
         f"rel_bilinguismo_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2191,8 +2177,8 @@ def relatorio_iconografia(df):
     fig.update_xaxes(type='category', tickmode='linear')
     st.plotly_chart(fig, width='stretch')
     st.markdown("##### Exportar")
-    col1, col2, col3 = st.columns(3)
-    excel_rel = UtilsModule.converter_excel(resumo)
+    col1, col2 = st.columns(2)
+    excel_rel = UtilsModule.converter_excel(resumo.rename(columns={'n': 'Nº Revista', 'total_imagens': 'Total de Imagens'}))
     col1.download_button(
         "📊 EXCEL",
         excel_rel,
@@ -2200,16 +2186,9 @@ def relatorio_iconografia(df):
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
-    csv_rel = resumo.to_csv(index=False, encoding='utf-8-sig')
-    col2.download_button(
-        "📋 CSV",
-        csv_rel,
-        f"rel_iconografia_{datetime.now().strftime('%Y%m%d')}.csv",
-        "text/csv",
-        width='stretch'
-    )
+    
     pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(resumo_display, "Iconografia por revista")
-    col3.download_button(
+    col2.download_button(
         "📄 PDF",
         pdf_rel,
         f"rel_iconografia_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2277,7 +2256,7 @@ def relatorio_tipos_textuais(df):
     counts.index = counts.index + 1
     st.dataframe(counts, width='stretch')
     st.markdown("##### Exportar")
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     excel_rel = UtilsModule.converter_excel(counts)
     col1.download_button(
         "📊 EXCEL",
@@ -2286,16 +2265,9 @@ def relatorio_tipos_textuais(df):
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
-    csv_rel = counts.to_csv(index=False, encoding='utf-8-sig')
-    col2.download_button(
-        "📋 CSV",
-        csv_rel,
-        f"rel_tipos_{datetime.now().strftime('%Y%m%d')}.csv",
-        "text/csv",
-        width='stretch'
-    )
+    
     pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(counts, "Tipos textuais")
-    col3.download_button(
+    col2.download_button(
         "📄 PDF",
         pdf_rel,
         f"rel_tipos_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2348,9 +2320,16 @@ def relatorio_manifesto(df):
             width='stretch'
         )
         st.markdown("##### Exportar")
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
         df_export = df_man[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'palavras_chave', 'onde_encontrado']].copy()
-        excel_rel = UtilsModule.converter_excel(df_export)
+        excel_rel = UtilsModule.converter_excel(df_export.rename(columns={
+            'n': 'Nº Revista', 
+            'registro': 'Registro',
+            'vocabulario_controlado': 'Tipo Textual',
+            'titulo_artigo': 'Título',
+            'palavras_chave': 'Palavras-chave',
+            'onde_encontrado': 'Encontrado em'
+        }))
         col1.download_button(
             "📊 EXCEL",
             excel_rel,
@@ -2358,16 +2337,9 @@ def relatorio_manifesto(df):
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             width='stretch'
         )
-        csv_rel = df_export.to_csv(index=False, encoding='utf-8-sig')
-        col2.download_button(
-            "📋 CSV",
-            csv_rel,
-            f"rel_manifesto_{datetime.now().strftime('%Y%m%d')}.csv",
-            "text/csv",
-            width='stretch'
-        )
+        
         pdf_rel = PDFModule.gerar_pdf_analitico(df_man, len(df), "Manifesto")
-        col3.download_button(
+        col2.download_button(
             "📄 PDF",
             pdf_rel,
             f"rel_manifesto_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2422,9 +2394,16 @@ def relatorio_sibila(df):
             width='stretch'
         )
         st.markdown("##### Exportar")
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
         df_export = df_sib[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'palavras_chave', 'onde_encontrado']].copy()
-        excel_rel = UtilsModule.converter_excel(df_export)
+        excel_rel = UtilsModule.converter_excel(df_export.rename(columns={
+            'n': 'Nº Revista', 
+            'registro': 'Registro',
+            'vocabulario_controlado': 'Tipo Textual',
+            'titulo_artigo': 'Título',
+            'palavras_chave': 'Palavras-chave',
+            'onde_encontrado': 'Encontrado em'
+        }))
         col1.download_button(
             "📊 EXCEL",
             excel_rel,
@@ -2432,16 +2411,9 @@ def relatorio_sibila(df):
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             width='stretch'
         )
-        csv_rel = df_export.to_csv(index=False, encoding='utf-8-sig')
-        col2.download_button(
-            "📋 CSV",
-            csv_rel,
-            f"rel_sibila_{datetime.now().strftime('%Y%m%d')}.csv",
-            "text/csv",
-            width='stretch'
-        )
+        
         pdf_rel = PDFModule.gerar_pdf_analitico(df_sib, len(df), "Sibila")
-        col3.download_button(
+        col2.download_button(
             "📄 PDF",
             pdf_rel,
             f"rel_sibila_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2461,7 +2433,7 @@ def relatorio_palavras_chave(df):
     df_stats.index = df_stats.index + 1
     st.dataframe(df_stats, width='stretch')
     st.markdown("##### Exportar")
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     excel_rel = UtilsModule.converter_excel(df_stats)
     col1.download_button(
         "📊 EXCEL",
@@ -2470,16 +2442,9 @@ def relatorio_palavras_chave(df):
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
-    csv_rel = df_stats.to_csv(index=False, encoding='utf-8-sig')
-    col2.download_button(
-        "📋 CSV",
-        csv_rel,
-        f"rel_palavras_chave_{datetime.now().strftime('%Y%m%d')}.csv",
-        "text/csv",
-        width='stretch'
-    )
+    
     pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(df_stats, "Palavras-chave")
-    col3.download_button(
+    col2.download_button(
         "📄 PDF",
         pdf_rel,
         f"rel_palavras_chave_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -2567,9 +2532,9 @@ def relatorio_densidade_paginas(df):
     
     # Exportar
     st.markdown("##### Exportar")
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     
-    excel_rel = UtilsModule.converter_excel(df_rel)
+    excel_rel = UtilsModule.converter_excel(df_rel.rename(columns={'n.': 'Nº Revista'}))
     col1.download_button(
         "📊 EXCEL",
         excel_rel,
@@ -2578,17 +2543,8 @@ def relatorio_densidade_paginas(df):
         width='stretch'
     )
     
-    csv_rel = df_rel.to_csv(index=False, encoding='utf-8-sig')
-    col2.download_button(
-        "📋 CSV",
-        csv_rel,
-        f"rel_densidade_imagens_{datetime.now().strftime('%Y%m%d')}.csv",
-        "text/csv",
-        width='stretch'
-    )
-    
     pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(df_rel, "Densidade de Imagens por Páginas")
-    col3.download_button(
+    col2.download_button(
         "📄 PDF",
         pdf_rel,
         f"rel_densidade_imagens_{datetime.now().strftime('%Y%m%d')}.pdf",
@@ -3481,9 +3437,30 @@ def main():
             # Layout melhorado para botões de exportação com espaçamento adequado
             col_export1, col_export2, col_export3 = st.columns([1, 1, 1])
 
-            excel_busca = UtilsModule.converter_excel(res)
+            # Renomear colunas para português antes de exportar
+            res_export = res.rename(columns={
+                "n": "Nº Revista",
+                "registro": "Registro",
+                "titulo_artigo": "Título",
+                "subtitulo_artigo": "Subtítulo",
+                "autores_colaboradores": "Autores Colaboradores",
+                "entidade_coletiva": "Entidade Coletiva",
+                "tradutores": "Tradutores",
+                "autores_citados": "Autores Citados",
+                "vocabulario_controlado": "Tipo Textual",
+                "palavras_chave": "Palavras-Chave",
+                "nome_pessoal_como_assunto": "Nome Pessoal (Assunto)",
+                "paginas": "Páginas",
+                "resumo": "Resumo",
+                "iconografias": "Iconografias",
+                "nota_edicao": "Nota da Edição",
+                "idioma_01": "Idioma 1",
+                "idioma_02": "Idioma 2",
+                "notas_pesquisa": "Notas de Pesquisa"
+            })
+            excel_busca = UtilsModule.converter_excel(res_export)
             pdf_busca = PDFModule.gerar_pdf_busca_analitica(res, len(df), str_criterios, df_citados, df_colab)
-
+            
             with col_export1:
                 st.download_button(
                     "📊 BAIXAR EXCEL",
@@ -3928,32 +3905,32 @@ def main():
                                 nodes_data = []
                                 for node in G.nodes():
                                     nodes_data.append({
-                                        'id': node,
-                                        'label': node,
-                                        'in_degree': G.in_degree(node),
-                                        'out_degree': G.out_degree(node)
+                                        'ID': node,
+                                        'Rótulo': node,
+                                        'Grau Entrada': G.in_degree(node),
+                                        'Grau Saída': G.out_degree(node)
                                     })
                                 df_nodes = pd.DataFrame(nodes_data)
-                                csv_nodes = df_nodes.to_csv(index=False)
+                                excel_nodes = UtilsModule.converter_excel(df_nodes)
                                 st.download_button(
-                                    "📥 Baixar Nós (CSV)",
-                                    data=csv_nodes,
-                                    file_name="autores_nos.csv",
-                                    mime="text/csv",
-                                    key="btn_nodes_csv"
+                                    "📥 Baixar Nós (Excel)",
+                                    data=excel_nodes,
+                                    file_name="autores_nos.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_nodes_excel"
                                 )
 
                             with col_exp3:
-                                # CSV de arestas
-                                edges_data = [{'source': e[0], 'target': e[1]} for e in G.edges()]
+                                # Excel de arestas
+                                edges_data = [{'Origem': e[0], 'Destino': e[1]} for e in G.edges()]
                                 df_edges = pd.DataFrame(edges_data)
-                                csv_edges = df_edges.to_csv(index=False)
+                                excel_edges = UtilsModule.converter_excel(df_edges)
                                 st.download_button(
-                                    "📥 Baixar Arestas (CSV)",
-                                    data=csv_edges,
-                                    file_name="citacoes_arestas.csv",
-                                    mime="text/csv",
-                                    key="btn_edges_csv"
+                                    "📥 Baixar Arestas (Excel)",
+                                    data=excel_edges,
+                                    file_name="citacoes_arestas.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_edges_excel"
                                 )
 
                     except Exception as e:
@@ -4220,17 +4197,17 @@ def main():
                                         nodes_data_viz = []
                                         for node in G_viz.nodes():
                                             nodes_data_viz.append({
-                                                'id': node,
-                                                'label': node,
-                                                'in_degree': G_viz.in_degree(node),
-                                                'out_degree': G_viz.out_degree(node)
+                                                'ID': node,
+                                                'Rótulo': node,
+                                                'Grau Entrada': G_viz.in_degree(node),
+                                                'Grau Saída': G_viz.out_degree(node)
                                             })
                                         df_nodes_viz = pd.DataFrame(nodes_data_viz)
-                                        csv_nodes_viz = df_nodes_viz.to_csv(index=False)
+                                        excel_nodes_viz = UtilsModule.converter_excel(df_nodes_viz)
 
-                                        edges_data_viz = [{'source': e[0], 'target': e[1]} for e in G_viz.edges()]
+                                        edges_data_viz = [{'Origem': e[0], 'Destino': e[1]} for e in G_viz.edges()]
                                         df_edges_viz = pd.DataFrame(edges_data_viz)
-                                        csv_edges_viz = df_edges_viz.to_csv(index=False)
+                                        excel_edges_viz = UtilsModule.converter_excel(df_edges_viz)
 
                                         def _safe_text(txt: str) -> str:
                                             try:
@@ -4531,8 +4508,8 @@ def main():
                                                 "graph": G_viz,
                                                 "render_html": render_html,
                                                 "gexf": gexf_data_viz,
-                                                "nodes_csv": csv_nodes_viz,
-                                                "edges_csv": csv_edges_viz,
+                                                "nodes_excel": excel_nodes_viz,
+                                                "edges_excel": excel_edges_viz,
                                                 "pdf": pdf_output,
                                                 "spacing": spacing_distance,
                                                 "use_community": use_community,
@@ -4659,19 +4636,19 @@ def main():
                             )
                         with col_dl3:
                             st.download_button(
-                                "Nós CSV",
-                                data=viz_state.get("nodes_csv", ""),
-                                file_name="autores_nos.csv",
-                                mime="text/csv",
+                                "Nós Excel",
+                                data=viz_state.get("nodes_excel", b""),
+                                file_name="autores_nos.xlsx",
+                                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                                 key="btn_nodes_dl",
                                 use_container_width=True
                             )
                         with col_dl4:
                             st.download_button(
-                                "Arestas CSV",
-                                data=viz_state.get("edges_csv", ""),
-                                file_name="citacoes_arestas.csv",
-                                mime="text/csv",
+                                "Arestas Excel",
+                                data=viz_state.get("edges_excel", b""),
+                                file_name="citacoes_arestas.xlsx",
+                                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                                 key="btn_edges_dl",
                                 use_container_width=True
                             )
@@ -4843,13 +4820,13 @@ def main():
                                     st.metric("Total Considerado", len(final_tokens))
 
                                 # Download
-                                csv_freq = df_freq.to_csv(index=False)
+                                excel_freq = UtilsModule.converter_excel(df_freq)
                                 st.download_button(
-                                    "📥 Baixar frequências (CSV)",
-                                    data=csv_freq,
-                                    file_name="frequencia_conceitos_resumos.csv",
-                                    mime="text/csv",
-                                    key="btn_freq_csv"
+                                    "📥 Baixar frequências (Excel)",
+                                    data=excel_freq,
+                                    file_name="frequencia_conceitos_resumos.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_freq_excel"
                                 )
                             else:
                                 st.warning("Não foi possível extrair palavras significativas dos resumos.")
@@ -4939,13 +4916,17 @@ def main():
                                     st.metric("Associações totais", len(df_cooc))
 
                                 # Download matriz
-                                csv_matriz = matriz_filtrada.to_csv()
+                                matriz_final = matriz_filtrada.reset_index().rename(columns={
+                                    'genero': 'Tipo Textual',
+                                    'palavra_chave': 'Palavras-chave'
+                                })
+                                excel_matriz = UtilsModule.converter_excel(matriz_final)
                                 st.download_button(
-                                    "📥 Baixar matriz (CSV)",
-                                    data=csv_matriz,
-                                    file_name="matriz_generos_palavras_chave.csv",
-                                    mime="text/csv",
-                                    key="btn_matriz_csv"
+                                    "📥 Baixar matriz (Excel)",
+                                    data=excel_matriz,
+                                    file_name="matriz_generos_palavras_chave.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_matriz_excel"
                                 )
 
                     except Exception as e:
@@ -5124,20 +5105,10 @@ def main():
                             
                             col_rad1, col_rad2 = st.columns(2)
                             
-                            # CSV
-                            csv_radar = df_export_radar.to_csv(index=False)
-                            col_rad1.download_button(
-                                "📋 Baixar Dados (CSV)",
-                                data=csv_radar,
-                                file_name="dna_sibila_dados.csv",
-                                mime="text/csv",
-                                key="btn_radar_csv_export"
-                            )
-                            
-                            # Excel
+                            # Excel (Única opção agora)
                             try:
                                 excel_radar = UtilsModule.converter_excel(df_export_radar)
-                                col_rad2.download_button(
+                                col_rad1.download_button(
                                     "📊 Baixar Dados (Excel)",
                                     data=excel_radar,
                                     file_name="dna_sibila_dados.xlsx",
@@ -5145,7 +5116,7 @@ def main():
                                     key="btn_radar_excel_export"
                                 )
                             except Exception as e:
-                                col_rad2.warning(f"Excel indisponível: {e}")
+                                col_rad1.warning(f"Excel indisponível: {e}")
 
                 except Exception as e:
                     st.error(f"❌ Erro ao gerar Radar Chart: {str(e)}")
@@ -5785,7 +5756,7 @@ def main():
                     columns={'Termo': 'Campo', 'Qtd': 'Num. Absoluto', '%': 'Percentual'}
                 )
                 st.markdown(f"### 📥 Exportar dados de {label}")
-                exp_col1, exp_col2, exp_col3 = st.columns(3)
+                exp_col1, exp_col2 = st.columns(2)
                 excel_cat = UtilsModule.converter_excel(df_export)
                 exp_col1.download_button(
                     f"📊 EXCEL - {label.upper()}",
@@ -5803,15 +5774,6 @@ def main():
                     "application/pdf",
                     width='stretch',
                     key=f"btn_pdf_{tab_key}"
-                )
-                csv_data = df_export.to_csv(index=False, encoding='utf-8-sig')
-                exp_col3.download_button(
-                    f"📋 CSV - {label.upper()}",
-                    csv_data,
-                    f"sibila_{tab_key}_{datetime.now().strftime('%Y%m%d')}.csv",
-                    "text/csv",
-                    width='stretch',
-                    key=f"btn_csv_{tab_key}"
                 )
                 st.markdown("---")
                 st.markdown(f"**⬆️ {label.upper()} MAIS FREQUENTES (Top 30)**")
@@ -5864,7 +5826,7 @@ def main():
         st.markdown("---")
         st.markdown("### 📥 EXPORTAÇÃO")
         if not df.empty:
-            exp_row1_col1, exp_row1_col2, exp_row1_col3 = st.columns(3)
+            exp_row1_col1, exp_row1_col2 = st.columns(2)
             js = json.dumps(dados, ensure_ascii=False, indent=2)
             exp_row1_col1.download_button(
                 "📥 BAIXAR JSON (CATÁLOGO)",
@@ -5879,14 +5841,6 @@ def main():
                 excel_data,
                 f"backup_sibila_{datetime.now().strftime('%Y%m%d')}.xlsx",
                 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                width='stretch'
-            )
-            csv_data = df.astype(str).to_csv(index=False, encoding='utf-8-sig')
-            exp_row1_col3.download_button(
-                "📄 BAIXAR CSV (CATÁLOGO)",
-                csv_data,
-                f"backup_sibila_{datetime.now().strftime('%Y%m%d')}.csv",
-                "text/csv",
                 width='stretch'
             )
         else:
