@@ -1726,9 +1726,9 @@
     ],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-11-25T16:22:48.689739",
-    "_id": "1764098568689",
-    "notas_pesquisa": []
+    "_timestamp": "2025-12-21T00:24:46.695753",
+    "notas_pesquisa": [],
+    "_id": "1764098568689"
   },
   {
     "n": "1",
@@ -4340,7 +4340,7 @@
     "n": "3",
     "registro": "0 de 54",
     "ordem_exibicao": 1,
-    "idioma_01": "Português",
+    "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "CAPA",
     "titulo_artigo": "Está lançado o IM(PÓS)SIBILISMO",
@@ -4370,7 +4370,7 @@
     "n": "3",
     "registro": "1 de 54",
     "ordem_exibicao": 2,
-    "idioma_01": "Português",
+    "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "ARTES PLÁSTICAS",
     "titulo_artigo": "Sem título",
