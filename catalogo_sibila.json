@@ -673,7 +673,7 @@
     "ordem_exibicao": 23,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "ENSAIO | Artes Plásticas",
     "titulo_artigo": "Empenho e outros sentidos",
     "subtitulo_artigo": "",
@@ -727,7 +727,7 @@
   {
     "n": "0",
     "registro": "23 de 24",
-    "ordem_exibicao": 24.0,
+    "ordem_exibicao": 24,
     "idioma_01": "ING",
     "idioma_02": "",
     "vocabulario_controlado": "ARTES PLÁSTICAS",
@@ -774,7 +774,7 @@
   {
     "n": "0",
     "registro": "24 de 24",
-    "ordem_exibicao": 25.0,
+    "ordem_exibicao": 25,
     "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "CAPA",
@@ -804,7 +804,7 @@
   {
     "n": "1",
     "registro": "0 de 35",
-    "ordem_exibicao": 1.0,
+    "ordem_exibicao": 1,
     "idioma_01": "POR",
     "idioma_02": "",
     "vocabulario_controlado": "CAPA",
@@ -834,7 +834,7 @@
   {
     "n": "1",
     "registro": "1 de 35",
-    "ordem_exibicao": 2.0,
+    "ordem_exibicao": 2,
     "idioma_01": "ING",
     "idioma_02": "",
     "vocabulario_controlado": "ARTES PLÁSTICAS",
@@ -1517,7 +1517,7 @@
     "ordem_exibicao": 10,
     "idioma_01": "ESP",
     "idioma_02": "POR",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "POEMA(S)",
     "titulo_artigo": "Dois poemas",
     "subtitulo_artigo": "",
@@ -1726,9 +1726,9 @@
     ],
     "nome_pessoal_como_assunto": [],
     "iconografias": [],
-    "_timestamp": "2025-12-21T00:24:46.695753",
-    "notas_pesquisa": [],
-    "_id": "1764098568689"
+    "_timestamp": "2025-11-25T16:22:48.689739",
+    "_id": "1764098568689",
+    "notas_pesquisa": []
   },
   {
     "n": "1",
@@ -1885,7 +1885,7 @@
     "ordem_exibicao": 20,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "POEMA(S)",
     "titulo_artigo": "DOIS POEMAS",
     "subtitulo_artigo": "",
@@ -2255,7 +2255,7 @@
     "ordem_exibicao": 31,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "REPORTAGEM",
     "titulo_artigo": "Belgais: um novo espaço para a arte",
     "subtitulo_artigo": "",
@@ -2552,7 +2552,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2583,7 +2583,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2619,7 +2619,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2650,7 +2650,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2681,7 +2681,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2715,7 +2715,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2748,7 +2748,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2782,7 +2782,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2813,7 +2813,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2846,7 +2846,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2882,7 +2882,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -2915,7 +2915,7 @@
     "ordem_exibicao": 3,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "CARTAS DO LEITOR",
     "titulo_artigo": "Cartas",
     "subtitulo_artigo": "",
@@ -3538,7 +3538,7 @@
       "SALOMÃO, Waly",
       "VELOSO, Caetano",
       "CARDOSO, Ivan",
-      "ZÉ, Tom",
+      "MARTINS, Antônio J. Santana (Tom Zé)",
       "OITICICA, Hélio",
       "BUARQUE, Chico",
       "GIL, Gilberto",
@@ -3860,7 +3860,7 @@
     "ordem_exibicao": 30,
     "idioma_01": "POR",
     "idioma_02": "",
-    "entidade_coletiva": "",
+    "entidade_coletiva": [],
     "vocabulario_controlado": "POEMA(S)",
     "titulo_artigo": "Dois poemas",
     "subtitulo_artigo": "",
@@ -4439,7 +4439,7 @@
     "resumo": "Seção de correspondência que reúne comentários de leitores e colaboradores acerca das edições anteriores da revista Sibila. Os textos abordam a recepção crítica de ensaios e poemas, com menções específicas a obras de Rômulo Salvino, Eliot Weinberger e Mário Faustino, além de relatos sobre traduções de Robert Stock e a circulação internacional do periódico.",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "ZÉ, Tom"
+      "MARTINS, Antônio J. Santana (Tom Zé)"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -6347,7 +6347,7 @@
       "DJAVAN",
       "JOYCE, James",
       "BYRNE, David",
-      "ZÉ, Tom",
+      "MARTINS, Antônio J. Santana (Tom Zé)",
       "SUBA",
       "FONSECA, Celso",
       "SUZANO, Marcos",
@@ -6890,6 +6890,38 @@
   },
   {
     "n": "4",
+    "registro": "2.6 de 37",
+    "ordem_exibicao": 3,
+    "idioma_01": "POR",
+    "idioma_02": "",
+    "vocabulario_controlado": "CARTAS DO LEITOR",
+    "titulo_artigo": "Cartas",
+    "subtitulo_artigo": "",
+    "paginas": "p.7-8",
+    "resumo": "Seção de correspondência reunindo comentários de leitores e colaboradores. Décio Pignatari analisa a contribuição teórica das revistas Sibila e Babel para a nova poesia, destacando a conexão com os \"language poets\" e a entrevista de Charles Bernstein. Outros missivistas, como Marcelo Diniz e Diana Toneto, discutem a produção literária própria e buscam canais de publicação, citando referências como Agustina Bessa-Luís e Manuel Bandeira. Carlos Ávila comenta especificamente o conteúdo da edição anterior, elogiando traduções de Ungaretti e Tablada, além de textos de Régis Bonvicino, João Almino e Romulo Valle Salvino.",
+    "nota_edicao": "",
+    "autores_colaboradores": [
+      "DINIZ, Marcelo"
+    ],
+    "entidade_coletiva": [],
+    "tradutores": [],
+    "autores_citados": [
+      "HOLLANDA, Heloísa Buarque de"
+    ],
+    "palavras_chave": [
+      "Literatura",
+      "Poesia",
+      "Crítica",
+      "Música Popular"
+    ],
+    "nome_pessoal_como_assunto": [],
+    "iconografias": [],
+    "_timestamp": "2026-02-18T00:00:00.000000",
+    "_id": "1764284988052",
+    "notas_pesquisa": []
+  },
+  {
+    "n": "4",
     "registro": "3 de 37",
     "ordem_exibicao": 4,
     "idioma_01": "POR",
@@ -6904,7 +6936,7 @@
       "BONVICINO, Régis",
       "CISNEROS, Odile",
       "SALVINO, Romulo Valle",
-      "SANTOS, Tatiana Longo dos",
+      "FIGUEIREDO, Tatiana Maria Longo dos Santos e Nogueira",
       "BERNSTEIN, Charles",
       "BUENO, Wilson",
       "GONÇALVES, Célia",
@@ -6928,7 +6960,7 @@
       "ARAÚJO, Laís Corrêa de",
       "MENDES, Murilo",
       "BRITO, Casimiro de",
-      "ZÉ, Tom"
+      "MARTINS, Antônio J. Santana (Tom Zé)"
     ],
     "palavras_chave": [
       "Vanguarda",
@@ -7009,7 +7041,7 @@
     "resumo": "\"Urgente pela paz\".",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "ZÉ, Tom"
+      "MARTINS, Antônio J. Santana (Tom Zé)"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -8214,7 +8246,7 @@
     "resumo": "Texto de apresentação de Tatiana Longo dos Santos contextualizando o resgate do conto \"O relógio\", de Mário de Andrade, publicado originalmente em 1930 sob o pseudônimo Luiz Antonio Marques. A autora descreve a descoberta do recorte no Arquivo Mário de Andrade (IEB/USP) e analisa o interesse do escritor pelo insólito e pelo realismo fantástico, estabelecendo paralelos com obras de João do Rio e Murilo Rubião. O texto marca a homenagem aos 110 anos de nascimento do modernista. [seção Recuperações].",
     "nota_edicao": "",
     "autores_colaboradores": [
-      "SANTOS, Tatiana Longo dos"
+      "FIGUEIREDO, Tatiana Maria Longo dos Santos e Nogueira"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -10102,7 +10134,7 @@
       "PAZ, Octavio",
       "DIANA",
       "MONTALE, Eugenio",
-      "ZÉ, Tom"
+      "MARTINS, Antônio J. Santana (Tom Zé)"
     ],
     "palavras_chave": [
       "Poesia Brasileira",
@@ -10317,12 +10349,12 @@
     "titulo_artigo": "Editorial",
     "subtitulo_artigo": "",
     "paginas": "p.7-9",
-    "resumo": "Editorial que apresenta os conteúdos da edição, destacando a seção \"Pares Contemporâneos\" dedicada à poesia mexicana atual, com ensaio de Rodolfo Mata e depoimento de Hugo Gola. Comenta a publicação do texto híbrido \"Tudo Acontece\" de Dominique Fourcade e o resgate da série jornalística \"A Moda e o Novo Homem\" (1956) de Flávio de Carvalho, relacionando-a ao cenário contemporâneo da moda e da arte. Ressalta a entrevista com o poeta e antologista Jerome Rothenberg sobre etnopoesia e modernismo, além de mencionar contribuições de Paolo Ruffini, Wilson Bueno e as resenhas críticas de Paulo Franchetti e Mario Cámara.",
+    "resumo": "Editorial que apresenta os conteúdos da edição, destacando a seção \"Pares Contemporâneos\" dedicada à poesia mexicana atual, com ensaio de Rodolfo Mata e depoimento de Hugo Gola. Comenta a publicação do texto híbrido \"Tudo Acontece\" de Dominique Fourcade e o resgate da série jornalística \"A Moda e o Novo Homem\" (1956) de Flávio de Carvalho, relacionando-a ao cenário contemporâneo da moda e da arte. Ressalta a entrevista com o poeta e antologista Jerome Rothenberg sobre etnopoesia e modernismo, além de mencionar contribuições de Paolo Ruffilli, Wilson Bueno e as resenhas críticas de Paulo Franchetti e Mario Cámara.",
     "nota_edicao": "",
     "autores_colaboradores": [
       "BONVICINO, Régis",
       "CISNEROS, Odile",
-      "SANTOS, Tatiana Longo dos"
+      "FIGUEIREDO, Tatiana Maria Longo dos Santos e Nogueira"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -11962,7 +11994,7 @@
     "nota_edicao": "",
     "autores_colaboradores": [
       "BONVICINO, Régis",
-      "SANTOS, Tatiana Longo dos"
+      "FIGUEIREDO, Tatiana Maria Longo dos Santos e Nogueira"
     ],
     "entidade_coletiva": [],
     "tradutores": [],
@@ -13253,7 +13285,7 @@
     "autores_colaboradores": [
       "BONVICINO, Régis",
       "PÉCORA, Alcir",
-      "FIGUEIREDO, Tatiana Longo"
+      "FIGUEIREDO, Tatiana Maria Longo dos Santos e Nogueira"
     ],
     "entidade_coletiva": [],
     "tradutores": [],

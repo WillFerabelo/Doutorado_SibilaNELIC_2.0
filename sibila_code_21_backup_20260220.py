@@ -2209,10 +2209,10 @@ def relatorio_autores_assunto_colab(df):
     
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown("**Colaboradores (20 mais frequentes)**")
+        st.markdown("**Colaboradores (top 20)**")
         st.dataframe(df_colab.head(20), width='stretch')
     with c2:
-        st.markdown("**Nomes pessoais como assunto (20 mais frequentes)**")
+        st.markdown("**Nomes pessoais como assunto (top 20)**")
         st.dataframe(df_ass.head(20), width='stretch')
     intersect = set(df_colab['Termo']).intersection(set(df_ass['Termo']))
     st.markdown("---")
@@ -2221,42 +2221,22 @@ def relatorio_autores_assunto_colab(df):
         st.write(", ".join(sorted(list(intersect))))
     else:
         st.write("Nenhuma interseção encontrada.")
-
-    # Gráfico comparativo — 10 mais frequentes de cada
-    import plotly.graph_objects as go
-    top10_colab = df_colab.head(10)
-    top10_ass = df_ass.head(10)
-    fig = go.Figure()
-    fig.add_trace(go.Bar(
-        y=top10_colab['Termo'], x=top10_colab['Qtd'],
-        name='Colaboradores', orientation='h'
-    ))
-    fig.add_trace(go.Bar(
-        y=top10_ass['Termo'], x=top10_ass['Qtd'],
-        name='Assunto', orientation='h'
-    ))
-    fig.update_layout(
-        height=450,
-        title="10 mais frequentes — Colaboradores vs. Nomes pessoais como assunto",
-        xaxis_title="Ocorrências",
-        yaxis={'categoryorder': 'total ascending'},
-        barmode='group'
-    )
-    st.plotly_chart(fig, width='stretch')
-
+        
     st.markdown("##### Exportar")
     col1, col2 = st.columns(2)
     
-    # Exportar tabelas completas (20 mais frequentes para visualização e PDF).
+    # Exportar Tabelas Completas (Top 20 apenas para visualização, mas exportação pode ser completa ou top 20. 
+    # O usuário pediu "Autores Colaboradores (Top 20)" e "Nomes Pessoais como Assunto (Top 20)" no PDF.
+    # Vamos exportar o Top 20 no PDF conforme solicitado.
     
     pdf_duplo = PDFModule.gerar_pdf_duas_tabelas(
-        df_colab.head(20), "Autores Colaboradores (20 mais frequentes)",
-        df_ass.head(20), "Nomes Pessoais como Assunto (20 mais frequentes)",
+        df_colab.head(20), "Autores Colaboradores (Top 20)",
+        df_ass.head(20), "Nomes Pessoais como Assunto (Top 20)",
         "Autores como Assunto vs Colaboradores"
     )
     
     col1.download_button(
-        "📄 PDF (20 primeiros de cada)",
+        "📄 PDF (Top 20 de ambos)",
         pdf_duplo,
         f"rel_autores_assunto_colab_{datetime.now().strftime('%Y%m%d')}.pdf",
         "application/pdf",
@@ -2275,22 +2255,6 @@ def relatorio_tipos_textuais(df):
     counts['Percentual'] = (counts['Num. Absoluto'] / total * 100).map(lambda x: f"{x:.2f}%")
     counts.index = counts.index + 1
     st.dataframe(counts, width='stretch')
-
-    fig = px.bar(
-        counts, x="Num. Absoluto", y="Tipo textual",
-        orientation='h',
-        text="Num. Absoluto"
-    )
-    fig.update_layout(
-        height=max(350, len(counts) * 30),
-        title="Distribuição por tipo textual",
-        xaxis_title="Quantidade",
-        yaxis_title="",
-        yaxis={'categoryorder': 'total ascending'}
-    )
-    fig.update_traces(textposition='outside')
-    st.plotly_chart(fig, width='stretch')
-
     st.markdown("##### Exportar")
     col1, col2 = st.columns(2)
     excel_rel = UtilsModule.converter_excel(counts)
@@ -2301,7 +2265,7 @@ def relatorio_tipos_textuais(df):
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         width='stretch'
     )
-
+    
     pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(counts, "Tipos textuais")
     col2.download_button(
         "📄 PDF",
@@ -2355,30 +2319,11 @@ def relatorio_manifesto(df):
             },
             width='stretch'
         )
-
-        # Gráfico — ocorrências por número da revista
-        contagem_n = df_man['n'].value_counts().reset_index()
-        contagem_n.columns = ['n.', 'Ocorrências']
-        contagem_n['n.'] = pd.Categorical(contagem_n['n.'], categories=ORDEM_SIBILA, ordered=True)
-        contagem_n = contagem_n.sort_values('n.').dropna(subset=['n.'])
-        fig = px.bar(
-            contagem_n, x="n.", y="Ocorrências",
-            text="Ocorrências"
-        )
-        fig.update_layout(
-            height=350,
-            title="Ocorrências de 'Manifesto' por número",
-            xaxis_title="n.",
-            yaxis_title="Ocorrências"
-        )
-        fig.update_xaxes(type='category', tickmode='linear')
-        st.plotly_chart(fig, width='stretch')
-
         st.markdown("##### Exportar")
         col1, col2 = st.columns(2)
         df_export = df_man[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'palavras_chave', 'onde_encontrado']].copy()
         excel_rel = UtilsModule.converter_excel(df_export.rename(columns={
-            'n': 'Nº Revista',
+            'n': 'Nº Revista', 
             'registro': 'Registro',
             'vocabulario_controlado': 'Tipo Textual',
             'titulo_artigo': 'Título',
@@ -2448,30 +2393,11 @@ def relatorio_sibila(df):
             },
             width='stretch'
         )
-
-        # Gráfico — ocorrências por número da revista
-        contagem_n = df_sib['n'].value_counts().reset_index()
-        contagem_n.columns = ['n.', 'Ocorrências']
-        contagem_n['n.'] = pd.Categorical(contagem_n['n.'], categories=ORDEM_SIBILA, ordered=True)
-        contagem_n = contagem_n.sort_values('n.').dropna(subset=['n.'])
-        fig = px.bar(
-            contagem_n, x="n.", y="Ocorrências",
-            text="Ocorrências"
-        )
-        fig.update_layout(
-            height=350,
-            title="Ocorrências de 'Sibila' por número",
-            xaxis_title="n.",
-            yaxis_title="Ocorrências"
-        )
-        fig.update_xaxes(type='category', tickmode='linear')
-        st.plotly_chart(fig, width='stretch')
-
         st.markdown("##### Exportar")
         col1, col2 = st.columns(2)
         df_export = df_sib[['n', 'registro', 'vocabulario_controlado', 'titulo_artigo', 'palavras_chave', 'onde_encontrado']].copy()
         excel_rel = UtilsModule.converter_excel(df_export.rename(columns={
-            'n': 'Nº Revista',
+            'n': 'Nº Revista', 
             'registro': 'Registro',
             'vocabulario_controlado': 'Tipo Textual',
             'titulo_artigo': 'Título',
@@ -2506,24 +2432,6 @@ def relatorio_palavras_chave(df):
     )
     df_stats.index = df_stats.index + 1
     st.dataframe(df_stats, width='stretch')
-
-    top20_kw = df_stats.head(20).copy()
-    top20_kw['Num_Absoluto'] = top20_kw['Num. Absoluto'].astype(int)
-    fig = px.bar(
-        top20_kw, x="Num_Absoluto", y="Palavra-chave",
-        orientation='h',
-        text="Num_Absoluto"
-    )
-    fig.update_layout(
-        height=max(400, len(top20_kw) * 28),
-        title="20 palavras-chave mais frequentes",
-        xaxis_title="Ocorrências",
-        yaxis_title="",
-        yaxis={'categoryorder': 'total ascending'}
-    )
-    fig.update_traces(textposition='outside')
-    st.plotly_chart(fig, width='stretch')
-
     st.markdown("##### Exportar")
     col1, col2 = st.columns(2)
     excel_rel = UtilsModule.converter_excel(df_stats)
@@ -2643,463 +2551,6 @@ def relatorio_densidade_paginas(df):
         "application/pdf",
         width='stretch'
     )
-
-
-# ------------------------------------------
-# RELATÓRIOS NELIC — Métricas ANALISE_09
-# ------------------------------------------
-
-def relatorio_sintese_estatistica(df):
-    st.markdown("#### Síntese Estatística do Corpus")
-
-    total_registros = len(df)
-
-    colab = DataModule.get_normalized_series(df, 'autores_colaboradores')
-    colaboradores_unicos = colab.nunique()
-
-    trad = DataModule.get_normalized_series(df, 'tradutores')
-    tradutores_unicos = trad.nunique()
-
-    citados = DataModule.get_normalized_series(df, 'autores_citados')
-    autores_citados_unicos = citados.nunique()
-
-    textos_traduzidos = df['tradutores'].apply(
-        lambda x: isinstance(x, list) and len(x) > 0
-    ).sum()
-
-    textos_bilingues = df.apply(UtilsModule.is_bilingue, axis=1).sum()
-
-    idiomas_set = set()
-    for col_idioma in ['idioma_01', 'idioma_02']:
-        if col_idioma in df.columns:
-            vals = df[col_idioma].dropna().astype(str).str.strip()
-            vals = vals[vals != '']
-            idiomas_set.update(vals.unique())
-    total_idiomas = len(idiomas_set)
-
-    dados = [
-        {"Categoria": "Total de registros", "Valor": total_registros},
-        {"Categoria": "Colaboradores únicos", "Valor": colaboradores_unicos},
-        {"Categoria": "Tradutores únicos", "Valor": tradutores_unicos},
-        {"Categoria": "Autores citados únicos", "Valor": autores_citados_unicos},
-        {"Categoria": "Textos traduzidos", "Valor": textos_traduzidos},
-        {"Categoria": "Textos bilíngues", "Valor": textos_bilingues},
-        {"Categoria": "Idiomas identificados", "Valor": total_idiomas},
-    ]
-    df_rel = pd.DataFrame(dados)
-    df_rel.index = df_rel.index + 1
-    st.dataframe(df_rel, width='stretch')
-
-    fig = px.bar(
-        df_rel, x="Valor", y="Categoria",
-        orientation='h',
-        text="Valor"
-    )
-    fig.update_layout(
-        height=350,
-        title="Síntese Estatística do Corpus",
-        xaxis_title="Quantidade",
-        yaxis_title="",
-        yaxis={'categoryorder': 'array', 'categoryarray': list(reversed(df_rel['Categoria'].tolist()))}
-    )
-    fig.update_traces(textposition='outside')
-    st.plotly_chart(fig, width='stretch')
-
-    st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
-
-    excel_rel = UtilsModule.converter_excel(df_rel)
-    col1.download_button(
-        "📊 EXCEL",
-        excel_rel,
-        f"rel_sintese_estatistica_{datetime.now().strftime('%Y%m%d')}.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        width='stretch'
-    )
-
-    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(df_rel, "Síntese Estatística do Corpus")
-    col2.download_button(
-        "📄 PDF",
-        pdf_rel,
-        f"rel_sintese_estatistica_{datetime.now().strftime('%Y%m%d')}.pdf",
-        "application/pdf",
-        width='stretch'
-    )
-
-
-def relatorio_poesia_vs_ensaios(df):
-    st.markdown("#### Proporção poesia vs. ensaios por número")
-
-    def classificar(vc):
-        vc_upper = str(vc).upper().strip()
-        if vc_upper.startswith("POEMA"):
-            return "Poemas"
-        elif vc_upper.startswith("ENSAIO"):
-            return "Ensaios"
-        elif vc_upper.startswith("ENTREVISTA"):
-            return "Entrevistas"
-        elif vc_upper.startswith("RESENHA"):
-            return "Resenhas"
-        else:
-            return "Outros"
-
-    df_work = df.copy()
-    df_work['_categoria'] = df_work['vocabulario_controlado'].apply(classificar)
-
-    rows = []
-    for rev in ORDEM_SIBILA:
-        sub = df_work[df_work['n'] == rev]
-        if sub.empty:
-            continue
-        total = len(sub)
-        contagens = sub['_categoria'].value_counts()
-        poemas = contagens.get("Poemas", 0)
-        ensaios = contagens.get("Ensaios", 0)
-        entrevistas = contagens.get("Entrevistas", 0)
-        resenhas = contagens.get("Resenhas", 0)
-        outros = contagens.get("Outros", 0)
-        rows.append({
-            "n.": rev,
-            "Poemas": poemas,
-            "Poemas %": f"{poemas/total*100:.1f}%",
-            "Ensaios": ensaios,
-            "Entrevistas": entrevistas,
-            "Resenhas": resenhas,
-            "Outros": outros,
-            "Total": total
-        })
-    df_rel = pd.DataFrame(rows)
-    df_rel.index = df_rel.index + 1
-    st.dataframe(df_rel, width='stretch')
-
-    # Nota de rodapé — totais gerais
-    total_ensaios = df_work[df_work['_categoria'] == 'Ensaios'].shape[0]
-    ensaios_lit = df_work[
-        df_work['vocabulario_controlado'].astype(str).str.upper().str.strip() == 'ENSAIO - LITERATURA'
-    ].shape[0]
-    ensaios_outros = total_ensaios - ensaios_lit
-    st.caption(
-        f"Nota: Do total de {total_ensaios} ensaios no corpus, "
-        f"{ensaios_lit} são de Literatura e {ensaios_outros} de outras áreas "
-        f"(Cultura, Política, Filosofia, etc.). "
-        f"Veja o relatório 'Tabela cruzada: tipo textual × número' para o detalhamento completo."
-    )
-
-    # Expander com decomposição dos ensaios por subtipo
-    with st.expander("Detalhamento: subtipos de ensaio por número"):
-        df_ensaios = df_work[df_work['_categoria'] == 'Ensaios'].copy()
-        if not df_ensaios.empty:
-            ct_ensaios = pd.crosstab(
-                df_ensaios['vocabulario_controlado'],
-                df_ensaios['n']
-            )
-            cols_ordenadas = [c for c in ORDEM_SIBILA if c in ct_ensaios.columns]
-            ct_ensaios = ct_ensaios[cols_ordenadas]
-            ct_ensaios['TOTAL'] = ct_ensaios.sum(axis=1)
-            ct_ensaios = ct_ensaios.sort_values('TOTAL', ascending=False)
-            st.dataframe(ct_ensaios, width='stretch')
-        else:
-            st.info("Nenhum ensaio encontrado no corpus.")
-
-    # Gráfico empilhado
-    categorias = ["Poemas", "Ensaios", "Entrevistas", "Resenhas", "Outros"]
-    df_chart = df_rel[["n."] + [c for c in categorias if c in df_rel.columns]].copy()
-    df_melt = df_chart.melt(id_vars="n.", var_name="Categoria", value_name="Qtd")
-    fig = px.bar(
-        df_melt, x="n.", y="Qtd", color="Categoria",
-        barmode="stack",
-        text="Qtd"
-    )
-    fig.update_layout(
-        height=420,
-        title="Proporção de tipos textuais por número",
-        xaxis_title="n.",
-        yaxis_title="Quantidade"
-    )
-    fig.update_xaxes(type='category', tickmode='linear')
-    fig.update_traces(textposition='inside')
-    st.plotly_chart(fig, width='stretch')
-
-    # Exportação
-    st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
-
-    # Excel com duas abas
-    try:
-        o = BytesIO()
-        with pd.ExcelWriter(o, engine='xlsxwriter') as w:
-            df_rel.to_excel(w, index=True, sheet_name='Proporção')
-            if not df_ensaios.empty:
-                ct_ensaios.to_excel(w, index=True, sheet_name='Ensaios - detalhe')
-        excel_bytes = o.getvalue()
-    except Exception as e:
-        st.error(f"Erro ao gerar Excel: {e}")
-        excel_bytes = UtilsModule.converter_excel(df_rel)
-
-    col1.download_button(
-        "📊 EXCEL",
-        excel_bytes,
-        f"rel_poesia_vs_ensaios_{datetime.now().strftime('%Y%m%d')}.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        width='stretch'
-    )
-
-    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(df_rel, "Proporção poesia vs. ensaios por número")
-    col2.download_button(
-        "📄 PDF",
-        pdf_rel,
-        f"rel_poesia_vs_ensaios_{datetime.now().strftime('%Y%m%d')}.pdf",
-        "application/pdf",
-        width='stretch'
-    )
-
-
-def relatorio_distribuicao_idiomas(df):
-    st.markdown("#### Distribuição de Idiomas no Corpus")
-
-    todos_idiomas = []
-    for col_idioma in ['idioma_01', 'idioma_02']:
-        if col_idioma in df.columns:
-            vals = df[col_idioma].dropna().astype(str).str.strip()
-            vals = vals[vals != '']
-            todos_idiomas.extend(vals.tolist())
-
-    if not todos_idiomas:
-        st.info("Nenhum idioma registrado no corpus.")
-        return
-
-    s_idiomas = pd.Series(todos_idiomas)
-    contagem = s_idiomas.value_counts().reset_index()
-    contagem.columns = ['Idioma', 'Total']
-    total_geral = contagem['Total'].sum()
-    contagem['%'] = (contagem['Total'] / total_geral * 100).map('{:.2f}%'.format)
-    contagem.index = contagem.index + 1
-
-    st.dataframe(contagem, width='stretch')
-
-    fig = px.bar(
-        contagem, x="Total", y="Idioma",
-        orientation='h',
-        text="Total"
-    )
-    fig.update_layout(
-        height=max(300, len(contagem) * 35),
-        title="Distribuição de idiomas",
-        xaxis_title="Ocorrências",
-        yaxis_title="Idioma",
-        yaxis={'categoryorder': 'total ascending'}
-    )
-    st.plotly_chart(fig, width='stretch')
-
-    st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
-
-    excel_rel = UtilsModule.converter_excel(contagem)
-    col1.download_button(
-        "📊 EXCEL",
-        excel_rel,
-        f"rel_distribuicao_idiomas_{datetime.now().strftime('%Y%m%d')}.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        width='stretch'
-    )
-
-    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(contagem, "Distribuição de Idiomas no Corpus")
-    col2.download_button(
-        "📄 PDF",
-        pdf_rel,
-        f"rel_distribuicao_idiomas_{datetime.now().strftime('%Y%m%d')}.pdf",
-        "application/pdf",
-        width='stretch'
-    )
-
-
-def relatorio_tabela_cruzada_tipo_numero(df):
-    st.markdown("#### Tabela Cruzada: Tipo Textual × Número")
-
-    ct = pd.crosstab(df['vocabulario_controlado'], df['n'])
-    cols_ordenadas = [c for c in ORDEM_SIBILA if c in ct.columns]
-    ct = ct[cols_ordenadas]
-    ct['TOTAL'] = ct.sum(axis=1)
-    ct = ct.sort_values('TOTAL', ascending=False)
-
-    st.caption(
-        "O catálogo registra tipos textuais com subclassificações "
-        "(ex.: ENSAIO - Literatura, ENSAIO - Cultura). "
-        "Cada linha preserva a classificação original do Sistema SD."
-    )
-    st.dataframe(ct, width='stretch')
-
-    # Tipo dominante por número
-    st.markdown("**Tipo dominante por número:**")
-    dominantes = []
-    for col_n in cols_ordenadas:
-        if col_n in ct.columns:
-            tipo_dom = ct[col_n].idxmax()
-            qtd_dom = ct[col_n].max()
-            dominantes.append({"n.": col_n, "Tipo dominante": tipo_dom, "Qtd": qtd_dom})
-    if dominantes:
-        df_dom = pd.DataFrame(dominantes)
-        df_dom.index = df_dom.index + 1
-        st.dataframe(df_dom, width='stretch')
-
-    # Gráfico stacked bar — 10 tipos textuais mais frequentes por número
-    ct_sem_total = ct.drop(columns=['TOTAL'], errors='ignore')
-    top10_tipos = ct['TOTAL'].nlargest(10).index.tolist()
-    ct_top10 = ct_sem_total.loc[top10_tipos]
-    df_chart = ct_top10.reset_index().melt(
-        id_vars='vocabulario_controlado', var_name='n.', value_name='Qtd'
-    )
-    fig = px.bar(
-        df_chart, x="n.", y="Qtd", color="vocabulario_controlado",
-        barmode="stack",
-        text="Qtd"
-    )
-    fig.update_layout(
-        height=500,
-        title="Distribuição dos 10 tipos textuais mais frequentes por número",
-        xaxis_title="n.",
-        yaxis_title="Quantidade",
-        legend_title="Tipo textual"
-    )
-    fig.update_xaxes(type='category', tickmode='linear')
-    fig.update_traces(textposition='inside', textfont_size=9)
-    st.plotly_chart(fig, width='stretch')
-
-    st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
-
-    # Excel com índice (vocabulario_controlado)
-    try:
-        o = BytesIO()
-        with pd.ExcelWriter(o, engine='xlsxwriter') as w:
-            ct.to_excel(w, index=True, sheet_name='Tabela cruzada')
-            if dominantes:
-                df_dom.to_excel(w, index=True, sheet_name='Tipo dominante')
-        excel_bytes = o.getvalue()
-    except Exception as e:
-        st.error(f"Erro ao gerar Excel: {e}")
-        excel_bytes = UtilsModule.converter_excel(ct.reset_index())
-
-    col1.download_button(
-        "📊 EXCEL",
-        excel_bytes,
-        f"rel_tabela_cruzada_{datetime.now().strftime('%Y%m%d')}.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        width='stretch'
-    )
-
-    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(
-        ct.reset_index().rename(columns={'vocabulario_controlado': 'Tipo Textual'}),
-        "Tabela Cruzada: Tipo Textual × Número"
-    )
-    col2.download_button(
-        "📄 PDF",
-        pdf_rel,
-        f"rel_tabela_cruzada_{datetime.now().strftime('%Y%m%d')}.pdf",
-        "application/pdf",
-        width='stretch'
-    )
-
-
-def relatorio_autores_frequentes(df):
-    st.markdown("#### Autores mais frequentes (25 primeiros)")
-
-    colab = DataModule.get_normalized_series(df, 'autores_colaboradores')
-    if colab.empty:
-        st.info("Nenhum autor/colaborador registrado.")
-        return
-
-    top25 = colab.value_counts().head(25).reset_index()
-    top25.columns = ['Autor', 'Aparições']
-    top25.index = top25.index + 1
-
-    st.dataframe(top25, width='stretch')
-
-    fig = px.bar(
-        top25, x="Aparições", y="Autor",
-        orientation='h',
-        text="Aparições"
-    )
-    fig.update_layout(
-        height=max(400, len(top25) * 28),
-        title="25 autores/colaboradores mais frequentes",
-        xaxis_title="Aparições",
-        yaxis_title="",
-        yaxis={'categoryorder': 'total ascending'}
-    )
-    st.plotly_chart(fig, width='stretch')
-
-    st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
-
-    excel_rel = UtilsModule.converter_excel(top25)
-    col1.download_button(
-        "📊 EXCEL",
-        excel_rel,
-        f"rel_autores_frequentes_{datetime.now().strftime('%Y%m%d')}.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        width='stretch'
-    )
-
-    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(top25, "Autores mais frequentes (25 primeiros)")
-    col2.download_button(
-        "📄 PDF",
-        pdf_rel,
-        f"rel_autores_frequentes_{datetime.now().strftime('%Y%m%d')}.pdf",
-        "application/pdf",
-        width='stretch'
-    )
-
-
-def relatorio_tradutores_frequentes(df):
-    st.markdown("#### Tradutores mais frequentes (10 primeiros)")
-
-    trad = DataModule.get_normalized_series(df, 'tradutores')
-    if trad.empty:
-        st.info("Nenhum tradutor registrado.")
-        return
-
-    top10 = trad.value_counts().head(10).reset_index()
-    top10.columns = ['Tradutor', 'Aparições']
-    top10.index = top10.index + 1
-
-    st.dataframe(top10, width='stretch')
-
-    fig = px.bar(
-        top10, x="Aparições", y="Tradutor",
-        orientation='h',
-        text="Aparições"
-    )
-    fig.update_layout(
-        height=max(300, len(top10) * 35),
-        title="10 tradutores mais frequentes",
-        xaxis_title="Aparições",
-        yaxis_title="",
-        yaxis={'categoryorder': 'total ascending'}
-    )
-    st.plotly_chart(fig, width='stretch')
-
-    st.markdown("##### Exportar")
-    col1, col2 = st.columns(2)
-
-    excel_rel = UtilsModule.converter_excel(top10)
-    col1.download_button(
-        "📊 EXCEL",
-        excel_rel,
-        f"rel_tradutores_frequentes_{datetime.now().strftime('%Y%m%d')}.xlsx",
-        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        width='stretch'
-    )
-
-    pdf_rel = PDFModule.gerar_pdf_tabela_estatistica(top10, "Tradutores mais frequentes (10 primeiros)")
-    col2.download_button(
-        "📄 PDF",
-        pdf_rel,
-        f"rel_tradutores_frequentes_{datetime.now().strftime('%Y%m%d')}.pdf",
-        "application/pdf",
-        width='stretch'
-    )
-
 
 # ==========================================
 # 5. MAIN APP LOGIC
@@ -4046,53 +3497,35 @@ def main():
             tipo_rel = st.selectbox(
                 "Selecione o relatório:",
                 [
-                    "Análise por tipos textuais",
-                    "Autores como assunto vs colaboradores",
-                    "Autores mais frequentes (25 primeiros)",
-                    "Densidade de Imagens por Páginas",
-                    "Distribuição de idiomas",
-                    "Iconografia por revista",
+                    "Volume de itens por revista",
                     "Índice de publicações bilíngues",
+                    "Iconografia por revista",
+                    "Autores como assunto vs colaboradores",
+                    "Análise por tipos textuais",
                     "Manifesto",
-                    "Palavras-chave",
-                    "Proporção poesia vs. ensaios por número",
                     "Sibila",
-                    "Síntese estatística do corpus",
-                    "Tabela cruzada: tipo textual × número",
-                    "Tradutores mais frequentes (10 primeiros)",
-                    "Volume de itens por revista"
+                    "Palavras-chave",
+                    "Densidade de Imagens por Páginas"
                 ]
             )
-            if tipo_rel == "Análise por tipos textuais":
-                relatorio_tipos_textuais(df)
-            elif tipo_rel == "Autores como assunto vs colaboradores":
-                relatorio_autores_assunto_colab(df)
-            elif tipo_rel == "Autores mais frequentes (25 primeiros)":
-                relatorio_autores_frequentes(df)
-            elif tipo_rel == "Densidade de Imagens por Páginas":
-                relatorio_densidade_paginas(df)
-            elif tipo_rel == "Distribuição de idiomas":
-                relatorio_distribuicao_idiomas(df)
-            elif tipo_rel == "Iconografia por revista":
-                relatorio_iconografia(df)
+            if tipo_rel == "Volume de itens por revista":
+                relatorio_mapa_colaboracao(df)
             elif tipo_rel == "Índice de publicações bilíngues":
                 relatorio_bilinguismo(df)
+            elif tipo_rel == "Iconografia por revista":
+                relatorio_iconografia(df)
+            elif tipo_rel == "Autores como assunto vs colaboradores":
+                relatorio_autores_assunto_colab(df)
+            elif tipo_rel == "Análise por tipos textuais":
+                relatorio_tipos_textuais(df)
             elif tipo_rel == "Manifesto":
                 relatorio_manifesto(df)
-            elif tipo_rel == "Palavras-chave":
-                relatorio_palavras_chave(df)
-            elif tipo_rel == "Proporção poesia vs. ensaios por número":
-                relatorio_poesia_vs_ensaios(df)
             elif tipo_rel == "Sibila":
                 relatorio_sibila(df)
-            elif tipo_rel == "Síntese estatística do corpus":
-                relatorio_sintese_estatistica(df)
-            elif tipo_rel == "Tabela cruzada: tipo textual × número":
-                relatorio_tabela_cruzada_tipo_numero(df)
-            elif tipo_rel == "Tradutores mais frequentes (10 primeiros)":
-                relatorio_tradutores_frequentes(df)
-            elif tipo_rel == "Volume de itens por revista":
-                relatorio_mapa_colaboracao(df)
+            elif tipo_rel == "Palavras-chave":
+                relatorio_palavras_chave(df)
+            elif tipo_rel == "Densidade de Imagens por Páginas":
+                relatorio_densidade_paginas(df)
 
     # --- ANÁLISE COMPARATIVA ---
     elif menu == "ANÁLISE COMPARATIVA":
@@ -4381,7 +3814,11 @@ def main():
             # TAB 1: ANÁLISE DE REDES
             # ========================================
             if selected_adv == "🕸️ Análise de Redes":
-                st.markdown("### 🕸️ Visualização Interativa da Rede de Citações")
+                st.markdown("### 🕸️ Análise de Redes: Autores e Citações")
+                st.markdown("""
+                Visualize as relações entre **autores colaboradores** e **autores citados**.
+                Esta análise permite identificar padrões de citação e redes de influência.
+                """)
 
                 if not NETWORKX_AVAILABLE:
                     st.error("❌ Biblioteca `networkx` não disponível. Instale com: `pip install networkx`")
@@ -4405,12 +3842,104 @@ def main():
                             G = nx.DiGraph()
                             G.add_edges_from(edges_autor_citacao)
 
+                            # Métricas do grafo
+                            col1, col2, col3, col4 = st.columns(4)
+                            with col1:
+                                st.metric("Autores", G.number_of_nodes())
+                            with col2:
+                                st.metric("Citações", G.number_of_edges())
+                            with col3:
+                                densidade = nx.density(G)
+                                st.metric("Densidade", f"{densidade:.4f}", help="Indica o quão conectada é a rede. Se fosse 1.0, todos os autores citariam todos os outros. Valor baixo indica rede esparsa.")
+                            with col4:
+                                componentes = nx.number_weakly_connected_components(G)
+                                st.metric("Componentes", componentes, help="Número de grupos isolados de autores. Se for 1, todos estão conectados. Se for maior, existem 'ilhas' de citação separadas.")
+
+                            st.markdown("---")
+
+                            # Top autores mais citados
+                            st.markdown("#### 📊 Autores Mais Citados")
+                            in_degree = sorted(G.in_degree(), key=lambda x: x[1], reverse=True)[:15]
+                            if in_degree:
+                                df_in = pd.DataFrame(in_degree, columns=['Autor', 'Vezes Citado'])
+                                fig_in = px.bar(df_in, x='Vezes Citado', y='Autor', orientation='h',
+                                               title='15 Autores Mais Citados')
+                                fig_in.update_layout(yaxis={'categoryorder': 'total ascending'})
+                                st.plotly_chart(fig_in, use_container_width=True)
+
+                            # Top autores que mais citam
+                            st.markdown("#### 📊 Autores que Mais Citam")
+                            out_degree = sorted(G.out_degree(), key=lambda x: x[1], reverse=True)[:15]
+                            if out_degree:
+                                df_out = pd.DataFrame(out_degree, columns=['Autor', 'Citações Feitas'])
+                                fig_out = px.bar(df_out, x='Citações Feitas', y='Autor', orientation='h',
+                                                title='15 Autores que Mais Citam Outros')
+                                fig_out.update_layout(yaxis={'categoryorder': 'total ascending'})
+                                st.plotly_chart(fig_out, use_container_width=True)
+
+                            st.markdown("---")
+
+                            # Exportação
+                            st.markdown("#### 💾 Exportar Dados da Rede")
+                            col_exp1, col_exp2, col_exp3 = st.columns(3)
+
+                            with col_exp1:
+                                # Exportar GEXF (para Gephi)
+                                try:
+                                    import io
+                                    gexf_buffer = io.BytesIO()
+                                    nx.write_gexf(G, gexf_buffer)
+                                    gexf_data = gexf_buffer.getvalue()
+                                    st.download_button(
+                                        "📥 Baixar GEXF (Gephi)",
+                                        data=gexf_data,
+                                        file_name="rede_autores_citacoes.gexf",
+                                        mime="application/gexf+xml",
+                                        key="btn_gexf"
+                                    )
+                                except Exception as e:
+                                    st.warning(f"Erro ao gerar GEXF: {e}")
+
+                            with col_exp2:
+                                # CSV de nós
+                                nodes_data = []
+                                for node in G.nodes():
+                                    nodes_data.append({
+                                        'ID': node,
+                                        'Rótulo': node,
+                                        'Grau Entrada': G.in_degree(node),
+                                        'Grau Saída': G.out_degree(node)
+                                    })
+                                df_nodes = pd.DataFrame(nodes_data)
+                                excel_nodes = UtilsModule.converter_excel(df_nodes)
+                                st.download_button(
+                                    "📥 Baixar Nós (Excel)",
+                                    data=excel_nodes,
+                                    file_name="autores_nos.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_nodes_excel"
+                                )
+
+                            with col_exp3:
+                                # Excel de arestas
+                                edges_data = [{'Origem': e[0], 'Destino': e[1]} for e in G.edges()]
+                                df_edges = pd.DataFrame(edges_data)
+                                excel_edges = UtilsModule.converter_excel(df_edges)
+                                st.download_button(
+                                    "📥 Baixar Arestas (Excel)",
+                                    data=excel_edges,
+                                    file_name="citacoes_arestas.xlsx",
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                    key="btn_edges_excel"
+                                )
+
                     except Exception as e:
                         st.error(f"❌ Erro na análise de redes: {str(e)}")
 
                     # ==========================================
                     # VIZ INTERATIVA PYVIS
                     # ==========================================
+                    st.markdown("#### 🕸️ VISUALIZAÇÃO INTERATIVA") # (PYVIS)
                     st.markdown("Clique no botão abaixo para gerar o grafo. *Para grandes volumes de dados, isso pode levar alguns segundos.*")
                     
                     if not PYVIS_AVAILABLE:
@@ -6247,7 +5776,7 @@ def main():
                     key=f"btn_pdf_{tab_key}"
                 )
                 st.markdown("---")
-                st.markdown(f"**⬆️ {label.upper()} MAIS FREQUENTES (30 primeiros)**")
+                st.markdown(f"**⬆️ {label.upper()} MAIS FREQUENTES (Top 30)**")
                 counts.index = counts.index + 1
                 st.dataframe(counts.head(30), width='stretch')
                 with st.expander(f"Mostrar tabela completa de {label} ({len(counts)} termos)"):
@@ -6256,47 +5785,7 @@ def main():
             if selected_mais_dados == "PALAVRAS-CHAVE":
                 show_stats_with_export('palavras_chave', 'Palavra-chave', 'palavras_chave')
             elif selected_mais_dados == "AUTORES CITADOS":
-                st.info(
-                    "📌 **Nota conceitual — Autores Citados vs. Autores que Citam**\n\n"
-                    "Esta aba apresenta os **autores citados**: nomes referenciados, mencionados ou analisados "
-                    "nos textos publicados em *Sibila*. Trata-se de uma métrica de **recepção** — quanto mais "
-                    "registros citam um autor, maior sua presença no horizonte de referências do corpus.\n\n"
-                    "Não confundir com **autores que mais citam** (colaboradores que, por terem mais textos "
-                    "publicados, naturalmente referenciam mais autores — ver aba **COLABORADORES** e a seção "
-                    "**Análise de Redes**).\n\n"
-                    "• **Autor citado** = referenciado por colaboradores nos textos publicados (recepção)\n\n"
-                    "• **Colaborador** = quem assina textos publicados na revista (produção)\n\n"
-                    "• **Quem mais cita** = colaborador com maior volume de referências feitas (produção de referências)"
-                )
                 show_stats_with_export('autores_citados', 'Autor Citado', 'autores_citados')
-
-                # Cruzamento: autores citados que também são colaboradores
-                s_citados_crz = DataModule.get_normalized_series(df, 'autores_citados')
-                s_colabs_crz = DataModule.get_normalized_series(df, 'autores_colaboradores')
-                if not s_citados_crz.empty and not s_colabs_crz.empty:
-                    citados_set = set(s_citados_crz.unique())
-                    colabs_set = set(s_colabs_crz.unique())
-                    overlap_set = citados_set & colabs_set
-                    if overlap_set:
-                        with st.expander(f"🔍 Autores citados que também são colaboradores da revista ({len(overlap_set)} autores)"):
-                            st.markdown(
-                                "Os autores abaixo aparecem **tanto como citados quanto como colaboradores** da revista. "
-                                "Isso é esperado: editores e membros do corpo editorial frequentemente são referenciados "
-                                "nos textos de outros colaboradores. A coluna **Vezes citado** indica em quantos registros "
-                                "o autor é citado; **Textos publicados** indica em quantos registros ele é colaborador."
-                            )
-                            citados_freq = s_citados_crz.value_counts()
-                            colabs_freq = s_colabs_crz.value_counts()
-                            overlap_rows = []
-                            for nome in overlap_set:
-                                overlap_rows.append({
-                                    'Autor': nome,
-                                    'Vezes citado': int(citados_freq.get(nome, 0)),
-                                    'Textos publicados': int(colabs_freq.get(nome, 0))
-                                })
-                            df_overlap = pd.DataFrame(overlap_rows).sort_values('Vezes citado', ascending=False)
-                            df_overlap.index = range(1, len(df_overlap) + 1)
-                            st.dataframe(df_overlap, width='stretch')
             elif selected_mais_dados == "COLABORADORES":
                 show_stats_with_export('autores_colaboradores', 'Colaborador', 'colaboradores')
             elif selected_mais_dados == "TRADUTORES":
