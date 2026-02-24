@@ -137,6 +137,8 @@ CANONICAL_AUTHORS = {
     "SZAKOSI, Endre": "SZKAROSI, Endre",
     "REIS, Olga Carneiro": "REIS, Orfa Carneiro",
     "ARP, Jean": "ARP, Hans",
+    "FENG, Yao": "JINGMING, Yao",
+    "MING, Yao": "JINGMING, Yao",
 }
 
 FIELDS_TO_CHECK = [
